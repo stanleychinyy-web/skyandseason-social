@@ -13,6 +13,8 @@ ROOT = os.path.abspath(os.path.join(HERE, '..', '..')); ASSETS = os.path.join(RO
 sys.path.insert(0, os.path.join(ROOT, 'tools'))
 from daytype import day, daytype, name, STEMS, BRANCH_ANIMAL
 from week import ANIMAL_ICON, ANIMAL_EL, SEASON, GOD, SLUG, FORCE
+from daytype import BRANCH_EL
+def BRANCH_EL_OF(b): return BRANCH_EL[b]
 W, H, FPS = 1080, 1920, 30
 BEAT = 60 / 112; BAR = 4 * BEAT; CARD = 2 * BAR
 INK = (35, 28, 60); MUTED = (95, 88, 120); CREAM = (255, 250, 240); RED = (226, 84, 60); GREEN = (50, 140, 85)
@@ -90,26 +92,135 @@ def facts(date):
     spec = json.load(open(spec_p, encoding='utf-8')) if os.path.exists(spec_p) else {}
     return dt, s, b, spec
 
-# ---------- story ----------
-def story(date):
+# ---------- stories (6 frames, all about the day) ----------
+STEM_ICON = ['deciduous-tree', 'herb', 'sun-with-face', 'candle', 'mountain', 'sheaf-of-rice', 'axe', 'gem-stone', 'water-wave', 'cloud-with-rain']
+EL_ICON = {'Wood': 'deciduous-tree', 'Fire': 'fire', 'Earth': 'mountain', 'Metal': 'gem-stone', 'Water': 'droplet'}
+STEM_INFO = [  # nature (from the site's stem gods), good for, watch out
+    ('Growth, structure, standing tall.', 'starting long projects, planning ahead', 'being stubborn'),
+    ('Flexible and social; always finds a way round.', 'networking, gentle persuasion, teamwork', 'people-pleasing'),
+    ('Warm, generous and seen by everyone.', 'launching, presenting, showing up', 'overpromising and burning out'),
+    ('Focused warmth: a small light that goes deep.', 'deep talks, careful work, learning', 'overthinking at night'),
+    ('Steady, reliable, protective.', 'commitments, admin, home matters', 'refusing to budge'),
+    ('Nurturing, practical, patient.', 'caring for people, cooking, budgeting', 'worrying too much'),
+    ('Decisive, direct, brave.', 'hard decisions, decluttering, exercise', 'words that cut too sharp'),
+    ('Refined, precise, elegant.', 'polishing details, self-care, design', 'perfectionism'),
+    ('Big, free-flowing, adventurous.', 'big ideas, travel, learning', 'scattered focus'),
+    ('Quiet, intuitive, adaptable.', 'reflection, research, rest', 'moodiness'),
+]
+# The site's 12 seasons (branch-stage-map.js): landscape line and months
+LANDSCAPE = ['A seed lies buried below the frost line, waiting.', 'Snowmelt seeps down toward the buried seed.',
+             'The first shoot breaks through thawing soil.', 'A tender seedling stands unshielded in spring rain.',
+             'A staked sapling is pruned and trained upright.', 'A young tree stretches toward open sun, branches spreading.',
+             'The canopy is full, fruit ripening in high summer.', 'Fruit hangs heavy on the branch as daylight starts to shorten.',
+             'The first leaves turn as early frost tests the canopy.', 'The leaves fall, the tree stands bare against the sky.',
+             'Fallen leaves settle into the earth, becoming next year’s soil.', 'Bare ground under frost, nothing visible above the soil.']
+HOURS = ['11pm–1am', '1–3am', '3–5am', '5–7am', '7–9am', '9–11am', '11am–1pm', '1–3pm', '3–5pm', '5–7pm', '7–9pm', '9–11pm']
+COLOUR = {'Wood': 'green', 'Fire': 'red or pink', 'Earth': 'yellow or beige', 'Metal': 'white or silver', 'Water': 'navy or black'}
+DIRECTION = {'Wood': 'East', 'Fire': 'South', 'Earth': 'the centre of the room', 'Metal': 'West', 'Water': 'North'}
+PROD = {'Wood': 'Fire', 'Fire': 'Earth', 'Earth': 'Metal', 'Metal': 'Water', 'Water': 'Wood'}
+CTRL = {'Wood': 'Earth', 'Earth': 'Water', 'Water': 'Fire', 'Fire': 'Metal', 'Metal': 'Wood'}
+def element_link(top, bottom):
+    """How the day's Sky element (top) and Season element (bottom) relate: (quiz question, options, answer, explanation)."""
+    if PROD[bottom] == top: return (f'Which element feeds {top}?', bottom, f'{bottom} feeds {top}. Today {top} sits on {bottom}: well fed and strong.')
+    if PROD[top] == bottom: return (f'What does {top} feed?', bottom, f'{top} feeds {bottom}. Today {top} pours its energy into the {bottom} below it: generous, but tiring.')
+    if CTRL[top] == bottom: return (f'Which element does {top} keep in check?', bottom, f'{top} keeps {bottom} in check. Today {top} is the boss of the ground it stands on.')
+    if CTRL[bottom] == top: return (f'Which element keeps {top} in check?', bottom, f'{bottom} keeps {top} in check. Today {top} is under pressure from below: steady wins.')
+    return (f'Which element is the same as {top}?', bottom, f'Today {top} sits on {top}: double strength, for better and worse.')
+def options(answer):
+    order = ['Wood', 'Fire', 'Earth', 'Metal', 'Water']; i = order.index(answer)
+    return sorted({answer, order[(i + 2) % 5], order[(i + 4) % 5]}, key=order.index)
+
+def frame(el, date, k, n):
+    im = Image.new('RGBA', (W, H), BG[el]); d = ImageDraw.Draw(im)
+    d.text((W // 2, 230), date.strftime('TODAY · %a %-d %b').upper(), font=F(38, 600), fill=INK, anchor='mm')
+    for j in range(n):
+        x = W // 2 - (n - 1) * 22 + j * 44
+        d.rounded_rectangle([x - 16, 270, x + 16, 278], 4, fill=INK if j == k else (255, 255, 255))
+    return im, d
+def card(d, y0, y1): d.rounded_rectangle([80, y0, W - 80, y1], 48, fill=(255, 255, 255))
+
+def stories(date):
     dt, s, b, spec = facts(date)
-    el = STEMS[s][1]; im = Image.new('RGBA', (W, H), BG[el]); d = ImageDraw.Draw(im)
-    ctext(d, 250, dt.strftime('%A %-d %B').upper(), F(40, 600), INK)
-    ctext(d, 320, "Today's Sky & Season", F(76, 700), INK)
-    for k, (cx, kind) in enumerate([(285, 'SKY'), (795, 'SEASON')]):
-        d.rounded_rectangle([cx - 235, 410, cx + 235, 1010], 48, fill=(255, 255, 255))
-        art = medallion(SLUG[s], 250) if kind == 'SKY' else emoji(ANIMAL_ICON[b], 260)
-        im.alpha_composite(art, (cx - art.width // 2, 450))
-        d.text((cx, 760), kind, font=F(32, 700), fill=RED if kind == 'SKY' else GREEN, anchor='mm')
-        d.text((cx, 830), name(s) if kind == 'SKY' else BRANCH_ANIMAL[b], font=F(54, 700), fill=INK, anchor='mm')
-        d.text((cx, 895), GOD[s] if kind == 'SKY' else SEASON[b], font=F(36, 500), fill=MUTED, anchor='mm')
-        d.text((cx, 950), "the day's element" if kind == 'SKY' else "the day's animal", font=F(30, 400), fill=MUTED, anchor='mm')
-    line = spec.get('day_line') or f"{GOD[s]} meets {SEASON[b]}."
-    y = para(d, 0, 1080, line, 60, W - 180, INK, w=600, center=True, max_lines=3)
-    para(d, 0, y + 30, "What does today mean for YOUR element? Swipe today's post, or find yours free at the link in bio.", 40, W - 220, MUTED, w=500, center=True, max_lines=3)
-    pill(d, W // 2, 1560, "skyandseason.com · free", F(46, 700), INK, CREAM, h=110)
-    out = os.path.join(ROOT, 'media', date); os.makedirs(out, exist_ok=True)
-    im.convert('RGB').save(f'{out}/story1.jpg', quality=90); print('story', f'{out}/story1.jpg')
+    sky_el, sea_el = STEMS[s][1], BRANCH_EL_OF(b)
+    sky_icon, sea_icon = emoji(STEM_ICON[s], 300), emoji(ANIMAL_ICON[b], 300)
+    out = os.path.join(ROOT, 'media', date); os.makedirs(out, exist_ok=True); N = 6; files = []
+    def save(im, k):
+        p = f'{out}/story{k + 1}.jpg'; im.convert('RGB').save(p, quality=90); files.append(p)
+    # 1. cover
+    im, d = frame(sky_el, dt, 0, N)
+    ctext(d, 360, "Today's Sky & Season", F(76, 700), INK)
+    for cx, kind in [(290, 'SKY'), (790, 'SEASON')]:
+        d.rounded_rectangle([cx - 230, 430, cx + 230, 1010], 48, fill=(255, 255, 255))
+        art = emoji(STEM_ICON[s], 260) if kind == 'SKY' else emoji(ANIMAL_ICON[b], 260)
+        im.alpha_composite(art, (cx - 130, 465))
+        d.text((cx, 770), kind, font=F(32, 700), fill=RED if kind == 'SKY' else GREEN, anchor='mm')
+        d.text((cx, 835), name(s) if kind == 'SKY' else BRANCH_ANIMAL[b], font=F(56, 700), fill=INK, anchor='mm')
+        d.text((cx, 900), GOD[s] if kind == 'SKY' else SEASON[b], font=F(36, 500), fill=MUTED, anchor='mm')
+        d.text((cx, 955), "the day's element" if kind == 'SKY' else "the day's animal", font=F(30, 400), fill=MUTED, anchor='mm')
+    para(d, 0, 1080, spec.get('day_line') or f'{GOD[s]} meets {SEASON[b]}.', 60, W - 180, INK, w=600, center=True, max_lines=3)
+    ctext(d, 1560, 'Tap for today in 6 stories', F(44, 600), RED)
+    save(im, 0)
+    # 2. the Sky
+    nature, good, watch = STEM_INFO[s]
+    im, d = frame(sky_el, dt, 1, N)
+    ctext(d, 350, "TODAY'S SKY", F(40, 700), RED)
+    scaled(im, sky_icon, W // 2, 560, 1)
+    ctext(d, 780, name(s), F(92, 700), INK); ctext(d, 860, GOD[s], F(48, 500), MUTED)
+    card(d, 930, 1560)
+    y = para(d, 130, 970, nature, 50, W - 260, INK, w=600, max_lines=2)
+    d.text((130, y + 30), 'GOOD FOR', font=F(34, 700), fill=GREEN); y = para(d, 130, y + 80, good.capitalize() + '.', 48, W - 260, INK, max_lines=2)
+    d.text((130, y + 30), 'WATCH OUT FOR', font=F(34, 700), fill=RED); para(d, 130, y + 80, watch.capitalize() + '.', 48, W - 260, INK, max_lines=2)
+    save(im, 1)
+    # 3. the Season
+    hm, tr, cl = BRANCH_ANIMAL[HARMONY[b]], [BRANCH_ANIMAL[(b + 4) % 12], BRANCH_ANIMAL[(b + 8) % 12]], BRANCH_ANIMAL[(b + 6) % 12]
+    im, d = frame(sea_el, dt, 2, N)
+    ctext(d, 350, "TODAY'S SEASON", F(40, 700), GREEN)
+    scaled(im, sea_icon, W // 2, 560, 1)
+    ctext(d, 780, f'{BRANCH_ANIMAL[b]} day', F(92, 700), INK); ctext(d, 860, SEASON[b], F(48, 500), MUTED)
+    card(d, 930, 1600)
+    y = para(d, 130, 970, LANDSCAPE[b], 46, W - 260, INK, w=500, max_lines=2)
+    rows = [('BEST FRIEND TODAY', hm, GREEN), ('SAME TEAM', ' & '.join(tr), GREEN), ('GO EASY', cl, RED)]
+    for lab, val, col in rows:
+        d.text((130, y + 34), lab, font=F(34, 700), fill=col); d.text((W - 130, y + 26), val, font=F(50, 700), fill=INK, anchor='ra'); y += 100
+    para(d, 130, y + 30, f'Born in a {cl} year? Keep today light.', 42, W - 260, MUTED, max_lines=2)
+    save(im, 2)
+    # 4. lucky colour / hours / direction
+    im, d = frame(sky_el, dt, 3, N)
+    ctext(d, 360, "Today's little luck", F(76, 700), INK)
+    lucky = [((b + 4) % 12), HARMONY[b], ((b + 8) % 12)]
+    lucky = sorted(set(lucky), key=lambda x: (x - 3) % 12)  # morning first
+    rows = [('artist-palette', 'COLOUR', f'Wear {COLOUR[sky_el]} to go with today’s {sky_el}.'),
+            ('alarm-clock', 'BEST HOURS', ', '.join(f'{HOURS[h]} ({BRANCH_ANIMAL[h]})' for h in lucky)),
+            ('compass', 'DIRECTION', f'Sit facing {DIRECTION[sky_el]} for focus.')]
+    y = 470
+    for icon, lab, txt in rows:
+        card(d, y, y + 300); im.alpha_composite(emoji(icon, 130), (120, y + 85))
+        d.text((290, y + 50), lab, font=F(36, 700), fill=RED)
+        para(d, 290, y + 105, txt, 44, W - 420, INK, w=500, max_lines=3); y += 340
+    para(d, 0, y + 20, 'For everyone today. Your own lucky hours are in your free chart.', 38, W - 220, MUTED, center=True, max_lines=2)
+    save(im, 3)
+    # 5. quiz
+    q, ans, why = element_link(sky_el, sea_el)
+    im, d = frame(sea_el, dt, 4, N)
+    scaled(im, emoji('red-question-mark', 220), W // 2, 470, 1)
+    ctext(d, 660, 'Quick quiz', F(84, 700), INK)
+    para(d, 0, 760, q, 60, W - 200, INK, w=600, center=True, max_lines=2)
+    y = 960
+    for o in options(ans):
+        card(d, y, y + 150); im.alpha_composite(emoji(EL_ICON[o], 100), (150, y + 25)); d.text((290, y + 75), o, font=F(60, 700), fill=INK, anchor='lm'); y += 180
+    ctext(d, y + 60, 'Guess, then tap for the answer', F(42, 600), RED)
+    save(im, 4)
+    # 6. answer + call to action
+    im, d = frame(sea_el, dt, 5, N)
+    ctext(d, 360, f'Answer: {ans}', F(84, 700), GREEN)
+    scaled(im, emoji(EL_ICON[ans], 200), W // 2 - 140, 560, 1); scaled(im, emoji(EL_ICON[sky_el], 200), W // 2 + 140, 560, 1)
+    para(d, 0, 720, why, 50, W - 200, INK, w=500, center=True, max_lines=4)
+    card(d, 1060, 1560)
+    para(d, 0, 1110, 'What does today mean for YOUR element?', 54, W - 260, INK, w=700, center=True, max_lines=2)
+    para(d, 0, 1260, "Your element is the day you were born. Find it free, with today's reading for you.", 40, W - 280, MUTED, center=True, max_lines=3)
+    pill(d, W // 2, 1420, 'skyandseason.com · free', F(46, 700), INK, CREAM, h=104)
+    save(im, 5)
+    print('stories', len(files), out)
 
 # ---------- reels ----------
 def render(kind, date):
@@ -127,7 +238,7 @@ def render(kind, date):
         intro = 1
     n = len(items); bars = intro * 2 + n * 2 + 3; total = bars * BAR; start = intro * CARD
     if kind == 'sky':
-        big = [medallion(a['art'], 360) for a in items]; today_art = medallion(SLUG[s], 420); small_today = medallion(SLUG[s], 220)
+        big = [emoji(STEM_ICON[i], 380) for i in range(10)]; today_art = emoji(STEM_ICON[s], 420); small_today = emoji(STEM_ICON[s], 240)
     else:
         big = [emoji(a['icon'], 420) for a in items]; today_art = emoji(ANIMAL_ICON[b], 440)
     mark = Image.open(f'{ASSETS}/brand/logo-mark-256.png').convert('RGBA').resize((80, 80))
@@ -217,4 +328,4 @@ def render(kind, date):
 
 if __name__ == '__main__':
     k, date = sys.argv[1], sys.argv[2]
-    story(date) if k == 'story' else render(k, date)
+    stories(date) if k == 'story' else render(k, date)
