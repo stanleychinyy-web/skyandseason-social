@@ -2,24 +2,13 @@
  "date": "2026-10-18",
  "status": "approved",
  "morning": {
-  "type": "carousel",
-  "slides": [
-   "media/2026-10-18/a1.jpg",
-   "media/2026-10-18/a2.jpg",
-   "media/2026-10-18/a3.jpg",
-   "media/2026-10-18/a4.jpg"
-  ],
-  "caption": "Sunday's messages are in 📱 Swipe to find yours.\n\nToday is Yin Wood over Earth: slow, steady, quietly growing. Good for care and catching up, not for rushing.\n\nYour element is the day you were born, not your zodiac animal. Find it free at the link in bio.\n\nWhose message was too accurate? Tag them.\n\n#skyandseason #innerconstellation #dailyhoroscope #zodiac #selfawareness #chinesezodiac #fourpillars #fiveelements #sundayvibes #singapore"
- },
- "stories": [
-  "media/2026-10-18/story1.jpg"
- ],
- "evening": {
   "type": "reel",
   "video": "media/2026-10-18/reel.mp4",
   "cover": "media/2026-10-18/cover.jpg",
-  "caption": "Your zodiac animal's lucky day this week 🍀 Pause on yours.\n\nLucky days are your animal's harmony days in the Chinese calendar. Go-easy days are its clash days. Born in Jan or early Feb? Use the animal before yours.\n\nYour animal is your Season. The element of the day you were born is your Sky. Find both free at the link in bio.\n\nTag someone born in your year 👇\n\n#skyandseason #innerconstellation #chinesezodiac #zodiacanimals #luckyday #weeklyhoroscope #chineseastrology #bazi #horoscope #singapore",
-  "series": "season-week",
-  "week": "2026-10-19"
- }
+  "caption": "Today is an Ox day 🐮 Pause on your animal.\n\nEvery day has an animal. Today's Ox meets the animal of the year you were born: Rat gets a best-friend day, Snake and Rooster a team day, Goat a clash day. Born in Jan or early Feb? Use the animal before yours.\n\nYour animal is your Season. The element of the day you were born is your Sky. Find both free at the link in bio.\n\nTag someone born in your year 👇\n\n#skyandseason #innerconstellation #chinesezodiac #zodiacanimals #dailyhoroscope #chineseastrology #bazi #horoscope #astrologyreels #singapore",
+  "series": "season-today"
+ },
+ "stories": [
+  "media/2026-10-18/story1.jpg"
+ ]
 }

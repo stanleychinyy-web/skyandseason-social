@@ -1,7 +1,8 @@
-"""Usage: python3 music.py out.m4a [transpose semitones] [melody a|b]
+"""Usage: python3 music.py out.m4a [transpose semitones] [melody a|b] [bars, default 8]
 Bright 112 bpm tune from real sampled instruments (tonejs-instruments, MIT). 8 bars, C-G-Am-F."""
 import numpy as np, subprocess, os, sys, functools
-SR = 44100; BPM = 112; BEAT = 60 / BPM; BARS = 8
+SR = 44100; BPM = 112; BEAT = 60 / BPM
+BARS = int(sys.argv[4]) if len(sys.argv) > 4 else 8
 NM = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'node_modules')
 NOTES = ['C', 'Cs', 'D', 'Ds', 'E', 'F', 'Fs', 'G', 'Gs', 'A', 'As', 'B']
 
@@ -36,7 +37,8 @@ def put(x, t, g):
     i = int(t * SR); out[i:i + len(x)] += g * x[:len(out) - i]
 
 CH = {'C': ['C3', 'G3', 'C4', 'E4', 'G4'], 'G': ['G2', 'D3', 'G3', 'B3', 'D4'], 'Am': ['A2', 'E3', 'A3', 'C4', 'E4'], 'F': ['F2', 'C3', 'F3', 'A3', 'C4']}
-PROG = ['C', 'G', 'Am', 'F', 'C', 'G', 'F', 'C']
+PHRASE = ['C', 'G', 'Am', 'F', 'C', 'G', 'F', 'C']
+PROG = [PHRASE[i % 8] for i in range(BARS)]
 STRUM = [(0, 1, 1.0), (1, 1, .7), (1.5, -1, .55), (2.5, -1, .6), (3, 1, .75), (3.5, -1, .5)]
 for bar, ch in enumerate(PROG):
     t0 = bar * 4 * BEAT
@@ -68,10 +70,14 @@ MEL_B = [
     [(0, 'F6'), (1, 'C6'), (2, 'A5'), (3, 'C6')],
     [(0, 'E6'), (0.5, 'G6'), (1, 'C7')],
 ]
-if VAR == 'b': MEL = MEL_B
-for bar, mel in enumerate(MEL):
+A, B = (MEL_B, MEL) if VAR == 'b' else (MEL, MEL_B)
+for bar in range(BARS):
+    ph = bar // 8; mel = (A if ph % 2 == 0 else B)[bar % 8]
+    final = bar == BARS - 1
+    if final: mel = [(0, 'C7'), (0.5, 'G6'), (1, 'E6'), (1.5, 'C6')]
+    elif ph % 3 == 1: mel = [x for x in mel if x[0] in (0, 2)]   # lighter middle phrase
     for beat, n in mel:
-        put(note('xylophone', M(n), 1.2), bar * 4 * BEAT + beat * BEAT, 0.30)
+        put(note('xylophone', M(n), 1.2), bar * 4 * BEAT + beat * BEAT, 0.28)
 out /= np.max(np.abs(out)) / 0.89
 dst = sys.argv[1] if len(sys.argv) > 1 else 'tune.m4a'
 subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'f32le', '-ar', str(SR), '-ac', '1', '-i', '-', '-af', 'afade=t=out:st=%.2f:d=2' % (BARS * 4 * BEAT + 0.3), '-c:a', 'aac', '-b:a', '160k', dst], input=out.tobytes(), check=True)

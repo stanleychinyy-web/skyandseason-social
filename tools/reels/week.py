@@ -1,8 +1,5 @@
-"""Facts for the two weekly reels, for the week starting on <monday>.
-  python3 tools/reels/week.py 2026-10-19 > tools/reels/weeks/2026-10-19.json
-Sky reel  (Saturday 19:00 before the week): the 10 Day Masters - lucky day and go-easy day, named by the site's ten forces.
-Season reel (Sunday 19:00 before the week): the 12 animals - lucky day (harmony) and go-easy day (clash).
-Only the 'tip' fields are left empty; the writer fills them (short, cheeky, general)."""
+"""Shared Sky & Season constants used by reel.py: animal icons and elements, the site's 12 season names,
+the ten stem gods and the ten forces. (The weekly lucky-day builder below is no longer used; reels are about the day.)"""
 import sys, os, json, datetime
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from daytype import day, daytype, name, STEMS, BRANCH_ANIMAL

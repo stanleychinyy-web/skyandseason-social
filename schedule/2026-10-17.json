@@ -2,24 +2,13 @@
  "date": "2026-10-17",
  "status": "approved",
  "morning": {
-  "type": "carousel",
-  "slides": [
-   "media/2026-10-17/a1.jpg",
-   "media/2026-10-17/a2.jpg",
-   "media/2026-10-17/a3.jpg",
-   "media/2026-10-17/a4.jpg"
-  ],
-  "caption": "Your element got a message 📱 Swipe to find yours.\n\nToday is Yang Wood over Water, and day one of a brand-new 60-day cycle. Start something small; roots before height.\n\nDon't know your element? It's the day you were born, not your zodiac animal. Find it free at the link in bio.\n\nWhich one are you? Tell us below.\n\n#skyandseason #innerconstellation #dailyhoroscope #horoscope #astrology #chineseastrology #bazi #fiveelements #newbeginnings #singapore"
- },
- "stories": [
-  "media/2026-10-17/story1.jpg"
- ],
- "evening": {
   "type": "reel",
   "video": "media/2026-10-17/reel.mp4",
   "cover": "media/2026-10-17/cover.jpg",
-  "caption": "Your Day Master's lucky day this week 🗓️ Pause on yours.\n\nYour Day Master is the element of the day you were born: your Sky. Each day this week lends it a different force, from The Muse (ideas and fun) to The Crucible (pressure).\n\nDon't know yours? Find it free at the link in bio. Tomorrow 7pm: your zodiac animal's lucky day.\n\nComment your Day Master below 👇\n\n#skyandseason #innerconstellation #daymaster #bazi #chineseastrology #fiveelements #luckyday #weeklyhoroscope #horoscope #astrologyreels #singapore",
-  "series": "sky-week",
-  "week": "2026-10-19"
- }
+  "caption": "Today's Sky is Yang Wood, The Great Tree 🌳 Pause on your Day Master.\n\nYour Day Master is the element of the day you were born. When today's element meets yours, it creates one of 10 forces, from The Sovereign (confidence) to The Crucible (pressure). Today is also day one of a new 60-day cycle.\n\nDon't know your Day Master? Find it free at the link in bio.\n\nWhich force did you get today? Comment below 👇\n\n#skyandseason #innerconstellation #daymaster #bazi #chineseastrology #fiveelements #dailyhoroscope #horoscope #astrologyreels #singapore",
+  "series": "sky-today"
+ },
+ "stories": [
+  "media/2026-10-17/story1.jpg"
+ ]
 }
