@@ -1,28 +1,34 @@
-"""Post one day's Daily Reflection (reel + stories) to Instagram via the official
+"""Post one slot of a day's Sky & Season content to Instagram via the official
 Instagram API with Instagram Login (graph.instagram.com).
 
-Reads   schedule/<date>.json   (written by Claude after Stanley's Sunday review)
-Writes  posted/<date>.json     (marker; makes every run idempotent)
+schedule/<date>.json (written by Claude after Stanley's Sunday review):
+  {"date", "status",
+   "morning": {"type": "carousel", "slides": [...jpg], "caption": "..."}   # or "reel" with "video"
+   "stories": [...jpg],                                                     # go out with the morning slot
+   "evening": {...same shape...}}                                           # optional
+  Older days use {"reel", "caption", "stories"} and still work.
+posted/<date>.json records what went out (idempotent; safe to retry).
 
-Env: IG_ACCESS_TOKEN (secret), DATE (optional YYYY-MM-DD, default = today in Singapore),
-     DRY_RUN=1 (check token + files, post nothing), MEDIA_BASE (public URL prefix),
-     PUBLISH_AT (optional HH:MM Singapore time, e.g. 06:00).
+Instagram's API cannot schedule, but an uploaded container stays valid for 24 hours. Scheduled runs
+start hours early, upload and let Instagram process everything, then wait and publish at exactly
+PUBLISH_AT. A run that starts late publishes straight away. Just before publishing, the run re-reads
+the newest schedule and markers from origin/main, so a late hold, caption edit or another run's post
+is respected.
 
-Instagram's API cannot schedule a post, but an uploaded media container stays valid for
-24 hours. So scheduled runs start hours early, upload and let Instagram process everything,
-then wait and press "publish" at exactly PUBLISH_AT. A run that starts after PUBLISH_AT
-publishes straight away: a day is never skipped. Just before publishing, the run re-reads
-the latest schedule from origin/main so a late hold, caption edit, or another run's
-posted marker is respected.
+Env: IG_ACCESS_TOKEN, SLOT=morning|evening, DATE (default today SGT), DRY_RUN, MEDIA_BASE (comma list,
+may contain {sha}), PUBLISH_AT (HH:MM Singapore).
 """
-import datetime, json, os, subprocess, sys, time, urllib.parse, urllib.request, urllib.error
+import datetime, json, os, subprocess, time, urllib.parse, urllib.request, urllib.error
 
 API = "https://graph.instagram.com/v23.0"
 TOKEN = os.environ.get("IG_ACCESS_TOKEN", "").strip()
 DRY = os.environ.get("DRY_RUN", "") in ("1", "true", "yes")
+SLOT = (os.environ.get("SLOT") or "morning").strip()
 SGT = datetime.timezone(datetime.timedelta(hours=8))
 DATE = (os.environ.get("DATE") or "").strip() or datetime.datetime.now(SGT).date().isoformat()
 PUBLISH_AT = (os.environ.get("PUBLISH_AT") or "").strip()
+
+
 def _head_sha():
     try:
         return subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
@@ -30,70 +36,80 @@ def _head_sha():
         return ""
 
 
-# MEDIA_BASE may contain {sha}: replaced by the checked-out commit, so media URLs match the files read here.
 MEDIA_BASES = [b.strip().rstrip("/").replace("{sha}", _head_sha() or "main")
                for b in os.environ["MEDIA_BASE"].split(",") if b.strip()]
-
-
-uid_global = None
+UID = None
 
 
 def call(method, path, **params):
     params["access_token"] = TOKEN
     data = urllib.parse.urlencode(params).encode()
     url = f"{API}/{path}"
-    if method == "GET":
-        req = urllib.request.Request(url + "?" + data.decode())
-    else:
-        req = urllib.request.Request(url, data=data, method="POST")
+    req = urllib.request.Request(url + "?" + data.decode()) if method == "GET" else urllib.request.Request(url, data=data, method="POST")
     try:
         with urllib.request.urlopen(req, timeout=120) as r:
             return json.load(r)
     except urllib.error.HTTPError as e:
         body = e.read().decode(errors="replace")
-        body = body.replace(TOKEN, "***") if TOKEN else body
-        raise SystemExit(f"Instagram API error {e.code} on {method} {path}: {body}")
+        raise SystemExit(f"Instagram API error {e.code} on {method} {path}: {body.replace(TOKEN, '***') if TOKEN else body}")
 
 
-def wait_ready(container_id, what):
+def wait_ready(cid, what):
     for _ in range(60):  # up to ~10 minutes
-        st = call("GET", container_id, fields="status_code,status")
-        code = st.get("status_code")
-        if code == "FINISHED":
+        st = call("GET", cid, fields="status_code,status")
+        if st.get("status_code") == "FINISHED":
             return
-        if code in ("ERROR", "EXPIRED"):
+        if st.get("status_code") in ("ERROR", "EXPIRED"):
             raise SystemExit(f"{what}: Instagram could not process the media: {st}")
         time.sleep(10)
     raise SystemExit(f"{what}: still processing after 10 minutes")
 
 
-def prepare(uid, params, what, rel):
-    """Create a media container and wait until Instagram has processed it.
-    Tries each public media host in turn if Instagram can't fetch one."""
+def with_hosts(make, what):
+    """make(base_url) -> container id; tries each public media host in turn."""
     last = None
     for base in MEDIA_BASES:
-        p = dict(params)
-        p["video_url" if params.get("media_type") == "REELS" else "image_url"] = f"{base}/{rel}"
         try:
-            c = call("POST", f"{uid}/media", **p)["id"]
-            wait_ready(c, what)
-            print(f"{what}: uploaded and processed (container {c})")
-            return c
+            cid = make(base)
+            wait_ready(cid, what)
+            print(f"{what}: uploaded and processed (container {cid})")
+            return cid
         except SystemExit as e:
             last = e
             print(f"{what}: host {base} failed ({e}); trying next host")
     raise last
 
 
-def finish(container_id, what):
-    m = call("POST", f"{uid_global}/media_publish", creation_id=container_id)["id"]
+def prepare_item(item, caption, what):
+    if item["type"] == "reel":
+        return with_hosts(lambda b: call("POST", f"{UID}/media", media_type="REELS", video_url=f"{b}/{item['video']}",
+                                         caption=caption, share_to_feed="true")["id"], what)
+    if item["type"] == "carousel":
+        def make(b):
+            kids = []
+            for s in item["slides"]:
+                k = call("POST", f"{UID}/media", image_url=f"{b}/{s}", is_carousel_item="true")["id"]
+                wait_ready(k, what + " slide")
+                kids.append(k)
+            return call("POST", f"{UID}/media", media_type="CAROUSEL", children=",".join(kids), caption=caption)["id"]
+        return with_hosts(make, what)
+    if item["type"] == "image":
+        return with_hosts(lambda b: call("POST", f"{UID}/media", image_url=f"{b}/{item['slides'][0]}", caption=caption)["id"], what)
+    raise SystemExit(f"{what}: unknown post type {item['type']}")
+
+
+def prepare_story(img, what):
+    return with_hosts(lambda b: call("POST", f"{UID}/media", media_type="STORIES", image_url=f"{b}/{img}")["id"], what)
+
+
+def finish(cid, what):
+    m = call("POST", f"{UID}/media_publish", creation_id=cid)["id"]
     link = call("GET", m, fields="permalink").get("permalink", "")
     print(f"published {what}: {m} {link}")
     return {"id": m, "permalink": link}
 
 
 def latest_from_origin(path):
-    """Read a file from the newest origin/main (None if absent or git unavailable)."""
     try:
         subprocess.run(["git", "fetch", "-q", "origin", "main"], check=True, timeout=120)
         r = subprocess.run(["git", "show", f"origin/main:{path}"], capture_output=True, text=True)
@@ -112,7 +128,7 @@ def wait_until_publish_time():
     if now >= target:
         print(f"{now:%H:%M:%S} is past {PUBLISH_AT}; publishing now")
         return
-    print(f"ready; waiting until {target:%Y-%m-%d %H:%M:%S} Singapore time ({(target-now).total_seconds()/60:.0f} min)")
+    print(f"ready; waiting until {target:%Y-%m-%d %H:%M} Singapore time ({(target - now).total_seconds() / 60:.0f} min)")
     while True:
         left = (target - datetime.datetime.now(SGT)).total_seconds()
         if left <= 0:
@@ -120,80 +136,87 @@ def wait_until_publish_time():
         time.sleep(min(left, 300) if left > 1 else 0.2)
 
 
+def normalise(s):
+    if "reel" in s and "morning" not in s:  # older schedule shape
+        s["morning"] = {"type": "reel", "video": s["reel"], "caption": s.get("caption", "")}
+    return s
+
+
+def files_of(item):
+    return [item["video"]] if item["type"] == "reel" else item["slides"]
+
+
 def main():
+    global UID
     if not TOKEN:
         raise SystemExit("IG_ACCESS_TOKEN secret is missing")
     me = call("GET", "me", fields="user_id,username")
-    global uid_global
-    uid = uid_global = me["user_id"]
-    print(f"account @{me.get('username')} ({uid}); date {DATE}")
+    UID = me["user_id"]
+    print(f"account @{me.get('username')} ({UID}); date {DATE}; slot {SLOT}")
 
     sched_path = f"schedule/{DATE}.json"
     if not os.path.exists(sched_path):
-        print(f"no {sched_path}; nothing to post")
-        return
-    s = json.load(open(sched_path, encoding="utf-8"))
-    status = s.get("status", "pending")
-    if status not in ("pending", "approved"):
-        print(f"status is '{status}'; not posting")
-        return
+        print(f"no {sched_path}; nothing to post"); return
+    s = normalise(json.load(open(sched_path, encoding="utf-8")))
+    if s.get("status", "pending") not in ("pending", "approved"):
+        print(f"status is '{s.get('status')}'; not posting"); return
+    item = s.get(SLOT)
+    stories = s.get("stories", []) if SLOT == "morning" else []
+    if not item and not stories:
+        print(f"nothing scheduled for the {SLOT} slot"); return
+    post_key = "reel" if (item and item["type"] == "reel") else SLOT
+    caption = (item or {}).get("caption", "").strip()
+    if item and (not caption or "#" not in caption):
+        raise SystemExit("caption or hashtags missing; refusing to post (house rule)")
+    missing = [p for p in (files_of(item) if item else []) + stories if not os.path.exists(p)]
+    if missing:
+        raise SystemExit(f"missing media files: {missing}")
     marker_path = f"posted/{DATE}.json"
     done = json.load(open(marker_path)) if os.path.exists(marker_path) else {}
-    caption = s["caption"].strip()
-    if not caption or "#" not in caption:
-        raise SystemExit("caption or hashtags missing; refusing to post (house rule)")
-
-    for p in [s["reel"]] + s.get("stories", []):
-        if not os.path.exists(p):
-            raise SystemExit(f"missing media file {p}")
     if DRY:
-        print("dry run OK: token works, schedule and media present:", s["reel"], s.get("stories"))
-        print("public reel URLs:", [f"{b}/{s['reel']}" for b in MEDIA_BASES])
-        print("publish time:", PUBLISH_AT or "immediately")
-        return
+        print("dry run OK:", post_key, item and item["type"], files_of(item) if item else [], "stories:", stories)
+        print("publish time:", PUBLISH_AT or "immediately"); return
 
     # 1. Upload everything early and let Instagram process it.
     todo = []
-    if not done.get("reel"):
-        todo.append(("reel", {"media_type": "REELS", "caption": caption, "share_to_feed": "true"}, s["reel"]))
-    for i, img in enumerate(s.get("stories", []), 1):
+    if item and not done.get(post_key):
+        todo.append((post_key, prepare_item(item, caption, f"{SLOT} {item['type']}")))
+    for i, img in enumerate(stories, 1):
         if not done.get(f"story{i}"):
-            todo.append((f"story{i}", {"media_type": "STORIES"}, img))
+            todo.append((f"story{i}", prepare_story(img, f"story{i}")))
     if not todo:
-        print("already posted for", DATE)
-        return
-    containers = {key: prepare(uid, params, key, rel) for key, params, rel in todo}
+        print("already posted for", DATE, SLOT); return
 
     # 2. Wait for the publish time.
     wait_until_publish_time()
 
-    # 3. Last check against the newest repo state (hold set late? caption edited? already posted?)
+    # 3. Last check against the newest repo state.
     if PUBLISH_AT:
         remote_done = latest_from_origin(marker_path)
         if remote_done:
             done.update(remote_done)
             todo = [t for t in todo if not remote_done.get(t[0])]
             if not todo:
-                print("another run already posted today; stopping")
-                return
+                print("another run already posted this slot; stopping"); return
         latest = latest_from_origin(sched_path)
         if latest:
+            latest = normalise(latest)
             if latest.get("status", "pending") not in ("pending", "approved"):
-                print(f"status changed to '{latest.get('status')}' since this run started; not posting")
-                return
-            new_caption = (latest.get("caption") or "").strip()
-            if any(t[0] == "reel" for t in todo) and new_caption and "#" in new_caption and new_caption != caption:
-                print("caption was edited since upload; re-uploading reel with the new caption")
-                containers["reel"] = prepare(uid, {"media_type": "REELS", "caption": new_caption,
-                                                   "share_to_feed": "true"}, "reel", s["reel"])
+                print(f"status changed to '{latest.get('status')}'; not posting"); return
+            new_cap = ((latest.get(SLOT) or {}).get("caption") or "").strip()
+            if item and new_cap and "#" in new_cap and new_cap != caption and any(k == post_key for k, _ in todo):
+                print("caption was edited since upload; re-uploading with the new caption")
+                todo = [(k, prepare_item(item, new_cap, f"{SLOT} {item['type']}") if k == post_key else c) for k, c in todo]
 
-    # 4. Publish: reel first, then stories in order.
-    for key, _, _ in todo:
-        done[key] = finish(containers[key], key)
-        if key == "reel":
-            done["postedAt"] = datetime.datetime.now(SGT).isoformat(timespec="seconds")
+    # 4. Publish: the post first, then stories in order.
+    for key, cid in todo:
+        done[key] = finish(cid, key)
+        if key == post_key:
+            done.setdefault("postedAt", datetime.datetime.now(SGT).isoformat(timespec="seconds"))
+            if SLOT == "evening":
+                done["eveningAt"] = datetime.datetime.now(SGT).isoformat(timespec="seconds")
         json.dump(done, open(marker_path, "w"), indent=1)
-    print("all done for", DATE)
+    print("all done for", DATE, SLOT)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Speak-up",
+  "line": "Say the thing, nicely. Staying quiet costs more today."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Joy",
+  "line": "Your good mood is contagious today. Spread it in the group chat."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Rival",
+  "line": "Someone will eye your seat today. Stand your ground, politely."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Friend",
+  "line": "Team effort day. Just don't turn the group chat into a competition."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Support",
+  "line": "Learning sticks today. Read the thing you saved three weeks ago."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Insight",
+  "line": "You want alone time today. Allowed. Reply to messages later."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Recognition",
+  "line": "Your reputation goes up today. Don't spend it all on one hot take."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Pressure",
+  "line": "Tough conversation day. Keep it short, kind and done."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Steady-money",
+  "line": "Practical beats exciting today. Pick the reliable option."
+ },
+ {
+  "element": "Yin Water",
+  "type": "Opportunity",
+  "line": "Someone new could be useful today. Save their number, skip the impulse buy."
+ }
+]

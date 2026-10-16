@@ -1,11 +1,17 @@
 {
  "date": "2026-10-17",
  "status": "approved",
- "caption": "The Chinese calendar runs in 60-day cycles, and today the count starts again from one.\n\nSaturday’s energy is Yang Wood over Water: a tall tree drinking deep water. It’s the classic day for beginnings. Start small, and let the roots come before the height.\n\n3 small things for everyone today:\n1. Start one small habit\n2. Spend ten minutes among trees\n3. Write one goal for the next 60 days\n\nHow today meets your own chart is different. Your personal tips are free at the link in bio.\n\n#skyandseason #innerconstellation #dailyreflection #astrology #zodiacsigns #personalgrowth #lunarcalendar #chineseastrology #bazi #fiveelements #newbeginnings",
- "reel": "media/2026-10-17/reel.mp4",
+ "morning": {
+  "type": "carousel",
+  "slides": [
+   "media/2026-10-17/a1.jpg",
+   "media/2026-10-17/a2.jpg",
+   "media/2026-10-17/a3.jpg",
+   "media/2026-10-17/a4.jpg"
+  ],
+  "caption": "Your element got a message 📱 Swipe to find yours.\n\nToday is Yang Wood over Water, and day one of a brand-new 60-day cycle. Start something small; roots before height.\n\nDon't know your element? It's the day you were born, not your zodiac animal. Find it free at the link in bio.\n\nWhich one are you? Tell us below.\n\n#skyandseason #innerconstellation #dailyhoroscope #horoscope #astrology #chineseastrology #bazi #fiveelements #newbeginnings #singapore"
+ },
  "stories": [
-  "media/2026-10-17/story1.jpg",
-  "media/2026-10-17/story2.jpg",
-  "media/2026-10-17/story3.jpg"
+  "media/2026-10-17/story1.jpg"
  ]
 }

@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Rival",
+  "line": "Friendly competition today. Win it, then buy the kopi."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Friend",
+  "line": "Your people show up today. Make the group plan before someone else does."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Support",
+  "line": "Someone older has the answer you need. Call them."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Insight",
+  "line": "Trust the weird hunch today. Just don't explain it to everyone yet."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Recognition",
+  "line": "Be on time today. Someone important is counting."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Pressure",
+  "line": "Someone tests your patience today. Count to five, then win calmly."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Steady-money",
+  "line": "Small, boring tasks pay off today. Do the admin."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Opportunity",
+  "line": "Money finds a side door today. Eyes open, wallet closed."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Speak-up",
+  "line": "Your opinions are spicy today. Maybe sleep on that email."
+ },
+ {
+  "element": "Yin Water",
+  "type": "Joy",
+  "line": "Make something just because. It's good for you."
+ }
+]

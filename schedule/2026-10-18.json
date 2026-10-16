@@ -1,11 +1,17 @@
 {
  "date": "2026-10-18",
  "status": "approved",
- "caption": "Some weeks the progress is all underground. It still counts.\n\nSunday’s energy is Yin Wood over Earth: a vine in cool soil, quietly holding on. Gentle, patient, resilient. Good for care and slow things; results may not show yet.\n\n3 small things for everyone today:\n1. Water a plant, or bring one home\n2. Share a slow meal\n3. Plan next week in pencil\n\nHow today meets your own chart is different. Your personal tips are free at the link in bio.\n\n#skyandseason #innerconstellation #dailyreflection #horoscope #selfdiscovery #seasonsoflife #fengshui #chinesemetaphysics #fiveelements #sundayreset",
- "reel": "media/2026-10-18/reel.mp4",
+ "morning": {
+  "type": "carousel",
+  "slides": [
+   "media/2026-10-18/a1.jpg",
+   "media/2026-10-18/a2.jpg",
+   "media/2026-10-18/a3.jpg",
+   "media/2026-10-18/a4.jpg"
+  ],
+  "caption": "Sunday's messages are in 📱 Swipe to find yours.\n\nToday is Yin Wood over Earth: slow, steady, quietly growing. Good for care and catching up, not for rushing.\n\nYour element is the day you were born, not your zodiac animal. Find it free at the link in bio.\n\nWhose message was too accurate? Tag them.\n\n#skyandseason #innerconstellation #dailyhoroscope #zodiac #selfawareness #chinesezodiac #fourpillars #fiveelements #sundayvibes #singapore"
+ },
  "stories": [
-  "media/2026-10-18/story1.jpg",
-  "media/2026-10-18/story2.jpg",
-  "media/2026-10-18/story3.jpg"
+  "media/2026-10-18/story1.jpg"
  ]
 }

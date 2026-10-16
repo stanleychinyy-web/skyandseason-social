@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Friend",
+  "line": "Someone agrees with everything you say today. Suspicious, but enjoy it."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Rival",
+  "line": "Someone wants what you want. Share the credit, not the last piece of chicken."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Insight",
+  "line": "Your shower thought is the good one. Write it down before you dry off."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Support",
+  "line": "Ask for help today. Yes, you. Nothing bad will happen."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Pressure",
+  "line": "Today pushes back. Do the hardest thing first and the rest gets easy."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Recognition",
+  "line": "Someone notices your effort today. Act surprised."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Opportunity",
+  "line": "Say yes to the random invite. Read the fine print first."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Steady-money",
+  "line": "Not a shopping day. A checking-your-bank-app day."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Joy",
+  "line": "Cook something, share something. Calories don't count today. (They do.)"
+ },
+ {
+  "element": "Yin Water",
+  "type": "Speak-up",
+  "line": "You're right today. Say it kindly and it actually lands."
+ }
+]

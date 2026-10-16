@@ -6,11 +6,20 @@ on:
     - cron: "0 17 * * *"    # 01:00 Singapore
     - cron: "0 19 * * *"    # 03:00 Singapore (second early start)
     - cron: "30 22 * * *"   # 06:30 Singapore (safety net: posts at once if nothing went out)
+    # Evening slot (series posts, Mon/Wed/Fri): publishes at exactly 19:00 Singapore time.
+    - cron: "0 6 * * *"     # 14:00 Singapore (early start)
+    - cron: "0 8 * * *"     # 16:00 Singapore (second early start)
+    - cron: "30 11 * * *"   # 19:30 Singapore (safety net)
   workflow_dispatch:
     inputs:
       date:
         description: "Date to post (YYYY-MM-DD). Blank = today in Singapore."
         required: false
+      slot:
+        description: "morning (daily reading + story) or evening (series post)"
+        type: choice
+        options: [morning, evening]
+        default: morning
       dry_run:
         description: "Check only, post nothing"
         type: boolean
@@ -31,13 +40,16 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           DATE: ${{ inputs.date }}
           DRY_RUN: ${{ inputs.dry_run }}
-          PUBLISH_AT: ${{ github.event_name == 'schedule' && '06:00' || '' }}
+          SLOT: ${{ github.event_name == 'schedule' && ((github.event.schedule == '0 6 * * *' || github.event.schedule == '0 8 * * *' || github.event.schedule == '30 11 * * *') && 'evening' || 'morning') || inputs.slot || 'morning' }}
+          PUBLISH_AT: ${{ github.event_name == 'schedule' && ((github.event.schedule == '0 6 * * *' || github.event.schedule == '0 8 * * *' || github.event.schedule == '30 11 * * *') && '19:00' || '06:00') || '' }}
           MEDIA_BASE: https://raw.githubusercontent.com/${{ github.repository }}/{sha},https://cdn.jsdelivr.net/gh/${{ github.repository }}@{sha}
         run: python3 scripts/post.py
       - name: Save posted marker
         if: always()
+        env:
+          SLOT_NAME: ${{ github.event_name == 'schedule' && ((github.event.schedule == '0 6 * * *' || github.event.schedule == '0 8 * * *' || github.event.schedule == '30 11 * * *') && 'evening' || 'morning') || inputs.slot || 'morning' }}
         run: |
           git config user.name "Daily Reflection bot"
           git config user.email "actions@users.noreply.github.com"
           git add posted || true
-          git diff --cached --quiet || (git commit -m "Posted $(TZ=Asia/Singapore date +%F)" && (git push || (git pull --rebase -q origin main && git push)))
+          git diff --cached --quiet || (git commit -m "Posted $(TZ=Asia/Singapore date +%F) ${SLOT_NAME}" && (git push || (git pull --rebase -q origin main && git push)))

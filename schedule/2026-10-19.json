@@ -1,11 +1,28 @@
 {
  "date": "2026-10-19",
  "status": "approved",
- "caption": "If you’ve been waiting for a good week to start something, this Monday is a strong one.\n\nMonday’s energy is Yang Fire over Wood: sunrise over a young forest. Warm, bright, visible. Wood feeds the fire, so there’s fuel for big moves. The only catch is saying yes to too much.\n\n3 small things for everyone today:\n1. Do your hardest task before lunch\n2. Step outside in daylight early\n3. Share your idea out loud\n\nHow today meets your own chart is different. Your personal tips are free at the link in bio.\n\n#skyandseason #innerconstellation #dailyreflection #astrology #zodiac #astrologer #selfawareness #bazi #chinesezodiac #fiveelements #mondaymotivation",
- "reel": "media/2026-10-19/reel.mp4",
+ "morning": {
+  "type": "carousel",
+  "slides": [
+   "media/2026-10-19/a1.jpg",
+   "media/2026-10-19/a2.jpg",
+   "media/2026-10-19/a3.jpg",
+   "media/2026-10-19/a4.jpg"
+  ],
+  "caption": "Monday, but make it personal 📱 Swipe to find your element's message.\n\nToday is Yang Fire over Wood: bright, bold and full of energy. Great for starting things, easy to overcommit.\n\nDon't know your element? Find it free at the link in bio.\n\nComment your element and how today is going.\n\n#skyandseason #innerconstellation #dailyhoroscope #horoscope #zodiacsigns #mondaymotivation #bazi #chineseastrology #fiveelements #sgig"
+ },
  "stories": [
-  "media/2026-10-19/story1.jpg",
-  "media/2026-10-19/story2.jpg",
-  "media/2026-10-19/story3.jpg"
- ]
+  "media/2026-10-19/story1.jpg"
+ ],
+ "evening": {
+  "type": "carousel",
+  "slides": [
+   "media/2026-10-19/b1.jpg",
+   "media/2026-10-19/b2.jpg",
+   "media/2026-10-19/b3.jpg",
+   "media/2026-10-19/b4.jpg"
+  ],
+  "caption": "Tag the one who chopes with tissue 😂\n\nEvery element has its hawker centre habit. Which one is you, and which one is your makan kaki?\n\nYour element comes from the day you were born, not your zodiac animal. Find yours free at the link in bio.\n\n#skyandseason #innerconstellation #zodiacmemes #astrologymemes #singapore #sgfood #hawkerculture #chineseastrology #fiveelements #bazi",
+  "series": "hawker-centre"
+ }
 }

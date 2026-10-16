@@ -1,11 +1,17 @@
 {
  "date": "2026-10-20",
  "status": "approved",
- "caption": "The quiet ones are often the warmest people in the room.\n\nTuesday’s energy is Yin Fire over Wood: a lantern in a spring garden. Gentle light, creative, a little tender. Good for kindness and making things. Feelings sit close to the surface today, yours and other people’s.\n\n3 small things for everyone today:\n1. Send someone a thank-you\n2. Make something with your hands\n3. Dim the lights tonight\n\nHow today meets your own chart is different. Your personal tips are free at the link in bio.\n\n#skyandseason #innerconstellation #dailyreflection #horoscope #zodiacsigns #personalgrowth #knowyourself #chineseastrology #fourpillars #fiveelements",
- "reel": "media/2026-10-20/reel.mp4",
+ "morning": {
+  "type": "carousel",
+  "slides": [
+   "media/2026-10-20/a1.jpg",
+   "media/2026-10-20/a2.jpg",
+   "media/2026-10-20/a3.jpg",
+   "media/2026-10-20/a4.jpg"
+  ],
+  "caption": "Your element got a message 📱 Swipe to find yours.\n\nToday is Yin Fire over Wood: warm, creative, a little tender. Good for kindness and making things.\n\nYour element is the day you were born, not your zodiac animal. Find it free at the link in bio.\n\nSend this to someone whose message fits a bit too well.\n\n#skyandseason #innerconstellation #dailyhoroscope #astrology #personalgrowth #chinesemetaphysics #fourpillars #fiveelements #knowyourself #singapore"
+ },
  "stories": [
-  "media/2026-10-20/story1.jpg",
-  "media/2026-10-20/story2.jpg",
-  "media/2026-10-20/story3.jpg"
+  "media/2026-10-20/story1.jpg"
  ]
 }

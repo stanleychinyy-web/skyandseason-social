@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Joy",
+  "line": "Treat yourself, a little. Bubble tea counts as self-care today."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Speak-up",
+  "line": "Ideas flow, rules feel annoying. Pick your battles."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Friend",
+  "line": "You'll bump into someone exactly like you. One of you has to compromise."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Rival",
+  "line": "Watch the wallet: group dinners get expensive fast today."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Insight",
+  "line": "Great day to learn something random. Bad day for small talk."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Support",
+  "line": "Rest counts as productive today. Nap without guilt."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Pressure",
+  "line": "Deadline energy today. Good news: you work best under it."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Recognition",
+  "line": "Good day for anything official: forms, meetings, asking for the raise."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Opportunity",
+  "line": "Good day to sell, pitch or hustle. Bad day to gamble."
+ },
+ {
+  "element": "Yin Water",
+  "type": "Steady-money",
+  "line": "Good day to pay back, pay off or plan ahead."
+ }
+]
