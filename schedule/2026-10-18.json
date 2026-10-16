@@ -13,5 +13,13 @@
  },
  "stories": [
   "media/2026-10-18/story1.jpg"
- ]
+ ],
+ "evening": {
+  "type": "reel",
+  "video": "media/2026-10-18/reel.mp4",
+  "cover": "media/2026-10-18/cover.jpg",
+  "caption": "Your zodiac animal's lucky day this week 🍀 Pause on yours.\n\nLucky days are your animal's harmony days in the Chinese calendar. Go-easy days are its clash days. Born in Jan or early Feb? Use the animal before yours.\n\nYour animal is your Season. The element of the day you were born is your Sky. Find both free at the link in bio.\n\nTag someone born in your year 👇\n\n#skyandseason #innerconstellation #chinesezodiac #zodiacanimals #luckyday #weeklyhoroscope #chineseastrology #bazi #horoscope #singapore",
+  "series": "season-week",
+  "week": "2026-10-19"
+ }
 }

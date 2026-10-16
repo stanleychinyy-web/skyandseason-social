@@ -82,8 +82,11 @@ def with_hosts(make, what):
 
 def prepare_item(item, caption, what):
     if item["type"] == "reel":
-        return with_hosts(lambda b: call("POST", f"{UID}/media", media_type="REELS", video_url=f"{b}/{item['video']}",
-                                         caption=caption, share_to_feed="true")["id"], what)
+        def make(b):
+            extra = {"cover_url": f"{b}/{item['cover']}"} if item.get("cover") else {}
+            return call("POST", f"{UID}/media", media_type="REELS", video_url=f"{b}/{item['video']}",
+                        caption=caption, share_to_feed="true", **extra)["id"]
+        return with_hosts(make, what)
     if item["type"] == "carousel":
         def make(b):
             kids = []
@@ -143,7 +146,7 @@ def normalise(s):
 
 
 def files_of(item):
-    return [item["video"]] if item["type"] == "reel" else item["slides"]
+    return ([item["video"]] + ([item["cover"]] if item.get("cover") else [])) if item["type"] == "reel" else item["slides"]
 
 
 def main():
@@ -164,7 +167,7 @@ def main():
     stories = s.get("stories", []) if SLOT == "morning" else []
     if not item and not stories:
         print(f"nothing scheduled for the {SLOT} slot"); return
-    post_key = "reel" if (item and item["type"] == "reel") else SLOT
+    post_key = "reel" if (SLOT == "morning" and item and item["type"] == "reel") else SLOT
     caption = (item or {}).get("caption", "").strip()
     if item and (not caption or "#" not in caption):
         raise SystemExit("caption or hashtags missing; refusing to post (house rule)")
