@@ -1,0 +1,141 @@
+{
+ "series": "earth-discovery",
+ "plan": "production/EARTH_DISCOVERY_PLAN.md",
+ "daily_credit_cap": 80,
+ "post_time_sgt": "19:00 (evening slot)",
+ "statuses": "todo -> made (in repo, evening.status=review) -> approved (evening.status removed/approved) -> posted; or changes",
+ "reels": [
+  {
+   "id": "SKY01",
+   "character": "sky",
+   "title": "A New World",
+   "element": null,
+   "dev_date": "2026-10-19",
+   "post_date": "2026-10-25",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": ""
+  },
+  {
+   "id": "SEA01",
+   "character": "season",
+   "title": "A World to Explore",
+   "element": null,
+   "dev_date": "2026-10-20",
+   "post_date": "2026-10-27",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": ""
+  },
+  {
+   "id": "SKY02",
+   "character": "sky",
+   "title": "The Whisper of Rain",
+   "element": "Gui Water",
+   "dev_date": "2026-10-21",
+   "post_date": "2026-10-29",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": ""
+  },
+  {
+   "id": "SEA02",
+   "character": "season",
+   "title": "The Mighty Ocean",
+   "element": "Ren Water",
+   "dev_date": "2026-10-22",
+   "post_date": "2026-11-01",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": ""
+  },
+  {
+   "id": "SKY03",
+   "character": "sky",
+   "title": "The First Bloom",
+   "element": "Yi Wood",
+   "dev_date": "2026-10-23",
+   "post_date": "2026-11-03",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": ""
+  },
+  {
+   "id": "SEA03",
+   "character": "season",
+   "title": "The Tree That Reaches the Sky",
+   "element": "Jia Wood",
+   "dev_date": "2026-10-24",
+   "post_date": "2026-11-05",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": ""
+  },
+  {
+   "id": "SKY04",
+   "character": "sky",
+   "title": "A Light in the Darkness",
+   "element": "Ding Fire",
+   "dev_date": "2026-10-25",
+   "post_date": "2026-11-08",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": ""
+  },
+  {
+   "id": "SEA04",
+   "character": "season",
+   "title": "The Radiant Sun",
+   "element": "Bing Fire",
+   "dev_date": "2026-10-26",
+   "post_date": "2026-11-10",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": ""
+  },
+  {
+   "id": "SKY05",
+   "character": "sky",
+   "title": "The Gentle Earth",
+   "element": "Ji Earth",
+   "dev_date": "2026-10-27",
+   "post_date": "2026-11-12",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": ""
+  },
+  {
+   "id": "SEA05",
+   "character": "season",
+   "title": "The Unshakable Mountain",
+   "element": "Wu Earth",
+   "dev_date": "2026-10-28",
+   "post_date": "2026-11-15",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": ""
+  },
+  {
+   "id": "SKY06",
+   "character": "sky",
+   "title": "The Hidden Jewel",
+   "element": "Xin Metal",
+   "dev_date": "2026-10-29",
+   "post_date": "2026-11-17",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": ""
+  },
+  {
+   "id": "SEA06",
+   "character": "season",
+   "title": "The Strength Within Iron",
+   "element": "Geng Metal",
+   "dev_date": "2026-10-30",
+   "post_date": "2026-11-19",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": ""
+  }
+ ]
+}

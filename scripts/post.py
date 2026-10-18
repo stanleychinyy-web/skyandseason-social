@@ -164,6 +164,9 @@ def main():
     if s.get("status", "pending") not in ("pending", "approved"):
         print(f"status is '{s.get('status')}'; not posting"); return
     item = s.get(SLOT)
+    if item and item.get("status") in ("review", "hold", "changes"):
+        print(f"{SLOT} item is '{item.get('status')}' (waiting for Stanley's approval); not posting it")
+        item = None
     stories = s.get("stories", []) if SLOT == "morning" else []
     if not item and not stories:
         print(f"nothing scheduled for the {SLOT} slot"); return
@@ -206,6 +209,10 @@ def main():
             latest = normalise(latest)
             if latest.get("status", "pending") not in ("pending", "approved"):
                 print(f"status changed to '{latest.get('status')}'; not posting"); return
+            if (latest.get(SLOT) or {}).get("status") in ("review", "hold", "changes") and any(k == post_key for k, _ in todo):
+                print(f"{SLOT} item was put on hold; skipping it")
+                todo = [t for t in todo if t[0] != post_key]
+                if not todo: return
             new_cap = ((latest.get(SLOT) or {}).get("caption") or "").strip()
             if item and new_cap and "#" in new_cap and new_cap != caption and any(k == post_key for k, _ in todo):
                 print("caption was edited since upload; re-uploading with the new caption")
