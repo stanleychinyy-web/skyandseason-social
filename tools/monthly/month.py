@@ -11,6 +11,9 @@ HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.abspath(os.pat
 sys.path.insert(0, os.path.join(ROOT, 'tools')); sys.path.insert(0, os.path.join(ROOT, 'tools', 'reels'))
 from daytype import daytype, name, STEMS, BRANCH_ANIMAL, BRANCH_EL
 from week import GOD, SEASON, FORCE
+INNER = ['The Steadfast Pillar', 'The Resilient Weaver', 'The Luminary', "The Alchemist's Flame", 'The Silent Sentinel', 'The Nurturing Garden', "The Arbiter's Blade", 'The Refined Artisan', 'The Boundless Tide', 'The Pervasive Mist']
+INNER_SHORT = ['Unwavering conviction and principled leadership', 'Adaptable strength that bends and finds a way round', 'Boundless generosity and warmth', 'Intense, transformative focus', 'Steady, protective, immovable', 'Unconditional empathy and care, fertile soil for others', 'Decisive clarity that cuts to what matters', 'Refined precision and craft', 'Vast, free-flowing curiosity', 'Quiet, pervasive intuition']
+STAGE = ['Seeding', 'Gestating', 'Sprouting', 'Exposing', 'Bracing', 'Reaching', 'Culminating', 'Ripening', 'Weathering', 'Releasing', 'Composting', 'Dissolving']
 from reel import relation, GLOSS, LANDSCAPE, STEM_INFO, HOURS
 SGT = datetime.timezone(datetime.timedelta(hours=8))
 HAN_STEMS = '甲乙丙丁戊己庚辛壬癸'; HAN_BRANCHES = '子丑寅卯辰巳午未申酉戌亥'
@@ -76,7 +79,7 @@ def build(ym):
     stem_el, br_el = STEMS[s][1], BRANCH_EL[b]
     return dict(
         gregorian_month=datetime.date(y, m, 1).strftime('%B %Y'), post_date=(datetime.date(y, m, 1) - datetime.timedelta(1)).isoformat(),
-        bazi_month=dict(pillar=after, stem=name(s), stem_god=GOD[s], stem_nature=STEM_INFO[s][0], stem_good_for=STEM_INFO[s][1], stem_watch=STEM_INFO[s][2],
+        bazi_month=dict(pillar=after, stem=name(s), stem_inner=INNER[s], stem_inner_short=INNER_SHORT[s], season_stage=STAGE[b], stem_god=GOD[s], stem_nature=STEM_INFO[s][0], stem_good_for=STEM_INFO[s][1], stem_watch=STEM_INFO[s][2],
                         branch=BRANCH_ANIMAL[b], branch_element=br_el, season=SEASON[b], landscape=LANDSCAPE[b], hidden_stems=hid,
                         polarity=STEMS[s][0], stem_vs_branch=el_rel(stem_el, br_el),
                         best_friend=BRANCH_ANIMAL[[1, 0, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2][b]], team=[BRANCH_ANIMAL[(b + 4) % 12], BRANCH_ANIMAL[(b + 8) % 12]],

@@ -42,6 +42,7 @@ A separate, premium monthly series, built to reach new people (it may be boosted
   - Pillars come from **lunar-lite**, the engine skyandseason.com uses.
   - The solar-term minute comes from **astronomy-engine** (`tools/monthly/month.py`).
   - Finding (18 Oct): lunar-lite only works in 2-hour blocks and switches months about 1–2 hours after the true solar term (Li Dong 2026: astronomical 17:52 SGT; the engine switches in its 19:00–21:00 block). For the minute, trust the astronomy.
+- data.json now carries the Inner names too: `bazi_month.stem_inner` (e.g. "The Nurturing Garden"), `stem_inner_short`, `season` (e.g. "The Bare Ground") and `season_stage`.
 - Only state relationships that are in data.json, or the standard five-element symbolism:
   - Water = wealth and flow.
   - Earth stores and contains.
@@ -58,10 +59,11 @@ A separate, premium monthly series, built to reach new people (it may be boosted
   - Must include #skyandseason and #innerconstellation.
   - End with a comment prompt.
   - At most one emoji per paragraph.
-- **Look (v2, 18 Oct; Stanley rejected v1 as "primary school"):** premium and dark. Deep indigo with a violet glow; the site's own oil paintings (`tools/assets/art/stems/<slug>.jpg` and `art/branches/<slug>.jpg`, the same art skyandseason.com shows) for the month's element and animal, framed with a thin gold line and a slow push-in; a blurred echo of the painting as atmosphere behind the type; Newsreader serif in soft white, gold kickers and hairline rules; gold dust. **No emoji, no cartoon icons, no stickers, no title cards.** Opens on the approved Sky & Season orbit shot; closes on a clean indigo page with the logo mark, gold wordmark and website.
+- **Look (v2, 18 Oct; Stanley rejected v1 as "primary school"):** premium and dark. Deep indigo with a violet glow; the site's own Inner Constellation oil paintings (`tools/assets/art/inner-stems/<slug>.jpg` for the element's essence, `art/inner-branches/<slug>.jpg` for the season; the Classic sets in `art/stems` and `art/branches` are not used unless the lens is switched) for the month's element and season, framed with a thin gold line and a slow push-in; a blurred echo of the painting as atmosphere behind the type; Newsreader serif in soft white, gold kickers and hairline rules; gold dust. **No emoji, no cartoon icons, no stickers, no title cards.** Opens on the approved Sky & Season orbit shot; closes on a clean indigo page with the logo mark, gold wordmark and website.
 - **Music:** a warm, bright bed of real sampled harp, piano and flute (`tools/monthly/music.py`, MIT samples, advert-safe). Never dark music. Stanley may swap in a trending sound in the app.
 
 ### Copy rules (v2, binding)
+- **One lens, both halves (Stanley, 18 Oct: "If the heaven pillar is Inner Constellation, the earth branch also has to be Inner. If not it is confusing").** The reel, the stories and the body of the report use the **Inner Constellation lens for both the element and the season**: the stem's essence name and painting (Yin Earth = "The Nurturing Garden", `tools/assets/art/inner-stems/<slug>.jpg`) and the branch's season name and painting ("The Bare Ground", `tools/assets/art/inner-branches/<slug>.jpg`). **No animals, no stem-god names ("The Fertile Field"), no Chinese characters on screen.** The Classic names (pillar 己亥, The Fertile Field, the Pig, the twelve animals' relations) live only in the report's final section "The classic view, if you know the animals". The renderer reads `"lens"` from content.json and defaults to `inner`; `classic` exists only in case Stanley ever asks for that look, and then it must be classic on both halves.
 - **Every concept is explained in the sentence it appears in.** "Yin Earth" is always followed by what it is in everyday words. The labels "The month's element · what we call the Sky" and "The month's animal · what we call the Season" are drawn under the names.
 - **No ten-god / force names in the reel or stories** (no "The Steward", "The Muse"…). The reel's personal part is **five element groups** ("Wood people: a money month…"), which is honest because both yin and yang Day Masters of an element get the same family of force. The ten-force detail lives in the website report, and even there the plain meaning comes before the name ("a steady-money force, which we call The Steward").
 - The word "Day Master" is not used on screen; it is "your element: the day you were born".
@@ -71,8 +73,8 @@ A separate, premium monthly series, built to reach new people (it may be boosted
 | --- | --- | --- |
 | 0–5.7 s | hook | 2 lines, each ≤ 30 characters |
 | 5.7–10 s | intro | line1 ≤ 44 ("Every month has its own element."), line2 ≤ 44 ("November's is Yin Earth.") |
-| 10–16 s | sky | sky_name ≤ 24, sky_label ≤ 46, sky_plain ≤ 64 (the painting of the month's stem) |
-| 16–21 s | season | season_name ≤ 24, season_label ≤ 46, season_plain ≤ 64 (the painting of the month's animal) |
+| 10–16 s | sky | sky_name ≤ 24 (the Inner essence name, e.g. "The Nurturing Garden"), sky_label ≤ 46, sky_plain ≤ 64 ("Yin Earth: soft, patient soil…") |
+| 16–21 s | season | season_name ≤ 24 (the Inner season name, e.g. "The Bare Ground"), season_label ≤ 46, season_plain ≤ 64 |
 | 21–27 s | meaning | image ≤ 45 (one picture line), meaning ≤ 96 |
 | 27–40 s | themes | 3 × {area, headline ≤ 28, line ≤ 86} |
 | 40–49 s | opportunity, challenge | each {headline ≤ 30, line ≤ 86, tip ≤ 48} |
@@ -96,9 +98,9 @@ Instagram API stories cannot carry stickers.
   4. Five Element interactions (month stem vs branch, month vs year).
   5. Career and wealth.
   6. Relationships and personal development.
-  7. Twelve zodiac animals.
-  8. Your Day Master this month: the concept first, then the five element groups, then all ten with the plain meaning before the force name.
-  9. Practical guidance (5–7 bullets).
+  7. Your element this month: the concept first, then the five element groups, then all ten with the plain meaning before the force name.
+  8. Practical guidance (5–7 bullets).
+  9. "The classic view, if you know the animals": the pillar, the stem god, the animal, hidden stems, the year pillar, and the twelve animals' relations (one line each).
   10. A traditional-interpretation note and a link line.
 - **qa** lists every factual claim with its data.json field.
 

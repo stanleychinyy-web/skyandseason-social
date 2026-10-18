@@ -4,6 +4,8 @@
 Reads monthly/<ym>/data.json (month.py) and content.json (schema v2, see monthly/SERIES.md); writes monthly/<ym>/reel.mp4,
 cover.jpg, story1-3.jpg and copies them to media/<post_date>/monthly-*.  Run from the repo root after `cd tools/reels && npm install`.
 
+Lens (18 Oct): the Inner Constellation lens on BOTH halves (stem essence painting + season stage painting), never the Classic
+stem-god / animal paintings, so the two halves match. Set "lens": "classic" in content.json only if Stanley asks for that look.
 Look (v2, 18 Oct, after Stanley rejected the emoji version): premium and dark. Deep indigo, the site's own oil paintings of the
 month's element and animal (tools/assets/art, the same art the website shows), slow Ken Burns on every painting, gold dust,
 Newsreader serif in soft white with gold accents, thin gold rules. Opens on the approved Sky & Season orbit shot, closes on a
@@ -115,9 +117,10 @@ def render(ym):
     folder = os.path.join(ROOT, 'monthly', ym)
     D = json.load(open(f'{folder}/data.json', encoding='utf-8')); C = tidy(json.load(open(f'{folder}/content.json', encoding='utf-8')))
     bm = D['bazi_month']; month = D['gregorian_month']; mname = month.split()[0]
-    sky_art = art('stems', SLUG[bm['stem']]); sea_art = art('branches', BR_SLUG[bm['branch']])
+    lens = C.get('lens', 'inner'); ST, BR = ('stems', 'branches') if lens == 'classic' else ('inner-stems', 'inner-branches')
+    sky_art = art(ST, SLUG[bm['stem']]); sea_art = art(BR, BR_SLUG[bm['branch']])
     sky_md, sea_md = medallion(sky_art, 150), medallion(sea_art, 150)
-    el_md = {el: medallion(art('stems', EL_SLUG[el]), 118, EL_TINT[el]) for el in ['Wood', 'Fire', 'Earth', 'Metal', 'Water']}
+    el_md = {el: medallion(art(ST, EL_SLUG[el]), 118, EL_TINT[el]) for el in ['Wood', 'Fire', 'Earth', 'Metal', 'Water']}
     mark = Image.open(f'{A}/brand/logo-mark-256.png').convert('RGBA').resize((140, 140))
     word = Image.open(f'{A}/brand/logo-wordmark-1200w.png').convert('RGBA'); word = word.resize((720, int(720 * word.height / word.width)))
     wa = word.getchannel('A'); word = Image.new('RGBA', word.size, GOLD_L + (255,)); word.putalpha(wa)
@@ -217,6 +220,7 @@ def render(ym):
 # ---------- stories ----------
 def stories(D, C, folder):
     bm = D['bazi_month']; month = D['gregorian_month']; S = C['stories']
+    lens = C.get('lens', 'inner'); ST, BR = ('stems', 'branches') if lens == 'classic' else ('inner-stems', 'inner-branches')
     def base(k):
         im = night(); dust(im, 3 + k * 2.1, 0.6); d = ImageDraw.Draw(im, 'RGBA'); kicker(d, 230, f'THE MONTH AHEAD · {month.upper()}')
         for j in range(3):
@@ -225,7 +229,7 @@ def stories(D, C, folder):
     e = C['energy']
     # 1 teaser: the month's painting
     im, d = base(0); t = S['teaser']
-    y = painting_panel(im, art('stems', SLUG[bm['stem']]), 330, 760, 0.5, 1); d = ImageDraw.Draw(im, 'RGBA')
+    y = painting_panel(im, art(ST, SLUG[bm['stem']]), 330, 760, 0.5, 1); d = ImageDraw.Draw(im, 'RGBA')
     kick = t['kicker'] if 'month ahead' not in t['kicker'].lower() else f"{month.split()[0]} in one picture"
     d.text((W // 2, y + 60), kick.upper(), font=sans(30, 700), fill=GOLD, anchor='mm')
     yy = y + 110
@@ -235,7 +239,7 @@ def stories(D, C, folder):
     im.convert('RGB').save(f'{folder}/story1.jpg', quality=92)
     # 2 question: reply with a number (a native poll can be added by hand)
     im, d = base(1); q = S['question']
-    im.alpha_composite(medallion(art('branches', BR_SLUG[bm['branch']]), 220), (W // 2 - 116, 330))
+    im.alpha_composite(medallion(art(BR, BR_SLUG[bm['branch']]), 220), (W // 2 - 116, 330))
     y = block(d, 640, q['question'], serif(84, 500), WHITE, maxw=W - 140) + 50
     for i, o in enumerate(q['options']):
         ov = Image.new('RGBA', (W, H), (0, 0, 0, 0)); ImageDraw.Draw(ov).rounded_rectangle([110, y, W - 110, y + 132], 66, outline=GOLD + (170,), width=2, fill=(255, 255, 255, 16)); im.alpha_composite(ov); d = ImageDraw.Draw(im, 'RGBA')
@@ -248,7 +252,7 @@ def stories(D, C, folder):
     y = block(d, 340, c['headline'], serif(80, 500), WHITE, maxw=W - 140)
     y = block(d, y + 20, c['line'], sans(40, 400), SOFT, maxw=W - 200) + 40
     for el in ['Wood', 'Fire', 'Earth', 'Metal', 'Water']:
-        md = medallion(art('stems', EL_SLUG[el]), 104, EL_TINT[el]); im.alpha_composite(md, (100, int(y)))
+        md = medallion(art(ST, EL_SLUG[el]), 104, EL_TINT[el]); im.alpha_composite(md, (100, int(y)))
         d.text((240, y + 2), E['cards'][el]['people'], font=sans(32, 700), fill=EL_TINT[el])
         f = fit(d, E['cards'][el]['line'], 38, W - 340, lambda s: sans(s, 400), 32); yy = block(d, y + 46, E['cards'][el]['line'], f, WHITE, maxw=W - 340, align='l', x=240, lead=1.12)
         yy = int(max(yy, y + 112)); d.line([(240, yy + 12), (W - 100, yy + 12)], fill=GOLD_D + (120,), width=1); y = yy + 30

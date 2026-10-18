@@ -10,6 +10,9 @@ The project doc `claude/month-ahead-series.md` holds the full brief and rules; t
 - **Posted:** on the last day of the month at 21:00 SGT (the day before the month starts): the reel, then the 3 stories.
   It only posts when the review status is `approved`.
 
+## Lens
+Inner Constellation on both halves (essence painting + season painting). See SERIES.md.
+
 ## Files
 - `monthly/<YYYY-MM>/data.json`: validated facts from `tools/monthly/month.py` (lunar-lite pillars, astronomy-engine solar-term minute, SGT).
 - `monthly/<YYYY-MM>/content.json`: the script, stories, captions, report and promotion notes (written by the Fable task).
