@@ -58,35 +58,38 @@ A separate, premium monthly series, built to reach new people (it may be boosted
   - Must include #skyandseason and #innerconstellation.
   - End with a comment prompt.
   - At most one emoji per paragraph.
-- **Look:**
-  - Opens on the approved Sky & Season orbit shot (`tools/assets/monthly/hook-orbit.mp4`, from "The Birth of Sky & Season").
-  - Then soft lavender/dawn pages with indigo type and gold accents.
-  - Graphics are Noto emoji for elements and animals, the same style as the daily posts.
-  - Closes on a clean indigo page with the logo, gold wordmark and website (no stickers, no childish end card).
+- **Look (v2, 18 Oct; Stanley rejected v1 as "primary school"):** premium and dark. Deep indigo with a violet glow; the site's own oil paintings (`tools/assets/art/stems/<slug>.jpg` and `art/branches/<slug>.jpg`, the same art skyandseason.com shows) for the month's element and animal, framed with a thin gold line and a slow push-in; a blurred echo of the painting as atmosphere behind the type; Newsreader serif in soft white, gold kickers and hairline rules; gold dust. **No emoji, no cartoon icons, no stickers, no title cards.** Opens on the approved Sky & Season orbit shot; closes on a clean indigo page with the logo mark, gold wordmark and website.
 - **Music:** a warm, bright bed of real sampled harp, piano and flute (`tools/monthly/music.py`, MIT samples, advert-safe). Never dark music. Stanley may swap in a trending sound in the app.
 
-### Reel script blocks and character limits
+### Copy rules (v2, binding)
+- **Every concept is explained in the sentence it appears in.** "Yin Earth" is always followed by what it is in everyday words. The labels "The month's element · what we call the Sky" and "The month's animal · what we call the Season" are drawn under the names.
+- **No ten-god / force names in the reel or stories** (no "The Steward", "The Muse"…). The reel's personal part is **five element groups** ("Wood people: a money month…"), which is honest because both yin and yang Day Masters of an element get the same family of force. The ten-force detail lives in the website report, and even there the plain meaning comes before the name ("a steady-money force, which we call The Steward").
+- The word "Day Master" is not used on screen; it is "your element: the day you were born".
+
+### Reel script blocks and character limits (schema v2)
 | Time | Block | Contents |
 | --- | --- | --- |
 | 0–5.7 s | hook | 2 lines, each ≤ 30 characters |
-| 5.7–17 s | energy | sky ≤ 40, season ≤ 40, image ≤ 45, meaning ≤ 80 |
-| 17–34 s | themes | 3 themes (Career & money, Relationships, Personal growth), each {area, headline ≤ 28, line ≤ 80} |
-| 34–46 s | opportunity, challenge | each {headline ≤ 30, line ≤ 80, tip ≤ 50} |
-| 46–54 s | personal | line ≤ 60, plus day_master_lines for all 10 Day Masters (≤ 42 each, matching their month force) |
-| 54–60 s | close | exactly "Your month. Your element. Your path." and "Discover your personalised monthly reading at Sky & Season." |
-
-The renderer drops repeated labels: "Sky:" and "Season:" prefixes, "Yang Wood · The Steward:" prefixes, and numbers on the options.
+| 5.7–10 s | intro | line1 ≤ 44 ("Every month has its own element."), line2 ≤ 44 ("November's is Yin Earth.") |
+| 10–16 s | sky | sky_name ≤ 24, sky_label ≤ 46, sky_plain ≤ 64 (the painting of the month's stem) |
+| 16–21 s | season | season_name ≤ 24, season_label ≤ 46, season_plain ≤ 64 (the painting of the month's animal) |
+| 21–27 s | meaning | image ≤ 45 (one picture line), meaning ≤ 96 |
+| 27–40 s | themes | 3 × {area, headline ≤ 28, line ≤ 86} |
+| 40–49 s | opportunity, challenge | each {headline ≤ 30, line ≤ 86, tip ≤ 48} |
+| 49–56 s | elements | intro1 ≤ 46, intro2 ≤ 46, cards Wood/Fire/Earth/Metal/Water {people ≤ 14, line ≤ 62} |
+| 56–60 s | close | exactly "Your month. Your element. Your path." and "Discover your personalised monthly reading at Sky & Season." |
 
 ### Stories
 Instagram API stories cannot carry stickers.
 1. **Teaser:** kicker, 2-line headline, a line, and a pointer to the reel on the feed.
 2. **Question:** 4 options; people reply with the number. A `native_poll` version is also given so Stanley can add a real poll by hand if he wants.
-3. **Conversion:** the 10 Day Masters with their month force, "Discover Your Monthly Energy", and "Free at the link in bio · skyandseason.com".
+3. **Conversion:** the five element groups with their plain month line, "Discover Your Monthly Energy", and "Free at the link in bio · skyandseason.com".
 
-### content.json keys
-`hook[2]`, `energy{sky, season, image, meaning}`, `themes[3]`, `opportunity`, `challenge`, `personal{line, day_master_lines{10}}`, `close[2]`, `stories{teaser, question{question, options[4], reply_line, native_poll}, conversion}`, `reel_caption`, `alt_text`, `story_alt[3]`, `report_md`, `promotion`, `qa`.
+### content.json keys (schema v2)
+`hook[2]`, `intro{line1, line2}`, `energy{sky_name, sky_plain, sky_label, season_name, season_plain, season_label, image, meaning}`, `themes[3]`, `opportunity`, `challenge`, `elements{intro1, intro2, cards{Wood, Fire, Earth, Metal, Water: {people, line}}}`, `close[2]`, `stories{teaser{kicker ≤ 34, headline[2 ≤ 24], line ≤ 80, pointer ≤ 40}, question{question ≤ 44, options[4 ≤ 18], reply_line ≤ 40, native_poll}, conversion{headline ≤ 34, line ≤ 96, invitation, link_line}}`, `reel_caption`, `alt_text`, `story_alt[3]`, `report_md`, `promotion`, `qa`.
 
-- **report_md** is 1,500–2,200 words. Sections:
+- **report_md** is 1,600–2,300 words. Sections:
+  0. "Start here: three words": Sky = the month's element; Season = the month's animal; Day Master = your element, from the day you were born (two lines each).
   1. Monthly energy overview.
   2. The month pillar (stem, branch, hidden stems).
   3. Solar-term dates (Gregorian vs BaZi, SGT, including the mid-month term).
@@ -94,7 +97,7 @@ Instagram API stories cannot carry stickers.
   5. Career and wealth.
   6. Relationships and personal development.
   7. Twelve zodiac animals.
-  8. Ten Day Masters.
+  8. Your Day Master this month: the concept first, then the five element groups, then all ten with the plain meaning before the force name.
   9. Practical guidance (5–7 bullets).
   10. A traditional-interpretation note and a link line.
 - **qa** lists every factual claim with its data.json field.
@@ -107,7 +110,7 @@ Instagram API stories cannot carry stickers.
 5. Read the last two `monthly/*/content.json` files so the hook and themes don't repeat. Then write `monthly/M/content.json`, validating JSON and every limit.
 6. Run `python3 tools/monthly/render.py M` (it also writes `media/L/monthly-*`). Look at frames at 2, 10, 20, 30, 40, 50 and 58 s and at all 3 stories. Fix anything cut off, then re-render.
 7. Write `schedule/monthly/L.json` with `status: "review"` and the `monthly` and `stories` entries, then commit and push.
-8. **Review page:** publish `monthly/M/reel.mp4`, `cover.jpg` and `story1-3.jpg` under the page paths `monthly/M/...` (files only, omit capabilities). Then write doc `monthly/M`:
+8. **Review page:** publish `cover.jpg`, `story1-3.jpg` and a preview copy of the reel under 16 MB (`ffmpeg -i reel.mp4 -vf scale=720:1280 -c:v libx264 -crf 25 -c:a aac -b:a 128k -movflags +faststart`) under the page paths `monthly/M/...` (files only, omit capabilities). Then write doc `monthly/M`:
    - `label` "Month name YYYY", `month`, `post_date` L, `status` "review", `note` "".
    - `reel`, `cover`, `stories[3]` (page paths).
    - `hook`, `pillar_line` (e.g. "己亥 · Yin Earth over the Pig · from Sat 7 Nov 5:52 PM SGT"), `facts` [[label, text]].
