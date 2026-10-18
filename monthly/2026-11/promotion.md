@@ -16,7 +16,10 @@ It opens with a wallet, not a Chinese term, so a stranger has nothing to decode 
 - This November, growth is underground.
 
 ## Notes
-Keep the ad general; no personal predictions in ad copy. Avoid hype words and promises of luck in the primary text. Use the reel caption's first two paragraphs as the ad primary text. Run the hook variants against each other for three days before scaling, and judge on 3-second hold rate and link taps, not likes. The reel names no Chinese terms on screen apart from the month pillar in the caption, so it is safe for a cold audience.
+Keep the ad general; no personal predictions in ad copy. Avoid hype words and promises of luck in the primary text. Use the reel caption's first two paragraphs as the ad primary text, so the ad uses the site's Inner names (The Nurturing Garden over The Bare Ground) and nothing else. Run the hook variants against each other for three days before scaling, and judge on 3-second hold rate and link taps, not likes. The reel, the stories, the caption and the ad all use the Inner lens only: no animals, no stem names, no Chinese characters anywhere a cold audience sees them. The classic names appear only in the last section of the long report.
+
+## Naming lens
+The ad, like the reel and stories, uses the site's Inner names for both halves of the month: The Nurturing Garden (the month's element, Yin Earth) over The Bare Ground (the month's season, a Water season). No animals, stem names or Chinese characters in anything a cold audience sees.
 
 ## Native poll for Story 2 (optional, add by hand in the Instagram app)
 Which November is yours?

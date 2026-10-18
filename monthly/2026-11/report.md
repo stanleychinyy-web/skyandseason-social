@@ -2,105 +2,73 @@
 
 ## Start here: three words
 
-Three words carry everything below.
+**Sky** is the month's element. Every month has one of five: Wood, Fire, Earth, Metal or Water, each in a softer or a bolder form. November's Sky is Yin Earth, which on skyandseason.com we call The Nurturing Garden.
 
-**Sky** is the month's element. Every month has one of five: Wood, Fire, Earth, Metal or Water. November's Sky is Yin Earth.
+**Season** is the month's season, or stage: where the year's energy sits in its cycle of growing, peaking, dissolving and resting. November's Season is The Bare Ground, the first stage of winter.
 
-**Season** is the month's animal, one of the twelve you know from Chinese New Year. November's Season is the Pig.
-
-**Day Master** is your own element, taken from the day you were born, not the year. It decides how the month lands on you, which is why one month reads differently for different people.
+**Your element** is the element of the day you were born, not the year. It decides how the month lands on you, which is why one month reads differently for different people.
 
 ## Monthly energy overview
 
-November's Sky is Yin Earth, the softer of the two Earth types. Think garden soil rather than a mountain: patient, practical, happier storing than spending. On skyandseason.com this type is called The Fertile Field: soil that feeds whatever is planted in it.
+November is The Nurturing Garden over The Bare Ground.
 
-November's Season is the Pig, a Water animal. Its season name on our calendar is The Bare Ground: frost on top, nothing showing above the soil, and a great deal happening underneath. Storage, not emptiness.
+The Nurturing Garden is Yin Earth, the softer of the two Earth types: garden soil rather than mountain rock. The site's own definition is "unconditional empathy and care, fertile soil for others to grow in, if its own boundaries can hold", and its energy word is Inward Foundation. In everyday terms: patient soil that would rather store than spend.
 
-Put the two together and you get patient soil over deep, quiet water. In traditional reading, Water stands for money and flow, and Earth holds and contains it. This month Earth keeps Water in check, so the mood is less about splashing and more about saving and keeping. Winter, by tradition, is the season for storing and rest.
+The Bare Ground is a Water season. The site's landscape line is "bare ground under frost, nothing visible above the soil". Its stage is Dissolving and its function is Potential: the year's visible growth has gone back into the earth, stored as the raw material of the next cycle. Underneath the frost sits deep, quiet water. Storage, not emptiness.
 
-That lands neatly on the Singapore calendar: 11.11, bonus season and the first year-end gatherings all at once. Enjoy them, but budget first and browse second.
+Put the two together and you get patient soil over deep water. In traditional reading, Water stands for money and flow, and Earth holds it. The garden holds the water, so the month leans to saving over splashing. Winter, by tradition, is the season for storing and rest.
 
-The catch, because there is always one, is worry. Soft soil frets; its known weak spot is worrying too much. Frost hides growth, it does not stop it. If you cannot see results yet, that is the season doing its job, not a sign that something is wrong.
+On the Singapore calendar that means 11.11, bonus season and the first year-end gatherings: budget first, browse second.
 
-## The month pillar 己亥
+The catch is worry. The Nurturing Garden's known weak spot is worrying too much; the definition's own small print, "if its own boundaries can hold", is the clue. Frost hides growth, it does not stop it. If you cannot see results yet, that is the season doing its job.
 
-In BaZi, every month is written as a pair of characters, called a pillar. November's is 己亥: the top character is the Sky (the element), the bottom is the Season (the animal).
+## The month's two halves
 
-**The top half: Yin Earth.** Yin means the gentle form, so this is garden soil, not rock: good for caring for people, cooking, budgeting and keeping a household running; less good at letting things go, which is where the worrying comes from.
+Every month has two halves: its element on top and its season underneath.
 
-**The bottom half: the Pig.** A Water animal, and the first of the three winter months. The landscape is bare ground under frost, nothing visible above the soil.
+**The top half: The Nurturing Garden, Yin Earth.** The gentle form of Earth: garden soil, not rock. Good for caring for people, cooking and budgeting; less good at letting go, which is where the worrying comes from. The Garden's gift is making other things grow; its task is holding its own boundaries while it does.
 
-**The energies tucked inside the animal.** Every animal carries a mix of elements inside it, like ingredients in a dish; the Pig carries two. About 70 percent is Yang Water, the big, moving kind, which is why the Pig reads as deep water, not a puddle. The other 30 percent is Yang Wood, the big tree: a seed of spring tucked inside winter, a quiet second layer of new ideas under all that water. The pillar as a whole is Yin, so it works on you gently rather than loudly.
+**The bottom half: The Bare Ground, a Water season.** The first of the three winter stages, deep water moving quietly under the frost. Its verb is Dissolving: what was built this year breaks down into what next year is built from.
+
+**The energies tucked inside the season.** Every season carries a mix of elements inside it, like ingredients in a dish, and this one carries two. About 70 percent is deep, moving Water, the river rather than the puddle, which is why the Bare Ground reads as depth, not emptiness. The other 30 percent is a seed of spring: the bold form of Wood, the tree that will stand up once the frost lifts, a quiet layer of new ideas under all that water. The month as a whole is Yin, so it works on you gently rather than loudly.
 
 ## Dates: the calendar month and the BaZi month
 
-The calendar month runs 1 to 30 November. The BaZi month starts and ends instead at fixed points in the sun's year, called solar terms. Every time below is Singapore time.
+The calendar month runs 1 to 30 November. The BaZi month starts and ends instead at fixed points in the sun's year, called solar terms.
 
-- The month 己亥 begins at Li Dong (Start of Winter): Saturday 7 November 2026, 5:52 PM SGT.
-- The mid-month marker is Xiao Xue (Minor Snow): Sunday 22 November 2026, 3:23 PM SGT. The month does not change here; the season deepens.
-- The month ends at Da Xue (Major Snow): Monday 7 December 2026, 10:52 AM SGT, when December's pillar takes over.
+- The month begins at Li Dong (Start of Winter): Saturday 7 November 2026, 5:52 PM SGT.
+- The mid-month marker is Xiao Xue (Minor Snow): Sunday 22 November 2026, 3:23 PM SGT. The month does not change here.
+- The month ends at Da Xue (Major Snow): Monday 7 December 2026, 10:52 AM SGT, when December's energy takes over.
 
-So 1 to 7 November, up to 5:52 PM, still belong to the previous month, 戊戌. If the first week of November feels like October, in BaZi terms it is. (Our chart engine works in two-hour blocks and switches a little after the exact minute; for the minute itself we trust the astronomy.)
+So 1 to 7 November, up to 5:52 PM, still belong to the previous month: if the first week feels like October, in BaZi terms it is. (Our chart engine works in two-hour blocks and switches a little after the exact minute; trust the minute.)
 
 ## How the elements interact
 
 The five elements affect each other in fixed ways: some feed another, some hold another in check. Two pairings shape November.
 
-**The month's element and the month's animal.** Earth keeps Water in check, the way a riverbank shapes a river. Soft Yin Earth is a gentle check, not a dam: the water still flows, with a shape. Money, time and energy go better this month inside a container: a budget, a timetable, a list.
+**The month's element and the month's season.** Earth holds Water, the way a riverbank shapes a river. The Nurturing Garden is a gentle hold, not a dam: the water still flows, with a shape. Money, time and energy go better inside a container this month: a budget, a list.
 
-**The month and the year.** The year 2026 is 丙午: Yang Fire over the Horse, a Fire animal. Two things happen when November meets it. First, the year's Fire feeds the month's Earth, because Fire produces Earth, the way ash becomes soil; the year's warmth keeps the patient soil from feeling cold, one reason this winter month feels steadier than it might. Second, the month's Water keeps the year's Fire in check: the Pig's deep water cools the Horse's heat, so a hot, fast-moving year gets a calmer month to bank what you have gained before December.
-
-In short: the year gives the month warmth, and the month gives the year a breather. A grounded November, provided you work at the soil's speed rather than the Horse's.
+**The month and the year.** This year's element is Yang Fire, the bright sun, over a Fire season, so 2026 runs hot and fast. First, the year's Fire feeds the month's Earth, the way ash becomes soil; the year's warmth keeps the garden from feeling cold, one reason this winter month feels steadier than it might. Second, the month's Water cools the year's Fire: the deep water under the Bare Ground takes the heat out of a fast year and gives it a calmer month to bank what it has gained. The year gives the month warmth; the month gives the year a breather.
 
 ## Career and wealth
 
-Water is traditionally the element of money and flow, and this month Water sits under Earth, which holds it. In plain terms: money is present, but the month favours people who shape it over people who chase it. Steady income, savings plans and careful bonus decisions sit well. Big impulsive moves sit less well.
+Water is traditionally the element of money and flow, and this month Water sits under Earth, which holds it. Money is present, but the month favours people who shape it over people who chase it. Steady income, savings plans and careful bonus decisions sit well; big impulsive moves do not.
 
-At work, Yin Earth rewards the quiet, dependable contributor: finishing what you started, tidying the year's loose ends, writing the 2027 plan, looking after your team. Hoping for a dramatic announcement? Remember the frost. Results may be forming underground and show in a later month.
+At work, The Nurturing Garden rewards the quiet, dependable contributor: finishing what you started, tidying the year's loose ends, writing the 2027 plan, looking after your team. Hoping for a dramatic announcement? Remember the frost: results may be forming underground and show in a later month.
 
-The 30 percent of Yang Wood inside the Pig is the part of the month already thinking about spring. Keep a notebook: November's ideas may not be ready to launch, but they are worth planting.
-
-And for the 11.11 sales: the month is not telling you to skip them. It is telling you to write the list before you open the app.
+The 30 percent of Wood inside the Bare Ground is the part of the month already thinking about spring. Keep a notebook: November's ideas may not be ready to launch, but they are worth planting. And the month is not telling you to skip the 11.11 sales, only to write the list first.
 
 ## Relationships and personal development
 
-Yin Earth is the nurturer among the ten element types, so this is a natural month for looking after people: cooking for family, hosting the first year-end gathering, checking in on friends who have gone quiet. Small, consistent care lands better than grand gestures. The Water underneath keeps feelings moving, so conversations can go deeper if you let them.
+The Nurturing Garden is, as the name says, the nurturer among the ten element types, so this is a natural month for looking after people: cooking for family, hosting the first year-end gathering, checking in on friends who have gone quiet. Small, consistent care lands better than grand gestures. The Water underneath keeps feelings moving; conversations can go deeper.
 
-The catch, again, is worry. If you catch yourself replaying conversations or managing other people's problems for them, that is the month's weak spot talking. Decide once, then let the soil rest.
+The catch, again, is worry. If you catch yourself replaying conversations or managing other people's problems for them, that is the Garden forgetting its own boundaries. Decide once, then let the soil rest.
 
-For personal growth, winter is by tradition the season of storing and rest. That is permission, not laziness. Sleep, reflection, finishing books and quiet planning all count. The Bare Ground looks idle; underneath, roots are doing their best work.
+For personal growth, winter is by tradition the season of storing and rest. That is permission, not laziness. The Bare Ground looks idle; underneath, roots are doing their best work.
 
-## The twelve animals
+## Your element this month
 
-Your birth animal comes from your birth year, and each animal has a traditional relationship with the Pig, the month's animal. This is one layer of a full chart, so read it lightly.
-
-**Rat.** A steady month. Nothing pulls on the Rat; set your own pace and get the year-end admin done early.
-
-**Ox.** A steady month. Nothing pulls on the Ox. Your patience matches the soft soil; keep ploughing.
-
-**Tiger.** A best-friend month. Tiger and Pig are a traditional perfect pair, so people tend to be on your side. Ask for help, or offer it.
-
-**Rabbit.** A team month. Rabbit and Pig belong to the same seasonal group, so they pull in the same direction. Group projects and shared goals move along nicely.
-
-**Dragon.** A steady month. Nothing pulls on the Dragon. Enjoy the quiet and bank energy for December.
-
-**Snake.** A clash month, so go easy. Snake and Pig sit directly opposite each other on the animal wheel, which traditionally means more change and friction than usual. Nothing to fear: spread big decisions out, double-check bookings and give yourself buffer. Clash months are often where stale things finally move.
-
-**Horse.** A steady month. Nothing pulls on the Horse. The year is yours already; let November be the quiet chapter.
-
-**Goat.** A team month. Goat and Pig belong to the same seasonal group. Shared plans flow; join something rather than go solo.
-
-**Monkey.** A small-friction month. Monkey and Pig rub each other a little. Expect small irritations, a slow reply or a changed plan, not real trouble.
-
-**Rooster.** A steady month. Nothing pulls on the Rooster. Polish and finish rather than start.
-
-**Dog.** A steady month. Nothing pulls on the Dog. Last month was your own; this one lets you rest.
-
-**Pig.** A home-turf month. This is a Pig month, your own animal, so things feel familiar and you are more visible. The catch is doubling down on old habits; give the month a shape and you will enjoy it.
-
-## Your Day Master this month
-
-**The concept, in one breath.** Your Day Master is your own element, taken from the day you were born. It comes in a yang (bigger, bolder) or yin (softer, finer) form, ten types in all. Each month's element meets yours in a particular way, and that meeting gives the month its flavour for you. The free chart at skyandseason.com shows yours in seconds.
+**The concept, in one breath.** Your element is the element of the day you were born, in a yang (bigger, bolder) or yin (softer, finer) form: ten types in all. Each month's element meets yours in a particular way, and that meeting gives the month its flavour for you. The free chart at skyandseason.com shows yours in seconds.
 
 **The five families.** Both forms of an element share the same kind of month.
 
@@ -110,37 +78,62 @@ Your birth animal comes from your birth year, and each animal has a traditional 
 - **Metal people** get a learning and support month: mentors, study, rest. Trust your gut.
 - **Water people** get a responsibility month: being noticed, deadlines, pressure. Pace yourself.
 
-**All ten, one by one.** Plain meaning first, then the name the site gives that force.
+**All ten, one by one.** Plain meaning first, then the name the site gives that force. The month's element sets the main note; the season adds a second.
 
-**Yang Wood**, The Great Tree. November brings a steady-money force, which we call The Steward. Earth is what Wood draws from: a month for income you can count on and careful spending. The Pig underneath adds a note of intuition: trust the hunch about where to put your money.
+**Yang Wood**, the bold form of Wood. November brings a steady-money force, which we call The Steward. Earth is what Wood draws from: a month for income you can count on. The Bare Ground underneath adds intuition: trust the hunch about where to put your money.
 
-**Yin Wood**, The Climbing Vine. November brings a lucky-breaks force, which we call The Visionary. Opportunities show up sideways, through people and chance. The Pig underneath adds help and learning: mentors are close by, so say yes to the coffee.
+**Yin Wood**, the gentle form of Wood. November brings a lucky-breaks force, which we call The Visionary. Opportunities show up sideways, through people and chance. The Bare Ground underneath adds help and learning: say yes to the coffee with a mentor.
 
-**Yang Fire**, The Sun. November brings a speaking-up force, which we call The Rebel. You will want to say what you think, and the month hands you the microphone. The Pig underneath adds pressure, so pick your moment and tone: honest, warm and brief works; blunt and tired does not.
+**Yang Fire**, the bold form of Fire. November brings a speaking-up force, which we call The Rebel. You will want to say what you think, and the month hands you the microphone. The Bare Ground underneath adds pressure, so pick your moment: honest, warm and brief works.
 
-**Yin Fire**, The Candle Flame. November brings an ideas-and-fun force, which we call The Muse. Creativity, hobbies and good company come easily. The Pig underneath adds recognition: show what you have been making.
+**Yin Fire**, the gentle form of Fire. November brings an ideas-and-fun force, which we call The Muse. Creativity, hobbies and good company come easily. The Bare Ground underneath adds recognition: show what you have been making.
 
-**Yang Earth**, The Mountain. November brings a competition force, which we call The Shadow. The month's element is your own in the opposite form, so you meet peers and rivals. The Pig underneath adds lucky breaks: treat the rivalry as a pace-setter and let luck find you while you work.
+**Yang Earth**, the bold form of Earth. November brings a competition force, which we call The Shadow. The month's element is your own in the opposite form, so you meet peers and rivals. The Bare Ground underneath adds lucky breaks: let the rivalry set your pace and luck find you at work.
 
-**Yin Earth**, The Fertile Field. November brings a confidence force, which we call The Sovereign. This is your own element exactly, so you feel surer of your footing. The Pig underneath adds steady money: a solid month for building, saving and leading quietly.
+**Yin Earth**, the gentle form of Earth. November brings a confidence force, which we call The Sovereign. This is your own element exactly, so you feel surer of your footing. The Bare Ground underneath adds steady money: a solid month for building and saving.
 
-**Yang Metal**, The Raw Blade. November brings a help-and-learning force, which we call The Sage. Earth produces Metal, so the month feeds you: support from elders and teachers. The Pig underneath adds ideas and fun: learn something new and enjoy it.
+**Yang Metal**, the bold form of Metal. November brings a help-and-learning force, which we call The Sage. Earth produces Metal, so the month feeds you: support from elders and teachers. The Bare Ground underneath adds ideas and fun: learn something new.
 
-**Yin Metal**, The Jewel. November brings an intuition force, which we call The Mystic. Your instincts beat your spreadsheets this month. The Pig underneath adds speaking up: you may surprise people with a well-timed honest word. Say it kindly.
+**Yin Metal**, the gentle form of Metal. November brings an intuition force, which we call The Mystic. Your instincts beat your spreadsheets this month. The Bare Ground underneath adds speaking up: a well-timed honest word, said kindly.
 
-**Yang Water**, The Ocean. November brings a recognition force, which we call The Guardian. Earth gives Water its banks: structure, responsibility and being seen. The Pig underneath adds confidence, because it is your own element. Lead, and accept the credit.
+**Yang Water**, the bold form of Water. November brings a recognition force, which we call The Guardian. Earth gives Water its banks: structure, responsibility and being seen. The Bare Ground underneath adds confidence, because its deep water is your own element. Lead, and accept the credit.
 
-**Yin Water**, The Rain and Mist. November brings a pressure force, which we call The Crucible. Earth leans on Water, so deadlines and expectations feel heavier. The Pig underneath adds competition. Pace yourself and ask for help early; the month that squeezes also sharpens.
+**Yin Water**, the gentle form of Water. November brings a pressure force, which we call The Crucible. Earth leans on Water, so deadlines feel heavier. The Bare Ground underneath adds competition. Pace yourself and ask for help early; the month that squeezes also sharpens.
 
 ## Practical guidance
 
 - Write the 11.11 list before you open the app, and set the budget before the bonus sets it for you.
-- The first week still belongs to the previous month: finish October's loose ends, then start new plans after 7 November, 5:52 PM.
+- Finish October's loose ends first; new plans start after 7 November, 5:52 PM.
 - Put one container around your money: a savings transfer, a spreadsheet or an envelope. Soil holding water is the whole point.
-- Host small. Soft soil loves feeding people, and year-end gatherings go better in a kitchen than a ballroom.
+- Host small. The Nurturing Garden loves feeding people; year-end gatherings go better in a kitchen than a ballroom.
 - Notice when you are worrying on a loop. Decide once, write it down, let the soil rest.
-- Keep a notebook for spring ideas. The Wood inside the Pig means good seeds arrive early, in disguise.
-- Snakes, Monkeys and Yin Water people: build extra buffer into November. Everyone else: rest is on the plan.
+- Keep a notebook for spring ideas. The seed of Wood inside the Bare Ground means good ideas arrive early, in disguise.
+- Yin Water and Yang Fire people: pressure sits somewhere in your month, so build in buffer. Everyone else: rest is on the plan.
+
+## The classic view, if you know the animals
+
+For readers who know the stems and the animals, here is the same month in classic terms.
+
+- **The month pillar is 己亥.** 己 is Yin Earth, which the classic lens calls The Fertile Field. 亥 is the Pig, a Water animal.
+- **Inside the Pig** sit two hidden stems: Yang Water, The Ocean, 70 percent, and Yang Wood, The Great Tree, 30 percent. The pillar is Yin.
+- **The first week** of November, up to 5:52 PM on the 7th, still belongs to the previous pillar, 戊戌.
+- **The year is 丙午**: Yang Fire over the Horse, a Fire animal. Fire feeds Earth; Water keeps Fire in check.
+- **Your Day Master** is the classic name for your element. The ten types, Yang Wood to Yin Water, are The Great Tree, The Climbing Vine, The Sun, The Candle Flame, The Mountain, The Fertile Field, The Raw Blade, The Jewel, The Ocean and The Rain and Mist.
+
+**The twelve animals.** Your birth animal comes from your birth year; each has a traditional relationship with the Pig. Read it lightly.
+
+- **Rat.** Steady month: nothing pulls on the Rat.
+- **Ox.** Steady month: nothing pulls on the Ox.
+- **Tiger.** Best-friend month: Tiger and Pig are a perfect pair.
+- **Rabbit.** Team month: Rabbit and Pig are on the same team.
+- **Dragon.** Steady month: nothing pulls on the Dragon.
+- **Snake.** Clash month, go easy: Snake and Pig sit opposite each other.
+- **Horse.** Steady month: nothing pulls on the Horse.
+- **Goat.** Team month: Goat and Pig are on the same team.
+- **Monkey.** Small-friction month: Monkey and Pig rub each other a little.
+- **Rooster.** Steady month: nothing pulls on the Rooster.
+- **Dog.** Steady month: nothing pulls on the Dog.
+- **Pig.** Home-turf month: this is a Pig month, your own animal.
 
 ## A closing note
 
