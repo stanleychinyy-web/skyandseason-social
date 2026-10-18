@@ -2,6 +2,11 @@
 
 Source brief: Stanley, 18 Oct 2026 ("Earth Discovery and Elemental Awakening"). Storyline is fixed: no extra scenes, characters, reunions or episodes. Sky appears only in Sky reels, Season only in Season reels.
 
+## 0. Daily task notes
+
+- The daily production task runs the **guard** (task step 8: restore any overwritten evening entries, mark posted reels) on EVERY run, including days when no reel is due and after all 12 are made. Only skip opening Flow on those days.
+- Post slots: Tue / Thu / Sun 19:00 SGT, alternating Sky and Season (dates in earth-discovery.json). The Saturday Daily Reflection batch task must keep any existing `evening` entry with series `earth-discovery`.
+
 ## 1. Budget and method (most cost-effective, Stanley's standing rule)
 
 Per reel, about 24–27 s:
