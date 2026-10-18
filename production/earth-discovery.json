@@ -137,5 +137,7 @@
    "credits_used": 0,
    "notes": ""
   }
- ]
+ ],
+ "last_run_date": "2026-10-18",
+ "schedule": "hourly 12:59-22:59 SGT until the day's reel is done"
 }
