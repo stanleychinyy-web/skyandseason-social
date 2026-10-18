@@ -15,7 +15,7 @@ PUBLISH_AT. A run that starts late publishes straight away. Just before publishi
 the newest schedule and markers from origin/main, so a late hold, caption edit or another run's post
 is respected.
 
-Env: IG_ACCESS_TOKEN, SLOT=morning|evening|monthly (monthly = schedule/<date>-monthly.json, approved only), DATE (default today SGT), DRY_RUN, MEDIA_BASE (comma list,
+Env: IG_ACCESS_TOKEN, SLOT=morning|evening|monthly (monthly = schedule/monthly/<date>.json, approved only), DATE (default today SGT), DRY_RUN, MEDIA_BASE (comma list,
 may contain {sha}), PUBLISH_AT (HH:MM Singapore).
 """
 import datetime, json, os, subprocess, time, urllib.parse, urllib.request, urllib.error
@@ -159,7 +159,7 @@ def main():
 
     monthly = SLOT == "monthly"   # The Month Ahead: its own file and marker, posts only when approved
     OK = ("approved",) if monthly else ("pending", "approved")
-    sched_path = f"schedule/{DATE}-monthly.json" if monthly else f"schedule/{DATE}.json"
+    sched_path = f"schedule/monthly/{DATE}.json" if monthly else f"schedule/{DATE}.json"
     if not os.path.exists(sched_path):
         print(f"no {sched_path}; nothing to post"); return
     s = normalise(json.load(open(sched_path, encoding="utf-8")))
@@ -179,7 +179,7 @@ def main():
     missing = [p for p in (files_of(item) if item else []) + stories if not os.path.exists(p)]
     if missing:
         raise SystemExit(f"missing media files: {missing}")
-    marker_path = f"posted/{DATE}-monthly.json" if monthly else f"posted/{DATE}.json"
+    marker_path = f"posted/monthly/{DATE}.json" if monthly else f"posted/{DATE}.json"
     done = json.load(open(marker_path)) if os.path.exists(marker_path) else {}
     if DRY:
         print("dry run OK:", post_key, item and item["type"], files_of(item) if item else [], "stories:", stories)
@@ -227,7 +227,7 @@ def main():
             done.setdefault("postedAt", datetime.datetime.now(SGT).isoformat(timespec="seconds"))
             if SLOT == "evening":
                 done["eveningAt"] = datetime.datetime.now(SGT).isoformat(timespec="seconds")
-        json.dump(done, open(marker_path, "w"), indent=1)
+        os.makedirs(os.path.dirname(marker_path), exist_ok=True); json.dump(done, open(marker_path, "w"), indent=1)
     print("all done for", DATE, SLOT)
 
 

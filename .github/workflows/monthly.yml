@@ -1,7 +1,7 @@
 name: Post The Month Ahead
 # Monthly flagship reel + 3 stories, posted on the last day of the month at 21:00 Singapore time.
-# Runs daily; post.py exits at once unless schedule/<today>-monthly.json exists AND is "approved".
-# Separate concurrency group and marker file (posted/<date>-monthly.json), so it never blocks the daily posts.
+# Runs daily; post.py exits at once unless schedule/monthly/<today>.json exists AND is "approved".
+# Separate concurrency group and marker file (posted/monthly/<date>.json), so it never blocks the daily posts.
 on:
   schedule:
     - cron: "0 9 * * *"     # 17:00 Singapore (early start: uploads, then waits for 21:00)

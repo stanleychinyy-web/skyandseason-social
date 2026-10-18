@@ -15,8 +15,8 @@ The project doc `claude/month-ahead-series.md` holds the full brief and rules; t
 - `monthly/<YYYY-MM>/content.json`: the script, stories, captions, report and promotion notes (written by the Fable task).
 - `monthly/<YYYY-MM>/reel.mp4`, `cover.jpg`, `story1-3.jpg`, `report.md`, `promotion.md`: rendered by `tools/monthly/render.py`.
 - `media/<post-date>/monthly-*`: the copies that get posted.
-- `schedule/<post-date>-monthly.json`: `{date, status: review|approved|hold|changes, kind: "month-ahead", month, monthly: {type: "reel", video, cover, caption}, stories: [3]}`.
-- `posted/<post-date>-monthly.json`: written by the workflow.
+- `schedule/monthly/<post-date>.json`: `{date, status: review|approved|hold|changes, kind: "month-ahead", month, monthly: {type: "reel", video, cover, caption}, stories: [3]}`.
+- `posted/monthly/<post-date>.json`: written by the workflow.
 - `.github/workflows/monthly.yml`: "Post The Month Ahead", daily crons 17:00 / 19:00 / 21:30 SGT, publishes at 21:00, own concurrency group.
 
 ## Commands (repo root)
