@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-23",
+ "status": "approved",
+ "stories": [
+  "media/2026-10-23/story1.jpg",
+  "media/2026-10-23/story2.jpg",
+  "media/2026-10-23/story3.jpg",
+  "media/2026-10-23/story4.jpg",
+  "media/2026-10-23/story5.jpg",
+  "media/2026-10-23/story6.jpg"
+ ],
+ "morning": {
+  "type": "carousel",
+  "slides": [
+   "media/2026-10-23/a1.jpg",
+   "media/2026-10-23/a2.jpg",
+   "media/2026-10-23/a3.jpg",
+   "media/2026-10-23/a4.jpg"
+  ],
+  "caption": "Friday message for your element 📱 Swipe to find yours.\n\nToday is Yang Metal over Fire: a sharp blade in summer heat. Great for clear decisions; go gentle with your words.\n\nYour element is the day you were born, not your zodiac animal. Find it free at the link in bio.\n\nComment your element and your Friday plan.\n\n#skyandseason #innerconstellation #astrology #zodiacsigns #fengshui #selfawareness #bazi #fourpillars #chineseastrology #fridayfeeling"
+ },
+ "evening": {
+  "type": "carousel",
+  "slides": [
+   "media/2026-10-23/b1.jpg",
+   "media/2026-10-23/b2.jpg",
+   "media/2026-10-23/b3.jpg",
+   "media/2026-10-23/b4.jpg"
+  ],
+  "caption": "Tag the one who replies three days later 😂\n\nEvery element has its group chat habit. Which one is you, and who's the voice-note sender in yours?\n\nYour element comes from the day you were born, not your zodiac animal. Find yours free at the link in bio.\n\nWhich one are you? Comment below.\n\n#skyandseason #innerconstellation #zodiacmemes #astrologymemes #relatable #fiveelements #chinesezodiac #bazi #fourpillars #singapore",
+  "series": "group-chat"
+ }
+}
