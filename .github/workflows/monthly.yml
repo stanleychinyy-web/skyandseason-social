@@ -1,0 +1,45 @@
+name: Post The Month Ahead
+# Monthly flagship reel + 3 stories, posted on the last day of the month at 21:00 Singapore time.
+# Runs daily; post.py exits at once unless schedule/<today>-monthly.json exists AND is "approved".
+# Separate concurrency group and marker file (posted/<date>-monthly.json), so it never blocks the daily posts.
+on:
+  schedule:
+    - cron: "0 9 * * *"     # 17:00 Singapore (early start: uploads, then waits for 21:00)
+    - cron: "0 11 * * *"    # 19:00 Singapore (second early start)
+    - cron: "30 13 * * *"   # 21:30 Singapore (safety net)
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Date to post (YYYY-MM-DD). Blank = today in Singapore."
+        required: false
+      dry_run:
+        description: "Check only, post nothing"
+        type: boolean
+        default: true
+permissions:
+  contents: write
+concurrency: post-month-ahead
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Post to Instagram
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          DATE: ${{ inputs.date }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          SLOT: monthly
+          PUBLISH_AT: ${{ github.event_name == 'schedule' && '21:00' || '' }}
+          MEDIA_BASE: https://raw.githubusercontent.com/${{ github.repository }}/{sha},https://cdn.jsdelivr.net/gh/${{ github.repository }}@{sha}
+        run: python3 scripts/post.py
+      - name: Save posted marker
+        if: always()
+        run: |
+          git config user.name "Daily Reflection bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add posted || true
+          git diff --cached --quiet || (git commit -m "Posted $(TZ=Asia/Singapore date +%F) month ahead" && (git push || (git pull --rebase -q origin main && git push)))

@@ -1,0 +1,219 @@
+{
+ "gregorian_month": "November 2026",
+ "post_date": "2026-10-31",
+ "bazi_month": {
+  "pillar": "己亥",
+  "stem": "Yin Earth",
+  "stem_god": "The Fertile Field",
+  "stem_nature": "Nurturing, practical, patient.",
+  "stem_good_for": "caring for people, cooking, budgeting",
+  "stem_watch": "worrying too much",
+  "branch": "Pig",
+  "branch_element": "Water",
+  "season": "The Bare Ground",
+  "landscape": "Bare ground under frost, nothing visible above the soil.",
+  "hidden_stems": [
+   {
+    "stem": "Yang Water",
+    "god": "The Ocean",
+    "share": 70
+   },
+   {
+    "stem": "Yang Wood",
+    "god": "The Great Tree",
+    "share": 30
+   }
+  ],
+  "polarity": "Yin",
+  "stem_vs_branch": "Earth keeps Water in check",
+  "best_friend": "Tiger",
+  "team": [
+   "Rabbit",
+   "Goat"
+  ],
+  "clash": "Snake",
+  "previous_pillar": "戊戌"
+ },
+ "starts": {
+  "term": "Li Dong (Start of Winter)",
+  "sgt": "Sat 7 Nov 2026, 5:52 PM SGT",
+  "iso": "2026-11-07T17:52:33.362864+08:00"
+ },
+ "mid_term": {
+  "term": "Xiao Xue (Minor Snow)",
+  "sgt": "Sun 22 Nov 2026, 3:23 PM SGT"
+ },
+ "ends": {
+  "term": "Da Xue (Major Snow)",
+  "sgt": "Mon 7 Dec 2026, 10:52 AM SGT",
+  "iso": "2026-12-07T10:52:47.191149+08:00"
+ },
+ "calendars_note": "The Gregorian month runs 1–30 November. The BaZi month 己亥 runs from 7 Nov 5:52 PM to 7 Dec 10:52 AM SGT; the first days of November still belong to 戊戌.",
+ "year": {
+  "pillar": "丙午",
+  "stem": "Yang Fire",
+  "branch": "Horse",
+  "year_stem_vs_month_stem": "Fire feeds Earth",
+  "year_branch_vs_month_branch": "Water keeps Fire in check"
+ },
+ "day_masters": [
+  {
+   "day_master": "Yang Wood",
+   "god": "The Great Tree",
+   "month_force": "The Steward",
+   "month_force_gloss": "steady money",
+   "month_type": "Steady-money",
+   "branch_force": "The Mystic",
+   "branch_force_gloss": "intuition"
+  },
+  {
+   "day_master": "Yin Wood",
+   "god": "The Climbing Vine",
+   "month_force": "The Visionary",
+   "month_force_gloss": "lucky breaks",
+   "month_type": "Opportunity",
+   "branch_force": "The Sage",
+   "branch_force_gloss": "help & learning"
+  },
+  {
+   "day_master": "Yang Fire",
+   "god": "The Sun",
+   "month_force": "The Rebel",
+   "month_force_gloss": "speaking up",
+   "month_type": "Speak-up",
+   "branch_force": "The Crucible",
+   "branch_force_gloss": "pressure"
+  },
+  {
+   "day_master": "Yin Fire",
+   "god": "The Candle Flame",
+   "month_force": "The Muse",
+   "month_force_gloss": "ideas & fun",
+   "month_type": "Joy",
+   "branch_force": "The Guardian",
+   "branch_force_gloss": "recognition"
+  },
+  {
+   "day_master": "Yang Earth",
+   "god": "The Mountain",
+   "month_force": "The Shadow",
+   "month_force_gloss": "competition",
+   "month_type": "Rival",
+   "branch_force": "The Visionary",
+   "branch_force_gloss": "lucky breaks"
+  },
+  {
+   "day_master": "Yin Earth",
+   "god": "The Fertile Field",
+   "month_force": "The Sovereign",
+   "month_force_gloss": "confidence",
+   "month_type": "Friend",
+   "branch_force": "The Steward",
+   "branch_force_gloss": "steady money"
+  },
+  {
+   "day_master": "Yang Metal",
+   "god": "The Raw Blade",
+   "month_force": "The Sage",
+   "month_force_gloss": "help & learning",
+   "month_type": "Support",
+   "branch_force": "The Muse",
+   "branch_force_gloss": "ideas & fun"
+  },
+  {
+   "day_master": "Yin Metal",
+   "god": "The Jewel",
+   "month_force": "The Mystic",
+   "month_force_gloss": "intuition",
+   "month_type": "Insight",
+   "branch_force": "The Rebel",
+   "branch_force_gloss": "speaking up"
+  },
+  {
+   "day_master": "Yang Water",
+   "god": "The Ocean",
+   "month_force": "The Guardian",
+   "month_force_gloss": "recognition",
+   "month_type": "Recognition",
+   "branch_force": "The Sovereign",
+   "branch_force_gloss": "confidence"
+  },
+  {
+   "day_master": "Yin Water",
+   "god": "The Rain and Mist",
+   "month_force": "The Crucible",
+   "month_force_gloss": "pressure",
+   "month_type": "Pressure",
+   "branch_force": "The Shadow",
+   "branch_force_gloss": "competition"
+  }
+ ],
+ "animals": [
+  {
+   "animal": "Rat",
+   "relation": "STEADY MONTH",
+   "why": "Nothing pulls on the Rat this month"
+  },
+  {
+   "animal": "Ox",
+   "relation": "STEADY MONTH",
+   "why": "Nothing pulls on the Ox this month"
+  },
+  {
+   "animal": "Tiger",
+   "relation": "BEST-FRIEND MONTH",
+   "why": "Tiger and Pig are a perfect pair"
+  },
+  {
+   "animal": "Rabbit",
+   "relation": "TEAM MONTH",
+   "why": "Rabbit and Pig are on the same team"
+  },
+  {
+   "animal": "Dragon",
+   "relation": "STEADY MONTH",
+   "why": "Nothing pulls on the Dragon this month"
+  },
+  {
+   "animal": "Snake",
+   "relation": "CLASH MONTH · GO EASY",
+   "why": "Snake and Pig sit opposite each other"
+  },
+  {
+   "animal": "Horse",
+   "relation": "STEADY MONTH",
+   "why": "Nothing pulls on the Horse this month"
+  },
+  {
+   "animal": "Goat",
+   "relation": "TEAM MONTH",
+   "why": "Goat and Pig are on the same team"
+  },
+  {
+   "animal": "Monkey",
+   "relation": "SMALL-FRICTION MONTH",
+   "why": "Monkey and Pig rub each other a little"
+  },
+  {
+   "animal": "Rooster",
+   "relation": "STEADY MONTH",
+   "why": "Nothing pulls on the Rooster this month"
+  },
+  {
+   "animal": "Dog",
+   "relation": "STEADY MONTH",
+   "why": "Nothing pulls on the Dog this month"
+  },
+  {
+   "animal": "Pig",
+   "relation": "HOME-TURF MONTH",
+   "why": "This is a Pig month, your own animal"
+  }
+ ],
+ "checks": {
+  "month_pillar_changes_around_term": true,
+  "engine_first_two_hour_block_with_new_month": 10,
+  "astronomical_two_hour_block": 9,
+  "note": "lunar-lite resolves two-hour blocks only; if the blocks differ, trust the astronomical minute and say so."
+ }
+}

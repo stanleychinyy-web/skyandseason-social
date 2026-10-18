@@ -15,7 +15,7 @@ PUBLISH_AT. A run that starts late publishes straight away. Just before publishi
 the newest schedule and markers from origin/main, so a late hold, caption edit or another run's post
 is respected.
 
-Env: IG_ACCESS_TOKEN, SLOT=morning|evening, DATE (default today SGT), DRY_RUN, MEDIA_BASE (comma list,
+Env: IG_ACCESS_TOKEN, SLOT=morning|evening|monthly (monthly = schedule/<date>-monthly.json, approved only), DATE (default today SGT), DRY_RUN, MEDIA_BASE (comma list,
 may contain {sha}), PUBLISH_AT (HH:MM Singapore).
 """
 import datetime, json, os, subprocess, time, urllib.parse, urllib.request, urllib.error
@@ -157,17 +157,19 @@ def main():
     UID = me["user_id"]
     print(f"account @{me.get('username')} ({UID}); date {DATE}; slot {SLOT}")
 
-    sched_path = f"schedule/{DATE}.json"
+    monthly = SLOT == "monthly"   # The Month Ahead: its own file and marker, posts only when approved
+    OK = ("approved",) if monthly else ("pending", "approved")
+    sched_path = f"schedule/{DATE}-monthly.json" if monthly else f"schedule/{DATE}.json"
     if not os.path.exists(sched_path):
         print(f"no {sched_path}; nothing to post"); return
     s = normalise(json.load(open(sched_path, encoding="utf-8")))
-    if s.get("status", "pending") not in ("pending", "approved"):
+    if s.get("status", "pending") not in OK:
         print(f"status is '{s.get('status')}'; not posting"); return
     item = s.get(SLOT)
     if item and item.get("status") in ("review", "hold", "changes"):
         print(f"{SLOT} item is '{item.get('status')}' (waiting for Stanley's approval); not posting it")
         item = None
-    stories = s.get("stories", []) if SLOT == "morning" else []
+    stories = s.get("stories", []) if SLOT in ("morning", "monthly") else []
     if not item and not stories:
         print(f"nothing scheduled for the {SLOT} slot"); return
     post_key = "reel" if (SLOT == "morning" and item and item["type"] == "reel") else SLOT
@@ -177,7 +179,7 @@ def main():
     missing = [p for p in (files_of(item) if item else []) + stories if not os.path.exists(p)]
     if missing:
         raise SystemExit(f"missing media files: {missing}")
-    marker_path = f"posted/{DATE}.json"
+    marker_path = f"posted/{DATE}-monthly.json" if monthly else f"posted/{DATE}.json"
     done = json.load(open(marker_path)) if os.path.exists(marker_path) else {}
     if DRY:
         print("dry run OK:", post_key, item and item["type"], files_of(item) if item else [], "stories:", stories)
@@ -207,7 +209,7 @@ def main():
         latest = latest_from_origin(sched_path)
         if latest:
             latest = normalise(latest)
-            if latest.get("status", "pending") not in ("pending", "approved"):
+            if latest.get("status", "pending") not in OK:
                 print(f"status changed to '{latest.get('status')}'; not posting"); return
             if (latest.get(SLOT) or {}).get("status") in ("review", "hold", "changes") and any(k == post_key for k, _ in todo):
                 print(f"{SLOT} item was put on hold; skipping it")
