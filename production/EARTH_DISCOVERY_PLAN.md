@@ -44,9 +44,7 @@ Upload any sheet not yet in Flow as an ingredient image (free). Transformation c
 
 ## 3. Prompt blocks (append to every prompt)
 
-**SKY BLOCK:** "Sky, the approved character from the attached reference, exactly as designed: small indigo-and-violet spirit, white face, chest and belly, white crescent moon on the forehead, long flowing ribbon ears (never horns), mitten-like hands, no legs walking — she always floats. Gentle, thoughtful, curious. Soft high-quality 3D cinematic fantasy animation, rich atmospheric light. Vertical 9:16. No text, no captions, no watermark, no other characters."
-
-**SEASON BLOCK:** "Season, the approved character from the attached reference, exactly as designed: white body with sky-blue tips, golden eight-ray sun on the forehead, two legs, three fingers and a thumb on each hand, three toes on each foot, always upright (never on all fours). Expressive, energetic, adventurous. Soft high-quality 3D cinematic fantasy animation, rich atmospheric light. Vertical 9:16. No text, no captions, no watermark, no other characters."
+**SKY BLOCK / SEASON BLOCK:** use the current text in `production/learnings/PROMPT_GUARDS.md` (SKY GUARD / SEASON GUARD), word for word, in every still and clip prompt. Read `production/learnings/LEARNINGS.md` before writing prompts and add a row for every mistake found in QC (the guards are updated in the same run).
 
 **FORM LINE (transformation shots):** "transforms smoothly into the attached approved <FORM> elemental form — same face, eyes, proportions and silhouette; only ears, tail, iris and chest crystal change material as on the reference; the moon/sun symbol stays unchanged."
 
