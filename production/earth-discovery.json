@@ -12,9 +12,19 @@
    "element": null,
    "dev_date": "2026-10-19",
    "post_date": "2026-10-25",
-   "status": "todo",
-   "credits_used": 64,
-   "notes": "2026-10-19 in progress: stills K1-K4 done (Flow project Oct 11 - 20:03, session \"Sky Character Atmospheric...\"), saved in library EARTH_DISCOVERY/SKY01/KEYFRAMES; 3 Veo Fast clips V1-V3 approved (60 cr) from K1-K3. If resuming: download the 3 SKY01 clips from Flow, do not regenerate."
+   "status": "made",
+   "credits_used": 65,
+   "notes": "V01 made 19 Oct (65 cr: 5 stills incl. K4 redraw for indigo hand, 3 Veo Fast clips). V1 clip failed QC (ears stood up like antennae from 0.7 s) and the 80-credit cap left no room for a retry, so the opening is an in-house push on K1; V2 used in full; V3 trimmed 1.8-5.4 s (feet dipped into the lake at 1 s; drop turned into crystals after 5.5 s). Note: V3 shows a white palm, K4 an indigo hand.",
+   "made_date": "2026-10-19",
+   "evening_entry": {
+    "type": "reel",
+    "video": "media/2026-10-25/evening-reel.mp4",
+    "cover": "media/2026-10-25/evening-cover.jpg",
+    "caption": "Sky has just arrived on Earth, and everything is new 🌙\n\nSky is the quiet Yin spirit. She doesn't rush in; she drifts, notices and feels her way. Clouds, hills, a sparkling river, then a cool breeze and one small raindrop landing in her hand. In people, this Yin side is the part of you that pauses to take in a new place before you decide what it means. The gentle start is often where the real discovery begins.\n\nWhat's the first thing you notice when you arrive somewhere new? Tell us below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yinandyang #animatedshort #fiveelements #selfdiscovery #fantasyart #3danimation #easternphilosophy #mindfulmoments",
+    "series": "earth-discovery",
+    "status": "review"
+   },
+   "file": "SS_A-NEW-WORLD_V01.mp4"
   },
   {
    "id": "SEA01",
@@ -138,6 +148,6 @@
    "notes": ""
   }
  ],
- "last_run_date": "2026-10-18",
+ "last_run_date": "2026-10-19",
  "schedule": "hourly 12:59-22:59 SGT until the day's reel is done"
 }
