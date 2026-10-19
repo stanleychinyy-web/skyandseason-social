@@ -1,9 +1,32 @@
 {
- "evening": {
-  "id": "P1",
-  "permalink": "https://ig/p/P1",
+ "morning": {
+  "id": "17996363127029948",
+  "permalink": "https://www.instagram.com/p/DeptTPRgUzt/",
   "found": true
  },
- "postedAt": "2026-10-19T15:40:06+08:00",
- "eveningAt": "2026-10-19T15:40:06+08:00"
+ "postedAt": "2026-10-19T15:34:55+08:00",
+ "story1": {
+  "id": "18363201349216708",
+  "permalink": "https://www.instagram.com/stories/theskyandseason/4011224931866815161"
+ },
+ "story2": {
+  "id": "18635900107030653",
+  "permalink": "https://www.instagram.com/stories/theskyandseason/4011225041161985691"
+ },
+ "story3": {
+  "id": "18112885745464429",
+  "permalink": "https://www.instagram.com/stories/theskyandseason/4011225145986019859"
+ },
+ "story4": {
+  "id": "18098803745452844",
+  "permalink": "https://www.instagram.com/stories/theskyandseason/4011225255625110624"
+ },
+ "story5": {
+  "id": "18024045710926935",
+  "permalink": "https://www.instagram.com/stories/theskyandseason/4011225364710609611"
+ },
+ "story6": {
+  "id": "18096566678122721",
+  "permalink": "https://www.instagram.com/stories/theskyandseason/4011225483065469445"
+ }
 }
