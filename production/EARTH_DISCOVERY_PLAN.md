@@ -7,6 +7,12 @@ Source brief: Stanley, 18 Oct 2026 ("Earth Discovery and Elemental Awakening"). 
 - The daily production task runs the **guard** (task step 8: restore any overwritten evening entries, mark posted reels) on EVERY run, including days when no reel is due and after all 12 are made. Only skip opening Flow on those days.
 - Post slots: Tue / Thu / Sun 19:00 SGT, alternating Sky and Season (dates in earth-discovery.json). The Saturday Daily Reflection batch task must keep any existing `evening` entry with series `earth-discovery`.
 
+## 0a. Stanley's quality rule (19 Oct 2026, after SKY01 V01) — overrides budget and schedule
+- **Every shot in the story is a real Veo animation.** No static photos or in-house push-ins on stills (the closing shot K4 is now a 4th Veo clip V4 from K4). Only the end card is made in-house.
+- **On-model in every frame:** Sky's hands are deep indigo-violet (never white), ears hang/flow as ribbons (never stand up), she floats clear of ground and water. Put these lines in every video prompt.
+- **Quality over speed:** if a clip fails QC, regenerate it (spare credits may be used). Never queue a reel with a failed or missing shot. If the day's budget runs out, carry on the next day and let the post date slip; tell Stanley.
+- Per reel now: 4 stills (4) + 4 Veo clips (80) ≈ 84 credits, plus retries.
+
 ## 1. Budget and method (most cost-effective, Stanley's standing rule)
 
 Per reel, about 24–27 s:
@@ -15,10 +21,10 @@ Per reel, about 24–27 s:
 |---|---|---|
 | 4 start-frame stills (K1–K4) | Flow, Nano Banana 2.1, image + character refs | 4 |
 | 3 video clips × 8 s (V1–V3) from K1–K3 | Flow, Veo 3.1 Fast image-to-video, 720p | 60 |
-| Closing shot ~3 s from K4 (slow push, light drift, particles) | In-house Python (0 credits) | 0 |
+| Closing shot V4 from K4 (Veo image-to-video, gentle motion) | Flow, Veo 3.1 Fast, 720p | 20 |
 | End card V2, 4 s | `endcard2.py` | 0 |
 | Music + ambience | FluidSynth GM soundfont + synthesized nature beds | 0 |
-| **Planned total** | | **64** |
+| **Planned total** | | **84 + retries** |
 
 - **Daily cap: 80 credits** (one reel plus up to 16 credits of redraws/one retry clip). Failed Flow clips are not charged; retry them.
 - If a clip still breaks a rule after one retry, fix it in the edit (trim around it) rather than spend more.
