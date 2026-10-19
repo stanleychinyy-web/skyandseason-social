@@ -1,0 +1,13 @@
+# Earth Discovery — generation learnings log
+
+**Habit (Stanley, 19 Oct 2026):** after EVERY generation round (still or clip), QC it, and for each mistake add a row below (date, reel/shot, what went wrong, likely cause, fix applied to `PROMPT_GUARDS.md` / plan, result of the retry). Before writing any new prompt, read this file and `PROMPT_GUARDS.md`. A fix counts as learned only after a retry passes; mark it ✅. Mirror of this folder in the library: `17_Generation_Learnings/`.
+
+| # | Date | Reel / shot | Mistake | Cause (best guess) | Fix / prevention | Status |
+|---|---|---|---|---|---|---|
+| L1 | 19 Oct | SKY01 V1 (T1, T2, R1B) | Sky's ears stood straight up like rabbit ears / antennae | She was falling/descending; Veo applies "air resistance" so the ribbons lift. Positive phrasing ("ears trail above her like streamers") made it worse | No falling or fast descents for Sky. Use hover/slow glide; start from a still where the ears hang down (K1B). Ear lock in SKY GUARD. Never describe ears "above" her | ✅ R1C (hover from K1B) passed |
+| L2 | 19 Oct | SKY01 V2 hills (T1, used in V02) | "Four ears": the two ears split into several streaming ribbons beside the top loop | Fast side-glide + "ribbon ears flowing in the breeze" → Veo adds extra streamers | ANATOMY LOCK: exactly two ears + one top loop, no extra ribbons/streamers; slow drifting speed | Retry R2 running |
+| L3 | 19 Oct | SKY01 K4 still, V3 T1 clip | White, furry mitten hand | MY prompt said "white mitten hand" (K4); the Flow agent also rewrote "white mitten-like hand" into the K3/V3 prompts | Never write "white" near hands; always "deep indigo-violet mitten hands"; check the agent's rewritten prompt text | ✅ K4B, R3, R4 passed |
+| L4 | 19 Oct | SKY01 V3 (T1, R3 at 1 s) | Feet dipped into the lake (looked like standing in water) | Start still K3 had her very low over the water | Start stills with a large air gap ("hovering high above the water, about her own height above it"); trim the first 2 s if needed | Trimmed; prevention for next stills |
+| L5 | 19 Oct | SKY01 V3 T1 | Raindrop turned into crystal shards | "raindrop" + "study it" → model drifted to gems | Prop line: "one clear water droplet, never ice or crystal" | ✅ R3 passed |
+| L6 | 19 Oct | SKY01 V01 edit | Still photos with a camera push used as shots → Stanley: looks weird, not animated | Credit-cap shortcut | Rule: every story shot is a Veo clip; quality over schedule (plan §0a) | ✅ V02 |
+| L7 | 19 Oct | Workflow | "Download batch" in Flow saves a zip (download (N).zip) to Downloads | Flow behaviour | Extract by the name inside the zip, check the timestamp, move the zip to Downloads/_to_delete | ✅ |
