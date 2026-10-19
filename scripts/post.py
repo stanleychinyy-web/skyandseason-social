@@ -237,6 +237,8 @@ def main():
     marker_path = f"posted/monthly/{DATE}.json" if monthly else f"posted/{DATE}.json"
     done = json.load(open(marker_path)) if os.path.exists(marker_path) else {}
     if DRY:
+        if item:
+            print("already live with this caption:", existing_post(caption) or "no")
         print("dry run OK:", post_key, item and item["type"], files_of(item) if item else [], "stories:", stories)
         print("publish time:", PUBLISH_AT or "immediately"); return
 
