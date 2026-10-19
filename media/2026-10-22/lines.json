@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Steady-money",
+  "line": "Pack lunch today. Your wallet notices, and so does your next holiday."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Opportunity",
+  "line": "Someone mentions a deal or a lead today. Ask one more question before you say yes."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Speak-up",
+  "line": "Your ideas are loud today. Great for the meeting, less great for the family chat."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Joy",
+  "line": "Small treat, big mood. Get the kaya toast and skip the guilt trip."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Rival",
+  "line": "Everyone wants the same thing today: the last seat, the window slot. Take turns."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Friend",
+  "line": "An old friend texts back today. Reply properly, not just with a sticker."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Support",
+  "line": "Ask the person who's done it before. Ten minutes of advice saves you a week."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Insight",
+  "line": "Quiet focus today. Headphones on, notifications off, and the work flows."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Recognition",
+  "line": "Someone's watching how you handle things today. Stay calm; it counts later."
+ },
+ {
+  "element": "Yin Water",
+  "type": "Pressure",
+  "line": "Busy, busy today. Eat a proper meal before you reply to anything important."
+ }
+]

@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Pressure",
+  "line": "A last-minute task lands today. Do it well, then log off on time."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Recognition",
+  "line": "Dress a little sharper today. Someone important remembers first impressions."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Opportunity",
+  "line": "Say yes to Friday plans. A useful contact might be there. Your budget might not."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Steady-money",
+  "line": "Payday maths day. Move some into savings before the weekend sales find you."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Joy",
+  "line": "Weekend mood starts early. Plan something fun, but keep today's promises first."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Speak-up",
+  "line": "You'll want to correct everyone today. Choose the one correction that matters."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Friend",
+  "line": "Your squad is strong today. Plan the weekend before it becomes a 40-message debate."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Rival",
+  "line": "Friendly competition at work or the gym today. Win it, then share your tip."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Insight",
+  "line": "Your gut is right about someone today. Keep it to yourself for now."
+ },
+ {
+  "element": "Yin Water",
+  "type": "Support",
+  "line": "Let someone treat you today. Say thank you, not 'aiyah, no need'."
+ }
+]

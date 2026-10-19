@@ -10,23 +10,16 @@
   "media/2026-10-26/story6.jpg"
  ],
  "morning": {
-  "type": "carousel",
-  "slides": [
-   "media/2026-10-26/a1.jpg",
-   "media/2026-10-26/a2.jpg",
-   "media/2026-10-26/a3.jpg",
-   "media/2026-10-26/a4.jpg"
-  ],
-  "caption": "New week, new message 📱 Swipe to find your element.\n\nToday is Yin Water over Metal: soft rain and clear air. Good for planning the week and tidying up; skip the big moods.\n\nYour element is the day you were born, not your zodiac animal. Find it free at the link in bio.\n\nWhich one are you? Comment below.\n\n#skyandseason #innerconstellation #horoscope #zodiacsigns #personalgrowth #fengshui #bazi #chinesemetaphysics #fiveelements #mondaymotivation"
+  "type": "reel",
+  "video": "media/2026-10-26/reel.mp4",
+  "cover": "media/2026-10-26/cover.jpg",
+  "caption": "New week, new message 📱 Pause on your Day Master.\n\nToday is Yin Water over Metal: soft rain and clear air. Good for planning the week and tidying up; skip the big moods.\n\nYour element is the day you were born, not your zodiac animal. Find it free at the link in bio.\n\nWhich one are you? Comment below.\n\n#skyandseason #innerconstellation #horoscope #zodiacsigns #personalgrowth #fengshui #bazi #chinesemetaphysics #fiveelements #mondaymotivation",
+  "series": "sky-today"
  },
  "evening": {
-  "type": "carousel",
-  "slides": [
-   "media/2026-10-26/b1.jpg",
-   "media/2026-10-26/b2.jpg",
-   "media/2026-10-26/b3.jpg",
-   "media/2026-10-26/b4.jpg"
-  ],
+  "type": "reel",
+  "video": "media/2026-10-26/series-reel.mp4",
+  "cover": "media/2026-10-26/series-cover.jpg",
   "caption": "Tag the one who never washes their mug ☕\n\nEvery element has its office pantry habit. Which one is you, and which one sits next to you?\n\nYour element comes from the day you were born, not your zodiac animal. Find yours free at the link in bio.\n\nWhich one are you? Comment below.\n\n#skyandseason #innerconstellation #zodiacmemes #astrologymemes #officelife #mondaymood #fiveelements #chineseastrology #bazi #sgig",
   "series": "office-pantry"
  }

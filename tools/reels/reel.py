@@ -3,7 +3,9 @@ Everything is about the day it posts.
   cd tools/reels && npm install          (once: emoji, font, instrument samples)
   python3 tools/reels/reel.py sky    <date>   -> media/<date>/reel.mp4 + cover.jpg   (needs media/<date>/lines.json from render.py daily)
   python3 tools/reels/reel.py season <date>   -> media/<date>/reel.mp4 + cover.jpg   (needs animal_tips in tools/days/<date>.json)
-  python3 tools/reels/reel.py story  <date>   -> media/<date>/story1.jpg             (needs day_line in tools/days/<date>.json)
+  python3 tools/reels/reel.py story  <date>   -> media/<date>/story1-6.jpg           (needs day_line in tools/days/<date>.json)
+  python3 tools/reels/reel.py series tools/series/<slug>.json <date> -> media/<date>/series-reel.mp4 + series-cover.jpg (Mon/Wed/Fri 19:00)
+Lens: the daily posts use the Classic lens on both halves (stem gods + zodiac animals); never Inner season names here.
 Run from the repository root. Each card stays on screen for 2 bars (about 4.3 s) so it can be read."""
 import json, sys, os, io, subprocess, tempfile, shutil, datetime, textwrap
 import cairosvg
@@ -27,6 +29,8 @@ HOW = {'Friend': 'Today is your own element', 'Rival': 'Today is your own elemen
        'Speak-up': 'You feed today\'s element', 'Insight': 'Today\'s element feeds you', 'Support': 'Today\'s element feeds you',
        'Opportunity': 'You shape today\'s element', 'Steady-money': 'You shape today\'s element',
        'Pressure': 'Today\'s element shapes you', 'Recognition': 'Today\'s element shapes you'}
+ANIMAL_NOTE = {'Water': 'a Water animal: deep, quiet and flowing', 'Earth': 'an Earth animal: steady, patient and grounded', 'Wood': 'a Wood animal: growing, bold and restless',
+               'Fire': 'a Fire animal: warm, bright and quick', 'Metal': 'a Metal animal: sharp, precise and cool'}
 HARMONY = {0: 1, 1: 0, 2: 11, 11: 2, 3: 10, 10: 3, 4: 9, 9: 4, 5: 8, 8: 5, 6: 7, 7: 6}
 HARM = {0: 7, 7: 0, 1: 6, 6: 1, 2: 5, 5: 2, 3: 4, 4: 3, 8: 11, 11: 8, 9: 10, 10: 9}
 def relation(a, b):
@@ -155,9 +159,9 @@ def stories(date):
         im.alpha_composite(art, (cx - 130, 465))
         d.text((cx, 770), kind, font=F(32, 700), fill=RED if kind == 'SKY' else GREEN, anchor='mm')
         d.text((cx, 835), name(s) if kind == 'SKY' else BRANCH_ANIMAL[b], font=F(56, 700), fill=INK, anchor='mm')
-        d.text((cx, 900), GOD[s] if kind == 'SKY' else SEASON[b], font=F(36, 500), fill=MUTED, anchor='mm')
+        d.text((cx, 900), GOD[s] if kind == 'SKY' else f'{BRANCH_EL[b]} animal', font=F(36, 500), fill=MUTED, anchor='mm')
         d.text((cx, 955), "the day's element" if kind == 'SKY' else "the day's animal", font=F(30, 400), fill=MUTED, anchor='mm')
-    para(d, 0, 1080, spec.get('day_line') or f'{GOD[s]} meets {SEASON[b]}.', 60, W - 180, INK, w=600, center=True, max_lines=3)
+    para(d, 0, 1080, spec.get('day_line') or f'{GOD[s]} meets the {BRANCH_ANIMAL[b]}.', 60, W - 180, INK, w=600, center=True, max_lines=3)
     ctext(d, 1560, 'Tap for today in 6 stories', F(44, 600), RED)
     save(im, 0)
     # 2. the Sky
@@ -176,9 +180,9 @@ def stories(date):
     im, d = frame(sea_el, dt, 2, N)
     ctext(d, 350, "TODAY'S SEASON", F(40, 700), GREEN)
     scaled(im, sea_icon, W // 2, 560, 1)
-    ctext(d, 780, f'{BRANCH_ANIMAL[b]} day', F(92, 700), INK); ctext(d, 860, SEASON[b], F(48, 500), MUTED)
+    ctext(d, 780, f'{BRANCH_ANIMAL[b]} day', F(92, 700), INK); ctext(d, 860, f'{BRANCH_EL[b]} animal', F(48, 500), MUTED)
     card(d, 930, 1600)
-    y = para(d, 130, 970, LANDSCAPE[b], 46, W - 260, INK, w=500, max_lines=2)
+    y = para(d, 130, 970, f'The {BRANCH_ANIMAL[b]} is {ANIMAL_NOTE[BRANCH_EL[b]]}.', 46, W - 260, INK, w=500, max_lines=2)
     rows = [('BEST FRIEND TODAY', hm, GREEN), ('SAME TEAM', ' & '.join(tr), GREEN), ('GO EASY', cl, RED)]
     for lab, val, col in rows:
         d.text((130, y + 34), lab, font=F(34, 700), fill=col); d.text((W - 130, y + 26), val, font=F(50, 700), fill=INK, anchor='ra'); y += 100
@@ -262,7 +266,7 @@ def render(kind, date):
                 ctext(d, 450 + dy, f"{'AN' if BRANCH_ANIMAL[b][0] in 'AEIOU' else 'A'} {BRANCH_ANIMAL[b].upper()} DAY", F(120, 700), DEEP[ANIMAL_EL[b]])
                 scaled(im, today_art, W // 2, 800, ease_back((t - 0.3) / 0.4))
                 if t > 1.2:
-                    pill(d, W // 2, 1050, f"Season: {SEASON[b]}", F(40, 600), (255, 255, 255), INK, padx=40, h=84)
+                    pill(d, W // 2, 1050, f"{BRANCH_EL[b]} animal", F(40, 600), (255, 255, 255), INK, padx=40, h=84)
                     para(d, 0, 1180, f"Every day has an animal. Today's {BRANCH_ANIMAL[b]} meets the animal of the year you were born.", 44, W - 200, INK, center=True, max_lines=3)
                 if t > 2.4: ctext(d, 1480, "What it means for YOUR animal", F(50, 600), RED); ctext(d, 1545, "Pause on yours", F(40, 500), MUTED)
         elif kind == 'sky' and t < 2 * CARD:   # how it works
@@ -295,7 +299,7 @@ def render(kind, date):
             else:
                 ctext(d, 740 + dy, a['name'].upper(), F(108, 700), INK)
                 ctext(d, 820 + dy, a['years'], F(38, 500), MUTED)
-                pill(d, W // 2, 865 + dy, f"Your Season: {a['season']}", F(34, 600), (255, 255, 255), INK, padx=34, h=68)
+                pill(d, W // 2, 865 + dy, f"{a['element']} animal", F(34, 600), (255, 255, 255), INK, padx=34, h=68)
                 lab, why, col = a['rel']
                 nl = len(wrap(d, a['tip'], F(54, 600), W - 280))
                 d.rounded_rectangle([90, 975 + dy, W - 90, 1250 + dy + nl * 70], 44, fill=(255, 255, 255))
@@ -326,6 +330,52 @@ def render(kind, date):
                     '-c:a', 'aac', '-b:a', '160k', '-ar', '48000', '-movflags', '+faststart', f'{out}/reel.mp4'], check=True)
     shutil.rmtree(tmp); print(kind, f'{out}/reel.mp4', round(total, 1), 's')
 
+# ---------- series reel (Mon/Wed/Fri 19:00): "The 10 elements on the MRT" ----------
+def series_reel(spec_path, date):
+    sp = json.load(open(spec_path, encoding='utf-8'))
+    col = DEEP[sp.get('cover_element', 'Fire')]; bgc = BG[sp.get('cover_element', 'Fire')]
+    items = [(name(i), STEMS[i][1], sp['items'][name(i)]) for i in range(10)]
+    SCARD = 1.5 * BAR; n = 10; bars = 2 + 1.5 * n + 2.5; total = bars * BAR; start = CARD
+    big = [emoji(STEM_ICON[i], 360) for i in range(10)]
+    mark = Image.open(f'{ASSETS}/brand/logo-mark-256.png').convert('RGBA').resize((80, 80))
+    out = os.path.join(ROOT, 'media', date); os.makedirs(out, exist_ok=True); tmp = tempfile.mkdtemp()
+    title = ' '.join(sp['title'])
+    for fr in range(int(total * FPS) + 1):
+        t = fr / FPS
+        if t < CARD:   # cover
+            im = Image.new('RGBA', (W, H), col); d = ImageDraw.Draw(im); p = ease(t / 0.4); dy = 30 * (1 - p)
+            y = 520
+            for l in sp['title']: y = para(d, 0, y + dy, l, 112, W - 140, CREAM, w=700, center=True, max_lines=1, lead=1.05)
+            if t > 1.0: para(d, 0, y + 60, sp['tag_line'], 50, W - 200, (255, 240, 230), w=600, center=True, max_lines=2)
+            if t > 2.0: ctext(d, 1560, 'Pause on yours', F(44, 600), CREAM)
+            im.alpha_composite(mark, (W // 2 - 40, 1700))
+        elif t < start + SCARD * n:
+            i = int((t - start) // SCARD); lt = t - start - i * SCARD; nm, el, line = items[i]
+            im = Image.new('RGBA', (W, H), BG[el]); d = ImageDraw.Draw(im); dots(d, n, i)
+            p = ease((lt - 0.08) / 0.3); dy = 40 * (1 - p)
+            scaled(im, big[i], W // 2, 520, ease_back(lt / 0.3))
+            ctext(d, 780 + dy, nm.upper(), F(104, 700), INK)
+            d.rounded_rectangle([90, 900 + dy, W - 90, 900 + dy + 100 + 76 * len(wrap(d, line, F(60, 600), W - 280))], 44, fill=(255, 255, 255))
+            para(d, 140, 950 + dy, line, 60, W - 280, INK, w=600, max_lines=4, lead=1.25)
+        else:
+            lt = t - start - SCARD * n
+            im = Image.new('RGBA', (W, H), bgc); d = ImageDraw.Draw(im)
+            if lt > 0.1: ctext(d, 480, "Which one", F(130, 700), INK); ctext(d, 610, "are you?", F(130, 700), INK)
+            if lt > 0.8: para(d, 0, 760, "Your element comes from the day you were born. Find it free in 60 seconds.", 46, W - 200, INK, center=True, max_lines=3)
+            if lt > 1.5:
+                pill(d, W // 2, 1000, "skyandseason.com", F(46, 700), INK, CREAM, h=110)
+                ctext(d, 1180, sp.get('comment_line', "Then comment your element below."), F(42, 600), col)
+                im.alpha_composite(mark, (W // 2 - 40, 1280))
+        if abs(t - 1.6) < 0.5 / FPS: im.convert('RGB').save(f'{out}/series-cover.jpg', quality=90)
+        im.convert('RGB').save(f'{tmp}/{fr:05d}.jpg', quality=90)
+    music = f'{tmp}/tune.m4a'
+    subprocess.run([sys.executable, f'{HERE}/music.py', music, '2', 'a', str(int(bars + 0.999))], check=True)
+    subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-framerate', str(FPS), '-i', f'{tmp}/%05d.jpg', '-i', music,
+                    '-map', '0:v', '-map', '1:a', '-shortest', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '22', '-r', str(FPS),
+                    '-c:a', 'aac', '-b:a', '160k', '-ar', '48000', '-movflags', '+faststart', f'{out}/series-reel.mp4'], check=True)
+    shutil.rmtree(tmp); print('series', f'{out}/series-reel.mp4', round(total, 1), 's', title)
+
 if __name__ == '__main__':
     k, date = sys.argv[1], sys.argv[2]
-    stories(date) if k == 'story' else render(k, date)
+    if k == 'series': series_reel(sys.argv[2], sys.argv[3])
+    else: stories(date) if k == 'story' else render(k, date)

@@ -10,23 +10,16 @@
   "media/2026-10-21/story6.jpg"
  ],
  "morning": {
-  "type": "carousel",
-  "slides": [
-   "media/2026-10-21/a1.jpg",
-   "media/2026-10-21/a2.jpg",
-   "media/2026-10-21/a3.jpg",
-   "media/2026-10-21/a4.jpg"
-  ],
-  "caption": "Midweek message incoming 📱 Swipe to find your element.\n\nToday is Yang Earth over Earth: a mountain kind of day. Solid for promises and admin, slow for quick wins.\n\nYour element is the day you were born, not your zodiac animal. Find it free at the link in bio.\n\nWhich one are you? Tell us below.\n\n#skyandseason #innerconstellation #astrology #zodiac #selfawareness #knowyourself #chineseastrology #fourpillars #fiveelements #bazi"
+  "type": "reel",
+  "video": "media/2026-10-21/reel.mp4",
+  "cover": "media/2026-10-21/cover.jpg",
+  "caption": "Midweek message incoming 📱 Pause on your Day Master.\n\nToday is Yang Earth over Earth: a mountain kind of day. Solid for promises and admin, slow for quick wins.\n\nYour element is the day you were born, not your zodiac animal. Find it free at the link in bio.\n\nWhich one are you? Tell us below.\n\n#skyandseason #innerconstellation #astrology #zodiac #selfawareness #knowyourself #chineseastrology #fourpillars #fiveelements #bazi",
+  "series": "sky-today"
  },
  "evening": {
-  "type": "carousel",
-  "slides": [
-   "media/2026-10-21/b1.jpg",
-   "media/2026-10-21/b2.jpg",
-   "media/2026-10-21/b3.jpg",
-   "media/2026-10-21/b4.jpg"
-  ],
+  "type": "reel",
+  "video": "media/2026-10-21/series-reel.mp4",
+  "cover": "media/2026-10-21/series-cover.jpg",
   "caption": "Tag the one who stands at the door 🚇\n\nEvery element has its MRT habit. Which one is you, and which one is your commute buddy?\n\nYour element comes from the day you were born, not your zodiac animal. Find yours free at the link in bio.\n\nWhich one are you? Comment below.\n\n#skyandseason #innerconstellation #zodiacmemes #astrologymemes #singapore #sgmrt #relatable #fiveelements #chineseastrology #bazi",
   "series": "mrt"
  }

@@ -17,13 +17,10 @@
   "media/2026-10-22/story6.jpg"
  ],
  "morning": {
-  "type": "carousel",
-  "slides": [
-   "media/2026-10-22/a1.jpg",
-   "media/2026-10-22/a2.jpg",
-   "media/2026-10-22/a3.jpg",
-   "media/2026-10-22/a4.jpg"
-  ],
-  "caption": "Thursday notification 📱 Swipe to find your element.\n\nToday is Yin Earth over Fire: a warm, fertile field. Good for growing plans and looking after people; easy to take on too much.\n\nYour element is the day you were born, not your zodiac animal. Find it free at the link in bio.\n\nWhich message hit a bit too close? Tell us below.\n\n#skyandseason #innerconstellation #horoscope #selfdiscovery #metaphysics #personalgrowth #chinesemetaphysics #bazi #fiveelements #chineseastrology"
+  "type": "reel",
+  "video": "media/2026-10-22/reel.mp4",
+  "cover": "media/2026-10-22/cover.jpg",
+  "caption": "Thursday notification 📱 Pause on your Day Master.\n\nToday is Yin Earth over Fire: a warm, fertile field. Good for growing plans and looking after people; easy to take on too much.\n\nYour element is the day you were born, not your zodiac animal. Find it free at the link in bio.\n\nWhich message hit a bit too close? Tell us below.\n\n#skyandseason #innerconstellation #horoscope #selfdiscovery #metaphysics #personalgrowth #chinesemetaphysics #bazi #fiveelements #chineseastrology",
+  "series": "sky-today"
  }
 }

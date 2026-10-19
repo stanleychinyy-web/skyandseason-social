@@ -2,14 +2,11 @@
  "date": "2026-10-20",
  "status": "approved",
  "morning": {
-  "type": "carousel",
-  "slides": [
-   "media/2026-10-20/a1.jpg",
-   "media/2026-10-20/a2.jpg",
-   "media/2026-10-20/a3.jpg",
-   "media/2026-10-20/a4.jpg"
-  ],
-  "caption": "Your element got a message 📱 Swipe to find yours.\n\nToday is Yin Fire over Wood: warm, creative, a little tender. Good for kindness and making things.\n\nYour element is the day you were born, not your zodiac animal. Find it free at the link in bio.\n\nSend this to someone whose message fits a bit too well.\n\n#skyandseason #innerconstellation #dailyhoroscope #astrology #personalgrowth #chinesemetaphysics #fourpillars #fiveelements #knowyourself #singapore"
+  "type": "reel",
+  "video": "media/2026-10-20/reel.mp4",
+  "cover": "media/2026-10-20/cover.jpg",
+  "caption": "Your element got a message 📱 Pause on your Day Master.\n\nToday is Yin Fire over Wood: warm, creative, a little tender. Good for kindness and making things.\n\nYour element is the day you were born, not your zodiac animal. Find it free at the link in bio.\n\nSend this to someone whose message fits a bit too well.\n\n#skyandseason #innerconstellation #dailyhoroscope #astrology #personalgrowth #chinesemetaphysics #fourpillars #fiveelements #knowyourself #singapore",
+  "series": "sky-today"
  },
  "stories": [
   "media/2026-10-20/story1.jpg",
