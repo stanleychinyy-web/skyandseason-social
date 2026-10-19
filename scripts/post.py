@@ -105,11 +105,66 @@ def prepare_story(img, what):
     return with_hosts(lambda b: call("POST", f"{UID}/media", media_type="STORIES", image_url=f"{b}/{img}")["id"], what)
 
 
-def finish(cid, what):
-    m = call("POST", f"{UID}/media_publish", creation_id=cid)["id"]
-    link = call("GET", m, fields="permalink").get("permalink", "")
-    print(f"published {what}: {m} {link}")
-    return {"id": m, "permalink": link}
+def _norm(text):
+    return " ".join((text or "").split())[:120]
+
+
+def _ts(t):
+    return datetime.datetime.strptime(t, "%Y-%m-%dT%H:%M:%S%z")
+
+
+def existing_post(caption, hours=36):
+    """The oldest feed post from the last `hours` whose caption matches: proof it is already live.
+    Instagram sometimes answers media_publish with an error (e.g. 2207051 "action is blocked") although
+    the post went live; without this check every retry made a duplicate (19 Oct 2026: three carousels)."""
+    if not caption:
+        return None
+    try:
+        rows = call("GET", f"{UID}/media", fields="id,caption,permalink,timestamp", limit="25").get("data", [])
+    except SystemExit as e:
+        print(f"could not list recent posts ({e})"); return None
+    since = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=hours)
+    hits = [r for r in rows if _norm(r.get("caption")) == _norm(caption) and _ts(r["timestamp"]) >= since]
+    if not hits:
+        return None
+    r = min(hits, key=lambda r: r["timestamp"])
+    return {"id": r["id"], "permalink": r.get("permalink", ""), "found": True}
+
+
+def new_story_since(t0, known_ids):
+    try:
+        rows = call("GET", f"{UID}/stories", fields="id,permalink,timestamp").get("data", [])
+    except SystemExit as e:
+        print(f"could not list live stories ({e})"); return None
+    for r in sorted(rows, key=lambda r: r["timestamp"]):
+        if r["id"] not in known_ids and _ts(r["timestamp"]) >= t0 - datetime.timedelta(seconds=90):
+            return {"id": r["id"], "permalink": r.get("permalink", ""), "found": True}
+    return None
+
+
+def finish(cid, what, caption=None, done=None):
+    """Publish one container. If Instagram answers with an error, check whether it went live anyway.
+    Returns the marker entry, or None when it really did not publish."""
+    t0 = datetime.datetime.now(datetime.timezone.utc)
+    try:
+        m = call("POST", f"{UID}/media_publish", creation_id=cid)["id"]
+        link = call("GET", m, fields="permalink").get("permalink", "")
+        print(f"published {what}: {m} {link}")
+        return {"id": m, "permalink": link}
+    except SystemExit as e:
+        print(f"{what}: publish answered with an error: {e}")
+    for _ in range(3):  # give Instagram a moment, then look for the post
+        time.sleep(20)
+        if what.startswith("story"):
+            known = {v.get("id") for v in (done or {}).values() if isinstance(v, dict)}
+            hit = new_story_since(t0, known)
+        else:
+            hit = existing_post(caption, hours=1)
+        if hit:
+            print(f"{what}: it went live despite the error: {hit['id']} {hit['permalink']}")
+            return hit
+    print(f"{what}: not live; leaving it for the next run")
+    return None
 
 
 def latest_from_origin(path):
@@ -185,6 +240,17 @@ def main():
         print("dry run OK:", post_key, item and item["type"], files_of(item) if item else [], "stories:", stories)
         print("publish time:", PUBLISH_AT or "immediately"); return
 
+    # 0. Never post the same thing twice: if a post with this caption is already live, record it.
+    if item and not done.get(post_key):
+        hit = existing_post(caption)
+        if hit:
+            print(f"{post_key} is already live ({hit['permalink']}); recording it instead of posting again")
+            done[post_key] = hit
+            done.setdefault("postedAt", datetime.datetime.now(SGT).isoformat(timespec="seconds"))
+            if SLOT == "evening":
+                done.setdefault("eveningAt", datetime.datetime.now(SGT).isoformat(timespec="seconds"))
+            os.makedirs(os.path.dirname(marker_path), exist_ok=True); json.dump(done, open(marker_path, "w"), indent=1)
+
     # 1. Upload everything early and let Instagram process it.
     todo = []
     if item and not done.get(post_key):
@@ -199,6 +265,7 @@ def main():
     wait_until_publish_time()
 
     # 3. Last check against the newest repo state.
+    pub_caption = caption
     if PUBLISH_AT:
         remote_done = latest_from_origin(marker_path)
         if remote_done:
@@ -218,16 +285,31 @@ def main():
             new_cap = ((latest.get(SLOT) or {}).get("caption") or "").strip()
             if item and new_cap and "#" in new_cap and new_cap != caption and any(k == post_key for k, _ in todo):
                 print("caption was edited since upload; re-uploading with the new caption")
+                pub_caption = new_cap
                 todo = [(k, prepare_item(item, new_cap, f"{SLOT} {item['type']}") if k == post_key else c) for k, c in todo]
 
-    # 4. Publish: the post first, then stories in order.
+    # 4. Publish: the post first, then stories in order. A failed item never stops the rest
+    #    (on 19 Oct the stories were lost because the carousel's error ended the run).
+    failed = []
     for key, cid in todo:
-        done[key] = finish(cid, key)
+        if key == post_key:
+            hit = existing_post(pub_caption) or (existing_post(caption) if pub_caption != caption else None)
+            if hit:
+                print(f"{key} is already live ({hit['permalink']}); not posting again")
+            res = hit or finish(cid, key, caption=pub_caption, done=done)
+        else:
+            res = finish(cid, key, done=done)
+            time.sleep(5)
+        if not res:
+            failed.append(key); continue
+        done[key] = res
         if key == post_key:
             done.setdefault("postedAt", datetime.datetime.now(SGT).isoformat(timespec="seconds"))
             if SLOT == "evening":
                 done["eveningAt"] = datetime.datetime.now(SGT).isoformat(timespec="seconds")
         os.makedirs(os.path.dirname(marker_path), exist_ok=True); json.dump(done, open(marker_path, "w"), indent=1)
+    if failed:
+        raise SystemExit(f"not published: {failed} (the next run retries only these)")
     print("all done for", DATE, SLOT)
 
 
