@@ -213,7 +213,9 @@ def main():
     print(f"account @{me.get('username')} ({UID}); date {DATE}; slot {SLOT}")
 
     monthly = SLOT == "monthly"   # The Month Ahead: its own file and marker, posts only when approved
-    OK = ("approved",) if monthly else ("pending", "approved")
+    # "posted" = the morning went out and the review page says so; the evening slot must still run
+    # (the posted/ markers and the already-live check stop any repeat).
+    OK = ("approved",) if monthly else ("pending", "approved", "posted")
     sched_path = f"schedule/monthly/{DATE}.json" if monthly else f"schedule/{DATE}.json"
     if not os.path.exists(sched_path):
         print(f"no {sched_path}; nothing to post"); return
