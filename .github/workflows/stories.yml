@@ -1,0 +1,54 @@
+name: Post Daily Stories
+# Story-only drops between the feed posts: 12:30 (little luck + quiz) and 21:00 (quiz answer + video clip).
+# schedule/<date>.json keys stories_noon / stories_night; markers posted/<date>.noon.json / .night.json.
+on:
+  schedule:
+    # GitHub often starts scheduled runs late, so start early; the run uploads, then waits for the publish time.
+    - cron: "0 2 * * *"     # 10:00 Singapore (noon drop, early start)
+    - cron: "30 3 * * *"    # 11:30 Singapore (noon drop, second start)
+    - cron: "0 5 * * *"     # 13:00 Singapore (noon drop, safety net)
+    - cron: "0 10 * * *"    # 18:00 Singapore (night drop, early start)
+    - cron: "0 12 * * *"    # 20:00 Singapore (night drop, second start)
+    - cron: "30 13 * * *"   # 21:30 Singapore (night drop, safety net)
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Date (YYYY-MM-DD). Blank = today in Singapore."
+        required: false
+      slot:
+        description: "noon (12:30 stories) or night (21:00 stories)"
+        type: choice
+        options: [noon, night]
+        default: noon
+      dry_run:
+        description: "Check only, post nothing"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency: post-stories-${{ github.event_name == 'schedule' && ((github.event.schedule == '0 2 * * *' || github.event.schedule == '30 3 * * *' || github.event.schedule == '0 5 * * *') && 'noon' || 'night') || inputs.slot }}
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    env:
+      SLOT: ${{ github.event_name == 'schedule' && ((github.event.schedule == '0 2 * * *' || github.event.schedule == '30 3 * * *' || github.event.schedule == '0 5 * * *') && 'noon' || 'night') || inputs.slot }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Post stories to Instagram
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          DATE: ${{ inputs.date }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          PUBLISH_AT: ${{ github.event_name == 'schedule' && (env.SLOT == 'noon' && '12:30' || '21:00') || '' }}
+          MEDIA_BASE: https://raw.githubusercontent.com/${{ github.repository }}/{sha},https://cdn.jsdelivr.net/gh/${{ github.repository }}@{sha}
+        run: python3 scripts/post.py
+      - name: Save posted marker
+        if: always()
+        run: |
+          git config user.name "Daily Reflection bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add posted || true
+          git diff --cached --quiet || (git commit -m "Posted $(TZ=Asia/Singapore date +%F) ${SLOT} stories" && (git push || (git pull --rebase -q origin main && git push)))

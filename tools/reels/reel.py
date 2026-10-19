@@ -137,7 +137,7 @@ def options(answer):
 def frame(el, date, k, n):
     im = Image.new('RGBA', (W, H), BG[el]); d = ImageDraw.Draw(im)
     d.text((W // 2, 230), date.strftime('TODAY · %a %-d %b').upper(), font=F(38, 600), fill=INK, anchor='mm')
-    for j in range(n):
+    for j in range(n if n > 1 else 0):
         x = W // 2 - (n - 1) * 22 + j * 44
         d.rounded_rectangle([x - 16, 270, x + 16, 278], 4, fill=INK if j == k else (255, 255, 255))
     return im, d
@@ -151,7 +151,7 @@ def stories(date):
     def save(im, k):
         p = f'{out}/story{k + 1}.jpg'; im.convert('RGB').save(p, quality=90); files.append(p)
     # 1. cover
-    im, d = frame(sky_el, dt, 0, N)
+    im, d = frame(sky_el, dt, 0, 3)
     ctext(d, 360, "Today's Sky & Season", F(76, 700), INK)
     for cx, kind in [(290, 'SKY'), (790, 'SEASON')]:
         d.rounded_rectangle([cx - 230, 430, cx + 230, 1010], 48, fill=(255, 255, 255))
@@ -162,11 +162,11 @@ def stories(date):
         d.text((cx, 900), GOD[s] if kind == 'SKY' else f'{BRANCH_EL[b]} animal', font=F(36, 500), fill=MUTED, anchor='mm')
         d.text((cx, 955), "the day's element" if kind == 'SKY' else "the day's animal", font=F(30, 400), fill=MUTED, anchor='mm')
     para(d, 0, 1080, spec.get('day_line') or f'{GOD[s]} meets the {BRANCH_ANIMAL[b]}.', 60, W - 180, INK, w=600, center=True, max_lines=3)
-    ctext(d, 1560, 'Tap for today in 6 stories', F(44, 600), RED)
+    ctext(d, 1560, 'Little luck & a quiz at 12:30pm', F(44, 600), RED)
     save(im, 0)
     # 2. the Sky
     nature, good, watch = STEM_INFO[s]
-    im, d = frame(sky_el, dt, 1, N)
+    im, d = frame(sky_el, dt, 1, 3)
     ctext(d, 350, "TODAY'S SKY", F(40, 700), RED)
     scaled(im, sky_icon, W // 2, 560, 1)
     ctext(d, 780, name(s), F(92, 700), INK); ctext(d, 860, GOD[s], F(48, 500), MUTED)
@@ -177,7 +177,7 @@ def stories(date):
     save(im, 1)
     # 3. the Season
     hm, tr, cl = BRANCH_ANIMAL[HARMONY[b]], [BRANCH_ANIMAL[(b + 4) % 12], BRANCH_ANIMAL[(b + 8) % 12]], BRANCH_ANIMAL[(b + 6) % 12]
-    im, d = frame(sea_el, dt, 2, N)
+    im, d = frame(sea_el, dt, 2, 3)
     ctext(d, 350, "TODAY'S SEASON", F(40, 700), GREEN)
     scaled(im, sea_icon, W // 2, 560, 1)
     ctext(d, 780, f'{BRANCH_ANIMAL[b]} day', F(92, 700), INK); ctext(d, 860, f'{BRANCH_EL[b]} animal', F(48, 500), MUTED)
@@ -189,7 +189,7 @@ def stories(date):
     para(d, 130, y + 30, f'Born in a {cl} year? Keep today light.', 42, W - 260, MUTED, max_lines=2)
     save(im, 2)
     # 4. lucky colour / hours / direction
-    im, d = frame(sky_el, dt, 3, N)
+    im, d = frame(sky_el, dt, 0, 2)
     ctext(d, 360, "Today's little luck", F(76, 700), INK)
     lucky = [((b + 4) % 12), HARMONY[b], ((b + 8) % 12)]
     lucky = sorted(set(lucky), key=lambda x: (x - 3) % 12)  # morning first
@@ -205,20 +205,22 @@ def stories(date):
     save(im, 3)
     # 5. quiz
     q, ans, why = element_link(sky_el, sea_el)
-    im, d = frame(sea_el, dt, 4, N)
+    im, d = frame(sea_el, dt, 1, 2)
     scaled(im, emoji('red-question-mark', 220), W // 2, 470, 1)
     ctext(d, 660, 'Quick quiz', F(84, 700), INK)
     para(d, 0, 760, q, 60, W - 200, INK, w=600, center=True, max_lines=2)
     y = 960
     for o in options(ans):
         card(d, y, y + 150); im.alpha_composite(emoji(EL_ICON[o], 100), (150, y + 25)); d.text((290, y + 75), o, font=F(60, 700), fill=INK, anchor='lm'); y += 180
-    ctext(d, y + 60, 'Guess, then tap for the answer', F(42, 600), RED)
+    ctext(d, y + 60, 'Guess now. The answer drops at 9pm.', F(42, 600), RED)
     save(im, 4)
     # 6. answer + call to action
-    im, d = frame(sea_el, dt, 5, N)
-    ctext(d, 360, f'Answer: {ans}', F(84, 700), GREEN)
-    scaled(im, emoji(EL_ICON[ans], 200), W // 2 - 140, 560, 1); scaled(im, emoji(EL_ICON[sky_el], 200), W // 2 + 140, 560, 1)
-    para(d, 0, 720, why, 50, W - 200, INK, w=500, center=True, max_lines=4)
+    im, d = frame(sea_el, dt, 0, 1)
+    ctext(d, 290, "THIS AFTERNOON'S QUIZ", F(36, 700), MUTED)
+    para(d, 0, 330, q, 40, W - 240, MUTED, w=500, center=True, max_lines=2)
+    ctext(d, 470, f'Answer: {ans}', F(84, 700), GREEN)
+    scaled(im, emoji(EL_ICON[ans], 170), W // 2 - 130, 630, 1); scaled(im, emoji(EL_ICON[sky_el], 170), W // 2 + 130, 630, 1)
+    para(d, 0, 760, why, 48, W - 200, INK, w=500, center=True, max_lines=4)
     card(d, 1060, 1560)
     para(d, 0, 1110, 'What does today mean for YOUR element?', 54, W - 260, INK, w=700, center=True, max_lines=2)
     para(d, 0, 1260, "Your element is the day you were born. Find it free, with today's reading for you.", 40, W - 280, MUTED, center=True, max_lines=3)
@@ -375,7 +377,41 @@ def series_reel(spec_path, date):
                     '-c:a', 'aac', '-b:a', '160k', '-ar', '48000', '-movflags', '+faststart', f'{out}/series-reel.mp4'], check=True)
     shutil.rmtree(tmp); print('series', f'{out}/series-reel.mp4', round(total, 1), 's', title)
 
+# ---------- 9pm video story: a clip of the day's reel + an end card ----------
+def story_clip(date, source='reel'):
+    """media/<date>/story-clip.mp4: the first cards of today's reel (or tonight's series reel),
+    then a 3.5 s end card sending people to the full reel."""
+    dt, s, b, spec = facts(date); out = os.path.join(ROOT, 'media', date)
+    series = source == 'series'
+    src = f'{out}/series-reel.mp4' if series else f'{out}/reel.mp4'
+    sunday = dt.weekday() == 6
+    cut = (CARD + 2 * 1.5 * BAR) if series else 3 * CARD
+    el = STEMS[s][1] if not sunday else BRANCH_EL_OF(b)
+    im = Image.new('RGBA', (W, H), BG[el]); d = ImageDraw.Draw(im)
+    ctext(d, 300, 'TONIGHT', F(38, 700), RED)
+    scaled(im, emoji('sparkles', 240), W // 2, 520, 1)
+    if series:
+        head, body = 'Which one are you?', "All 10 elements are in tonight's reel on our page."
+    elif sunday:
+        head, body = 'Found your animal?', "All 12 zodiac animals are in today's reel on our page."
+    else:
+        head, body = 'Did you find yours?', "All 10 Day Masters are in today's reel on our page."
+    para(d, 0, 720, head, 92, W - 160, INK, w=700, center=True, max_lines=2)
+    para(d, 0, 900, body, 54, W - 220, INK, w=500, center=True, max_lines=3)
+    pill(d, W // 2, 1180, '@theskyandseason', F(52, 700), INK, CREAM, h=112)
+    para(d, 0, 1340, 'Your element is the day you were born. Find yours free at skyandseason.com', 40, W - 260, MUTED, center=True, max_lines=3)
+    end = f'{out}/_clip_end.jpg'; im.convert('RGB').save(end, quality=92)
+    tail = 3.5; tot = cut + tail
+    fc = (f'[0:v]trim=0:{cut:.3f},setpts=PTS-STARTPTS,fps={FPS},format=yuv420p[a];'
+          f'[1:v]fps={FPS},format=yuv420p,fade=t=in:st=0:d=0.3[e];[a][e]concat=n=2:v=1:a=0[v];'
+          f'[0:a]atrim=0:{tot:.3f},asetpts=PTS-STARTPTS,afade=t=out:st={tot - 1.2:.3f}:d=1.2[au]')
+    subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', src, '-loop', '1', '-t', str(tail), '-i', end,
+                    '-filter_complex', fc, '-map', '[v]', '-map', '[au]', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '21',
+                    '-r', str(FPS), '-c:a', 'aac', '-b:a', '160k', '-ar', '48000', '-movflags', '+faststart', f'{out}/story-clip.mp4'], check=True)
+    os.remove(end); print('clip', f'{out}/story-clip.mp4', round(tot, 1), 's', source)
+
 if __name__ == '__main__':
     k, date = sys.argv[1], sys.argv[2]
     if k == 'series': series_reel(sys.argv[2], sys.argv[3])
+    elif k == 'clip': story_clip(date, sys.argv[3] if len(sys.argv) > 3 else 'reel')
     else: stories(date) if k == 'story' else render(k, date)

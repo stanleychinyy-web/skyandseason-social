@@ -4,10 +4,7 @@
  "stories": [
   "media/2026-10-27/story1.jpg",
   "media/2026-10-27/story2.jpg",
-  "media/2026-10-27/story3.jpg",
-  "media/2026-10-27/story4.jpg",
-  "media/2026-10-27/story5.jpg",
-  "media/2026-10-27/story6.jpg"
+  "media/2026-10-27/story3.jpg"
  ],
  "morning": {
   "type": "reel",
@@ -15,5 +12,13 @@
   "cover": "media/2026-10-27/cover.jpg",
   "caption": "Tuesday check-in from your element 📱 Pause on your Day Master.\n\nToday is Yang Wood over Earth: a big tree on solid ground. Good for long plans; watch the stubborn streak.\n\nYour element is the day you were born, not your zodiac animal. Find it free at the link in bio.\n\nWhich one are you? Tell us below.\n\n#skyandseason #innerconstellation #astrology #selfdiscovery #knowyourself #metaphysics #fourpillars #chineseastrology #fengshuitips #singapore",
   "series": "sky-today"
- }
+ },
+ "stories_noon": [
+  "media/2026-10-27/story4.jpg",
+  "media/2026-10-27/story5.jpg"
+ ],
+ "stories_night": [
+  "media/2026-10-27/story6.jpg",
+  "media/2026-10-27/story-clip.mp4"
+ ]
 }

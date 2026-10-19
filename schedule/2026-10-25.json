@@ -4,10 +4,7 @@
  "stories": [
   "media/2026-10-25/story1.jpg",
   "media/2026-10-25/story2.jpg",
-  "media/2026-10-25/story3.jpg",
-  "media/2026-10-25/story4.jpg",
-  "media/2026-10-25/story5.jpg",
-  "media/2026-10-25/story6.jpg"
+  "media/2026-10-25/story3.jpg"
  ],
  "morning": {
   "type": "reel",
@@ -22,5 +19,13 @@
   "cover": "media/2026-10-25/evening-cover.jpg",
   "caption": "Sky has just arrived on Earth, and everything is new 🌙\n\nSky is the quiet Yin spirit. She doesn't rush in; she pauses, notices and feels her way. A golden hilltop, rolling hills, a sparkling river, then a cool breeze and one small raindrop landing in her hand. In people, this Yin side is the part of you that pauses to take in a new place before you decide what it means. The gentle start is often where the real discovery begins.\n\nWhat's the first thing you notice when you arrive somewhere new? Tell us below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yinandyang #animatedshort #fiveelements #selfdiscovery #fantasyart #3danimation #easternphilosophy #mindfulmoments",
   "series": "earth-discovery"
- }
+ },
+ "stories_noon": [
+  "media/2026-10-25/story4.jpg",
+  "media/2026-10-25/story5.jpg"
+ ],
+ "stories_night": [
+  "media/2026-10-25/story6.jpg",
+  "media/2026-10-25/story-clip.mp4"
+ ]
 }

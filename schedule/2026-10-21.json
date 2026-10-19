@@ -4,10 +4,7 @@
  "stories": [
   "media/2026-10-21/story1.jpg",
   "media/2026-10-21/story2.jpg",
-  "media/2026-10-21/story3.jpg",
-  "media/2026-10-21/story4.jpg",
-  "media/2026-10-21/story5.jpg",
-  "media/2026-10-21/story6.jpg"
+  "media/2026-10-21/story3.jpg"
  ],
  "morning": {
   "type": "reel",
@@ -22,5 +19,13 @@
   "cover": "media/2026-10-21/series-cover.jpg",
   "caption": "Tag the one who stands at the door 🚇\n\nEvery element has its MRT habit. Which one is you, and which one is your commute buddy?\n\nYour element comes from the day you were born, not your zodiac animal. Find yours free at the link in bio.\n\nWhich one are you? Comment below.\n\n#skyandseason #innerconstellation #zodiacmemes #astrologymemes #singapore #sgmrt #relatable #fiveelements #chineseastrology #bazi",
   "series": "mrt"
- }
+ },
+ "stories_noon": [
+  "media/2026-10-21/story4.jpg",
+  "media/2026-10-21/story5.jpg"
+ ],
+ "stories_night": [
+  "media/2026-10-21/story6.jpg",
+  "media/2026-10-21/story-clip.mp4"
+ ]
 }

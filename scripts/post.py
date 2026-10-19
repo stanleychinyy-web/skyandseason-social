@@ -15,7 +15,7 @@ PUBLISH_AT. A run that starts late publishes straight away. Just before publishi
 the newest schedule and markers from origin/main, so a late hold, caption edit or another run's post
 is respected.
 
-Env: IG_ACCESS_TOKEN, SLOT=morning|evening|monthly (monthly = schedule/monthly/<date>.json, approved only), DATE (default today SGT), DRY_RUN, MEDIA_BASE (comma list,
+Env: IG_ACCESS_TOKEN, SLOT=morning|noon|evening|night|monthly (noon/night = story drops from stories_noon/stories_night, markers posted/<date>.<slot>.json; monthly = schedule/monthly/<date>.json, approved only), DATE (default today SGT), DRY_RUN, MEDIA_BASE (comma list,
 may contain {sha}), PUBLISH_AT (HH:MM Singapore).
 """
 import datetime, json, os, subprocess, time, urllib.parse, urllib.request, urllib.error
@@ -101,8 +101,10 @@ def prepare_item(item, caption, what):
     raise SystemExit(f"{what}: unknown post type {item['type']}")
 
 
-def prepare_story(img, what):
-    return with_hosts(lambda b: call("POST", f"{UID}/media", media_type="STORIES", image_url=f"{b}/{img}")["id"], what)
+def prepare_story(path, what):
+    if path.endswith(".mp4"):  # video story
+        return with_hosts(lambda b: call("POST", f"{UID}/media", media_type="STORIES", video_url=f"{b}/{path}")["id"], what)
+    return with_hosts(lambda b: call("POST", f"{UID}/media", media_type="STORIES", image_url=f"{b}/{path}")["id"], what)
 
 
 def _norm(text):
@@ -155,7 +157,7 @@ def finish(cid, what, caption=None, done=None):
         print(f"{what}: publish answered with an error: {e}")
     for _ in range(3):  # give Instagram a moment, then look for the post
         time.sleep(20)
-        if what.startswith("story"):
+        if "story" in what:
             known = {v.get("id") for v in (done or {}).values() if isinstance(v, dict)}
             hit = new_story_since(t0, known)
         else:
@@ -226,7 +228,10 @@ def main():
     if item and item.get("status") in ("review", "hold", "changes"):
         print(f"{SLOT} item is '{item.get('status')}' (waiting for Stanley's approval); not posting it")
         item = None
-    stories = s.get("stories", []) if SLOT in ("morning", "monthly") else []
+    # noon / night = story-only drops (12:30 and 21:00): schedule keys stories_noon / stories_night
+    stories = s.get("stories", []) if SLOT in ("morning", "monthly") else s.get(f"stories_{SLOT}", [])
+    if SLOT in ("noon", "night"):
+        item = None
     if not item and not stories:
         print(f"nothing scheduled for the {SLOT} slot"); return
     post_key = "reel" if (SLOT == "morning" and item and item["type"] == "reel") else SLOT
@@ -236,7 +241,9 @@ def main():
     missing = [p for p in (files_of(item) if item else []) + stories if not os.path.exists(p)]
     if missing:
         raise SystemExit(f"missing media files: {missing}")
-    marker_path = f"posted/monthly/{DATE}.json" if monthly else f"posted/{DATE}.json"
+    marker_path = (f"posted/monthly/{DATE}.json" if monthly else
+                   f"posted/{DATE}.{SLOT}.json" if SLOT in ("noon", "night") else f"posted/{DATE}.json")
+    skey = "story" if SLOT in ("morning", "monthly") else f"{SLOT}_story"
     done = json.load(open(marker_path)) if os.path.exists(marker_path) else {}
     if DRY:
         if item:
@@ -260,8 +267,8 @@ def main():
     if item and not done.get(post_key):
         todo.append((post_key, prepare_item(item, caption, f"{SLOT} {item['type']}")))
     for i, img in enumerate(stories, 1):
-        if not done.get(f"story{i}"):
-            todo.append((f"story{i}", prepare_story(img, f"story{i}")))
+        if not done.get(f"{skey}{i}"):
+            todo.append((f"{skey}{i}", prepare_story(img, f"{skey}{i}")))
     if not todo:
         print("already posted for", DATE, SLOT); return
 

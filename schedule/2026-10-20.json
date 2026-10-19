@@ -11,10 +11,7 @@
  "stories": [
   "media/2026-10-20/story1.jpg",
   "media/2026-10-20/story2.jpg",
-  "media/2026-10-20/story3.jpg",
-  "media/2026-10-20/story4.jpg",
-  "media/2026-10-20/story5.jpg",
-  "media/2026-10-20/story6.jpg"
+  "media/2026-10-20/story3.jpg"
  ],
  "evening": {
   "type": "reel",
@@ -22,5 +19,13 @@
   "cover": "media/2026-10-20/evening-cover.jpg",
   "caption": "Some energy wakes you gently.\n\nThe moon didn't shout. It simply rose, and Sky opened her eyes for the first time.\n\nSky is Yin, the moon's energy. She notices first, feels deeply, and moves when the moment is right. Yin isn't weakness. It's the quiet strength of paying attention.\n\nDo you know someone who sees everything before anyone says a word? Tag them 🌙\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yinyang #moonenergy #chineseastrology #bazi #selfawareness #astrology #zodiac #animatedshort",
   "series": "sky-awakens"
- }
+ },
+ "stories_noon": [
+  "media/2026-10-20/story4.jpg",
+  "media/2026-10-20/story5.jpg"
+ ],
+ "stories_night": [
+  "media/2026-10-20/story6.jpg",
+  "media/2026-10-20/story-clip.mp4"
+ ]
 }
