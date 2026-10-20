@@ -1,0 +1,18 @@
+name: Inspect Instagram media (read-only)
+on:
+  workflow_dispatch:
+    inputs:
+      media_ids:
+        description: "Comma-separated Instagram media ids"
+        required: true
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/inspect_media.py | tee inspect.txt
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          MEDIA_IDS: ${{ inputs.media_ids }}
+      - uses: actions/upload-artifact@v4
+        with: {name: inspect, path: inspect.txt}
