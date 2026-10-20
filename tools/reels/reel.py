@@ -377,6 +377,68 @@ def series_reel(spec_path, date):
                     '-c:a', 'aac', '-b:a', '160k', '-ar', '48000', '-movflags', '+faststart', f'{out}/series-reel.mp4'], check=True)
     shutil.rmtree(tmp); print('series', f'{out}/series-reel.mp4', round(total, 1), 's', title)
 
+# ---------- ranking reel: "Most likely to be the micro-manager", countdown #5 -> #1 ----------
+def ranking_reel(spec_path, date):
+    """tools/rankings/<slug>.json: title[2-3], tag_line, cover_element, rank [{element, line, plus} x5, #1 first],
+    caption, optional comment_line. Writes media/<date>/series-reel.mp4 + series-cover.jpg (evening slot)."""
+    sp = json.load(open(spec_path, encoding='utf-8'))
+    col = DEEP[sp.get('cover_element', 'Fire')]; bgc = BG[sp.get('cover_element', 'Fire')]
+    idx = {name(i): i for i in range(10)}
+    ranks = sp['rank'][:5]; n = len(ranks); order = list(range(n - 1, -1, -1))   # show #5 first, #1 last
+    RC = CARD; bars = 2 + 2 * n + 2.5; total = bars * BAR; start = CARD
+    mark = Image.open(f'{ASSETS}/brand/logo-mark-256.png').convert('RGBA').resize((80, 80))
+    big = {r['element']: emoji(STEM_ICON[idx[r['element']]], 330) for r in ranks}
+    out = os.path.join(ROOT, 'media', date); os.makedirs(out, exist_ok=True); tmp = tempfile.mkdtemp()
+    for fr in range(int(total * FPS) + 1):
+        t = fr / FPS
+        if t < CARD:   # cover: the question
+            im = Image.new('RGBA', (W, H), col); d = ImageDraw.Draw(im); p = ease(t / 0.4); dy = 30 * (1 - p)
+            ctext(d, 420, 'WHICH ELEMENT IS…', F(46, 700), (255, 240, 230))
+            y = 520
+            for l in sp['title']: y = para(d, 0, y + dy, l, 108, W - 140, CREAM, w=700, center=True, max_lines=1, lead=1.05)
+            if t > 1.0: para(d, 0, y + 60, sp['tag_line'], 50, W - 200, (255, 240, 230), w=600, center=True, max_lines=2)
+            if t > 2.0: ctext(d, 1560, 'Counting down to #1', F(44, 600), CREAM)
+            im.alpha_composite(mark, (W // 2 - 40, 1700))
+        elif t < start + RC * n:
+            k = int((t - start) // RC); lt = t - start - k * RC; ri = order[k]; r = ranks[ri]; el = STEMS[idx[r['element']]][1]
+            top = ri == 0
+            im = Image.new('RGBA', (W, H), (255, 212, 92) if top else BG[el]); d = ImageDraw.Draw(im)
+            fg = INK; sub = MUTED
+            if top and lt > 0.2:
+                for j in range(14):   # little burst behind the #1 emoji
+                    import math; ang = j / 14 * 2 * math.pi; r0, r1 = 230, 230 + 50 * ease((lt - 0.2) / 0.4)
+                    d.line([(W // 2 + r0 * math.cos(ang), 560 + r0 * math.sin(ang)), (W // 2 + r1 * math.cos(ang), 560 + r1 * math.sin(ang))], fill=(255, 250, 240), width=10)
+            p = ease((lt - 0.05) / 0.3); dy = 40 * (1 - p)
+            ctext(d, 300, f'#{ri + 1}', F(150 if top else 120, 700), RED if top else fg)
+            scaled(im, big[r['element']], W // 2, 560, ease_back(lt / 0.3))
+            ctext(d, 790 + dy, r['element'].upper(), F(96, 700), fg)
+            ctext(d, 870 + dy, GOD[idx[r['element']]], F(44, 500), sub)
+            lines = wrap(d, r['line'], F(56, 600), W - 280)
+            h1 = 90 + 70 * len(lines)
+            d.rounded_rectangle([90, 940 + dy, W - 90, 940 + dy + h1], 44, fill=(255, 255, 255))
+            para(d, 140, 985 + dy, r['line'], 56, W - 280, INK, w=600, max_lines=3, lead=1.25)
+            if lt > 1.4 and r.get('plus'):
+                y2 = 940 + h1 + 40
+                d.text((140, y2), 'THE UPSIDE', font=F(34, 700), fill=GREEN)
+                para(d, 140, y2 + 50, r['plus'], 46, W - 280, fg, w=500, max_lines=2)
+        else:
+            lt = t - start - RC * n
+            im = Image.new('RGBA', (W, H), bgc); d = ImageDraw.Draw(im)
+            if lt > 0.1: ctext(d, 470, 'Agree?', F(140, 700), INK)
+            if lt > 0.6: para(d, 0, 600, sp.get('comment_line', 'Tag your #1 below.'), 60, W - 200, INK, w=700, center=True, max_lines=2)
+            if lt > 1.2: para(d, 0, 800, "Your element comes from the day you were born. Find it free in 60 seconds.", 46, W - 200, INK, center=True, max_lines=3)
+            if lt > 1.6:
+                pill(d, W // 2, 1040, "skyandseason.com", F(46, 700), INK, CREAM, h=110)
+                im.alpha_composite(mark, (W // 2 - 40, 1180))
+        if abs(t - 1.6) < 0.5 / FPS: im.convert('RGB').save(f'{out}/series-cover.jpg', quality=90)
+        im.convert('RGB').save(f'{tmp}/{fr:05d}.jpg', quality=90)
+    music = f'{tmp}/tune.m4a'
+    subprocess.run([sys.executable, f'{HERE}/music.py', music, '2', 'a', str(int(bars + 0.999))], check=True)
+    subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-framerate', str(FPS), '-i', f'{tmp}/%05d.jpg', '-i', music,
+                    '-map', '0:v', '-map', '1:a', '-shortest', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '22', '-r', str(FPS),
+                    '-c:a', 'aac', '-b:a', '160k', '-ar', '48000', '-movflags', '+faststart', f'{out}/series-reel.mp4'], check=True)
+    shutil.rmtree(tmp); print('ranking', f'{out}/series-reel.mp4', round(total, 1), 's', ' '.join(sp['title']))
+
 # ---------- 9pm video story: a clip of the day's reel + an end card ----------
 def story_clip(date, source='reel'):
     """media/<date>/story-clip.mp4: the first cards of today's reel (or tonight's series reel),
@@ -413,5 +475,6 @@ def story_clip(date, source='reel'):
 if __name__ == '__main__':
     k, date = sys.argv[1], sys.argv[2]
     if k == 'series': series_reel(sys.argv[2], sys.argv[3])
+    elif k == 'ranking': ranking_reel(sys.argv[2], sys.argv[3])
     elif k == 'clip': story_clip(date, sys.argv[3] if len(sys.argv) > 3 else 'reel')
     else: stories(date) if k == 'story' else render(k, date)
