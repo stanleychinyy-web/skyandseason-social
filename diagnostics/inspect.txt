@@ -1,0 +1,9 @@
+18226233142329773 media_type {"media_type": "VIDEO", "media_product_type": "REELS", "permalink": "https://www.instagram.com/reel/DeofsZFiYTq/", "timestamp": "2026-10-18T11:00:01+0000", "id": "18226233142329773"}
+18226233142329773 copyright_check_information ERROR 400 {"error":{"message":"Tried accessing nonexisting field (copyright_check_information)","type":"IGApiException","code":100,"fbtrace_id":"AAJdwDf7xFLZbHSKv24darn"}}
+18226233142329773 is_shared_to_feed {"is_shared_to_feed": true, "id": "18226233142329773"}
+18117940073071300 media_type {"media_type": "VIDEO", "media_product_type": "REELS", "permalink": "https://www.instagram.com/reel/Detsvr_ICDF/", "timestamp": "2026-10-20T11:13:51+0000", "id": "18117940073071300"}
+18117940073071300 copyright_check_information ERROR 400 {"error":{"message":"Tried accessing nonexisting field (copyright_check_information)","type":"IGApiException","code":100,"fbtrace_id":"ArRTAogR6VUwvvFxuFkqt6m"}}
+18117940073071300 is_shared_to_feed {"is_shared_to_feed": true, "id": "18117940073071300"}
+18637112851020846 media_type {"media_type": "VIDEO", "media_product_type": "REELS", "permalink": "https://www.instagram.com/reel/Dem02QRil9K/", "timestamp": "2026-10-17T22:00:01+0000", "id": "18637112851020846"}
+18637112851020846 copyright_check_information ERROR 400 {"error":{"message":"Tried accessing nonexisting field (copyright_check_information)","type":"IGApiException","code":100,"fbtrace_id":"ATheF7-Q1_l1pKK6JtRVkNt"}}
+18637112851020846 is_shared_to_feed {"is_shared_to_feed": true, "id": "18637112851020846"}
