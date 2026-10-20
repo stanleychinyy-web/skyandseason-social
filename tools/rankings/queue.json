@@ -1,23 +1,296 @@
 {
- "_rules": "Tue/Thu 19:00 ranking reels ('Which element is the most…?'). Stanley 20 Oct: 'not all is negative, can have positive traits… like personality reels'. Use topics in order, skipping used ones. At least 2 of every 3 must be POSITIVE; a CHEEKY one never runs twice in a row, and every card (cheeky or positive) has a warm 'plus'. Picks are the #1..#5 elements from classical stem traits; keep them unless a clearer reason exists. Lines <= ~60 chars, plus <= ~45 chars, everyday Singapore work/life, plain words. Mark 'used': '<date>' when scheduled.",
+ "_rules": "Wed/Sat 19:00 (Tue/Thu/Sun evenings belong to the character reels; Mon/Fri keep the situation series) ranking reels ('Which element is the most…?'). Stanley 20 Oct: 'not all is negative, can have positive traits… like personality reels'. Use topics in order, skipping used ones. At least 2 of every 3 must be POSITIVE; a CHEEKY one never runs twice in a row, and every card (cheeky or positive) has a warm 'plus'. Picks are the #1..#5 elements from classical stem traits; keep them unless a clearer reason exists. Lines <= ~60 chars, plus <= ~45 chars, everyday Singapore work/life, plain words. Mark 'used': '<date>' when scheduled.",
  "topics": [
-  {"slug": "hardest-working", "tone": "positive", "title": ["the hardest", "worker?"], "picks": ["Yang Earth", "Yin Earth", "Yang Metal", "Yang Wood", "Yin Wood"], "why": "Earth endures (the mountain, the field that never stops giving); Metal is disciplined; Wood keeps growing."},
-  {"slug": "best-in-a-crisis", "tone": "positive", "title": ["the one you want", "in a crisis?"], "picks": ["Yang Metal", "Yang Earth", "Yang Water", "Yang Wood", "Yin Metal"], "why": "Yang Metal decides fast, Yang Earth stays put, Yang Water finds a way round."},
-  {"slug": "micro-manager", "tone": "cheeky", "title": ["the micro-", "manager?"], "picks": ["Yin Metal", "Yang Metal", "Yang Earth", "Yin Earth", "Yin Fire"], "why": "Metal loves standards, Earth loves systems, Yin Fire notices everything.", "spec": "tools/rankings/micro-manager.json"},
-  {"slug": "most-loyal-friend", "tone": "positive", "title": ["the most", "loyal friend?"], "picks": ["Yang Earth", "Yang Metal", "Yin Earth", "Yang Wood", "Yin Wood"], "why": "Earth = trust, Metal = keeping your word, Wood = kindness."},
-  {"slug": "best-listener", "tone": "positive", "title": ["the best", "listener?"], "picks": ["Yin Water", "Yin Earth", "Yin Wood", "Yin Fire", "Yang Earth"], "why": "The yin stems receive; Yin Water reads what is not said."},
-  {"slug": "bossiest", "tone": "cheeky", "title": ["the", "bossiest?"], "picks": ["Yang Metal", "Yang Fire", "Yang Wood", "Yang Earth", "Yang Water"], "why": "The five yang stems lead from the front; Yang Metal gives orders, Yang Fire takes the stage."},
-  {"slug": "office-sunshine", "tone": "positive", "title": ["the office", "sunshine?"], "picks": ["Yang Fire", "Yin Fire", "Yang Wood", "Yin Wood", "Yang Water"], "why": "Fire warms the room; Wood brings fresh energy."},
-  {"slug": "most-creative", "tone": "positive", "title": ["the most", "creative?"], "picks": ["Yang Water", "Yin Fire", "Yin Wood", "Yin Water", "Yang Fire"], "why": "Water = ideas and imagination, Fire = expression, Yin Wood = taste."},
-  {"slug": "shortest-temper", "tone": "cheeky", "title": ["the shortest", "temper?"], "picks": ["Yang Fire", "Yang Metal", "Yang Water", "Yin Fire", "Yang Wood"], "why": "Yang Fire flares and is over by lunch; Yang Metal cuts; Yang Water storms."},
-  {"slug": "best-boss", "tone": "positive", "title": ["the best", "boss to have?"], "picks": ["Yang Wood", "Yang Earth", "Yang Fire", "Yin Earth", "Yang Metal"], "why": "Yang Wood gives shade and lets people grow; Yang Earth is fair and steady."},
-  {"slug": "best-gift-giver", "tone": "positive", "title": ["the best", "gift-giver?"], "picks": ["Yin Metal", "Yin Fire", "Yin Wood", "Yin Earth", "Yin Water"], "why": "Yin Metal has taste; Yin Fire remembers the tiny detail you mentioned once."},
-  {"slug": "seen-no-reply", "tone": "cheeky", "title": ["the 'seen'", "but no reply?"], "picks": ["Yang Water", "Yang Fire", "Yin Water", "Yang Metal", "Yang Wood"], "why": "Yang Water is already somewhere else; Yang Fire replied in their head."},
-  {"slug": "most-generous", "tone": "positive", "title": ["the most", "generous?"], "picks": ["Yang Fire", "Yang Earth", "Yin Earth", "Yang Wood", "Yang Water"], "why": "The sun shines on everyone; the field feeds everyone."},
-  {"slug": "best-negotiator", "tone": "positive", "title": ["the best", "negotiator?"], "picks": ["Yin Water", "Yang Water", "Yin Metal", "Yin Wood", "Yang Metal"], "why": "Water flows round the obstacle; Yin Metal knows exactly what it is worth."},
-  {"slug": "first-to-say-makan", "tone": "cheeky", "title": ["first to say", "'makan where?'"], "picks": ["Yang Fire", "Yin Earth", "Yang Water", "Yin Wood", "Yang Earth"], "why": "Yang Fire rallies the group; Yin Earth feeds people."},
-  {"slug": "future-boss", "tone": "positive", "title": ["most likely to", "be the boss?"], "picks": ["Yang Wood", "Yang Metal", "Yang Fire", "Yang Earth", "Yang Water"], "why": "The yang stems take the lead; Yang Wood stands tallest."},
-  {"slug": "calmest", "tone": "positive", "title": ["the calmest", "under pressure?"], "picks": ["Yang Earth", "Yin Water", "Yin Earth", "Yang Metal", "Yin Metal"], "why": "The mountain does not move; still water stays clear."},
-  {"slug": "start-a-business", "tone": "positive", "title": ["most likely to", "start a business?"], "picks": ["Yang Water", "Yang Fire", "Yang Wood", "Yang Metal", "Yin Wood"], "why": "Yang Water loves the new, Yang Fire sells it, Yang Wood builds it."}
+  {
+   "slug": "hardest-working",
+   "tone": "positive",
+   "title": [
+    "the hardest",
+    "worker?"
+   ],
+   "picks": [
+    "Yang Earth",
+    "Yin Earth",
+    "Yang Metal",
+    "Yang Wood",
+    "Yin Wood"
+   ],
+   "why": "Earth endures (the mountain, the field that never stops giving); Metal is disciplined; Wood keeps growing.",
+   "used": "2026-10-24",
+   "spec": "tools/rankings/hardest-working.json"
+  },
+  {
+   "slug": "best-in-a-crisis",
+   "tone": "positive",
+   "title": [
+    "the one you want",
+    "in a crisis?"
+   ],
+   "picks": [
+    "Yang Metal",
+    "Yang Earth",
+    "Yang Water",
+    "Yang Wood",
+    "Yin Metal"
+   ],
+   "why": "Yang Metal decides fast, Yang Earth stays put, Yang Water finds a way round."
+  },
+  {
+   "slug": "micro-manager",
+   "tone": "cheeky",
+   "title": [
+    "the micro-",
+    "manager?"
+   ],
+   "picks": [
+    "Yin Metal",
+    "Yang Metal",
+    "Yang Earth",
+    "Yin Earth",
+    "Yin Fire"
+   ],
+   "why": "Metal loves standards, Earth loves systems, Yin Fire notices everything.",
+   "spec": "tools/rankings/micro-manager.json"
+  },
+  {
+   "slug": "most-loyal-friend",
+   "tone": "positive",
+   "title": [
+    "the most",
+    "loyal friend?"
+   ],
+   "picks": [
+    "Yang Earth",
+    "Yang Metal",
+    "Yin Earth",
+    "Yang Wood",
+    "Yin Wood"
+   ],
+   "why": "Earth = trust, Metal = keeping your word, Wood = kindness."
+  },
+  {
+   "slug": "best-listener",
+   "tone": "positive",
+   "title": [
+    "the best",
+    "listener?"
+   ],
+   "picks": [
+    "Yin Water",
+    "Yin Earth",
+    "Yin Wood",
+    "Yin Fire",
+    "Yang Earth"
+   ],
+   "why": "The yin stems receive; Yin Water reads what is not said."
+  },
+  {
+   "slug": "bossiest",
+   "tone": "cheeky",
+   "title": [
+    "the",
+    "bossiest?"
+   ],
+   "picks": [
+    "Yang Metal",
+    "Yang Fire",
+    "Yang Wood",
+    "Yang Earth",
+    "Yang Water"
+   ],
+   "why": "The five yang stems lead from the front; Yang Metal gives orders, Yang Fire takes the stage."
+  },
+  {
+   "slug": "office-sunshine",
+   "tone": "positive",
+   "title": [
+    "the office",
+    "sunshine?"
+   ],
+   "picks": [
+    "Yang Fire",
+    "Yin Fire",
+    "Yang Wood",
+    "Yin Wood",
+    "Yang Water"
+   ],
+   "why": "Fire warms the room; Wood brings fresh energy."
+  },
+  {
+   "slug": "most-creative",
+   "tone": "positive",
+   "title": [
+    "the most",
+    "creative?"
+   ],
+   "picks": [
+    "Yang Water",
+    "Yin Fire",
+    "Yin Wood",
+    "Yin Water",
+    "Yang Fire"
+   ],
+   "why": "Water = ideas and imagination, Fire = expression, Yin Wood = taste."
+  },
+  {
+   "slug": "shortest-temper",
+   "tone": "cheeky",
+   "title": [
+    "the shortest",
+    "temper?"
+   ],
+   "picks": [
+    "Yang Fire",
+    "Yang Metal",
+    "Yang Water",
+    "Yin Fire",
+    "Yang Wood"
+   ],
+   "why": "Yang Fire flares and is over by lunch; Yang Metal cuts; Yang Water storms."
+  },
+  {
+   "slug": "best-boss",
+   "tone": "positive",
+   "title": [
+    "the best",
+    "boss to have?"
+   ],
+   "picks": [
+    "Yang Wood",
+    "Yang Earth",
+    "Yang Fire",
+    "Yin Earth",
+    "Yang Metal"
+   ],
+   "why": "Yang Wood gives shade and lets people grow; Yang Earth is fair and steady."
+  },
+  {
+   "slug": "best-gift-giver",
+   "tone": "positive",
+   "title": [
+    "the best",
+    "gift-giver?"
+   ],
+   "picks": [
+    "Yin Metal",
+    "Yin Fire",
+    "Yin Wood",
+    "Yin Earth",
+    "Yin Water"
+   ],
+   "why": "Yin Metal has taste; Yin Fire remembers the tiny detail you mentioned once."
+  },
+  {
+   "slug": "seen-no-reply",
+   "tone": "cheeky",
+   "title": [
+    "the 'seen'",
+    "but no reply?"
+   ],
+   "picks": [
+    "Yang Water",
+    "Yang Fire",
+    "Yin Water",
+    "Yang Metal",
+    "Yang Wood"
+   ],
+   "why": "Yang Water is already somewhere else; Yang Fire replied in their head."
+  },
+  {
+   "slug": "most-generous",
+   "tone": "positive",
+   "title": [
+    "the most",
+    "generous?"
+   ],
+   "picks": [
+    "Yang Fire",
+    "Yang Earth",
+    "Yin Earth",
+    "Yang Wood",
+    "Yang Water"
+   ],
+   "why": "The sun shines on everyone; the field feeds everyone."
+  },
+  {
+   "slug": "best-negotiator",
+   "tone": "positive",
+   "title": [
+    "the best",
+    "negotiator?"
+   ],
+   "picks": [
+    "Yin Water",
+    "Yang Water",
+    "Yin Metal",
+    "Yin Wood",
+    "Yang Metal"
+   ],
+   "why": "Water flows round the obstacle; Yin Metal knows exactly what it is worth."
+  },
+  {
+   "slug": "first-to-say-makan",
+   "tone": "cheeky",
+   "title": [
+    "first to say",
+    "'makan where?'"
+   ],
+   "picks": [
+    "Yang Fire",
+    "Yin Earth",
+    "Yang Water",
+    "Yin Wood",
+    "Yang Earth"
+   ],
+   "why": "Yang Fire rallies the group; Yin Earth feeds people."
+  },
+  {
+   "slug": "future-boss",
+   "tone": "positive",
+   "title": [
+    "most likely to",
+    "be the boss?"
+   ],
+   "picks": [
+    "Yang Wood",
+    "Yang Metal",
+    "Yang Fire",
+    "Yang Earth",
+    "Yang Water"
+   ],
+   "why": "The yang stems take the lead; Yang Wood stands tallest."
+  },
+  {
+   "slug": "calmest",
+   "tone": "positive",
+   "title": [
+    "the calmest",
+    "under pressure?"
+   ],
+   "picks": [
+    "Yang Earth",
+    "Yin Water",
+    "Yin Earth",
+    "Yang Metal",
+    "Yin Metal"
+   ],
+   "why": "The mountain does not move; still water stays clear."
+  },
+  {
+   "slug": "start-a-business",
+   "tone": "positive",
+   "title": [
+    "most likely to",
+    "start a business?"
+   ],
+   "picks": [
+    "Yang Water",
+    "Yang Fire",
+    "Yang Wood",
+    "Yang Metal",
+    "Yin Wood"
+   ],
+   "why": "Yang Water loves the new, Yang Fire sells it, Yang Wood builds it."
+  }
  ]
 }
