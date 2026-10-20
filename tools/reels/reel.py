@@ -444,15 +444,17 @@ def story_clip(date, source='reel'):
     """media/<date>/story-clip.mp4: the first cards of today's reel (or tonight's series reel),
     then a 3.5 s end card sending people to the full reel."""
     dt, s, b, spec = facts(date); out = os.path.join(ROOT, 'media', date)
-    series = source == 'series'
+    series = source in ('series', 'ranking')
     src = f'{out}/series-reel.mp4' if series else f'{out}/reel.mp4'
     sunday = dt.weekday() == 6
-    cut = (CARD + 2 * 1.5 * BAR) if series else 3 * CARD
+    cut = 2 * CARD if source == 'ranking' else (CARD + 2 * 1.5 * BAR) if series else 3 * CARD   # ranking: cover + #5, keeps #1 a secret
     el = STEMS[s][1] if not sunday else BRANCH_EL_OF(b)
     im = Image.new('RGBA', (W, H), BG[el]); d = ImageDraw.Draw(im)
     ctext(d, 300, 'TONIGHT', F(38, 700), RED)
     scaled(im, emoji('sparkles', 240), W // 2, 520, 1)
-    if series:
+    if source == 'ranking':
+        head, body = 'Who is #1?', "The full countdown is in tonight's reel on our page."
+    elif series:
         head, body = 'Which one are you?', "All 10 elements are in tonight's reel on our page."
     elif sunday:
         head, body = 'Found your animal?', "All 12 zodiac animals are in today's reel on our page."
