@@ -8,7 +8,8 @@ ANATOMY LOCK for the whole image/clip: Sky has EXACTLY TWO long ribbon ears (one
 
 ## SEASON GUARD (every Season still and clip)
 ANATOMY LOCK for the whole image/clip: Season has EXACTLY TWO broad fanned ears (white with sky-blue tips, tan inside) and ONE large white-and-blue plume tail, golden eight-ray sun on the forehead, blue streak on his left flank, blue chest crystal. Two legs, always upright (never on all fours, never crawling, never animal-style flying); three fingers and a thumb on each hand; three toes on each foot. When he flies or floats he stays upright with legs hanging below him. Exactly one character. No text, no watermark, no music.
-(Seed list — extend with Season learnings as they happen.)
+His two fanned ears stay fixed in their fanned shape on his head: they are NOT wings, never flap, never flop or hang down. He never crouches or leans onto his hands; hands never touch the ground. When he flies he floats calmly and slowly (no fast leaps or whip pans). Face stays sharp.
+(Extend with Season learnings as they happen. Also: type every Flow request as ONE paragraph — Enter sends the message.)
 
 ## ELEMENTAL FORMS
 For an elemental form, the ear/tail material and shape follow that form's reference sheet (e.g. Ding Fire candle-flame ears), but the count rule still holds: EXACTLY TWO ears and one tail/plume, nothing extra; hands keep the default colour unless the sheet shows otherwise.

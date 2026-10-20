@@ -34,8 +34,8 @@
       "dev_date": "2026-10-20",
       "post_date": "2026-10-27",
       "status": "todo",
-      "credits_used": 8,
-      "notes": "in progress (20 Oct): stills K1-K4 done and passed QC (library SEA01/KEYFRAMES). 8 credits so far (4 wasted: first batch had no character attached -> human boy). Next: V1-V4 image-to-video."
+      "credits_used": 148,
+      "notes": "in progress (20 Oct): stills K1-K4 passed QC. Clips T1: V4 passed; V3 T1 usable 4.0-8.0 only (crouch earlier); V1 (ears became wings) and V2 (floppy ears at the leap) failed. Retries V1B/V2B/V3B generating. Library SEA01/TAKES."
     },
     {
       "id": "SKY02",
