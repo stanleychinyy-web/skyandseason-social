@@ -52,9 +52,18 @@
       "element": "Gui Water",
       "dev_date": "2026-10-21",
       "post_date": "2026-10-29",
-      "status": "todo",
-      "credits_used": 0,
-      "notes": "in progress (21 Oct): stills K1,K2,K2B,K3,K4 passed QC (KEYFRAMES/). Clips V1_T1..V4_T1 in TAKES/: V2 ok trim 0.3-5.2 (bg morph after), V3 ok, V4 ok; V1_T1 failed (glow blob over face, L12) -> V1B retry requested. Credits so far ~105 (5 stills + 5 clips)."
+      "status": "made",
+      "credits_used": 100,
+      "notes": "V01 (21 Oct): all 4 story shots are Veo clips: V1_T2 (V1B) rain arrives, droplets above palms 0.2-6.7; V2_T1 Gui transformation (first+last frame K2->K2B) 0.3-5.2 (trimmed before the background morph, L13); V3_T1 Gui Water playing in rain, sun breaks through 0.2-7.6; V4_T1 seedling closing 0.3-6.0; end card V2. 28.5 s, 6.6 MB. 100 credits (stills were free; V1_T1 failed QC: glow blob over face, L12).",
+      "made_date": "2026-10-21",
+      "file": "SS_THE-WHISPER-OF-RAIN_V01.mp4",
+      "evening_entry": {
+        "type": "reel",
+        "video": "media/2026-10-29/evening-reel.mp4",
+        "cover": "media/2026-10-29/evening-cover.jpg",
+        "caption": "Sky felt the first drops of rain, and the rain felt like a friend 🌧️\n\nSky is the quiet Yin spirit, and when one drop touched the moon on her forehead she became Yin Water: soft, misty and patient. Yin Water is rain and dew rather than the open sea. It doesn't push. It seeps in, nourishes and lets small things grow. In people, it is the gentle side that notices how others feel, listens before it speaks and helps quietly in the background. Like rain on dry soil, a little care at the right time can wake something new.\n\nWho is the gentle rain in your life? Tag them below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yinwater #fiveelements #yinyang #animatedshort #rainydays #chineseastrology #selfawareness #3danimation",
+        "series": "earth-discovery"
+      }
     },
     {
       "id": "SEA02",
@@ -156,6 +165,6 @@
       "notes": ""
     }
   ],
-  "last_run_date": "2026-10-20",
+  "last_run_date": "2026-10-21",
   "schedule": "hourly 12:59-22:59 SGT until the day's reel is done"
 }
