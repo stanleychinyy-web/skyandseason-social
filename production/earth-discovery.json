@@ -74,7 +74,7 @@
    "post_date": "2026-11-01",
    "status": "todo",
    "credits_used": 0,
-   "notes": "in progress (22 Oct 15:10): Flow 380 credits at start; generating stills K1-K4 + K2B."
+   "notes": "in progress (22 Oct ~17:00): stills done and QC passed in KEYFRAMES/ (K1, K2, K2B2 = K2B with the duplicate old tail removed (use this one, K2B failed: two tails), K3, K4). Flow 380 credits at start. Next: Veo clips V1 (K1), V2 (K2->K2B2 first+last), V3 (K3), V4 (K4)."
   },
   {
    "id": "SKY03",
