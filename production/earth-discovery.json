@@ -72,9 +72,18 @@
    "element": "Ren Water",
    "dev_date": "2026-10-22",
    "post_date": "2026-11-01",
-   "status": "todo",
-   "credits_used": 0,
-   "notes": "LOCK (22 Oct 17:05 SGT): session_014DVJ6W3buPKvPPuyNVHKZb is producing SEA02 right now (clips V1-V4 T1 downloaded to TAKES/, in QC). Other runs: do not open Flow or spend credits until this lock is removed or it is after 21:00 SGT. Stills: K1, K2, K2B2 (K2B failed: two tails), K3, K4. 80 credits on clips so far."
+   "status": "made",
+   "credits_used": 100,
+   "notes": "V01 (22 Oct): all 4 story shots are Veo clips: V1_T1 sea + rising wave 0.3-6.8; V2_T1 Ren transformation (first+last frame K2->K2B2) 0.2-7.8; V3_T2 surf to shore + change back (first+last frame K3->K3B) 0.2-7.4; V4_T1 ancient tree tilt-up 0.2-4.6 (trimmed before a size pop, L16); end card V2. 29.7 s, 9.4 MB. 100 credits (stills free; V3_T1 failed QC: off-model default form after 4 s, L15; K2B two tails fixed by edit, L14).",
+   "made_date": "2026-10-22",
+   "file": "SS_THE-MIGHTY-OCEAN_V01.mp4",
+   "evening_entry": {
+    "type": "reel",
+    "video": "media/2026-11-01/evening-reel.mp4",
+    "cover": "media/2026-11-01/evening-cover.jpg",
+    "caption": "Season met the ocean, and the ocean met him right back 🌊\n\nSeason is the bright Yang spirit, and when he touched a giant wave he became Yang Water: the open sea, deep, strong and always moving. Ren Water doesn't trickle. It rolls forward with confidence, carries things a long way and finds a way around anything in its path. In people, it is the big-hearted, adventurous side that loves freedom, thinks big and can take on a lot without losing its flow. Like the tide, real strength can be powerful and calm at the same time.\n\nWho is the ocean in your life, the one who carries everyone along? Tag them below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yangwater #fiveelements #yinyang #animatedshort #oceanvibes #chineseastrology #selfdiscovery #3danimation",
+    "series": "earth-discovery"
+   }
   },
   {
    "id": "SKY03",
@@ -165,6 +174,6 @@
    "notes": ""
   }
  ],
- "last_run_date": "2026-10-21",
+ "last_run_date": "2026-10-22",
  "schedule": "hourly 12:59-22:59 SGT until the day's reel is done"
 }
