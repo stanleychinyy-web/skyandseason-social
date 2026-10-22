@@ -12,7 +12,7 @@ His two fanned ears stay fixed in their fanned shape on his head: they are NOT w
 (Extend with Season learnings as they happen. Also: type every Flow request as ONE paragraph — Enter sends the message.)
 
 ## ELEMENTAL FORMS
-For an elemental form, the ear/tail material and shape follow that form's reference sheet (e.g. Ding Fire candle-flame ears), but the count rule still holds: EXACTLY TWO ears and one tail/plume, nothing extra; hands keep the default colour unless the sheet shows otherwise.
+For an elemental form, the ear/tail material and shape follow that form's reference sheet (e.g. Ding Fire candle-flame ears), but the count rule still holds: EXACTLY TWO ears and one tail/plume, nothing extra; hands keep the default colour unless the sheet shows otherwise. The old tail is REPLACED by the elemental tail/plume (never two tails). Any change of form inside one clip (into a form or back to default) is a first+last frame video whose end still is made and QC'd first.
 
 ## PROPS
 - Water drops stay ONE clear water droplet, never ice, crystal or gems (unless the plan says crystal).
