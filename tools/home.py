@@ -91,12 +91,26 @@ def resting(date):
     order = []
     for p in double + a5 + a2 + m5 + m2 + [A['taiSui']]:
         if p not in order: order.append(p)
+    order = [p for p in order if p != 5]  # the centre is not a side of the home
     names = [SECTOR[p] for p in order]
-    # the two that matter most: double affliction first, then annual 5, annual 2, monthly 5 / 2
+    # Name the year's sides (annual 5, annual 2, Tai Sui) and this month's (monthly 5 / 2) separately,
+    # so the line changes with the month instead of repeating the annual pair all year.
+    year_side = [p for p in a5 + a2 + [A['taiSui']] if p != 5]
+    month_side = [p for p in m5 + m2 if p != 5 and p not in year_side]
+    yn = _join([SECTOR[p] for p in dict.fromkeys(year_side)])
+    mn = _join([SECTOR[p] for p in dict.fromkeys(month_side)])
+    if double:
+        head = _join([SECTOR[p] for p in dict.fromkeys(double)])
+        line = f'{head}: resting twice over this month. Nothing moves there.'
+    elif mn:
+        line = f'Resting sides: {yn} all year; {mn} this month. No drilling there.'
+        if len(line) > 80: line = f'Resting sides: {yn} all year; {mn} this month.'
+        if len(line) > 80: line = f'Resting: {", ".join(SECTOR[p] for p in dict.fromkeys(year_side))} all year; {", ".join(SECTOR[p] for p in dict.fromkeys(month_side))} this month.'
+    else:
+        line = f'Resting sides this month: {yn}. Hold the drilling and big moves there.'
     head = _join(names)
     side = 'side' if len(names) == 1 else 'sides'
-    line = f'Resting {side} this month: {head}. Hold the drilling and big moves there.'
-    if len(line) > 80: line = f'Resting {side} this month: {head}. Hold the drilling there.'
+    if len(line) > 80: line = f'Resting sides: {yn} all year; {mn} this month.' if mn and not double else f'Resting {side}: {head}. Hold the drilling there.'
     short = f'Resting {side}: {head}. Hold the drilling there.'
     return {'date': date.isoformat(), 'year': y, 'month_index': mi, 'month_animal': M['animal'],
             'annual': {SECTOR[p]: s for p, s in A['stars'].items()}, 'monthly': {SECTOR[p]: s for p, s in M['stars'].items()},

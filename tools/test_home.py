@@ -55,7 +55,7 @@ assert fs_month(datetime.date(2027, 1, 6)) == (2026, 11)
 R = resting('2026-10-22')   # Dog month: annual 5 S, annual 2 NW, monthly 5 N, monthly 2 W, Tai Sui S
 assert R['avoid'] == ['South', 'North-west', 'North', 'West'] and R['double'] == []
 assert (R['taiSui'], R['suiPo'], R['sanSha']) == ('South', 'North', 'North')
-assert R['line'].startswith('Resting sides this month: South and North-west.') and len(R['line']) <= 80
+assert R['line'].startswith('Resting sides: South and North-west all year; North and West this month') and len(R['line']) <= 80
 R = resting('2026-09-20')   # Rooster month: monthly 5 on annual 5 (S), monthly 2 on annual 2 (NW)
 assert R['double'] == ['South', 'North-west'] and R['avoid'][:2] == ['South', 'North-west']
 R = resting('2026-12-20')   # Rat month: monthly 2 in S on the annual 5
