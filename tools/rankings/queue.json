@@ -291,6 +291,70 @@
     "Yin Wood"
    ],
    "why": "Yang Water loves the new, Yang Fire sells it, Yang Wood builds it."
+  },
+  {
+   "slug": "best-home-organiser",
+   "tone": "positive",
+   "title": [
+    "the best",
+    "home organiser?"
+   ],
+   "picks": [
+    "Yin Metal",
+    "Yang Earth",
+    "Yin Earth",
+    "Yang Metal",
+    "Yin Wood"
+   ],
+   "why": "Yin Metal sorts and labels; Earth keeps the centre of the flat clear and everything in its place; Yin Wood finds space anywhere."
+  },
+  {
+   "slug": "best-host",
+   "tone": "positive",
+   "title": [
+    "the host everyone",
+    "wants to visit?"
+   ],
+   "picks": [
+    "Yang Fire",
+    "Yin Earth",
+    "Yang Earth",
+    "Yin Fire",
+    "Yang Wood"
+   ],
+   "why": "Yang Fire lights up the living room; Yin Earth feeds everyone and keeps the kettle going; Yin Fire remembers how you take your kopi."
+  },
+  {
+   "slug": "midnight-furniture-mover",
+   "tone": "cheeky",
+   "title": [
+    "the one who moves",
+    "furniture at midnight?"
+   ],
+   "picks": [
+    "Yang Water",
+    "Yang Fire",
+    "Yin Wood",
+    "Yang Wood",
+    "Yin Water"
+   ],
+   "why": "Yang Water cannot leave a room the way it found it; Yang Fire gets the idea at 11pm and acts on it; Wood keeps growing into new corners."
+  },
+  {
+   "slug": "greenest-balcony",
+   "tone": "positive",
+   "title": [
+    "the greenest",
+    "balcony?"
+   ],
+   "picks": [
+    "Yang Wood",
+    "Yin Wood",
+    "Yin Earth",
+    "Yin Water",
+    "Yang Water"
+   ],
+   "why": "Wood grows things; Yin Earth is the patient soil; Water keeps everything watered (and sometimes overwatered)."
   }
  ]
 }

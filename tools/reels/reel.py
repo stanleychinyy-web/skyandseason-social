@@ -16,6 +16,7 @@ sys.path.insert(0, os.path.join(ROOT, 'tools'))
 from daytype import day, daytype, name, STEMS, BRANCH_ANIMAL
 from week import ANIMAL_ICON, ANIMAL_EL, SEASON, GOD, SLUG, FORCE
 from daytype import BRANCH_EL
+from home import home_tip, resting
 def BRANCH_EL_OF(b): return BRANCH_EL[b]
 W, H, FPS = 1080, 1920, 30
 BEAT = 60 / 112; BAR = 4 * BEAT; CARD = 2 * BAR
@@ -120,7 +121,7 @@ LANDSCAPE = ['A seed lies buried below the frost line, waiting.', 'Snowmelt seep
              'Fallen leaves settle into the earth, becoming next year’s soil.', 'Bare ground under frost, nothing visible above the soil.']
 HOURS = ['11pm–1am', '1–3am', '3–5am', '5–7am', '7–9am', '9–11am', '11am–1pm', '1–3pm', '3–5pm', '5–7pm', '7–9pm', '9–11pm']
 COLOUR = {'Wood': 'green', 'Fire': 'red or pink', 'Earth': 'yellow or beige', 'Metal': 'white or silver', 'Water': 'navy or black'}
-DIRECTION = {'Wood': 'East', 'Fire': 'South', 'Earth': 'the centre of the room', 'Metal': 'West', 'Water': 'North'}
+# Facing directions are no longer given: the annual/monthly resting sides (home.py) would contradict a fixed table.
 PROD = {'Wood': 'Fire', 'Fire': 'Earth', 'Earth': 'Metal', 'Metal': 'Water', 'Water': 'Wood'}
 CTRL = {'Wood': 'Earth', 'Earth': 'Water', 'Water': 'Fire', 'Fire': 'Metal', 'Metal': 'Wood'}
 def element_link(top, bottom):
@@ -188,20 +189,22 @@ def stories(date):
         d.text((130, y + 34), lab, font=F(34, 700), fill=col); d.text((W - 130, y + 26), val, font=F(50, 700), fill=INK, anchor='ra'); y += 100
     para(d, 130, y + 30, f'Born in a {cl} year? Keep today light.', 42, W - 260, MUTED, max_lines=2)
     save(im, 2)
-    # 4. lucky colour / hours / direction
+    # 4. lucky colour / hours / at home (one Feng Shui placement tip, plus this month's resting sides)
     im, d = frame(sky_el, dt, 0, 2)
     ctext(d, 360, "Today's little luck", F(76, 700), INK)
     lucky = [((b + 4) % 12), HARMONY[b], ((b + 8) % 12)]
     lucky = sorted(set(lucky), key=lambda x: (x - 3) % 12)  # morning first
     rows = [('artist-palette', 'COLOUR', f'Wear {COLOUR[sky_el]} to go with today’s {sky_el}.'),
             ('alarm-clock', 'BEST HOURS', ', '.join(f'{HOURS[h]} ({BRANCH_ANIMAL[h]})' for h in lucky)),
-            ('compass', 'DIRECTION', f'Sit facing {DIRECTION[sky_el]} for focus.')]
+            ('house', 'AT HOME', home_tip(dt, sky_el))]
     y = 470
     for icon, lab, txt in rows:
         card(d, y, y + 300); im.alpha_composite(emoji(icon, 130), (120, y + 85))
         d.text((290, y + 50), lab, font=F(36, 700), fill=RED)
         para(d, 290, y + 105, txt, 44, W - 420, INK, w=500, max_lines=3); y += 340
-    para(d, 0, y + 20, 'For everyone today. Your own lucky hours are in your free chart.', 38, W - 220, MUTED, center=True, max_lines=2)
+    rest = resting(dt); foot = rest['line'] + ' For everyone today.'
+    if len(wrap(d, foot, F(38, 500), W - 220)) > 2: foot = rest['short'] + ' For everyone today.'
+    para(d, 0, y + 20, foot, 38, W - 220, MUTED, center=True, max_lines=2)
     save(im, 3)
     # 5. quiz
     q, ans, why = element_link(sky_el, sea_el)
