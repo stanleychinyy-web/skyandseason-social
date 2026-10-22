@@ -1,170 +1,170 @@
 {
-  "series": "earth-discovery",
-  "plan": "production/EARTH_DISCOVERY_PLAN.md",
-  "daily_credit_cap": 80,
-  "post_time_sgt": "19:00 (evening slot)",
-  "statuses": "todo -> made (in repo, evening.status=review) -> approved (evening.status removed/approved) -> posted; or changes",
-  "reels": [
-    {
-      "id": "SKY01",
-      "character": "sky",
-      "title": "A New World",
-      "element": null,
-      "dev_date": "2026-10-19",
-      "post_date": "2026-10-25",
-      "status": "approved",
-      "credits_used": 166,
-      "notes": "V02 (19 Oct, after Stanley rejected V01 for still shots and a white hand): all 4 story shots are Veo clips: R1C hilltop hover (K1B i2v) 0.5-6.8, V2 hills 0.3-7.3, R3 lake + raindrop on indigo hand 2.0-7.6, R4 macro drop on indigo hand 0.5-6.0; end card V2. 166 credits in total today. The descent-through-clouds shot failed 3 times (Veo lifts her ears when she falls), so the reel opens on the hilltop.",
-      "made_date": "2026-10-19",
-      "evening_entry": {
-        "type": "reel",
-        "video": "media/2026-10-25/evening-reel.mp4",
-        "cover": "media/2026-10-25/evening-cover.jpg",
-        "caption": "Sky has just arrived on Earth, and everything is new 🌙\n\nSky is the quiet Yin spirit. She doesn't rush in; she pauses, notices and feels her way. A golden hilltop, rolling hills, a sparkling river, then a cool breeze and one small raindrop landing in her hand. In people, this Yin side is the part of you that pauses to take in a new place before you decide what it means. The gentle start is often where the real discovery begins.\n\nWhat's the first thing you notice when you arrive somewhere new? Tell us below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yinandyang #animatedshort #fiveelements #selfdiscovery #fantasyart #3danimation #easternphilosophy #mindfulmoments",
-        "series": "earth-discovery"
-      },
-      "file": "SS_A-NEW-WORLD_V02.mp4"
-    },
-    {
-      "id": "SEA01",
-      "character": "season",
-      "title": "A World to Explore",
-      "element": null,
-      "dev_date": "2026-10-20",
-      "post_date": "2026-10-27",
-      "status": "approved",
-      "credits_used": 148,
-      "notes": "V01 (20 Oct): all 4 story shots are Veo clips: V1_T2 float-down + landing, arms wide 0.3-6.8; V2_T2 run + lift-off + upright float over forest 0.2-7.2; V3_T2 standing on the cliff, wave breaks 0.5-6.5; V4_T1 back view over the sea 0.3-5.3; end card V2. 28.5 s, 9.7 MB. 148 credits (4 wasted on a no-character still batch; V1/V2/V3 T1 failed QC: wing-ears, floppy ears, crouch - see LEARNINGS L8-L11).",
-      "made_date": "2026-10-20",
-      "file": "SS_A-WORLD-TO-EXPLORE_V01.mp4",
-      "evening_entry": {
-        "type": "reel",
-        "video": "media/2026-10-27/evening-reel.mp4",
-        "cover": "media/2026-10-27/evening-cover.jpg",
-        "caption": "Season has just landed on Earth, and he wants to see all of it ☀️\n\nSeason is the bright Yang spirit. He doesn't wait to be shown around; he jumps in, runs, flies and goes to look for himself. A sunlit hilltop, rolling hills and a river, then the edge of a cliff and an ocean bigger than anything he has seen. In people, this Yang side is the part of you that says \"let's go and see\" before you have all the answers. Curiosity with energy behind it is how new places get explored.\n\nIf you could explore anywhere tomorrow, where would you go first? Tell us below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yinandyang #animatedshort #fiveelements #selfdiscovery #adventuretime #3danimation #easternphilosophy #oceanlovers",
-        "series": "earth-discovery"
-      }
-    },
-    {
-      "id": "SKY02",
-      "character": "sky",
-      "title": "The Whisper of Rain",
-      "element": "Gui Water",
-      "dev_date": "2026-10-21",
-      "post_date": "2026-10-29",
-      "status": "made",
-      "credits_used": 100,
-      "notes": "V01 (21 Oct): all 4 story shots are Veo clips: V1_T2 (V1B) rain arrives, droplets above palms 0.2-6.7; V2_T1 Gui transformation (first+last frame K2->K2B) 0.3-5.2 (trimmed before the background morph, L13); V3_T1 Gui Water playing in rain, sun breaks through 0.2-7.6; V4_T1 seedling closing 0.3-6.0; end card V2. 28.5 s, 6.6 MB. 100 credits (stills were free; V1_T1 failed QC: glow blob over face, L12).",
-      "made_date": "2026-10-21",
-      "file": "SS_THE-WHISPER-OF-RAIN_V01.mp4",
-      "evening_entry": {
-        "type": "reel",
-        "video": "media/2026-10-29/evening-reel.mp4",
-        "cover": "media/2026-10-29/evening-cover.jpg",
-        "caption": "Sky felt the first drops of rain, and the rain felt like a friend 🌧️\n\nSky is the quiet Yin spirit, and when one drop touched the moon on her forehead she became Yin Water: soft, misty and patient. Yin Water is rain and dew rather than the open sea. It doesn't push. It seeps in, nourishes and lets small things grow. In people, it is the gentle side that notices how others feel, listens before it speaks and helps quietly in the background. Like rain on dry soil, a little care at the right time can wake something new.\n\nWho is the gentle rain in your life? Tag them below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yinwater #fiveelements #yinyang #animatedshort #rainydays #chineseastrology #selfawareness #3danimation",
-        "series": "earth-discovery"
-      }
-    },
-    {
-      "id": "SEA02",
-      "character": "season",
-      "title": "The Mighty Ocean",
-      "element": "Ren Water",
-      "dev_date": "2026-10-22",
-      "post_date": "2026-11-01",
-      "status": "todo",
-      "credits_used": 0,
-      "notes": ""
-    },
-    {
-      "id": "SKY03",
-      "character": "sky",
-      "title": "The First Bloom",
-      "element": "Yi Wood",
-      "dev_date": "2026-10-23",
-      "post_date": "2026-11-03",
-      "status": "todo",
-      "credits_used": 0,
-      "notes": ""
-    },
-    {
-      "id": "SEA03",
-      "character": "season",
-      "title": "The Tree That Reaches the Sky",
-      "element": "Jia Wood",
-      "dev_date": "2026-10-24",
-      "post_date": "2026-11-05",
-      "status": "todo",
-      "credits_used": 0,
-      "notes": ""
-    },
-    {
-      "id": "SKY04",
-      "character": "sky",
-      "title": "A Light in the Darkness",
-      "element": "Ding Fire",
-      "dev_date": "2026-10-25",
-      "post_date": "2026-11-08",
-      "status": "todo",
-      "credits_used": 0,
-      "notes": ""
-    },
-    {
-      "id": "SEA04",
-      "character": "season",
-      "title": "The Radiant Sun",
-      "element": "Bing Fire",
-      "dev_date": "2026-10-26",
-      "post_date": "2026-11-10",
-      "status": "todo",
-      "credits_used": 0,
-      "notes": ""
-    },
-    {
-      "id": "SKY05",
-      "character": "sky",
-      "title": "The Gentle Earth",
-      "element": "Ji Earth",
-      "dev_date": "2026-10-27",
-      "post_date": "2026-11-12",
-      "status": "todo",
-      "credits_used": 0,
-      "notes": ""
-    },
-    {
-      "id": "SEA05",
-      "character": "season",
-      "title": "The Unshakable Mountain",
-      "element": "Wu Earth",
-      "dev_date": "2026-10-28",
-      "post_date": "2026-11-15",
-      "status": "todo",
-      "credits_used": 0,
-      "notes": ""
-    },
-    {
-      "id": "SKY06",
-      "character": "sky",
-      "title": "The Hidden Jewel",
-      "element": "Xin Metal",
-      "dev_date": "2026-10-29",
-      "post_date": "2026-11-17",
-      "status": "todo",
-      "credits_used": 0,
-      "notes": ""
-    },
-    {
-      "id": "SEA06",
-      "character": "season",
-      "title": "The Strength Within Iron",
-      "element": "Geng Metal",
-      "dev_date": "2026-10-30",
-      "post_date": "2026-11-19",
-      "status": "todo",
-      "credits_used": 0,
-      "notes": ""
-    }
-  ],
-  "last_run_date": "2026-10-21",
-  "schedule": "hourly 12:59-22:59 SGT until the day's reel is done"
+ "series": "earth-discovery",
+ "plan": "production/EARTH_DISCOVERY_PLAN.md",
+ "daily_credit_cap": 80,
+ "post_time_sgt": "19:00 (evening slot)",
+ "statuses": "todo -> made (in repo, evening.status=review) -> approved (evening.status removed/approved) -> posted; or changes",
+ "reels": [
+  {
+   "id": "SKY01",
+   "character": "sky",
+   "title": "A New World",
+   "element": null,
+   "dev_date": "2026-10-19",
+   "post_date": "2026-10-25",
+   "status": "approved",
+   "credits_used": 166,
+   "notes": "V02 (19 Oct, after Stanley rejected V01 for still shots and a white hand): all 4 story shots are Veo clips: R1C hilltop hover (K1B i2v) 0.5-6.8, V2 hills 0.3-7.3, R3 lake + raindrop on indigo hand 2.0-7.6, R4 macro drop on indigo hand 0.5-6.0; end card V2. 166 credits in total today. The descent-through-clouds shot failed 3 times (Veo lifts her ears when she falls), so the reel opens on the hilltop.",
+   "made_date": "2026-10-19",
+   "evening_entry": {
+    "type": "reel",
+    "video": "media/2026-10-25/evening-reel.mp4",
+    "cover": "media/2026-10-25/evening-cover.jpg",
+    "caption": "Sky has just arrived on Earth, and everything is new 🌙\n\nSky is the quiet Yin spirit. She doesn't rush in; she pauses, notices and feels her way. A golden hilltop, rolling hills, a sparkling river, then a cool breeze and one small raindrop landing in her hand. In people, this Yin side is the part of you that pauses to take in a new place before you decide what it means. The gentle start is often where the real discovery begins.\n\nWhat's the first thing you notice when you arrive somewhere new? Tell us below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yinandyang #animatedshort #fiveelements #selfdiscovery #fantasyart #3danimation #easternphilosophy #mindfulmoments",
+    "series": "earth-discovery"
+   },
+   "file": "SS_A-NEW-WORLD_V02.mp4"
+  },
+  {
+   "id": "SEA01",
+   "character": "season",
+   "title": "A World to Explore",
+   "element": null,
+   "dev_date": "2026-10-20",
+   "post_date": "2026-10-27",
+   "status": "approved",
+   "credits_used": 148,
+   "notes": "V01 (20 Oct): all 4 story shots are Veo clips: V1_T2 float-down + landing, arms wide 0.3-6.8; V2_T2 run + lift-off + upright float over forest 0.2-7.2; V3_T2 standing on the cliff, wave breaks 0.5-6.5; V4_T1 back view over the sea 0.3-5.3; end card V2. 28.5 s, 9.7 MB. 148 credits (4 wasted on a no-character still batch; V1/V2/V3 T1 failed QC: wing-ears, floppy ears, crouch - see LEARNINGS L8-L11).",
+   "made_date": "2026-10-20",
+   "file": "SS_A-WORLD-TO-EXPLORE_V01.mp4",
+   "evening_entry": {
+    "type": "reel",
+    "video": "media/2026-10-27/evening-reel.mp4",
+    "cover": "media/2026-10-27/evening-cover.jpg",
+    "caption": "Season has just landed on Earth, and he wants to see all of it ☀️\n\nSeason is the bright Yang spirit. He doesn't wait to be shown around; he jumps in, runs, flies and goes to look for himself. A sunlit hilltop, rolling hills and a river, then the edge of a cliff and an ocean bigger than anything he has seen. In people, this Yang side is the part of you that says \"let's go and see\" before you have all the answers. Curiosity with energy behind it is how new places get explored.\n\nIf you could explore anywhere tomorrow, where would you go first? Tell us below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yinandyang #animatedshort #fiveelements #selfdiscovery #adventuretime #3danimation #easternphilosophy #oceanlovers",
+    "series": "earth-discovery"
+   }
+  },
+  {
+   "id": "SKY02",
+   "character": "sky",
+   "title": "The Whisper of Rain",
+   "element": "Gui Water",
+   "dev_date": "2026-10-21",
+   "post_date": "2026-10-29",
+   "status": "made",
+   "credits_used": 100,
+   "notes": "V01 (21 Oct): all 4 story shots are Veo clips: V1_T2 (V1B) rain arrives, droplets above palms 0.2-6.7; V2_T1 Gui transformation (first+last frame K2->K2B) 0.3-5.2 (trimmed before the background morph, L13); V3_T1 Gui Water playing in rain, sun breaks through 0.2-7.6; V4_T1 seedling closing 0.3-6.0; end card V2. 28.5 s, 6.6 MB. 100 credits (stills were free; V1_T1 failed QC: glow blob over face, L12).",
+   "made_date": "2026-10-21",
+   "file": "SS_THE-WHISPER-OF-RAIN_V01.mp4",
+   "evening_entry": {
+    "type": "reel",
+    "video": "media/2026-10-29/evening-reel.mp4",
+    "cover": "media/2026-10-29/evening-cover.jpg",
+    "caption": "Sky felt the first drops of rain, and the rain felt like a friend 🌧️\n\nSky is the quiet Yin spirit, and when one drop touched the moon on her forehead she became Yin Water: soft, misty and patient. Yin Water is rain and dew rather than the open sea. It doesn't push. It seeps in, nourishes and lets small things grow. In people, it is the gentle side that notices how others feel, listens before it speaks and helps quietly in the background. Like rain on dry soil, a little care at the right time can wake something new.\n\nWho is the gentle rain in your life? Tag them below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yinwater #fiveelements #yinyang #animatedshort #rainydays #chineseastrology #selfawareness #3danimation",
+    "series": "earth-discovery"
+   }
+  },
+  {
+   "id": "SEA02",
+   "character": "season",
+   "title": "The Mighty Ocean",
+   "element": "Ren Water",
+   "dev_date": "2026-10-22",
+   "post_date": "2026-11-01",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": "in progress (22 Oct 15:10): Flow 380 credits at start; generating stills K1-K4 + K2B."
+  },
+  {
+   "id": "SKY03",
+   "character": "sky",
+   "title": "The First Bloom",
+   "element": "Yi Wood",
+   "dev_date": "2026-10-23",
+   "post_date": "2026-11-03",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": ""
+  },
+  {
+   "id": "SEA03",
+   "character": "season",
+   "title": "The Tree That Reaches the Sky",
+   "element": "Jia Wood",
+   "dev_date": "2026-10-24",
+   "post_date": "2026-11-05",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": ""
+  },
+  {
+   "id": "SKY04",
+   "character": "sky",
+   "title": "A Light in the Darkness",
+   "element": "Ding Fire",
+   "dev_date": "2026-10-25",
+   "post_date": "2026-11-08",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": ""
+  },
+  {
+   "id": "SEA04",
+   "character": "season",
+   "title": "The Radiant Sun",
+   "element": "Bing Fire",
+   "dev_date": "2026-10-26",
+   "post_date": "2026-11-10",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": ""
+  },
+  {
+   "id": "SKY05",
+   "character": "sky",
+   "title": "The Gentle Earth",
+   "element": "Ji Earth",
+   "dev_date": "2026-10-27",
+   "post_date": "2026-11-12",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": ""
+  },
+  {
+   "id": "SEA05",
+   "character": "season",
+   "title": "The Unshakable Mountain",
+   "element": "Wu Earth",
+   "dev_date": "2026-10-28",
+   "post_date": "2026-11-15",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": ""
+  },
+  {
+   "id": "SKY06",
+   "character": "sky",
+   "title": "The Hidden Jewel",
+   "element": "Xin Metal",
+   "dev_date": "2026-10-29",
+   "post_date": "2026-11-17",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": ""
+  },
+  {
+   "id": "SEA06",
+   "character": "season",
+   "title": "The Strength Within Iron",
+   "element": "Geng Metal",
+   "dev_date": "2026-10-30",
+   "post_date": "2026-11-19",
+   "status": "todo",
+   "credits_used": 0,
+   "notes": ""
+  }
+ ],
+ "last_run_date": "2026-10-21",
+ "schedule": "hourly 12:59-22:59 SGT until the day's reel is done"
 }
