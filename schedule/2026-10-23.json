@@ -1,31 +1,31 @@
 {
- "date": "2026-10-23",
- "status": "approved",
- "stories": [
-  "media/2026-10-23/story1.jpg",
-  "media/2026-10-23/story2.jpg",
-  "media/2026-10-23/story3.jpg"
- ],
- "morning": {
-  "type": "reel",
-  "video": "media/2026-10-23/reel.mp4",
-  "cover": "media/2026-10-23/cover.jpg",
-  "caption": "Friday message for your element 📱 Pause on your Day Master.\n\nToday is Yang Metal over Fire: a sharp blade in summer heat. Great for clear decisions; go gentle with your words.\n\nYour element is the day you were born, not your zodiac animal. Find it free at the link in bio.\n\nComment your element and your Friday plan.\n\n#skyandseason #innerconstellation #astrology #zodiacsigns #fengshui #selfawareness #bazi #fourpillars #chineseastrology #fridayfeeling",
-  "series": "sky-today"
- },
- "evening": {
-  "type": "reel",
-  "video": "media/2026-10-23/series-reel.mp4",
-  "cover": "media/2026-10-23/series-cover.jpg",
-  "caption": "Tag the one who replies three days later 😂\n\nEvery element has its group chat habit. Which one is you, and who's the voice-note sender in yours?\n\nYour element comes from the day you were born, not your zodiac animal. Find yours free at the link in bio.\n\nWhich one are you? Comment below.\n\n#skyandseason #innerconstellation #zodiacmemes #astrologymemes #relatable #fiveelements #chinesezodiac #bazi #fourpillars #singapore",
-  "series": "group-chat"
- },
- "stories_noon": [
-  "media/2026-10-23/story4.jpg",
-  "media/2026-10-23/story5.jpg"
- ],
- "stories_night": [
-  "media/2026-10-23/story6.jpg",
-  "media/2026-10-23/story-clip.mp4"
- ]
+  "date": "2026-10-23",
+  "status": "posted",
+  "stories": [
+    "media/2026-10-23/story1.jpg",
+    "media/2026-10-23/story2.jpg",
+    "media/2026-10-23/story3.jpg"
+  ],
+  "morning": {
+    "type": "reel",
+    "video": "media/2026-10-23/reel.mp4",
+    "cover": "media/2026-10-23/cover.jpg",
+    "caption": "Friday message for your element 📱 Pause on your Day Master.\n\nToday is Yang Metal over Fire: a sharp blade in summer heat. Great for clear decisions; go gentle with your words.\n\nYour element is the day you were born, not your zodiac animal. Find it free at the link in bio.\n\nComment your element and your Friday plan.\n\n#skyandseason #innerconstellation #astrology #zodiacsigns #fengshui #selfawareness #bazi #fourpillars #chineseastrology #fridayfeeling",
+    "series": "sky-today"
+  },
+  "evening": {
+    "type": "reel",
+    "video": "media/2026-10-23/series-reel.mp4",
+    "cover": "media/2026-10-23/series-cover.jpg",
+    "caption": "Tag the one who replies three days later 😂\n\nEvery element has its group chat habit. Which one is you, and who's the voice-note sender in yours?\n\nYour element comes from the day you were born, not your zodiac animal. Find yours free at the link in bio.\n\nWhich one are you? Comment below.\n\n#skyandseason #innerconstellation #zodiacmemes #astrologymemes #relatable #fiveelements #chinesezodiac #bazi #fourpillars #singapore",
+    "series": "group-chat"
+  },
+  "stories_noon": [
+    "media/2026-10-23/story4.jpg",
+    "media/2026-10-23/story5.jpg"
+  ],
+  "stories_night": [
+    "media/2026-10-23/story6.jpg",
+    "media/2026-10-23/story-clip.mp4"
+  ]
 }
