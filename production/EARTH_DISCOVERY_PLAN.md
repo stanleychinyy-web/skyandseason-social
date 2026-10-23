@@ -44,7 +44,7 @@ Upload any sheet not yet in Flow as an ingredient image (free). Transformation c
 
 ## 3. Prompt blocks (append to every prompt)
 
-**SKY BLOCK / SEASON BLOCK:** use the current text in `production/learnings/PROMPT_GUARDS.md` (SKY GUARD / SEASON GUARD), word for word, in every still and clip prompt. Read `production/learnings/LEARNINGS.md` before writing prompts and add a row for every mistake found in QC (the guards are updated in the same run).
+**SKY BLOCK / SEASON BLOCK:** use the current text (for Sky: the ANATOMY LOCK **and the HEAD LOCK**) in `production/learnings/PROMPT_GUARDS.md` (SKY GUARD / SEASON GUARD), word for word, in every still and clip prompt. Read `production/learnings/LEARNINGS.md` before writing prompts and add a row for every mistake found in QC (the guards are updated in the same run).
 
 **FORM LINE (transformation shots):** "transforms smoothly into the attached approved <FORM> elemental form — same face, eyes, proportions and silhouette; only ears, tail, iris and chest crystal change material as on the reference; the moon/sun symbol stays unchanged."
 
