@@ -93,8 +93,8 @@
    "dev_date": "2026-10-23",
    "post_date": "2026-11-03",
    "status": "todo",
-   "credits_used": 0,
-   "notes": "in progress (23 Oct): Flow credits 330 at start. Stills K1-K4 requested (Nano Banana Pro); plan: K2B edit of K2 (Yi Wood), K3B edit of K3 (default form, garden at dusk); V1 i2v K1, V2 K2->K2B, V3 K3->K3B, V4 i2v K4."
+   "credits_used": 140,
+   "notes": "in progress (23 Oct, day 1; 140 credits used = daily cap reached, resume 24 Oct before SEA03; post date 3 Nov unchanged). Stills all in library KEYFRAMES/ and passed QC: K1, K2, K2B2 (Yi Wood, moon added - L17), K3, K3B (default, garden at dusk), K4. Clips in TAKES/: V1_T1 PASS (use 0.2-7.8). V4_T1 PASS (use 0.2-6.6; she turns to camera at 7.2 with an off face). V2: T1 FAIL (ears vanish/stand up, L19); T2 (V2B) ears good but green chest crystal disappears from 5.7 s (L22) -> make V2C: same first/last frame as V2 (original K2 -> K2B2 version), prompt V2 + V2B lines + 'the chest crystal stays visible the whole clip, blue at first then green; she closes her eyes during the change and opens them green'. V3: T1 FAIL (bunny ears + flash), T2 (V3B) FAIL (wing ears, blue eyes 4.2-5.4 s), T3 (V3C) FAIL (eyes and ears pass through blue/teal at about 2.5 s, white burst on soil) -> make V3D: same first/last frame (original K3 -> K3B version); garden grows first (0-4 s, Yi Wood), then 'she closes her eyes; the green leaves of her ears, tuft and tail softly fall away like petals revealing the smooth indigo ribbons with pink tips underneath; never blue or teal; she opens her eyes purple'; no burst on the soil; one far firelight in the last 2 s. Flow tip (L20): send one SHORT agent message per clip that refers to the prompt text already in the chat 'Elemental Character Tran...'; long messages get 'unusual activity'. Build ready in cloud: music_sky03.py written (copy in library source/ when assembling); caption drafted (birds/sparkles/crickets)."
   },
   {
    "id": "SEA03",
