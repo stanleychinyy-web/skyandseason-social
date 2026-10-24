@@ -174,7 +174,7 @@
       "notes": ""
     }
   ],
-  "last_run_date": "2026-10-23",
+  "last_run_date": "2026-10-24",
   "schedule": "hourly 12:59-22:59 SGT until the day's reel is done",
   "paused_until": "2026-10-24",
   "pause_note": "23 Oct: SKY03 hit the daily credit ceiling (140 of ~150) with V2 and V3 still failing QC. Hourly runs on 23 Oct: stop at once (guard already ran today). On 24 Oct resume SKY03 first (see its notes), then SEA03.",
