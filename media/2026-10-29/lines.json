@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Joy",
+  "line": "You're the fun one today. Crack the joke, then actually send the deck."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Speak-up",
+  "line": "You'll have opinions about the lunch spot today. Share one, not all twelve."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Friend",
+  "line": "Same energy as you everywhere today. Team up on one thing; don't fight for the mic."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Rival",
+  "line": "Someone louder grabs the spotlight today. Let them; your work speaks later."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Insight",
+  "line": "Reading or a podcast sticks today. Learn one thing on the MRT ride home."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Support",
+  "line": "Someone older offers advice today. Listen first; you can still do it your way."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Pressure",
+  "line": "The heat is on today. One task at a time, and drink your water."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Recognition",
+  "line": "Good day to ask for that sign-off. Clear message, polite tone, done."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Opportunity",
+  "line": "A lucky break could pop up today: a lead, a deal, a free upgrade. Check before you jump."
+ },
+ {
+  "element": "Yin Water",
+  "type": "Steady-money",
+  "line": "Small savings add up today. Bring your own kopi and feel smug about it."
+ }
+]

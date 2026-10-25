@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Speak-up",
+  "line": "You'll want to fix the Friday plan today. Suggest once, then go with the group."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Joy",
+  "line": "Creative streak today. Doodle, cook, rearrange your desk; the inbox can wait an hour."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Rival",
+  "line": "Someone wants the same last slot today. Share it; there's always another one."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Friend",
+  "line": "Your kind of people are around today. Make the dinner plan before Friday fades."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Support",
+  "line": "Someone has your back today. Ask for the favour you've been putting off."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Insight",
+  "line": "Quiet thinking pays off today. Take the long way home and let the answer come."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Recognition",
+  "line": "Your effort gets seen today. Say thanks and skip the humble-brag."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Pressure",
+  "line": "A small deadline pinches today. Finish it before the weekend, then switch off."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Steady-money",
+  "line": "Good money sense today. Move a little into savings before the weekend makan."
+ },
+ {
+  "element": "Yin Water",
+  "type": "Opportunity",
+  "line": "A surprise offer could land today. Sleep on it; good deals don't vanish overnight."
+ }
+]

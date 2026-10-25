@@ -1,11 +1,31 @@
 {
-  "date": "2026-11-01",
-  "status": "approved",
-  "evening": {
-    "type": "reel",
-    "video": "media/2026-11-01/evening-reel.mp4",
-    "cover": "media/2026-11-01/evening-cover.jpg",
-    "caption": "Season met the ocean, and the ocean met him right back 🌊\n\nSeason is the bright Yang spirit, and when he touched a giant wave he became Yang Water: the open sea, deep, strong and always moving. Ren Water doesn't trickle. It rolls forward with confidence, carries things a long way and finds a way around anything in its path. In people, it is the big-hearted, adventurous side that loves freedom, thinks big and can take on a lot without losing its flow. Like the tide, real strength can be powerful and calm at the same time.\n\nWho is the ocean in your life, the one who carries everyone along? Tag them below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yangwater #fiveelements #yinyang #animatedshort #oceanvibes #chineseastrology #selfdiscovery #3danimation",
-    "series": "earth-discovery"
-  }
+ "date": "2026-11-01",
+ "status": "pending",
+ "evening": {
+  "type": "reel",
+  "video": "media/2026-11-01/evening-reel.mp4",
+  "cover": "media/2026-11-01/evening-cover.jpg",
+  "caption": "Season met the ocean, and the ocean met him right back 🌊\n\nSeason is the bright Yang spirit, and when he touched a giant wave he became Yang Water: the open sea, deep, strong and always moving. Ren Water doesn't trickle. It rolls forward with confidence, carries things a long way and finds a way around anything in its path. In people, it is the big-hearted, adventurous side that loves freedom, thinks big and can take on a lot without losing its flow. Like the tide, real strength can be powerful and calm at the same time.\n\nWho is the ocean in your life, the one who carries everyone along? Tag them below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yangwater #fiveelements #yinyang #animatedshort #oceanvibes #chineseastrology #selfdiscovery #3danimation",
+  "series": "earth-discovery"
+ },
+ "stories": [
+  "media/2026-11-01/story1.jpg",
+  "media/2026-11-01/story2.jpg",
+  "media/2026-11-01/story3.jpg"
+ ],
+ "morning": {
+  "type": "reel",
+  "video": "media/2026-11-01/reel.mp4",
+  "cover": "media/2026-11-01/cover.jpg",
+  "caption": "Today is a Rabbit day 🐇 Pause on your animal.\n\nEvery day has an animal. Today's Rabbit meets the animal of the year you were born: Dog gets a best-friend day, Goat and Pig a team day, Rooster a clash day. Born in Jan or early Feb? Use the animal before yours.\n\nYour animal is your Season. The element of the day you were born is your Sky. Find both free at the link in bio.\n\nWhich animal are you? Comment below.\n\n#skyandseason #innerconstellation #chinesezodiac #zodiac #selfdiscovery #knowyourself #chineseastrology #lunarcalendar #seasonsoflife #astrologyreels",
+  "series": "season-today"
+ },
+ "stories_noon": [
+  "media/2026-11-01/story4.jpg",
+  "media/2026-11-01/story5.jpg"
+ ],
+ "stories_night": [
+  "media/2026-11-01/story6.jpg",
+  "media/2026-11-01/story-clip.mp4"
+ ]
 }

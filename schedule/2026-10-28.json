@@ -1,0 +1,31 @@
+{
+ "date": "2026-10-28",
+ "status": "pending",
+ "stories": [
+  "media/2026-10-28/story1.jpg",
+  "media/2026-10-28/story2.jpg",
+  "media/2026-10-28/story3.jpg"
+ ],
+ "morning": {
+  "type": "reel",
+  "video": "media/2026-10-28/reel.mp4",
+  "cover": "media/2026-10-28/cover.jpg",
+  "caption": "Today's Sky is Yin Wood, The Climbing Vine 🌿 Pause on your Day Master.\n\nYour Day Master is the element of the day you were born. Today's element meets it and creates one of 10 forces: Yin Wood gets a friend day, Yang Fire feels supported, Yin Earth feels the pressure.\n\nDon't know yours? Find it free at the link in bio.\n\nWhich line fits your Wednesday? Comment below.\n\n#skyandseason #innerconstellation #astrology #zodiacsigns #personalgrowth #metaphysics #bazi #chinesemetaphysics #fiveelements #singapore",
+  "series": "sky-today"
+ },
+ "stories_noon": [
+  "media/2026-10-28/story4.jpg",
+  "media/2026-10-28/story5.jpg"
+ ],
+ "stories_night": [
+  "media/2026-10-28/story6.jpg",
+  "media/2026-10-28/story-clip.mp4"
+ ],
+ "evening": {
+  "type": "reel",
+  "video": "media/2026-10-28/series-reel.mp4",
+  "cover": "media/2026-10-28/series-cover.jpg",
+  "caption": "Which element do you want next to you in a crisis? 🛟\n\nIn Chinese astrology your element comes from the day you were born. Yang Metal is the raw blade: it decides fast. Yang Earth is the mountain: it doesn't move. Yang Water is the ocean: it always finds another way round. Calm, steady and quick, each in its own way.\n\nFind your element free at the link in bio.\n\nTag your #1 below.\n\n#skyandseason #innerconstellation #fiveelements #chineseastrology #bazi #zodiacmemes #relatable #personalitytypes #worklife #singapore",
+  "series": "ranking-best-in-a-crisis"
+ }
+}

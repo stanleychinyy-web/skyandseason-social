@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Recognition",
+  "line": "Someone senior likes your work today. Take the feedback and the credit."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Pressure",
+  "line": "A picky request lands today. Do it properly once, then let it go."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Steady-money",
+  "line": "Good day to compare prices before you tap. The other shop might be cheaper."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Opportunity",
+  "line": "An unexpected yes comes your way today. Act on it before lunch ends."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Speak-up",
+  "line": "You'll want to rewrite someone's email today. Suggest edits; don't take over."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Joy",
+  "line": "Treat yourself today: nice stationery or a good kaya toast. Small joy, big lift."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Rival",
+  "line": "A colleague wants the same project today. Talk it out; there's room for two."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Friend",
+  "line": "Your kind of people are on form today. Plan something together; keep the chat short."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Support",
+  "line": "Someone has a useful tip today. Ask, listen, then make it your own."
+ },
+ {
+  "element": "Yin Water",
+  "type": "Insight",
+  "line": "Things click quietly today. Write down the idea before the next notification."
+ }
+]

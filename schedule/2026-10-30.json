@@ -1,0 +1,31 @@
+{
+ "date": "2026-10-30",
+ "status": "pending",
+ "stories": [
+  "media/2026-10-30/story1.jpg",
+  "media/2026-10-30/story2.jpg",
+  "media/2026-10-30/story3.jpg"
+ ],
+ "morning": {
+  "type": "reel",
+  "video": "media/2026-10-30/reel.mp4",
+  "cover": "media/2026-10-30/cover.jpg",
+  "caption": "Today's Sky is Yin Fire, The Candle Flame 🕯️ Pause on your Day Master.\n\nYour Day Master is the element of the day you were born. Today's small, steady flame meets it and creates one of 10 forces: Yin Fire gets a friend day, Yang Earth feels supported, Yin Metal feels a little pressure.\n\nDon't know yours? Find it free at the link in bio.\n\nWhat's your Friday line? Comment below.\n\n#skyandseason #innerconstellation #astrology #zodiac #selfawareness #astrologer #bazi #chinesemetaphysics #fiveelements #dailyhoroscope",
+  "series": "sky-today"
+ },
+ "stories_noon": [
+  "media/2026-10-30/story4.jpg",
+  "media/2026-10-30/story5.jpg"
+ ],
+ "stories_night": [
+  "media/2026-10-30/story6.jpg",
+  "media/2026-10-30/story-clip.mp4"
+ ],
+ "evening": {
+  "type": "reel",
+  "video": "media/2026-10-30/series-reel.mp4",
+  "cover": "media/2026-10-30/series-cover.jpg",
+  "caption": "Tag the one who measured the flat twice 📏\n\nEvery element sets up a new home its own way. Which one is you, and which one is your renovation kaki?\n\nYour element comes from the day you were born, not your zodiac animal. Find yours free at the link in bio.\n\nWhich one are you? Comment below.\n\n#skyandseason #innerconstellation #zodiacmemes #astrologymemes #singapore #bto #hdblife #newhome #fengshui #fiveelements #chineseastrology #relatable",
+  "series": "bto-setup"
+ }
+}

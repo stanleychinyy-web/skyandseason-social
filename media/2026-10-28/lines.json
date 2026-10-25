@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Rival",
+  "line": "Someone copies your idea today. Take it as a compliment, then finish yours first."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Friend",
+  "line": "Your people find you today. Say yes to the kopi; skip the gossip that comes with it."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Support",
+  "line": "Help turns up without asking today. Accept it, and say thank you out loud."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Insight",
+  "line": "A quiet hunch is right today. Trust it, but double-check the meeting time."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Recognition",
+  "line": "The boss notices your work today. Keep the reply short and the tone kind."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Pressure",
+  "line": "Wednesday pushes a bit today. Do the hardest task before lunch, then breathe."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Steady-money",
+  "line": "Good day to sort the bills. Cancel the app subscription you forgot about."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Opportunity",
+  "line": "A side chance pops up today. Say maybe, read the fine print, then decide."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Speak-up",
+  "line": "You'll want to correct someone today. Pick one battle; let the rest go."
+ },
+ {
+  "element": "Yin Water",
+  "type": "Joy",
+  "line": "Fun mood today. Share the meme, start the playlist, still hand in the work."
+ }
+]

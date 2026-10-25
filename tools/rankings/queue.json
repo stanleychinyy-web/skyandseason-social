@@ -33,7 +33,9 @@
     "Yang Wood",
     "Yin Metal"
    ],
-   "why": "Yang Metal decides fast, Yang Earth stays put, Yang Water finds a way round."
+   "why": "Yang Metal decides fast, Yang Earth stays put, Yang Water finds a way round.",
+   "used": "2026-10-28",
+   "spec": "tools/rankings/best-in-a-crisis.json"
   },
   {
    "slug": "micro-manager",
@@ -50,7 +52,8 @@
     "Yin Fire"
    ],
    "why": "Metal loves standards, Earth loves systems, Yin Fire notices everything.",
-   "spec": "tools/rankings/micro-manager.json"
+   "spec": "tools/rankings/micro-manager.json",
+   "used": "2026-10-31"
   },
   {
    "slug": "most-loyal-friend",

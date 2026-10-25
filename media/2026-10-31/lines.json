@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Opportunity",
+  "line": "A weekend find is waiting today: a sale, a tip, a good spot. Grab it, keep the receipt."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Steady-money",
+  "line": "Sort the week's spending today. The cart can stay a cart until Monday."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Joy",
+  "line": "Play mode today. Plan the outing, pick the music, let someone else drive."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Speak-up",
+  "line": "You'll say what you really think today. Kind words land better than sharp ones."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Friend",
+  "line": "Old friends ping today. Meet for supper; don't turn it into a debate."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Rival",
+  "line": "Someone's in the same long queue today. Smile and wait; the char kway teow is worth it."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Insight",
+  "line": "A slow morning gives you a clear head today. Write down the idea before brunch."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Support",
+  "line": "Family looks after you today. Let them; you can do the dishes after."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Pressure",
+  "line": "Errands pile up today. Do the two that matter and park the rest."
+ },
+ {
+  "element": "Yin Water",
+  "type": "Recognition",
+  "line": "Someone thanks you properly today. Take the compliment without explaining it away."
+ }
+]
