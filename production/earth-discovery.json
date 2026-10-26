@@ -92,9 +92,18 @@
       "element": "Yi Wood",
       "dev_date": "2026-10-23",
       "post_date": "2026-11-03",
-      "status": "todo",
-      "credits_used": 420,
-      "notes": "26 Oct (day 4): Flow balance 1,050 at start. V3X (K3->K3Y forward, to play reversed) generating (20 cr). in progress (25 Oct, day 3: 140 credits used = daily cap; Flow balance 10 after. Stanley told. RESUME on the next day with >=20 credits; post date 3 Nov unchanged unless it slips). PASS (TAKES/): V1_T3 = V1J from K1H, use 0.2-6.2 s (extra cat ears pop up at 6.35 s). V2_T5 = V2F (K2H2 -> 'SKY03 K2' newest version = K2B2), use 0.3-7.8 s, sprout stays; brief green crest 'melt' 4.0-4.4 s judged OK. V3_T5 (V3E) 0.2-3.3 s = garden grows. V4_T4 = V4S from new still K4S (KEYFRAMES/K4S_a, Flow 'SKY03 K4S', 3/4 side view), clean 0-8 s. ONLY MISSING: the change back to default (V3 second half). Fails today: V3R (spiky leaf crest), V3R2 (crest rises as an upright antenna/hook, crystal violet), V3R3 (crest grows as a long tentacle sideways). Veo turns crest->tuft well (V2D/V2F) but not tuft->crest. NEXT METHOD (L33): make 'SKY03 V3X' = first frame 'SKY03 K3' (K3B, default, dusk garden) -> last frame 'SKY03 K3Y' (Yi Wood, eyes closed), prompt like V2F (she closes her eyes; colour changes in place like ink spreading; crest arch slowly shrinks down into the small two-leaf sprout; ears hang; crystal pale blue then green; NO petals, particles, fireflies or anything moving in the garden, camera still) and PLAY IT REVERSED in the edit (ffmpeg reverse), hard cut from V3E 3.3 s (K3Y) into it. Then assemble: V1_T3 0.2-6.2 ; V2_T5 0.3-7.8 ; V3_T5 0.2-3.3 ; !V3X(reversed) ; V4_T4 0.2-7.8 (assemble_reel.py with '!' hard-cut support is in the cloud build; copy to source/). Flow tips: attach frames with the + picker and make the agent state first/last frame before Approve (V2E was wasted: agent took K3Y when told 'same frames as V2D'); Return does not send in Flow chat, click the arrow; Nano Banana makes 2 images per request."
+      "status": "made",
+      "credits_used": 440,
+      "notes": "V01 made 26 Oct (day 4, 20 credits today; Flow balance ~1,030 after). All story shots are Veo clips and passed QC: V1_T3 (V1J) 1.0-6.1; V2_T5 (V2F) 1.3-7.8; V3_T5 (V3E) 0.2-3.3 hard-cut into V3_T9 (V3X, K3->K3Y forward, played REVERSED 7.9->1.2 s = L33 method, clean: crest regrows smoothly, ears hang, moon and crystal stay); V4_T4 (V4S) 0.2-4.6. Story 25.8 s + end card = 29.8 s, 6.7 MB. Build in SKY03/source/BUILD.txt. Final SS_THE-FIRST-BLOOM_V01.mp4.",
+      "made_date": "2026-10-26",
+      "evening_entry": {
+        "type": "reel",
+        "video": "media/2026-11-03/evening-reel.mp4",
+        "cover": "media/2026-11-03/evening-cover.jpg",
+        "caption": "Sky touched one tiny seed, and a whole garden woke up 🌱\n\nSky is the gentle Yin spirit, and when she met the first green shoot she became Yin Wood: the flower, the vine, the soft grass that finds its way through any crack. Yi Wood doesn't push like a big tree. It bends, it climbs, it wraps around what is in its way and keeps growing toward the light. In people, it is the kind, flexible, quietly determined side that makes friends easily, helps others bloom and turns a bare patch into something beautiful. Small, patient care can change a whole landscape.\n\nWho is the gardener in your life, the one who helps everyone around them grow? Tag them below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yinwood #fiveelements #yinyang #animatedshort #gardenmagic #chineseastrology #selfdiscovery #3danimation",
+        "series": "earth-discovery",
+        "status": "review"
+      }
     },
     {
       "id": "SEA03",
@@ -179,6 +188,7 @@
   "paused_until": "2026-10-24",
   "pause_note": "23 Oct: SKY03 hit the daily credit ceiling (140 of ~150) with V2 and V3 still failing QC. Hourly runs on 23 Oct: stop at once (guard already ran today). On 24 Oct resume SKY03 first (see its notes), then SEA03.",
   "daily_spend": {
-    "2026-10-24": 140
+    "2026-10-24": 140,
+    "2026-10-26": 20
   }
 }
