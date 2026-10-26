@@ -1,6 +1,6 @@
 {
  "date": "2026-10-31",
- "status": "pending",
+ "status": "approved",
  "stories": [
   "media/2026-10-31/story1.jpg",
   "media/2026-10-31/story2.jpg",
@@ -26,7 +26,6 @@
   "video": "media/2026-10-31/series-reel.mp4",
   "cover": "media/2026-10-31/series-cover.jpg",
   "caption": "Which element is the micro-manager? 👀\n\nIn Chinese astrology your element comes from the day you were born. Metal loves standards, Earth loves systems, Yin Fire notices everything. Great qualities, until they are checking your slides at 11pm.\n\nFind your element free at the link in bio.\n\nTag your #1 below.\n\n#skyandseason #innerconstellation #officelife #worklife #relatable #zodiacmemes #fiveelements #chineseastrology #bazi #singapore",
-  "series": "ranking-micro-manager",
-  "status": "review"
+  "series": "ranking-micro-manager"
  }
 }
