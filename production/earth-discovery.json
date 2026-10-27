@@ -113,9 +113,18 @@
    "element": "Jia Wood",
    "dev_date": "2026-10-24",
    "post_date": "2026-11-05",
-   "status": "todo",
+   "status": "made",
    "credits_used": 87,
-   "notes": "in progress 27 Oct: Flow chat 'Season Jia Wood Charact...' (SEASON GUARD 27OCT). Stills all pass QC: SEA03 K1B (forest, front view), K2A (=K2 original, uploaded), K2J (=K2B Jia edit, uploaded), K3 (Jia, saplings), K4A (=K4 original), K4J (=K4B Jia edit). Library SEA03/KEYFRAMES has K2, K2B, K3, K4, K4B. Clips queued 27 Oct: V1 (i2v K1B), V2 (K2A->K2J), V3 (i2v K3, saplings grow, lift off), V4X (K4A->K4J forward, to play REVERSED = change back). Next: download, QC, assemble (music_sea03.py written)."
+   "notes": "V01 made 27 Oct (one day, 87 credits: 7 stills + 4 Veo clips, no retries; Flow balance ~963 after). All story shots are Veo clips and passed QC: V1_T1 (i2v K1B) 0.3-6.0; V2_T1 (K2A->K2J Jia change) 0.3-7.5; V3_T1 (i2v K3, saplings grow, lifts off) 0.2-6.6; V4X_T1 (K4A->K4J forward) 0.3-6.0 played REVERSED (L33 change back above the clouds). Story 25.0 s + end card = 29.0 s, 8.1 MB. Build in SEA03/source/BUILD.txt. Final SS_THE-TREE-THAT-REACHES-THE-SKY_V01.mp4.",
+   "made_date": "2026-10-27",
+   "evening_entry": {
+    "type": "reel",
+    "video": "media/2026-11-05/evening-reel.mp4",
+    "cover": "media/2026-11-05/evening-cover.jpg",
+    "caption": "Season touched one ancient tree, and the whole forest rose with him 🌳\n\nSeason is the bright Yang spirit, and when he felt the strength in those old roots he became Yang Wood: the tall tree that grows straight up toward the light. Jia Wood doesn't wait or wind around obstacles. It stands upright, reaches higher every year and gives shade to everything growing beneath it. In people, it is the steady, principled, forward-looking side that takes the lead, keeps its word and lifts others as it climbs. Real strength grows slowly, from deep roots.\n\nWho is the tall tree in your life, the one who stands firm so others can grow? Tag them below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yangwood #fiveelements #yinyang #animatedshort #bazi #chinesemetaphysics #personalgrowth #zodiac",
+    "series": "earth-discovery",
+    "status": "review"
+   }
   },
   {
    "id": "SKY04",
@@ -184,7 +193,7 @@
    "notes": ""
   }
  ],
- "last_run_date": "2026-10-26",
+ "last_run_date": "2026-10-27",
  "schedule": "hourly 12:59-22:59 SGT until the day's reel is done",
  "paused_until": "2026-10-24",
  "pause_note": "23 Oct: SKY03 hit the daily credit ceiling (140 of ~150) with V2 and V3 still failing QC. Hourly runs on 23 Oct: stop at once (guard already ran today). On 24 Oct resume SKY03 first (see its notes), then SEA03.",
