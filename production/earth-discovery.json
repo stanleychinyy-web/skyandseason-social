@@ -114,8 +114,8 @@
    "dev_date": "2026-10-24",
    "post_date": "2026-11-05",
    "status": "todo",
-   "credits_used": 0,
-   "notes": "in progress 27 Oct: Flow chat 'Season Character Design...' (SEASON GUARD 27OCT). Stills K1, K2, K4 made (K2, K4 pass QC; K1 back view -> redraw K1B). Asked for K1B, K2B (edit of K2 to Jia), K3 (Jia, saplings), K4B (edit of K4 to Jia). Shot plan: V1 i2v K1B; V2 first+last K2->K2B (Jia change); V3 i2v K3 (saplings grow, lifts off); V4 = forward K4->K4B played REVERSED (L33 change back above the clouds). Music script music_sea03.py ready in cloud."
+   "credits_used": 87,
+   "notes": "in progress 27 Oct: Flow chat 'Season Jia Wood Charact...' (SEASON GUARD 27OCT). Stills all pass QC: SEA03 K1B (forest, front view), K2A (=K2 original, uploaded), K2J (=K2B Jia edit, uploaded), K3 (Jia, saplings), K4A (=K4 original), K4J (=K4B Jia edit). Library SEA03/KEYFRAMES has K2, K2B, K3, K4, K4B. Clips queued 27 Oct: V1 (i2v K1B), V2 (K2A->K2J), V3 (i2v K3, saplings grow, lift off), V4X (K4A->K4J forward, to play REVERSED = change back). Next: download, QC, assemble (music_sea03.py written)."
   },
   {
    "id": "SKY04",
@@ -190,6 +190,7 @@
  "pause_note": "23 Oct: SKY03 hit the daily credit ceiling (140 of ~150) with V2 and V3 still failing QC. Hourly runs on 23 Oct: stop at once (guard already ran today). On 24 Oct resume SKY03 first (see its notes), then SEA03.",
  "daily_spend": {
   "2026-10-24": 140,
-  "2026-10-26": 20
+  "2026-10-26": 20,
+  "2026-10-27": 87
  }
 }
