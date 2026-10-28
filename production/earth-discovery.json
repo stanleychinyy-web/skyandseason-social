@@ -132,9 +132,18 @@
    "element": "Ding Fire",
    "dev_date": "2026-10-25",
    "post_date": "2026-11-08",
-   "status": "todo",
-   "credits_used": 0,
-   "notes": "in progress 28 Oct: stills K1,K2,K2B(edit),K3(+crest edit),K4A,K4J(edit) all passed QC (6 credits); uploaded K1/K2/K2B/K3/K4A/K4J as separate Flow items. Clips V1_T1 (i2v K1), V2_T1 (K2->K2B), V3_T1 (i2v K3) passed QC (60 credits). V4X (K4A->K4J forward, to play REVERSED) generating. Files in library SKY04/KEYFRAMES and TAKES."
+   "status": "made",
+   "credits_used": 106,
+   "notes": "V01 made 28 Oct (one day, 106 credits: 6 stills + 5 Veo clips incl. one retry; Flow balance ~914 after). All story shots are Veo clips and passed QC: V1_T1 (i2v K1) 0.5-7.0; V2_T1 (K2->K2B Ding change) 0.3-7.8; V3_T1 (i2v K3, candle lights, dawn) 0.3-7.0; V4X_T1 (K4A->K4J forward) 0.2-4.3 played REVERSED (L33 change back at dawn). V4X_T2 (V4Y retry) not used (L37). Story 24.8 s + end card = 28.8 s, 6.5 MB. Build in SKY04/source/BUILD.txt. Final SS_A-LIGHT-IN-THE-DARKNESS_V01.mp4. Note: V1's fire is a little bigger than the candle-size flame in V2.",
+   "made_date": "2026-10-28",
+   "evening_entry": {
+    "type": "reel",
+    "video": "media/2026-11-08/evening-reel.mp4",
+    "cover": "media/2026-11-08/evening-cover.jpg",
+    "caption": "Sky found one small flame in the dark, and the whole garden began to glow 🕯️\n\nSky is the gentle Yin spirit, and when she reached for that little fire she became Yin Fire: the candle, the lamp in the window, the starlight that helps you find your way at night. Ding Fire doesn't roar like a bonfire. It is warm, steady and close, and it lights up whatever it is near. In people, it is the attentive, thoughtful side that notices how others feel, brings comfort into a dark moment and helps everyone see a little more clearly. One small light can be enough to change a whole night.\n\nWho is the candle in your life, the one who brings warmth when things feel dark? Tag them below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yinfire #fiveelements #yinyang #animatedshort #chineseastrology #bazi #innerlight #3danimation",
+    "series": "earth-discovery",
+    "status": "review"
+   }
   },
   {
    "id": "SEA04",
@@ -200,6 +209,6 @@
   "2026-10-24": 140,
   "2026-10-26": 20,
   "2026-10-27": 87,
-  "2026-10-28": 86
+  "2026-10-28": 106
  }
 }
