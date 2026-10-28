@@ -33,7 +33,7 @@
    "element": null,
    "dev_date": "2026-10-20",
    "post_date": "2026-10-27",
-   "status": "approved",
+   "status": "posted",
    "credits_used": 148,
    "notes": "V01 (20 Oct): all 4 story shots are Veo clips: V1_T2 float-down + landing, arms wide 0.3-6.8; V2_T2 run + lift-off + upright float over forest 0.2-7.2; V3_T2 standing on the cliff, wave breaks 0.5-6.5; V4_T1 back view over the sea 0.3-5.3; end card V2. 28.5 s, 9.7 MB. 148 credits (4 wasted on a no-character still batch; V1/V2/V3 T1 failed QC: wing-ears, floppy ears, crouch - see LEARNINGS L8-L11).",
    "made_date": "2026-10-20",
@@ -44,7 +44,8 @@
     "cover": "media/2026-10-27/evening-cover.jpg",
     "caption": "Season has just landed on Earth, and he wants to see all of it ☀️\n\nSeason is the bright Yang spirit. He doesn't wait to be shown around; he jumps in, runs, flies and goes to look for himself. A sunlit hilltop, rolling hills and a river, then the edge of a cliff and an ocean bigger than anything he has seen. In people, this Yang side is the part of you that says \"let's go and see\" before you have all the answers. Curiosity with energy behind it is how new places get explored.\n\nIf you could explore anywhere tomorrow, where would you go first? Tell us below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yinandyang #animatedshort #fiveelements #selfdiscovery #adventuretime #3danimation #easternphilosophy #oceanlovers",
     "series": "earth-discovery"
-   }
+   },
+   "permalink": "https://www.instagram.com/reel/De_y30-D1fR/"
   },
   {
    "id": "SKY02",
@@ -201,7 +202,7 @@
    "notes": ""
   }
  ],
- "last_run_date": "2026-10-27",
+ "last_run_date": "2026-10-28",
  "schedule": "hourly 12:59-22:59 SGT until the day's reel is done",
  "paused_until": "2026-10-24",
  "pause_note": "23 Oct: SKY03 hit the daily credit ceiling (140 of ~150) with V2 and V3 still failing QC. Hourly runs on 23 Oct: stop at once (guard already ran today). On 24 Oct resume SKY03 first (see its notes), then SEA03.",
