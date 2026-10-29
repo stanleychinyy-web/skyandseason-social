@@ -153,9 +153,18 @@
    "element": "Bing Fire",
    "dev_date": "2026-10-26",
    "post_date": "2026-11-10",
-   "status": "todo",
-   "credits_used": 0,
-   "notes": ""
+   "status": "made",
+   "credits_used": 146,
+   "notes": "V01 made 29 Oct (one day, about 146 credits: 6 stills + 7 Veo clips incl. 3 retries). All story shots are Veo clips and passed QC: V1_T1 (i2v K1) 0.3-6.5; V2_T2 (K2A->K2J Bing change, 'phoenix feathers, no fire' prompt) 0.3-7.6; V3_T2 (i2v K3, clouds open onto valleys) 0.6-7.0; V4X_T2 (K4A->K4J forward) 0.4-6.2 played REVERSED (L33 change back toward the mountains). Rejected V2_T1, V3_T1, V4X_T1 (L38). Story 25.7 s + end card = 29.7 s, 4.9 MB. Build in SEA04/source/BUILD.txt. Final SS_THE-RADIANT-SUN_V01.mp4. Queued by the 13:59 run (the 12:59 run finished the reel and page caption but did not push).",
+   "made_date": "2026-10-29",
+   "evening_entry": {
+    "type": "reel",
+    "video": "media/2026-11-10/evening-reel.mp4",
+    "cover": "media/2026-11-10/evening-cover.jpg",
+    "caption": "Season caught one golden ray, and the whole sky opened up ☀️\n\nSeason is the bright Yang spirit, and when that sunlight reached him he became Yang Fire: the sun itself. Bing Fire doesn't flicker quietly like a candle. It shines on everyone at once, warm, generous and impossible to miss, and it chases the grey days away. In people, it is the open, enthusiastic, big-hearted side that lights up a room, lifts the mood and makes sure everyone feels included. Like the sun, it gives its warmth without asking for anything back.\n\nWho is the sunshine in your life, the one who brightens every room they walk into? Tag them below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yangfire #fiveelements #yinyang #animatedshort #bazi #chineseastrology #sunshine #3danimation",
+    "series": "earth-discovery",
+    "status": "review"
+   }
   },
   {
    "id": "SKY05",
@@ -202,7 +211,7 @@
    "notes": ""
   }
  ],
- "last_run_date": "2026-10-28",
+ "last_run_date": "2026-10-29",
  "schedule": "hourly 12:59-22:59 SGT until the day's reel is done",
  "paused_until": "2026-10-24",
  "pause_note": "23 Oct: SKY03 hit the daily credit ceiling (140 of ~150) with V2 and V3 still failing QC. Hourly runs on 23 Oct: stop at once (guard already ran today). On 24 Oct resume SKY03 first (see its notes), then SEA03.",
@@ -210,6 +219,7 @@
   "2026-10-24": 140,
   "2026-10-26": 20,
   "2026-10-27": 87,
-  "2026-10-28": 106
+  "2026-10-28": 106,
+  "2026-10-29": 146
  }
 }

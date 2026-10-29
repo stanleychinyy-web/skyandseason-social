@@ -22,6 +22,7 @@ His two fanned ears stay fixed in their fanned shape on his head: they are NOT w
 For an elemental form, the ear/tail material and shape follow that form's reference sheet (e.g. Ding Fire candle-flame ears), but the count rule still holds: EXACTLY TWO ears and one tail/plume, nothing extra; hands keep the default colour unless the sheet shows otherwise. The HEAD LOCK still applies in every form: no hair, ponytail, bun, bow, band or accessory; Sky's crest loop becomes only the form's own crest/leaf tuft as drawn on the sheet. The old tail is REPLACED by the elemental tail/plume (never two tails). The forehead symbol (Sky's white crescent moon, Season's golden sun) must stay visible in every form: write "keep the glowing white crescent moon on her forehead exactly as on the reference" in every form-change prompt and check it on every form still. Any change of form inside one clip (into a form or back to default) is a first+last frame video whose end still is made and QC'd first.
 
 FIRE FORMS (28 Oct, L37): in any change into a fire form say 'small softly curled flame tips, no tall flames shooting up from ears, tail or hands, no rings or hoops around her'; QC the middle of the clip for torch-like ear tips and use only the calm part.
+SEASON FIRE (29 Oct, L38): describe Season's fire-form ears and plume as 'phoenix feathers in red-to-gold colours, no fire, no flames, no light burst, no rings'; his fanned ears never become wings.
 
 ## PROPS
 - Water drops stay ONE clear water droplet, never ice, crystal or gems (unless the plan says crystal).
