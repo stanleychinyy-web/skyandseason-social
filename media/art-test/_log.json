@@ -1,0 +1,12 @@
+[
+ "candle-ox: pollinations ok 5s",
+ "great-tree: pollinations failed: HTTP Error 402: Payment Required",
+ "great-tree: sd_turbo failed: No module named 'torch'",
+ "great-tree: NO IMAGE",
+ "ocean-night: pollinations failed: HTTP Error 402: Payment Required",
+ "ocean-night: sd_turbo failed: No module named 'torch'",
+ "ocean-night: NO IMAGE",
+ "jewel-metal: pollinations failed: HTTP Error 402: Payment Required",
+ "jewel-metal: sd_turbo failed: No module named 'torch'",
+ "jewel-metal: NO IMAGE"
+]
