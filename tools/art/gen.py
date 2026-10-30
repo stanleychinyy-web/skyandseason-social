@@ -39,7 +39,7 @@ def sdxl_lcm(prompt, path, seed):
         pipe = DiffusionPipeline.from_pretrained("stabilityai/stable-diffusion-xl-base-1.0", torch_dtype=torch.float32, variant="fp16", use_safetensors=True)
         pipe.scheduler = LCMScheduler.from_config(pipe.scheduler.config)
         pipe.load_lora_weights("latent-consistency/lcm-lora-sdxl"); pipe.fuse_lora()
-        pipe.enable_attention_slicing(); pipe.enable_vae_slicing(); sdxl_lcm.pipe = pipe
+        pipe.enable_attention_slicing(); pipe.vae.enable_slicing(); sdxl_lcm.pipe = pipe
     g = torch.Generator().manual_seed(seed)
     im = pipe(prompt=f"{prompt}, {STYLE}", negative_prompt="text, letters, watermark, logo, blurry, cartoon, clipart, emoji, childish",
               num_inference_steps=8, guidance_scale=1.5, height=1344, width=768, generator=g).images[0]
