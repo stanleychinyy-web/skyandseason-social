@@ -1,0 +1,6 @@
+[
+ "lcm-candle-ox: lcm failed: 'StableDiffusionXLPipeline' object has no attribute 'enable_vae_slicing'",
+ "lcm-candle-ox: NO IMAGE",
+ "lcm-great-tree: lcm failed: 'StableDiffusionXLPipeline' object has no attribute 'enable_vae_slicing'",
+ "lcm-great-tree: NO IMAGE"
+]
