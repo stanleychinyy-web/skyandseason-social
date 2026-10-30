@@ -175,7 +175,7 @@
    "post_date": "2026-11-12",
    "status": "todo",
    "credits_used": 0,
-   "notes": "in progress (30 Oct): Flow balance 880 at start. Shot design: K1 i2v (soil in hands); K2->K2B Ji change (first+last frame); K3 Ji form i2v (field blooms); V4 = K4A default beside half-uncovered gem -> K4J Ji forward, played REVERSED (L33 change back). Stills K1,K2,K4A requested in a new Flow agent session."
+   "notes": "in progress (30 Oct ~14:00): stills done and QC passed in Flow: SKY05_K1, SKY05_K2, SKY05_K2B (Ji, new item), SKY05_K3 (Ji), K4A (Flow name \"Character hovering above gemstone\"), SKY05_K4J2 (Ji; K4J rejected: crest became a long ribbon). 7 stills credits. Clips SKY05_V1 (i2v K1), SKY05_V2 (K2->K2B), SKY05_V3 (i2v K3), SKY05_V4X (K4A->K4J2 forward, to play reversed) approved in Flow (80 credits). Flow balance 880 at start. Next: download, QC, assemble."
   },
   {
    "id": "SEA05",
@@ -220,6 +220,7 @@
   "2026-10-26": 20,
   "2026-10-27": 87,
   "2026-10-28": 106,
-  "2026-10-29": 146
+  "2026-10-29": 146,
+  "2026-10-30": 87
  }
 }
