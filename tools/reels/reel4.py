@@ -1,6 +1,6 @@
 """Daily Sky reel, format v4 (mock-up 30 Oct 2026): hook first, paintings, big type, motion, optional voice.
 
-python3 tools/reels/reel4.py sky <date> [--voice] [--out media/<date>/reel4.mp4]
+python3 tools/reels/reel4.py sky <date> [--voice] [--art media/<date>/art] [--out media/<date>/reel4.mp4]
 Needs media/<date>/lines.json (render.py daily) and tools/days/<date>.json.
 Voice: Piper (free, open source) with a model in tools/assets/voice/*.onnx (not required).
 """
@@ -31,19 +31,26 @@ def ease_back(t):
 
 
 _PAINT = {}
-def painting(slug):
-    """Full-bleed painting, darkened, with a bottom gradient. Oversized so it can drift."""
-    if slug in _PAINT: return _PAINT[slug]
-    im = Image.open(f'{ASSETS}/art/stems/{slug}.jpg').convert('RGB')
+ART_DIR = None   # media/<date>/art with hook.jpg, 01-*.jpg … (fresh generated art); falls back to the stem paintings
+def art_path(key, slug):
+    if ART_DIR:
+        hits = sorted(glob.glob(f'{ART_DIR}/{key}*.jpg')) if key != 'hook' else glob.glob(f'{ART_DIR}/hook.jpg')
+        if hits: return hits[0]
+    return f'{ASSETS}/art/stems/{slug}.jpg'
+def painting(slug, key=None):
+    """Full-bleed image, darkened, with a bottom gradient. Oversized so it can drift."""
+    path = art_path(key, slug) if key else f'{ASSETS}/art/stems/{slug}.jpg'
+    if path in _PAINT: return _PAINT[path]
+    im = Image.open(path).convert('RGB')
     r = max(W / im.width, H / im.height) * 1.12
     im = im.resize((int(im.width * r), int(im.height * r)), Image.LANCZOS)
     im = ImageEnhance.Brightness(im).enhance(0.52)
-    _PAINT[slug] = im; return im
+    _PAINT[path] = im; return im
 
 
-def frame_bg(slug, p):
+def frame_bg(slug, p, key=None):
     """p in 0..1 across the card: slow zoom-out drift."""
-    src = painting(slug); z = 1.0 + 0.06 * (1 - p)
+    src = painting(slug, key); z = 1.0 + 0.06 * (1 - p)
     cw, ch = int(W * z), int(H * z)
     x0 = (src.width - cw) // 2; y0 = int((src.height - ch) * (0.35 + 0.1 * p))
     im = src.crop((x0, y0, x0 + cw, y0 + ch)).resize((W, H), Image.BILINEAR).convert('RGBA')
@@ -120,7 +127,8 @@ def render_sky(date, voice=False, out_path=None):
     spec = json.load(open(f'{ROOT}/tools/days/{date}.json', encoding='utf-8'))
     lines = json.load(open(f'{ROOT}/media/{date}/lines.json', encoding='utf-8'))
     idx = {name(i): i for i in range(10)}
-    feat = spec.get('featured', lines[0]['element']); fl = next(l for l in lines if l['element'] == feat)
+    DRAMA = ['Pressure', 'Speak-up', 'Rival', 'Opportunity', 'Recognition', 'Insight', 'Joy', 'Steady-money', 'Support', 'Friend']
+    fl = min(lines, key=lambda l: DRAMA.index(l['type'])); feat = fl['element']
     hook_line = first_sentence(fl['line'])
     HOOK = 1.5 * BAR; CLOSE = 1.5 * BAR; n = len(lines); total = HOOK + n * CARD + CLOSE
     out = os.path.dirname(out_path) if out_path else f'{ROOT}/media/{date}'; os.makedirs(out, exist_ok=True)
@@ -138,7 +146,7 @@ def render_sky(date, voice=False, out_path=None):
     for fr in range(int(total * FPS) + 1):
         t = fr / FPS
         if t < HOOK:
-            p = t / HOOK; im = frame_bg(PAINT[s], p); d = ImageDraw.Draw(im)
+            p = t / HOOK; im = frame_bg(PAINT[s], p, 'hook'); d = ImageDraw.Draw(im)
             pill(d, 70, 290, date_txt, F(34, 700), WHITE, INK)
             y = pop_text(im, d, 70, 400, f'{feat} people:', F(132, 700), GOLD, t, per=0.1, start=0.05)
             y = pop_text(im, d, 70, y + 10, hook_line, F(112, 700), WHITE, t, per=0.08, start=0.35)
@@ -147,7 +155,7 @@ def render_sky(date, voice=False, out_path=None):
                 d.rounded_rectangle([60, 1540, 700, 1620], 16, fill=(20, 14, 10)); d.text((80, 1562), 'Your element in 3 sec…', font=F(46, 600), fill=GOLD)
         elif t < HOOK + n * CARD:
             k = int((t - HOOK) // CARD); lt = t - HOOK - k * CARD; l = lines[k]; si = idx[l['element']]
-            im = frame_bg(PAINT[si], lt / CARD); d = ImageDraw.Draw(im)
+            im = frame_bg(PAINT[si], lt / CARD, f'{k + 1:02d}-'); d = ImageDraw.Draw(im)
             d.text((70, 250), f'{k + 1} / {n}', font=F(44, 700), fill=GOLD)
             pop_text(im, d, 70, 320, l['element'].upper(), F(150, 700), WHITE, lt, per=0.12)
             if lt > 0.25: d.text((70, 480), GOD[si], font=NR(60), fill=CREAMY)
@@ -157,7 +165,7 @@ def render_sky(date, voice=False, out_path=None):
             if len(parts) > 1: pop_text(im, d, 70, y + 30, parts[1], F(70, 500), SOFT, lt, per=0.07, start=0.55 + 0.09 * len(head.split()) + 0.15, lead=1.1)
             d.text((70, 1620), 'Yours is the day you were born · skyandseason.com', font=F(38, 500), fill=(200, 195, 215))
         else:
-            lt = t - HOOK - n * CARD; im = frame_bg(PAINT[s], lt / CLOSE); d = ImageDraw.Draw(im)
+            lt = t - HOOK - n * CARD; im = frame_bg(PAINT[s], lt / CLOSE, 'hook'); d = ImageDraw.Draw(im)
             y = pop_text(im, d, 70, 520, 'Your element is the day you were born.', F(104, 700), WHITE, lt, per=0.08, lead=1.05)
             if lt > 0.9: y = pop_text(im, d, 70, y + 40, 'Find it free in 60 seconds.', F(72, 500), SOFT, lt, per=0.07, start=0.9)
             if lt > 1.4:
@@ -187,5 +195,7 @@ def render_sky(date, voice=False, out_path=None):
 if __name__ == '__main__':
     kind, date = sys.argv[1], sys.argv[2]
     voice = '--voice' in sys.argv
+    if '--art' in sys.argv: ART_DIR = sys.argv[sys.argv.index('--art') + 1]
+    elif os.path.isdir(f'{ROOT}/media/{date}/art'): ART_DIR = f'{ROOT}/media/{date}/art'
     out = sys.argv[sys.argv.index('--out') + 1] if '--out' in sys.argv else None
     render_sky(date, voice, out)
