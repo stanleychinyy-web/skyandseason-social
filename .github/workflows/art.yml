@@ -8,6 +8,9 @@ on:
       out:
         description: "Output folder (committed to main)"
         required: false
+      routes:
+        description: "lcm (quality) and/or turbo (fast), comma-separated"
+        required: false
 permissions:
   contents: write
 jobs:
@@ -17,7 +20,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { ref: main }
+      - name: Install (open-source image models)
+        run: pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q diffusers transformers accelerate peft safetensors pillow
       - name: Generate
+        env:
+          ART_ROUTES: ${{ inputs.routes || 'lcm,turbo' }}
         run: |
           python3 tools/art/gen.py "${{ inputs.out || 'media/art-test' }}" "${{ inputs.prompts || 'tools/art/test-prompts.json' }}"
       - name: Commit
