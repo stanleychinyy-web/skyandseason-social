@@ -173,9 +173,18 @@
    "element": "Ji Earth",
    "dev_date": "2026-10-27",
    "post_date": "2026-11-12",
-   "status": "todo",
-   "credits_used": 0,
-   "notes": "in progress (30 Oct ~14:00): stills done and QC passed in Flow: SKY05_K1, SKY05_K2, SKY05_K2B (Ji, new item), SKY05_K3 (Ji), K4A (Flow name \"Character hovering above gemstone\"), SKY05_K4J2 (Ji; K4J rejected: crest became a long ribbon). 7 stills credits. Clips SKY05_V1 (i2v K1), SKY05_V2 (K2->K2B), SKY05_V3 (i2v K3), SKY05_V4X (K4A->K4J2 forward, to play reversed) approved in Flow (80 credits). Flow balance 880 at start. Next: download, QC, assemble."
+   "status": "made",
+   "credits_used": 128,
+   "notes": "V01 made 30 Oct (one day, 128 credits: 8 stills + 6 Veo clips incl. 2 retries; Flow balance ~752 after). All story shots are Veo clips and passed QC: V1_T1 (i2v K1, soil crumbles) 0.3-6.0; V2_T1 (K2->K2B Ji change) 0.2-7.6; V3_T2 (V3B, i2v K3, field blooms) 0.3-6.3; V4X_T2 (V4X2, K4A2->K4J2 forward, same pose) 1.0-6.8 played REVERSED (L33 change back beside the gem). Rejected V3_T1 (extra striped streamers behind her, glow-ball hand), V4X_T1 (pose turn during change: ears spread, blob off crest, green eyes) (L39). Story 24.9 s + end card = 28.9 s, 8.3 MB. Build in SKY05/source/BUILD.txt. Final SS_THE-GENTLE-EARTH_V01.mp4. Stills stay in Flow (not downloaded).",
+   "made_date": "2026-10-30",
+   "evening_entry": {
+    "type": "reel",
+    "video": "media/2026-11-12/evening-reel.mp4",
+    "cover": "media/2026-11-12/evening-cover.jpg",
+    "caption": "Sky held a handful of soft soil, and the whole field began to bloom 🌱\n\nSky is the gentle Yin spirit, and when the warm earth reached her she became Yin Earth: the soft, rich soil of a garden. Ji Earth doesn't tower like a mountain. It holds, feeds and quietly makes room for things to grow, patient and steady, season after season. In people, it is the caring, practical, supportive side: the friend who listens, remembers the small things and helps everyone around them flourish. And like good soil, it often hides a little treasure inside.\n\nWho is the gentle earth in your life, the one who helps you grow? Tag them below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yinearth #fiveelements #yinyang #animatedshort #bazi #chineseastrology #selfdiscovery #3danimation",
+    "series": "earth-discovery",
+    "status": "review"
+   }
   },
   {
    "id": "SEA05",
@@ -221,6 +230,6 @@
   "2026-10-27": 87,
   "2026-10-28": 106,
   "2026-10-29": 146,
-  "2026-10-30": 87
+  "2026-10-30": 128
  }
 }

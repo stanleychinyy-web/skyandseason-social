@@ -12,6 +12,7 @@ CREST/CRYSTAL/PROPS LOCK (24 Oct): The crest arch sweeps BACKWARD and slightly t
 
 CHANGE-BACK RULE (25 Oct): never ask Veo to grow the default crest back from an elemental tuft. Generate default -> elemental (first frame default, last frame elemental, nothing else moving: no petals, particles or fireflies) and reverse the clip in the edit. Always attach first/last frames with the + picker and have the agent state them before approving.
 
+SAME-POSE RULE (30 Oct, L39): for any first+last-frame form change, the two stills must have the SAME pose and camera (make one from the other); say 'she does not turn or move; only her colour changes; no ball or blob floats off her head; eyes never green'. For i2v shots of elemental forms add 'nothing appears behind or around her: no ribbons, streamers, striped strips or wings; her hand stays a normal mitten, no glow ball; camera steady'.
 
 ## SEASON GUARD (every Season still and clip)
 ANATOMY LOCK for the whole image/clip: Season has EXACTLY TWO broad fanned ears (white with sky-blue tips, tan inside) and ONE large white-and-blue plume tail, golden eight-ray sun on the forehead, blue streak on his left flank, blue chest crystal. Two legs, always upright (never on all fours, never crawling, never animal-style flying); three fingers and a thumb on each hand; three toes on each foot. When he flies or floats he stays upright with legs hanging below him. Exactly one character. No text, no watermark, no music.
