@@ -59,4 +59,4 @@ for i, (name, prompt) in enumerate(spec.items()):
             log.append(f"{name}: {route} failed: {str(e)[:120]}")
     else:
         log.append(f"{name}: NO IMAGE")
-print("\n".join(log)); json.dump(log, open(f"{out}/_log.json", "w"), indent=1)
+print("\n".join(log)); json.dump(log, open(f"{out}/_log-{os.environ.get('ART_ROUTES', 'x').replace(',', '-')}-{int(time.time())}.json", "w"), indent=1)
