@@ -25,6 +25,8 @@ For an elemental form, the ear/tail material and shape follow that form's refere
 FIRE FORMS (28 Oct, L37): in any change into a fire form say 'small softly curled flame tips, no tall flames shooting up from ears, tail or hands, no rings or hoops around her'; QC the middle of the clip for torch-like ear tips and use only the calm part.
 SEASON FIRE (29 Oct, L38): describe Season's fire-form ears and plume as 'phoenix feathers in red-to-gold colours, no fire, no flames, no light burst, no rings'; his fanned ears never become wings.
 
+EARTH FORMS / TAIL CHANGE (31 Oct, L40): in any form change say 'his single tail changes IN PLACE from tip to base; the new material forms ON the same tail; exactly ONE tail at every moment (never a second tail beside it); nothing floats or flies: no rocks, pebbles, fragments or dust rise into the air; nothing comes off the head'.
+
 ## PROPS
 - Water drops stay ONE clear water droplet, never ice, crystal or gems (unless the plan says crystal).
 
