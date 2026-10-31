@@ -194,9 +194,18 @@
       "element": "Wu Earth",
       "dev_date": "2026-10-28",
       "post_date": "2026-11-15",
-      "status": "todo",
-      "credits_used": 0,
-      "notes": "in progress 31 Oct: Flow balance 810 at start. Stills done + QC passed (in KEYFRAMES/): K1, K2A2 (tall boulder, glow), K2J (Wu, same pose), K3 (Wu pushing), K4A (default at cave, same pose as K4J), K4J (Wu at cave); K2A unused (small round rock). Clips round 1 (80 cr): V1_T1 PASS (0.3-7.5), V3_T1 PASS (boulder slides, cave revealed); V2_T1 FAIL (rocks fly from behind head 3-5 s, second tail beside old tail), V4X_T1 FAIL (two tails 2.2-3.4 s) -> L40. Retries V2_T2/V4X_T2 approved (40 cr). Flow item names: 'Character pushing boulder on path'=K1, 'Character touching boulder'=K2A2, 'Character transformation to Wu Earth'=K2J, 'Character pushing boulder on mountain'=K3, 'Character changing to default form'=K4A, 'Character peering into cave opening'=K4J."
+      "status": "made",
+      "credits_used": 128,
+      "notes": "V01 made 31 Oct (one day, 128 credits: 8 stills + 6 Veo clips incl. 2 retries; Flow balance ~682 after). All story shots are Veo clips and passed QC: V1_T1 (i2v K1, pushes, boulder won't move) 0.3-6.5; V2_T2 (K2A2->K2J Wu change, TAIL AND SKY LOCK prompt) 0.4-7.4; V3_T1 (i2v K3, boulder slides aside, cave with silver shimmer) 0.3-6.8; V4X_T2 (K4A->K4J forward) 0.2-6.2 played REVERSED (L33 change back at the cave mouth). Rejected V2_T1 (rocks flew up from behind head, two tails), V4X_T1 (two tails) (L40). Story 25.7 s + end card = 29.7 s, 9.2 MB. Build in SEA05/source/BUILD.txt. Final SS_THE-UNSHAKABLE-MOUNTAIN_V01.mp4.",
+      "made_date": "2026-10-31",
+      "evening_entry": {
+        "type": "reel",
+        "video": "media/2026-11-15/evening-reel.mp4",
+        "cover": "media/2026-11-15/evening-cover.jpg",
+        "caption": "Season couldn't move the boulder by pushing harder, so he stood steady instead, and the mountain moved for him ⛰️\n\nSeason is the bright Yang spirit, and when he felt the deep strength of the rock he became Yang Earth: the mountain itself. Wu Earth doesn't rush or bend with every wind. It stays calm, solid and dependable, the kind of ground everyone else can stand on, and it moves only when the time is right. In people, it is the loyal, patient, protective side: the one who keeps their promises, stays calm in a crisis and quietly holds everything together. Steady beats strong.\n\nWho is the mountain in your life, the one you can always count on? Tag them below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yangearth #fiveelements #yinyang #animatedshort #bazi #chinesemetaphysics #mountains #3danimation",
+        "series": "earth-discovery",
+        "status": "review"
+      }
     },
     {
       "id": "SKY06",
