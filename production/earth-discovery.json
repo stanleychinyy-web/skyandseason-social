@@ -196,7 +196,7 @@
       "post_date": "2026-11-15",
       "status": "todo",
       "credits_used": 0,
-      "notes": "in progress 31 Oct: Flow balance 810 at start. Stage 1: stills K1, K2A, K3, K4J requested (new agent chat in Flow). Plan: K2J from K2A (same pose), K4A default from K4J (same pose); V1 i2v K1, V2 K2A->K2J, V3 i2v K3, V4X K4A->K4J reversed (L33)."
+      "notes": "in progress 31 Oct: Flow balance 810 at start. Stills done + QC passed (in KEYFRAMES/): K1, K2A2 (tall boulder, glow), K2J (Wu, same pose), K3 (Wu pushing), K4A (default at cave, same pose as K4J), K4J (Wu at cave); K2A unused (small round rock). Veo clips V1 (i2v K1), V2 (K2A2->K2J), V3 (i2v K3), V4X (K4A->K4J, play reversed) approved in Flow 13:5x (80 credits); next: download, QC, assemble. Flow item names: 'Character pushing boulder on path'=K1, 'Character touching boulder'=K2A2, 'Character transformation to Wu Earth'=K2J, 'Character pushing boulder on mountain'=K3, 'Character changing to default form'=K4A, 'Character peering into cave opening'=K4J."
     },
     {
       "id": "SKY06",
@@ -231,6 +231,7 @@
     "2026-10-27": 87,
     "2026-10-28": 106,
     "2026-10-29": 146,
-    "2026-10-30": 128
+    "2026-10-30": 128,
+    "2026-10-31": 88
   }
 }
