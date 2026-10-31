@@ -196,7 +196,7 @@
       "post_date": "2026-11-15",
       "status": "made",
       "credits_used": 128,
-      "notes": "V01 made 31 Oct (one day, 128 credits: 8 stills + 6 Veo clips incl. 2 retries; Flow balance ~682 after). All story shots are Veo clips and passed QC: V1_T1 (i2v K1, pushes, boulder won't move) 0.3-6.5; V2_T2 (K2A2->K2J Wu change, TAIL AND SKY LOCK prompt) 0.4-7.4; V3_T1 (i2v K3, boulder slides aside, cave with silver shimmer) 0.3-6.8; V4X_T2 (K4A->K4J forward) 0.2-6.2 played REVERSED (L33 change back at the cave mouth). Rejected V2_T1 (rocks flew up from behind head, two tails), V4X_T1 (two tails) (L40). Story 25.7 s + end card = 29.7 s, 9.2 MB. Build in SEA05/source/BUILD.txt. Final SS_THE-UNSHAKABLE-MOUNTAIN_V01.mp4.",
+      "notes": "V01 made 31 Oct (one day, 128 credits: 8 stills + 6 Veo clips incl. 2 retries; Flow balance ~682 after). All story shots are Veo clips and passed QC: V1_T1 (i2v K1, pushes, boulder won't move) 0.3-6.5; V2_T2 (K2A2->K2J Wu change, TAIL AND SKY LOCK prompt) 0.4-7.4; V3_T1 (i2v K3, boulder slides aside, cave with silver shimmer) 0.3-6.8; V4X_T2 (K4A->K4J forward) 0.2-6.2 played REVERSED (L33 change back at the cave mouth). Rejected V2_T1 (rocks flew up from behind head, two tails), V4X_T1 (two tails) (L40). Story 25.7 s + end card = 29.7 s, 9.2 MB. Build in SEA05/source/BUILD.txt. Final SS_THE-UNSHAKABLE-MOUNTAIN_V01.mp4. Review page: posts/2026-11-15 created (approval review) but the page's file storage is full (256 MB cap), so media/2026-11-15/e1.mp4 + e1-cover.jpg could NOT be uploaded (removing old posted media was not permitted without Stanley). Next run: once Stanley OKs freeing space (e.g. Oct 10-16 morning reel.mp4 files), publish the 360p preview (1.2 MB) at media/2026-11-15/e1.mp4 + e1-cover.jpg.",
       "made_date": "2026-10-31",
       "evening_entry": {
         "type": "reel",
@@ -230,7 +230,7 @@
       "notes": ""
     }
   ],
-  "last_run_date": "2026-10-30",
+  "last_run_date": "2026-10-31",
   "schedule": "hourly 12:59-22:59 SGT until the day's reel is done",
   "paused_until": "2026-10-24",
   "pause_note": "23 Oct: SKY03 hit the daily credit ceiling (140 of ~150) with V2 and V3 still failing QC. Hourly runs on 23 Oct: stop at once (guard already ran today). On 24 Oct resume SKY03 first (see its notes), then SEA03.",
