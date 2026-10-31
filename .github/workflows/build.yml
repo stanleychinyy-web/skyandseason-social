@@ -1,0 +1,70 @@
+name: Build reels
+# Format v4 (30 Oct 2026): fresh open-source art for every card (tools/art/<date>.json and <date>-evening.json),
+# then tools/build_day.py renders the reels and the 9pm clip, and media/<date>/ is committed. One job per date.
+on:
+  workflow_dispatch:
+    inputs:
+      dates:
+        description: "Comma-separated dates, e.g. 2026-11-04,2026-11-05"
+        required: true
+      skip_art:
+        description: "Re-render only (keep existing art)"
+        type: boolean
+        default: false
+      routes:
+        description: "Art routes: turbo (fast) and/or lcm (quality)"
+        required: false
+        default: "turbo"
+permissions:
+  contents: write
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      dates: ${{ steps.p.outputs.dates }}
+    steps:
+      - id: p
+        run: python3 -c "import json,os; print('dates=' + json.dumps([d.strip() for d in '${{ inputs.dates }}'.split(',') if d.strip()]))" >> "$GITHUB_OUTPUT"
+  build:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      matrix:
+        date: ${{ fromJSON(needs.plan.outputs.dates) }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - name: Install render tools
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libcairo2 > /dev/null
+          pip install -q pillow cairosvg
+          cd tools/reels && npm install --silent
+      - name: Install art model
+        if: ${{ !inputs.skip_art }}
+        run: pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q diffusers transformers accelerate peft safetensors
+      - uses: actions/cache@v4
+        if: ${{ !inputs.skip_art }}
+        with:
+          path: ~/.cache/huggingface
+          key: hf-sdxl-turbo-v1
+      - name: Generate art
+        if: ${{ !inputs.skip_art }}
+        env:
+          ART_ROUTES: ${{ inputs.routes || 'turbo' }}
+        run: |
+          D=${{ matrix.date }}
+          [ -f tools/art/$D.json ] && python3 tools/art/gen.py media/$D/art tools/art/$D.json || echo "no morning prompts"
+          [ -f tools/art/$D-evening.json ] && python3 tools/art/gen.py media/$D/art-evening tools/art/$D-evening.json || echo "no evening prompts"
+      - name: Render reels
+        run: python3 tools/build_day.py ${{ matrix.date }}
+      - name: Commit
+        run: |
+          D=${{ matrix.date }}
+          git config user.name "Reel build bot"; git config user.email "actions@users.noreply.github.com"
+          rm -f media/$D/a1.jpg media/$D/a2.jpg media/$D/a3.jpg media/$D/a4.jpg media/$D/art*/_log-*.json
+          git add media/$D
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Build reels $D (v4)"
+          for i in 1 2 3 4 5 6; do git push -q && exit 0; sleep $((RANDOM % 20 + 5)); git pull --rebase -q origin main || true; done; exit 1

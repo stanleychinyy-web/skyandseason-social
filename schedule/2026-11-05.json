@@ -1,6 +1,26 @@
 {
  "date": "2026-11-05",
  "status": "approved",
+ "stories": [
+  "media/2026-11-05/story1.jpg",
+  "media/2026-11-05/story2.jpg",
+  "media/2026-11-05/story3.jpg"
+ ],
+ "stories_noon": [
+  "media/2026-11-05/story4.jpg",
+  "media/2026-11-05/story5.jpg"
+ ],
+ "stories_night": [
+  "media/2026-11-05/story6.jpg",
+  "media/2026-11-05/story-clip.mp4"
+ ],
+ "morning": {
+  "type": "reel",
+  "video": "media/2026-11-05/reel.mp4",
+  "cover": "media/2026-11-05/cover.jpg",
+  "caption": "Thursday's Sky is Yin Water, The Rain and Mist 🌧️ Find your element below.\n\nYour element is the element of the day you were born. Today's soft rain meets it and creates one of 10 forces: Yin Water gets a friend day, Yin Metal gets a joy day, Yin Fire feels a small squeeze.\n\nDon't know yours? Find it free at the link in bio.\n\nWhich one sounds like your Thursday? Comment below.\n\n#skyandseason #innerconstellation #horoscope #zodiacsigns #knowyourself #fengshui #fourpillars #chineseastrology #dailyhoroscope #singapore",
+  "series": "sky-today"
+ },
  "evening": {
   "type": "reel",
   "video": "media/2026-11-05/evening-reel.mp4",

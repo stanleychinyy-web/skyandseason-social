@@ -1,0 +1,31 @@
+{
+ "date": "2026-11-09",
+ "status": "pending",
+ "stories": [
+  "media/2026-11-09/story1.jpg",
+  "media/2026-11-09/story2.jpg",
+  "media/2026-11-09/story3.jpg"
+ ],
+ "stories_noon": [
+  "media/2026-11-09/story4.jpg",
+  "media/2026-11-09/story5.jpg"
+ ],
+ "stories_night": [
+  "media/2026-11-09/story6.jpg",
+  "media/2026-11-09/story-clip.mp4"
+ ],
+ "morning": {
+  "type": "reel",
+  "video": "media/2026-11-09/reel.mp4",
+  "cover": "media/2026-11-09/cover.jpg",
+  "caption": "Monday's Sky is Yin Fire, The Candle Flame 🕯️ Find your element below.\n\nYour element is the element of the day you were born. Today's small steady flame meets it and creates one of 10 forces: Yin Fire gets a friend day, Yin Wood gets a joy day, Yin Metal feels the pressure.\n\nDon't know yours? Find it free at the link in bio.\n\nHow's your Monday going? Comment your element below.\n\n#skyandseason #innerconstellation #astrology #zodiacsigns #personalgrowth #metaphysics #bazi #chinesemetaphysics #fiveelements #mondaymotivation",
+  "series": "sky-today"
+ },
+ "evening": {
+  "type": "reel",
+  "video": "media/2026-11-09/series-reel.mp4",
+  "cover": "media/2026-11-09/series-cover.jpg",
+  "caption": "Tag the one who yam sengs the loudest 🥂\n\nWedding season is here, and every element has its dinner style. Which one is you, and which one is at your table?\n\nYour element comes from the day you were born, not your zodiac animal. Find yours free at the link in bio.\n\nWhich one are you? Comment below.\n\n#skyandseason #innerconstellation #weddingdinner #singapore #relatable #zodiacmemes #astrologymemes #fiveelements #chineseastrology #knowyourself",
+  "series": "wedding-dinner"
+ }
+}

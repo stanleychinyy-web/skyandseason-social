@@ -1,0 +1,32 @@
+{
+ "date": "2026-11-04",
+ "status": "pending",
+ "stories": [
+  "media/2026-11-04/story1.jpg",
+  "media/2026-11-04/story2.jpg",
+  "media/2026-11-04/story3.jpg"
+ ],
+ "stories_noon": [
+  "media/2026-11-04/story4.jpg",
+  "media/2026-11-04/story5.jpg"
+ ],
+ "stories_night": [
+  "media/2026-11-04/story6.jpg",
+  "media/2026-11-04/story-clip.mp4"
+ ],
+ "morning": {
+  "type": "reel",
+  "video": "media/2026-11-04/reel.mp4",
+  "cover": "media/2026-11-04/cover.jpg",
+  "caption": "Wednesday's Sky is Yang Water, The Ocean 🌊 Find your element below.\n\nYour element is the element of the day you were born. Today's big ocean meets it and creates one of 10 forces: Yang Water gets a friend day, Yang Metal gets a joy day, Yang Fire feels the pressure.\n\nDon't know yours? Find it free at the link in bio.\n\nWhich line hit closest? Comment below.\n\n#skyandseason #innerconstellation #astrology #zodiac #selfawareness #astrologer #bazi #chinesemetaphysics #fiveelements #humpday",
+  "series": "sky-today"
+ },
+ "evening": {
+  "type": "reel",
+  "video": "media/2026-11-04/series-reel.mp4",
+  "cover": "media/2026-11-04/series-cover.jpg",
+  "caption": "Which element is the most loyal friend? 🤝\n\nIn Chinese astrology your element comes from the day you were born. Earth is trust, Metal keeps its word, and Wood is kindness that keeps growing. That's why these five top the list for showing up when it counts.\n\nFind your element free at the link in bio.\n\nTag your #1 below.\n\n#skyandseason #innerconstellation #friendship #bestfriends #relatable #fiveelements #chineseastrology #bazi #zodiac #singapore",
+  "series": "ranking-most-loyal-friend",
+  "status": "review"
+ }
+}

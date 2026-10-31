@@ -1,0 +1,32 @@
+{
+ "date": "2026-11-07",
+ "status": "pending",
+ "stories": [
+  "media/2026-11-07/story1.jpg",
+  "media/2026-11-07/story2.jpg",
+  "media/2026-11-07/story3.jpg"
+ ],
+ "stories_noon": [
+  "media/2026-11-07/story4.jpg",
+  "media/2026-11-07/story5.jpg"
+ ],
+ "stories_night": [
+  "media/2026-11-07/story6.jpg",
+  "media/2026-11-07/story-clip.mp4"
+ ],
+ "morning": {
+  "type": "reel",
+  "video": "media/2026-11-07/reel.mp4",
+  "cover": "media/2026-11-07/cover.jpg",
+  "caption": "Saturday's Sky is Yin Wood, The Climbing Vine 🌿 Find your element below.\n\nYour element is the element of the day you were born. Today's climbing vine meets it and creates one of 10 forces: Yin Wood gets a friend day, Yin Water gets a joy day, Yin Earth has a busy one.\n\nDon't know yours? Find it free at the link in bio.\n\nWhat's your Saturday plan? Comment below.\n\n#skyandseason #innerconstellation #zodiac #horoscope #selfawareness #fengshuitips #fourpillars #chineseastrology #astrologyreels #weekendvibes",
+  "series": "sky-today"
+ },
+ "evening": {
+  "type": "reel",
+  "video": "media/2026-11-07/series-reel.mp4",
+  "cover": "media/2026-11-07/series-cover.jpg",
+  "caption": "Which element is the best listener? 👂\n\nIn Chinese astrology your element comes from the day you were born. The yin elements are the receivers: Yin Water reads what isn't said, Yin Earth makes room for you, Yin Wood asks the question that helps. Yang Earth sneaks in as the calm mountain.\n\nFind your element free at the link in bio.\n\nTag your #1 below.\n\n#skyandseason #innerconstellation #friendship #goodvibes #relatable #fiveelements #chineseastrology #knowyourself #zodiacsigns #singapore",
+  "series": "ranking-best-listener",
+  "status": "review"
+ }
+}
