@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Insight",
+  "line": "A hunch shows up mid-meeting. Note it down and test it before you share it."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Support",
+  "line": "Someone offers help today. Say yes, then buy them a kopi after."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Pressure",
+  "line": "Your inbox gets loud today. Clear the hardest one first, then breathe."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Recognition",
+  "line": "Your boss notices the small stuff today. Keep your notes tidy and on time."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Opportunity",
+  "line": "A side chance pops up today. Ask the real cost before you say yes."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Steady-money",
+  "line": "Good day to sort the bills. Boring work, very nice feeling after."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Joy",
+  "line": "Your fun side wins today. Book the makan plan; the spreadsheet can wait."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Speak-up",
+  "line": "You'll want to correct someone today. Say it kindly, in one message."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Friend",
+  "line": "Your crowd is in sync today. Say yes to the group plan; split the bill fair."
+ },
+ {
+  "element": "Yin Water",
+  "type": "Rival",
+  "line": "Someone runs with your idea today. Add your name to it and keep going."
+ }
+]

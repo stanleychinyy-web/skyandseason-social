@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Rival",
+  "line": "Someone copies your weekend plan today. Join forces; it's more fun anyway."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Friend",
+  "line": "Your kind of day. Meet a friend for brunch and let the chat run long."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Support",
+  "line": "Someone looks after you today. Let them cook; you do the dishes."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Insight",
+  "line": "A quiet afternoon sparks an idea. Keep a notebook within reach."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Recognition",
+  "line": "Family asks your opinion today. Give it gently; they'll actually listen."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Pressure",
+  "line": "Errands pile up today. Batch them into one trip, then put your feet up."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Steady-money",
+  "line": "Good day to compare prices. The weekend sale can survive one more look."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Opportunity",
+  "line": "A surprise offer turns up today. Say maybe, then read the fine print."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Speak-up",
+  "line": "You've got a hot take today. Share it at dinner, not in the group chat."
+ },
+ {
+  "element": "Yin Water",
+  "type": "Joy",
+  "line": "Easy fun finds you today. Say yes to the movie; skip the large popcorn."
+ }
+]

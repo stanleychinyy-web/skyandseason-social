@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Friend",
+  "line": "Your allies show up today. Ask for backup; you don't have to carry it alone."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Rival",
+  "line": "A friendly contest today. Let them win the small one; you'll take the next."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Insight",
+  "line": "You read the room fast today. Trust it, but check the facts before you act."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Support",
+  "line": "Help arrives quietly today. Accept the lift home and say thanks properly."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Pressure",
+  "line": "The to-do list grows legs today. Pick three; the rest can wait."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Recognition",
+  "line": "Your effort gets seen today. Show the work; let others do the praising."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Opportunity",
+  "line": "A good deal crosses your path today. If it's a big one, sleep on it."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Steady-money",
+  "line": "Friday treat time. Set the budget first, then enjoy every bite."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Joy",
+  "line": "Weekend mood starts early today. Plan something fun that fits the budget."
+ },
+ {
+  "element": "Yin Water",
+  "type": "Speak-up",
+  "line": "You'll say what everyone is thinking today. Pick kind words; the timing's good."
+ }
+]

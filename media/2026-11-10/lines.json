@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Opportunity",
+  "line": "A chance to grow shows up today. Raise your hand before someone else does."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Steady-money",
+  "line": "Slow and steady pays today. Tick off the admin; future you says thanks."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Joy",
+  "line": "You're fun to be around today. Lead the lunch plan and pick somewhere new."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Speak-up",
+  "line": "Your words carry today. Pitch the idea, and keep it to one slide."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Friend",
+  "line": "Solid people around you today. Lean on them; return the favour soon."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Rival",
+  "line": "Someone wants your spot today. Stay calm and do your part well."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Insight",
+  "line": "Quiet focus works today. Headphones on, notifications off."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Support",
+  "line": "Someone steady has your back today. Let them help, then say thank you."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Pressure",
+  "line": "The rules feel tight today. Work within them; your way can wait."
+ },
+ {
+  "element": "Yin Water",
+  "type": "Recognition",
+  "line": "Someone senior notices you today. Be on time and be clear."
+ }
+]

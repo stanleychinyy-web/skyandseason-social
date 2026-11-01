@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Support",
+  "line": "A wise word lands today. Write it down before the next meeting starts."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Insight",
+  "line": "Rainy-day thinking suits you. Your best idea turns up on the bus home."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Recognition",
+  "line": "People look to you today. Lead the meeting and keep it under 30 minutes."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Pressure",
+  "line": "A small deadline pinches today. Start early; skip the second coffee break."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Steady-money",
+  "line": "Steady wins today. Finish the task you keep pushing to tomorrow."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Opportunity",
+  "line": "A lucky break may show up today. Read the details before you jump."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Speak-up",
+  "line": "Your opinions are sharp today. Share one; save the rest for lunch."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Joy",
+  "line": "Small pleasures hit hard today. Get the good bubble tea, full sugar."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Rival",
+  "line": "Someone wants the same seat today. Share the table; it's not a race."
+ },
+ {
+  "element": "Yin Water",
+  "type": "Friend",
+  "line": "Your people get you today. Send the voice note; they'll reply fast."
+ }
+]

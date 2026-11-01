@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Joy",
+  "line": "Sunny Sunday energy. Go out, eat well and leave the laptop shut."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Speak-up",
+  "line": "You've got something to say today. Say it over lunch, not over text."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Friend",
+  "line": "Your crowd is bright today. Gather people; you'll be the warmest one there."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Rival",
+  "line": "Someone takes the spotlight today. Clap for them; your turn is coming."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Insight",
+  "line": "A slow morning brings a clear answer. Don't rush the coffee."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Support",
+  "line": "Family has your back today. Let them help with the chores for once."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Pressure",
+  "line": "Sunday pressure creeps in. Prep Monday for 20 minutes, then stop."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Recognition",
+  "line": "Someone praises your taste today. Take the compliment; don't explain it."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Opportunity",
+  "line": "A fun chance pops up today. Say yes if it fits your wallet."
+ },
+ {
+  "element": "Yin Water",
+  "type": "Steady-money",
+  "line": "Plan the week's spending today. Ten minutes now saves stress later."
+ }
+]
