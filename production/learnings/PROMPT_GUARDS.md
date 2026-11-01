@@ -27,6 +27,8 @@ SEASON FIRE (29 Oct, L38): describe Season's fire-form ears and plume as 'phoeni
 
 EARTH FORMS / TAIL CHANGE (31 Oct, L40): in any form change say 'his single tail changes IN PLACE from tip to base; the new material forms ON the same tail; exactly ONE tail at every moment (never a second tail beside it); nothing floats or flies: no rocks, pebbles, fragments or dust rise into the air; nothing comes off the head'.
 
+METAL/CRYSTAL FORMS (1 Nov, L41): never ask for the form change in one clip when ear/crest shapes change; first a colour-only still (same shapes) and a colour-only clip, then a facets-in-place clip. Always add 'nothing cracks, peels or breaks; no shards, pieces, powder, smoke or dust; nothing grows spikes; crest never splits into points'.
+
 ## PROPS
 - Water drops stay ONE clear water droplet, never ice, crystal or gems (unless the plan says crystal).
 
