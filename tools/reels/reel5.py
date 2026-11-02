@@ -193,7 +193,7 @@ def render(hook, cards, close, out_video, out_cover, card_len=CARD):
     for fr in range(int(total * FPS) + 1):
         t = fr / FPS
         if t < HOOK:
-            im = scene_bg(hook['img'], t / HOOK); d = ImageDraw.Draw(im)
+            im = scene_bg(hook['img'], t / HOOK) if hook.get('img') else hook['designed'].frame(t); d = ImageDraw.Draw(im)
             pill(d, 70, 120, hook['date'], F(34, 700), WHITE, INK, h=70)
             y = pop(im, 70, 230, hook['lead'], fit(d, hook['lead'], 118, W - 140, 2), GOLD, t, per=0.1)
             pop(im, 70, y + 4, hook['line'], fit(d, hook['line'], 96, W - 140, 3), WHITE, t, per=0.08, start=0.3)
@@ -248,9 +248,9 @@ def sky(date):
         else: c['designed'] = Designed(si, f'{date}-{k}')
         cards.append(c)
     hk = next((k for k in picks if cards[k].get('img')), None)
-    if hk is None: raise SystemExit(f'no SCENE image in {A} for the hook; expected one of {[f"{k + 1:02d}-" for k in picks]}')
+    if hk is None: hk = picks[0]; print(f'WARNING: no SCENE image in {A}; designed hook (fallback)')
     hl = lines[hk]
-    hook = dict(img=cards[hk]['img'], date=dt.strftime('%a %-d %b').upper(), lead=f"{hl['element']} people:",
+    hook = dict(img=cards[hk].get('img'), designed=cards[hk].get('designed'), date=dt.strftime('%a %-d %b').upper(), lead=f"{hl['element']} people:",
                 line=first_sentence(hl['line'])[0][0].lower() + first_sentence(hl['line'])[0][1:], note='Your element in 3 sec…')
     close = dict(line='Your element is the day you were born.', sub='Find it free in 60 seconds.', head='skyandseason.com', body='Then comment your element below.',
                  designed=Designed(s, f'{date}-close'))
@@ -269,9 +269,9 @@ def ranking(spec_path, date):
         else: c['designed'] = Designed(si, f'{date}-r{rank}')
         cards.append(c)
     top = cards[-1]
-    if not top.get('img'): raise SystemExit(f'no SCENE image for #1 in {A} (01-…)')
+    if not top.get('img'): print(f'WARNING: no SCENE image for #1 in {A}; designed hook (fallback)')
     title = ' '.join(sp['title'])
-    hook = dict(img=top['img'], date=dt.strftime('%a %-d %b').upper(), lead='Which element is', line=title[0].lower() + title[1:], note='Counting down to #1…')
+    hook = dict(img=top.get('img'), designed=top.get('designed'), date=dt.strftime('%a %-d %b').upper(), lead='Which element is', line=title[0].lower() + title[1:], note='Counting down to #1…')
     close = dict(line='Agree?', sub=sp.get('comment_line', 'Tag your #1 below.'), head='skyandseason.com', body='Your element is the day you were born. Free.',
                  designed=Designed(idx[ranks[0]['element']], f'{date}-rclose'))
     out = f'{ROOT}/media/{date}'
@@ -287,9 +287,9 @@ def series(spec_path, date):
         else: c['designed'] = Designed(i, f'{date}-s{i}')
         cards.append(c)
     first = {'img': art(A, 'hook')} if art(A, 'hook') else next((c for c in cards if c.get('img')), None)
-    if not first: raise SystemExit(f'no SCENE image in {A} (hook.png or a card)')
+    if not first: print(f'WARNING: no SCENE image in {A}; designed hook (fallback)'); first = {'designed': Designed(day(dt)[0], f'{date}-shook')}
     title = ' '.join(sp['title'])
-    hook = dict(img=first['img'], date=dt.strftime('%a %-d %b').upper(), lead=title[0].upper() + title[1:], line=sp['tag_line'], note='Find yours in 3 sec…')
+    hook = dict(img=first.get('img'), designed=first.get('designed'), date=dt.strftime('%a %-d %b').upper(), lead=title[0].upper() + title[1:], line=sp['tag_line'], note='Find yours in 3 sec…')
     close = dict(line='Which one are you?', sub='Your element is the day you were born.', head='skyandseason.com', body=sp.get('comment_line', 'Then comment your element below.'),
                  designed=Designed(day(dt)[0], f'{date}-sclose'))
     out = f'{ROOT}/media/{date}'
@@ -317,6 +317,7 @@ def season(date):
     from daytype import BRANCH_ANIMAL, BRANCH_EL
     dt = datetime.date.fromisoformat(date); s, b = day(dt); A = f'{ROOT}/media/{date}/art5'
     tips = json.load(open(f'{ROOT}/tools/days/{date}.json', encoding='utf-8'))['animal_tips']
+    if not (art(A, 'animals-a') and art(A, 'animals-b')): raise SystemExit(f'Sunday needs {A}/animals-a.png and animals-b.png (ChatGPT grids)')
     ts = tiles(art(A, 'animals-a')) + tiles(art(A, 'animals-b')); clash = (b + 6) % 12; an = BRANCH_ANIMAL[clash]
     cards = []
     for a in range(12):
@@ -324,7 +325,7 @@ def season(date):
         yrs = ' · '.join(str(y) for y in range(1948 + a, 2021, 12)[-4:])
         cards.append(dict(kicker=f'{a + 1} / 12', title=BRANCH_ANIMAL[a].upper(), who=f'Born {yrs}', pill=lab, head=tips[BRANCH_ANIMAL[a]],
                           body='Born in Jan or early Feb? Use the animal before yours.', designed=Designed(None, f'{date}-a{a}', el=BRANCH_EL[a], fig=ts[a])))
-    hook = dict(img=art(A, 'hook'), date=f"{dt.strftime('%a %-d %b').upper()} · {BRANCH_ANIMAL[b].upper()} DAY",
+    hook = dict(img=art(A, 'hook'), designed=Designed(s, f'{date}-hook'), date=f"{dt.strftime('%a %-d %b').upper()} · {BRANCH_ANIMAL[b].upper()} DAY",
                 lead=f"Born in {'an' if an[0] in 'AEIOU' else 'a'} {an} year?", line=tips[an], note='All 12 animals, one by one…')
     close = dict(line='Your animal is your Season.', sub='Your element is your Sky. Both free.', head='skyandseason.com', body='Then comment your animal below.',
                  designed=Designed(s, f'{date}-close'))
