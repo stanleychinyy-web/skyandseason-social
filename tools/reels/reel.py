@@ -152,7 +152,7 @@ def stories(date):
     def save(im, k):
         p = f'{out}/story{k + 1}.jpg'; im.convert('RGB').save(p, quality=90); files.append(p)
     # 1. cover
-    im, d = frame(sky_el, dt, 0, 3)
+    im, d = frame(sky_el, dt, 0, 4)
     ctext(d, 360, "Today's Sky & Season", F(76, 700), INK)
     for cx, kind in [(290, 'SKY'), (790, 'SEASON')]:
         d.rounded_rectangle([cx - 230, 430, cx + 230, 1010], 48, fill=(255, 255, 255))
@@ -163,11 +163,11 @@ def stories(date):
         d.text((cx, 900), GOD[s] if kind == 'SKY' else f'{BRANCH_EL[b]} animal', font=F(36, 500), fill=MUTED, anchor='mm')
         d.text((cx, 955), "the day's element" if kind == 'SKY' else "the day's animal", font=F(30, 400), fill=MUTED, anchor='mm')
     para(d, 0, 1080, spec.get('day_line') or f'{GOD[s]} meets the {BRANCH_ANIMAL[b]}.', 60, W - 180, INK, w=600, center=True, max_lines=3)
-    ctext(d, 1560, 'Little luck & a quiz at 12:30pm', F(44, 600), RED)
+    ctext(d, 1560, 'Tap for today\'s little luck', F(44, 600), RED)
     save(im, 0)
     # 2. the Sky
     nature, good, watch = STEM_INFO[s]
-    im, d = frame(sky_el, dt, 1, 3)
+    im, d = frame(sky_el, dt, 1, 4)
     ctext(d, 350, "TODAY'S SKY", F(40, 700), RED)
     scaled(im, sky_icon, W // 2, 560, 1)
     ctext(d, 780, name(s), F(92, 700), INK); ctext(d, 860, GOD[s], F(48, 500), MUTED)
@@ -178,7 +178,7 @@ def stories(date):
     save(im, 1)
     # 3. the Season
     hm, tr, cl = BRANCH_ANIMAL[HARMONY[b]], [BRANCH_ANIMAL[(b + 4) % 12], BRANCH_ANIMAL[(b + 8) % 12]], BRANCH_ANIMAL[(b + 6) % 12]
-    im, d = frame(sea_el, dt, 2, 3)
+    im, d = frame(sea_el, dt, 2, 4)
     ctext(d, 350, "TODAY'S SEASON", F(40, 700), GREEN)
     scaled(im, sea_icon, W // 2, 560, 1)
     ctext(d, 780, f'{BRANCH_ANIMAL[b]} day', F(92, 700), INK); ctext(d, 860, f'{BRANCH_EL[b]} animal', F(48, 500), MUTED)
@@ -190,7 +190,7 @@ def stories(date):
     para(d, 130, y + 30, f'Born in a {cl} year? Keep today light.', 42, W - 260, MUTED, max_lines=2)
     save(im, 2)
     # 4. lucky colour / hours / at home (one Feng Shui placement tip, plus this month's resting sides)
-    im, d = frame(sky_el, dt, 0, 2)
+    im, d = frame(sky_el, dt, 3, 4)
     ctext(d, 360, "Today's little luck", F(76, 700), INK)
     lucky = [((b + 4) % 12), HARMONY[b], ((b + 8) % 12)]
     lucky = sorted(set(lucky), key=lambda x: (x - 3) % 12)  # morning first
@@ -208,7 +208,7 @@ def stories(date):
     save(im, 3)
     # 5. quiz
     q, ans, why = element_link(sky_el, sea_el)
-    im, d = frame(sea_el, dt, 1, 2)
+    im, d = frame(sea_el, dt, 0, 1)
     scaled(im, emoji('red-question-mark', 220), W // 2, 470, 1)
     ctext(d, 660, 'Quick quiz', F(84, 700), INK)
     para(d, 0, 760, q, 60, W - 200, INK, w=600, center=True, max_lines=2)
@@ -219,7 +219,7 @@ def stories(date):
     save(im, 4)
     # 6. answer + call to action
     im, d = frame(sea_el, dt, 0, 1)
-    ctext(d, 290, "THIS AFTERNOON'S QUIZ", F(36, 700), MUTED)
+    ctext(d, 290, "TODAY'S QUIZ", F(36, 700), MUTED)
     para(d, 0, 330, q, 40, W - 240, MUTED, w=500, center=True, max_lines=2)
     ctext(d, 470, f'Answer: {ans}', F(84, 700), GREEN)
     scaled(im, emoji(EL_ICON[ans], 170), W // 2 - 130, 630, 1); scaled(im, emoji(EL_ICON[sky_el], 170), W // 2 + 130, 630, 1)

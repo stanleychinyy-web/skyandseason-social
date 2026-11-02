@@ -3,13 +3,11 @@ on:
   schedule:
     # GitHub often starts scheduled runs hours late, so start early: the run uploads
     # everything, then waits and publishes at exactly 06:00 Singapore time.
-    - cron: "0 17 * * *"    # 01:00 Singapore
-    - cron: "0 19 * * *"    # 03:00 Singapore (second early start)
-    - cron: "30 22 * * *"   # 06:30 Singapore (safety net: posts at once if nothing went out)
+    - cron: "41 21 * * *"   # 05:41 Singapore (backup; the on-time trigger dispatches at ~05:35)
+    - cron: "23 22 * * *"   # 06:23 Singapore (safety net: posts at once if nothing went out)
     # Evening slot (series posts, Mon/Wed/Fri): publishes at exactly 19:00 Singapore time.
-    - cron: "0 6 * * *"     # 14:00 Singapore (early start)
-    - cron: "0 8 * * *"     # 16:00 Singapore (second early start)
-    - cron: "30 11 * * *"   # 19:30 Singapore (safety net)
+    - cron: "43 10 * * *"   # 18:43 Singapore (backup)
+    - cron: "19 11 * * *"   # 19:19 Singapore (safety net)
   workflow_dispatch:
     inputs:
       date:
@@ -24,13 +22,17 @@ on:
         description: "Check only, post nothing"
         type: boolean
         default: false
+      on_time:
+        description: "Wait for the slot's publish time (used by the on-time trigger)"
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency: post-daily-reflection
 jobs:
   post:
     runs-on: ubuntu-latest
-    timeout-minutes: 355   # an early run may wait up to ~5 hours for 06:00
+    timeout-minutes: 180   # runs start at most ~2.5 h early (timing_guard); a hang can no longer block the next run for 6 h
     steps:
       - uses: actions/checkout@v4
         with:
@@ -40,14 +42,15 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           DATE: ${{ inputs.date }}
           DRY_RUN: ${{ inputs.dry_run }}
-          SLOT: ${{ github.event_name == 'schedule' && ((github.event.schedule == '0 6 * * *' || github.event.schedule == '0 8 * * *' || github.event.schedule == '30 11 * * *') && 'evening' || 'morning') || inputs.slot || 'morning' }}
-          PUBLISH_AT: ${{ github.event_name == 'schedule' && ((github.event.schedule == '0 6 * * *' || github.event.schedule == '0 8 * * *' || github.event.schedule == '30 11 * * *') && '19:00' || '06:00') || '' }}
+          SLOT: ${{ github.event_name == 'schedule' && ((github.event.schedule == '43 10 * * *' || github.event.schedule == '19 11 * * *') && 'evening' || 'morning') || inputs.slot || 'morning' }}
+          PUBLISH_AT: ${{ github.event_name == 'schedule' && ((github.event.schedule == '43 10 * * *' || github.event.schedule == '19 11 * * *') && '19:00' || '06:00') || (inputs.on_time && (inputs.slot == 'evening' && '19:00' || '06:00')) || '' }}
           MEDIA_BASE: https://raw.githubusercontent.com/${{ github.repository }}/{sha},https://cdn.jsdelivr.net/gh/${{ github.repository }}@{sha}
+          PYTHONUNBUFFERED: "1"
         run: python3 scripts/post.py
       - name: Save posted marker
         if: always()
         env:
-          SLOT_NAME: ${{ github.event_name == 'schedule' && ((github.event.schedule == '0 6 * * *' || github.event.schedule == '0 8 * * *' || github.event.schedule == '30 11 * * *') && 'evening' || 'morning') || inputs.slot || 'morning' }}
+          SLOT_NAME: ${{ github.event_name == 'schedule' && ((github.event.schedule == '43 10 * * *' || github.event.schedule == '19 11 * * *') && 'evening' || 'morning') || inputs.slot || 'morning' }}
         run: |
           git config user.name "Daily Reflection bot"
           git config user.email "actions@users.noreply.github.com"

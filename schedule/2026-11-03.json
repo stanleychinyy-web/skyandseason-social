@@ -4,7 +4,8 @@
  "stories": [
   "media/2026-11-03/story1.jpg",
   "media/2026-11-03/story2.jpg",
-  "media/2026-11-03/story3.jpg"
+  "media/2026-11-03/story3.jpg",
+  "media/2026-11-03/story4.jpg"
  ],
  "morning": {
   "type": "reel",
@@ -14,7 +15,6 @@
   "series": "sky-today"
  },
  "stories_noon": [
-  "media/2026-11-03/story4.jpg",
   "media/2026-11-03/story5.jpg"
  ],
  "stories_night": [

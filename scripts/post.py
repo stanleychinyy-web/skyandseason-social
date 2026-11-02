@@ -18,7 +18,9 @@ is respected.
 Env: IG_ACCESS_TOKEN, SLOT=morning|noon|evening|night|monthly (noon/night = story drops from stories_noon/stories_night, markers posted/<date>.<slot>.json; monthly = schedule/monthly/<date>.json, approved only), DATE (default today SGT), DRY_RUN, MEDIA_BASE (comma list,
 may contain {sha}), PUBLISH_AT (HH:MM Singapore).
 """
-import datetime, json, os, subprocess, time, urllib.parse, urllib.request, urllib.error
+import datetime, json, os, socket, subprocess, sys, time, urllib.parse, urllib.request, urllib.error
+socket.setdefaulttimeout(90)
+sys.stdout.reconfigure(line_buffering=True)   # logs appear live (a run that hung on 1 Nov showed nothing)
 
 API = "https://graph.instagram.com/v23.0"
 TOKEN = os.environ.get("IG_ACCESS_TOKEN", "").strip()
@@ -179,11 +181,34 @@ def latest_from_origin(path):
         return False
 
 
+def publish_target():
+    hh, mm = map(int, PUBLISH_AT.split(":"))
+    return datetime.datetime.fromisoformat(DATE).replace(hour=hh, minute=mm, tzinfo=SGT)
+
+
+def timing_guard():
+    """Scheduled runs only. GitHub often starts them hours late (Oct–Nov 2026: the 12:30 drop landed at 4–7pm, a
+    night run started after midnight and waited 20 h for the next day). Too early or too late: exit and let the
+    on-time trigger do it. The morning reel still posts when late (it is the day's post); the story drops do not,
+    because stale tips and quizzes are worse than none (Stanley, 2 Nov)."""
+    if not PUBLISH_AT:
+        return True
+    now = datetime.datetime.now(SGT); target = publish_target()
+    early = (target - now).total_seconds() / 3600
+    late = (now - target).total_seconds() / 60
+    if early > 2.5:
+        print(f"started {early:.1f} h before {PUBLISH_AT}; too early (an on-time trigger will run it)"); return False
+    if SLOT in ("noon", "night") and late > 75:
+        print(f"started {late:.0f} min after {PUBLISH_AT}; too late for the {SLOT} stories, skipping them"); return False
+    if SLOT == "evening" and late > 150:
+        print(f"started {late:.0f} min after {PUBLISH_AT}; too late for the evening post, skipping it"); return False
+    return True
+
+
 def wait_until_publish_time():
     if not PUBLISH_AT:
         return
-    hh, mm = map(int, PUBLISH_AT.split(":"))
-    target = datetime.datetime.fromisoformat(DATE).replace(hour=hh, minute=mm, tzinfo=SGT)
+    target = publish_target()
     now = datetime.datetime.now(SGT)
     if now >= target:
         print(f"{now:%H:%M:%S} is past {PUBLISH_AT}; publishing now")
@@ -210,6 +235,8 @@ def main():
     global UID
     if not TOKEN:
         raise SystemExit("IG_ACCESS_TOKEN secret is missing")
+    if not timing_guard():
+        return
     me = call("GET", "me", fields="user_id,username")
     UID = me["user_id"]
     print(f"account @{me.get('username')} ({UID}); date {DATE}; slot {SLOT}")
