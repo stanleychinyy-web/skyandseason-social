@@ -214,9 +214,18 @@
       "element": "Xin Metal",
       "dev_date": "2026-10-29",
       "post_date": "2026-11-17",
-      "status": "todo",
-      "credits_used": 187,
-      "notes": "in progress (2 Nov, day 2: Flow balance 670 at start; made still SKY06_K2S (colour-only silver, passed QC, saved KEYFRAMES/SKY06_K2S.jpg); queued SKY06_V2D (K2A->K2S colour) + SKY06_V2E (K2S->K2J facets), 40 credits; awaiting QC. NOTE: Xin form hands are silver per the approved Xin sheet, like SKY05 Earth-form tan hands; indigo-hand rule is for default form.) (1 Nov, day 1, ~145 credits: 5 stills + 7 Veo clips; Flow balance 740 at start, ~595 after). Flow project 'Oct 11 - 20:03', agent chat 'Xin Metal Crystal Gem Tra...' / 'Golden Meadow Crystal D...'. Stills (in Flow, all passed QC): SKY06_K1 ('Character brushing soil from cry...', default, gem on soil), SKY06_K2A ('Character holding crystal gem in...', default front view holding gem), SKY06_K2J ('Character color and material change', Xin, same pose made from K2A), SKY06_K3J ('Character floating above meadow', Xin), SKY06_K4J ('Sky holding crystal gem', Xin close-up). Clips in library SKY06/TAKES: PASSED V1_T1_gem_lifted (use 0.2-6.8; she drops the gem at 7.0), V3_T1_field_sparkles (0.3-6.8), V4_T1_closing (0.2-6.0). V2 (K2A->K2J Xin change) NOT passed yet: V2_T1 ears crusted with rough shards 2.5-4 s and crest a jagged spiky crystal cluster 4-5.5 s (reads as spiky hair); V2_T2 (V2B) her surface cracked and silver pieces flew off 2.5-4 s, patchy face; V2_T3 (V2C 'silver veil') dusty smoke ring round her head 1-3.5 s and crest split into two upward points 6-6.5 s (L41). NEXT RUN (2 Nov): make still SKY06_K2S = K2A with ONLY colours changed to Xin silver (same smooth ear/crest/tail shapes); QC; then V2a = K2A->K2S first+last frame 'colour changes slowly in place like ink spreading, shapes do not change' and V2b = K2S->K2J 'the smooth ears and crest gain clean flat facets in place, outline unchanged, nothing grows, flies or splits'; use both (or V2a + hard cut to the best part of V2b). Then assemble (music_sky06.py is ready in SKY06/source) per BUILD notes, caption drafted below. Caption draft: Sky brushed away the soil and found a hidden jewel, and when the sunlight passed through it, she became one too ✨ / Sky is the gentle Yin spirit, and when she held the crystal she became Yin Metal: the jewel. Xin Metal isn't the heavy sword or the iron gate. It is refined, precise and quietly brilliant, beauty polished by pressure that shines most when light is let in. In people, it is the side that notices the finest details, keeps high standards, chooses words with care and has a sparkle others only see up close. Small, but precious. / Who is the hidden jewel in your life, the one whose shine you noticed up close? Tag them below 👇 / A Sky & Season short. Explore your free chart at skyandseason.com (link in bio). / #skyandseason #innerconstellation #yinmetal #fiveelements #yinyang #animatedshort #bazi #chinesemetaphysics #crystals #3danimation"
+      "status": "made",
+      "credits_used": 207,
+      "notes": "V01 made 2 Nov (two days, ~207 credits: 6 stills + 10 Veo clips incl. 4 V2 retries; Flow balance ~610 after). All story shots are Veo clips and passed QC: V1_T1 (i2v K1) 0.2-5.6; V2_T6 V2F (K2A->K2S silver-ring colour sweep) 0.5-6.5 cut on the gem flash, dissolve into V2_T5 V2E (K2S->K2J facets) 5.5-7.9; V3_T1 0.3-5.5; V4_T1 0.2-5.0; end card V2. 27.8 s, 6.6 MB. Rejected: V2_T1-T4 (shards, cracking, smoke rings, ink smoke). Xin-form hands are silver per the approved Xin sheet. Build notes in SKY06/source/BUILD.txt.",
+      "made_date": "2026-11-02",
+      "evening_entry": {
+        "type": "reel",
+        "video": "media/2026-11-17/evening-reel.mp4",
+        "cover": "media/2026-11-17/evening-cover.jpg",
+        "caption": "Sky brushed away the soil and found a hidden jewel, and when the sunlight passed through it, she became one too ✨\n\nSky is the gentle Yin spirit, and when she held the crystal she became Yin Metal: the jewel. Xin Metal isn't the heavy sword or the iron gate. It is refined, precise and quietly brilliant, beauty polished by pressure that shines most when light is let in. In people, it is the side that notices the finest details, keeps high standards, chooses words with care and has a sparkle others only see up close. Small, but precious.\n\nWho is the hidden jewel in your life, the one whose shine you noticed up close? Tag them below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yinmetal #fiveelements #yinyang #animatedshort #bazi #chinesemetaphysics #crystals #3danimation",
+        "series": "earth-discovery",
+        "status": "review"
+      }
     },
     {
       "id": "SEA06",
@@ -232,8 +241,6 @@
   ],
   "last_run_date": "2026-11-01",
   "schedule": "hourly 12:59-22:59 SGT until the day's reel is done",
-  "paused_until": "2026-11-02",
-  "pause_note": "1 Nov: SKY06 hit the daily credit ceiling (~145 of ~150) with V2 (Xin change) still failing QC. Later hourly runs on 1 Nov: stop at once (guard already ran today). On 2 Nov resume SKY06 V2 first (see its notes); SKY06 post date 17 Nov is not at risk.",
   "daily_spend": {
     "2026-10-24": 140,
     "2026-10-26": 20,
@@ -243,6 +250,6 @@
     "2026-10-30": 128,
     "2026-10-31": 128,
     "2026-11-01": 145,
-    "2026-11-02": 42
+    "2026-11-02": 62
   }
 }
