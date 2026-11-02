@@ -142,8 +142,8 @@ def form(slug):
 
 class Designed:
     """Bright designed card for one elemental form; variation seeded by (date, card) so every day differs."""
-    def __init__(self, stem, seed):
-        self.el = STEMS[stem][1]; self.slug = STEM_SLUG[stem]; rnd = random.Random(seed)
+    def __init__(self, stem, seed, el=None, fig=None):
+        self.el = el or STEMS[stem][1]; self.slug = STEM_SLUG[stem] if stem is not None else None; rnd = random.Random(seed)
         top, bot = rnd.choice(GRAD[self.el])
         g = Image.new('RGB', (1, 256))
         for y in range(256):
@@ -158,8 +158,10 @@ class Designed:
             ring = Image.new('RGBA', (W, H), (0, 0, 0, 0)); ImageDraw.Draw(ring).ellipse([x - r, y - r, x + r, y + r], fill=(255, 255, 255, rnd.randint(30, 60)))
             self.base.alpha_composite(ring.filter(ImageFilter.GaussianBlur(18)))
         self.base = Image.alpha_composite(self.base, top_shade())
-        f = form(self.slug); scale = rnd.uniform(1.25, 1.45); f = f.resize((int(f.width * scale), int(f.height * scale)), Image.LANCZOS)
-        if rnd.random() < 0.5: f = f.transpose(Image.FLIP_LEFT_RIGHT)
+        if fig is not None: f = fig; cy = 990
+        else:
+            f = form(self.slug); scale = rnd.uniform(1.25, 1.45); f = f.resize((int(f.width * scale), int(f.height * scale)), Image.LANCZOS)
+            if rnd.random() < 0.5: f = f.transpose(Image.FLIP_LEFT_RIGHT)
         self.fig = f; self.cx, self.cy = cx, cy
         self.parts = [(rnd.uniform(0, W), rnd.uniform(500, H), rnd.uniform(6, 16), rnd.uniform(20, 70), rnd.uniform(0, 6.28)) for _ in range(26)]
         self.pc = PART[self.el]
@@ -284,14 +286,50 @@ def series(spec_path, date):
         if img: c['img'] = img
         else: c['designed'] = Designed(i, f'{date}-s{i}')
         cards.append(c)
-    first = next((c for c in cards if c.get('img')), None)
-    if not first: raise SystemExit(f'no SCENE image in {A}')
+    first = {'img': art(A, 'hook')} if art(A, 'hook') else next((c for c in cards if c.get('img')), None)
+    if not first: raise SystemExit(f'no SCENE image in {A} (hook.png or a card)')
     title = ' '.join(sp['title'])
     hook = dict(img=first['img'], date=dt.strftime('%a %-d %b').upper(), lead=title[0].upper() + title[1:], line=sp['tag_line'], note='Find yours in 3 sec…')
     close = dict(line='Which one are you?', sub='Your element is the day you were born.', head='skyandseason.com', body=sp.get('comment_line', 'Then comment your element below.'),
                  designed=Designed(day(dt)[0], f'{date}-sclose'))
     out = f'{ROOT}/media/{date}'
     render(hook, cards, close, f'{out}/series-reel.mp4', f'{out}/series-cover.jpg', card_len=1.5 * BAR)
+
+def tiles(path, cols=3, rows=2, size=640):
+    """Cut a ChatGPT grid picture (equal tiles) into rounded, white-framed portraits for the animal cards."""
+    im = Image.open(path).convert('RGB'); tw, th = im.width / cols, im.height / rows; out = []
+    for r in range(rows):
+        for c in range(cols):
+            t = im.crop((int(c * tw + tw * .03), int(r * th + th * .03), int((c + 1) * tw - tw * .03), int((r + 1) * th - th * .03)))
+            s = min(t.size); t = t.crop(((t.width - s) // 2, (t.height - s) // 2, (t.width + s) // 2, (t.height + s) // 2)).resize((size, size), Image.LANCZOS)
+            fr = Image.new('RGBA', (size + 36, size + 36), (0, 0, 0, 0)); m = Image.new('L', (size, size), 0)
+            ImageDraw.Draw(fr).rounded_rectangle([0, 0, size + 35, size + 35], 70, fill=(255, 255, 255, 255))
+            ImageDraw.Draw(m).rounded_rectangle([0, 0, size - 1, size - 1], 56, fill=255); fr.paste(t, (18, 18), m)
+            sh = Image.new('RGBA', (size + 120, size + 120), (0, 0, 0, 0)); ImageDraw.Draw(sh).rounded_rectangle([42, 54, size + 78, size + 90], 70, fill=(20, 10, 40, 90))
+            sh = sh.filter(ImageFilter.GaussianBlur(16)); sh.alpha_composite(fr, (42, 42)); out.append(sh)
+    return out
+
+def season(date):
+    """Sunday: the 12 animals meet today's animal. Hook = a ChatGPT scene (art5/hook.png); animal cards = tiles cut from
+    two ChatGPT grid pictures (art5/animals-a.png: Rat Ox Tiger / Rabbit Dragon Snake, art5/animals-b.png: Horse Goat Monkey /
+    Rooster Dog Pig) on bright designed backgrounds. 3 ChatGPT images per Sunday."""
+    from reel import relation
+    from daytype import BRANCH_ANIMAL, BRANCH_EL
+    dt = datetime.date.fromisoformat(date); s, b = day(dt); A = f'{ROOT}/media/{date}/art5'
+    tips = json.load(open(f'{ROOT}/tools/days/{date}.json', encoding='utf-8'))['animal_tips']
+    ts = tiles(art(A, 'animals-a')) + tiles(art(A, 'animals-b')); clash = (b + 6) % 12; an = BRANCH_ANIMAL[clash]
+    cards = []
+    for a in range(12):
+        lab = relation(a, b)[0].split(' · ')[0].replace('-', ' ').lower().capitalize()
+        yrs = ' · '.join(str(y) for y in range(1948 + a, 2021, 12)[-4:])
+        cards.append(dict(kicker=f'{a + 1} / 12', title=BRANCH_ANIMAL[a].upper(), who=f'Born {yrs}', pill=lab, head=tips[BRANCH_ANIMAL[a]],
+                          body='Born in Jan or early Feb? Use the animal before yours.', designed=Designed(None, f'{date}-a{a}', el=BRANCH_EL[a], fig=ts[a])))
+    hook = dict(img=art(A, 'hook'), date=f"{dt.strftime('%a %-d %b').upper()} · {BRANCH_ANIMAL[b].upper()} DAY",
+                lead=f"Born in {'an' if an[0] in 'AEIOU' else 'a'} {an} year?", line=tips[an], note='All 12 animals, one by one…')
+    close = dict(line='Your animal is your Season.', sub='Your element is your Sky. Both free.', head='skyandseason.com', body='Then comment your animal below.',
+                 designed=Designed(s, f'{date}-close'))
+    out = f'{ROOT}/media/{date}'
+    render(hook, cards, close, f'{out}/reel.mp4', f'{out}/cover.jpg', card_len=1.5 * BAR)
 
 def clip(date, source='reel'):
     """9pm video story: the hook + first card(s), then an end card sending people to the full reel."""
@@ -326,5 +364,6 @@ if __name__ == '__main__':
     elif k == 'ranking': ranking(sys.argv[2], sys.argv[3])
     elif k == 'series': series(sys.argv[2], sys.argv[3])
     elif k == 'clip': clip(sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else 'reel')
+    elif k == 'season': season(sys.argv[2])
     elif k == 'picks': picks(sys.argv[2])
     else: raise SystemExit('sky|ranking|series|clip|picks')
