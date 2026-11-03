@@ -29,6 +29,8 @@ EARTH FORMS / TAIL CHANGE (31 Oct, L40): in any form change say 'his single tail
 
 METAL/CRYSTAL FORMS (1 Nov, L41): never ask for the form change in one clip when ear/crest shapes change; first a colour-only still (same shapes) and a colour-only clip, then a facets-in-place clip. Always add 'nothing cracks, peels or breaks; no shards, pieces, powder, smoke or dust; nothing grows spikes; crest never splits into points'.
 
+SEASON METAL FORM (3 Nov, L42-L45): colour-only change clips: 'his face, head, body, arms and legs stay pure soft white the whole clip, never grey or patchy; the tan inside his ears stays tan until it fades straight to pale silver'. Never write blade or sword (Veo makes a weapon and armour): 'small hand-sized polished silver piece, never grows, never raised or swung; no armour, nothing grows on his arms, chest or body'. Keep Season facing the camera (three-quarter front); no head turns to profile.
+
 ## PROPS
 - Water drops stay ONE clear water droplet, never ice, crystal or gems (unless the plan says crystal).
 

@@ -215,7 +215,7 @@
    "element": "Xin Metal",
    "dev_date": "2026-10-29",
    "post_date": "2026-11-17",
-   "status": "made",
+   "status": "approved",
    "credits_used": 207,
    "notes": "V01 made 2 Nov (two days, ~207 credits: 6 stills + 10 Veo clips incl. 4 V2 retries; Flow balance ~610 after). All story shots are Veo clips and passed QC: V1_T1 (i2v K1) 0.2-5.6; V2_T6 V2F (K2A->K2S silver-ring colour sweep) 0.5-6.5 cut on the gem flash, dissolve into V2_T5 V2E (K2S->K2J facets) 5.5-7.9; V3_T1 0.3-5.5; V4_T1 0.2-5.0; end card V2. 27.8 s, 6.6 MB. Rejected: V2_T1-T4 (shards, cracking, smoke rings, ink smoke). Xin-form hands are silver per the approved Xin sheet. Build notes in SKY06/source/BUILD.txt.",
    "made_date": "2026-11-02",
@@ -236,11 +236,11 @@
    "dev_date": "2026-10-30",
    "post_date": "2026-11-19",
    "status": "todo",
-   "credits_used": 0,
-   "notes": "IN PROGRESS 3 Nov: stills K1, K2A, K3J, K4J made + passed (KEYFRAMES/). Plan: K1B (K1 redone in K2A's brown cave for continuity), K2S (colour-only silver from K2A), K2J (facets from K2S), K4J2 (K4J with white body). Clips: V1 i2v K1B; V2a K2A->K2S colour; V2b K2S->K2J facets (L41); V3 i2v K3J; V4 i2v K4J2. Flow balance 660 at start."
+   "credits_used": 148,
+   "notes": "IN PROGRESS (day 1 = 3 Nov, 148 credits: 8 stills + 7 Veo clips; daily cap reached, resume 4 Nov). Stills (KEYFRAMES/, all passed): K1 (unused, blue cave), K1B, K2A, K2S (colour-only silver), K2J (facets, from K2S), K3J, K4J (unused, silver body), K4J2 (white body). Passed clips (TAKES/): V1_T1 (i2v K1B) use 0.2-5.0 (sparkle trail flies across from 5.0); V2B_T1 (K2S->K2J facets) passed, use ~1.0-6.0; V4_T1 (i2v K4J2) passed, use 0.2-5.5. Not passed: V2A_T1 (patchy grey face, L42); V2A_T2 (face fixed but inner ears turn fully blue 0.8-4.5 s, L43; fallback only); V3_T1 (sword, armour, L44); V3_T2 (piece vanishes into chest, profile turn with horn-like ear, L45). NEXT (4 Nov, in the Flow chat 'Season Character Narrati...' which has PROMPT V1-V4 + SEASON LOCK defined): V2A3 (K2A->K2S, add L42+L43 lines) and V3C (i2v K3J, L44+L45 lines, no head turn, piece stays visible, no walking). Then assemble V1 0.2-5.0; V2A ~0.3-5.5; V2B ~1.0-6.0; V3 ~5 s; V4 0.2-5.5; end card. Build scripts: copy SEA05/source (assemble_reel.py, endcard2_cloud.py, music_sea05.py -> music_sea06.py)."
   }
  ],
- "last_run_date": "2026-11-02",
+ "last_run_date": "2026-11-03",
  "schedule": "hourly 12:59-22:59 SGT until the day's reel is done",
  "daily_spend": {
   "2026-10-24": 140,
@@ -251,6 +251,7 @@
   "2026-10-30": 128,
   "2026-10-31": 128,
   "2026-11-01": 145,
-  "2026-11-02": 62
+  "2026-11-02": 62,
+  "2026-11-03": 148
  }
 }
