@@ -12,7 +12,10 @@
    "world_name": "the sunlit plains",
    "feeling": "Steady money",
    "ten_god": "正財",
-   "status": "todo"
+   "status": "sample-made",
+   "made_date": "2026-11-07",
+   "credits_used": 63,
+   "notes": "V01 sample made 7 Nov (63 credits). V1_T1 only 0.2-3.4 usable (ears lift + crest spike after 3.6 s); V2_T1 and V3_T1 pass. 22.6 s, 5.9 MB. Library: EPISODES/TEN_MIRRORS/TM001. Waiting for Stanley; nothing scheduled."
   },
   {
    "id": "TM002",
@@ -1104,5 +1107,10 @@
    "status": "todo"
   }
  ],
- "sample": "TM001"
+ "sample": "TM001",
+ "learnings": [
+  "Arrival shots: never say mist/heat \"rises\" (pulls ears and crest up); say \"drifts sideways and fades\"; add \"ears hang straight down the whole clip, crest stays a low smooth arch, never grows into a spike\".",
+  "Flow: after clicking Approve, wait until the agent finishes (send arrow returns) before sending the next message, or the approval is cancelled.",
+  "Flow single-item download (720p original) saves a named mp4 straight to Downloads, no zip."
+ ]
 }
