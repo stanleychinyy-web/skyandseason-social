@@ -252,7 +252,7 @@
       }
     }
   ],
-  "last_run_date": "2026-11-06",
+  "last_run_date": "2026-11-07",
   "schedule": "hourly 12:59-22:59 SGT until the day's reel is done",
   "daily_spend": {
     "2026-10-24": 140,
