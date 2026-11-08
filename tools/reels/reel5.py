@@ -227,6 +227,12 @@ def art(dirp, key):
 def first_sentence(line):
     parts = line.split('. ', 1); return parts[0] + ('.' if len(parts) > 1 else ''), (parts[1] if len(parts) > 1 else '')
 
+PROPER = {'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'I', "I'm", "I'll", 'MRT', 'CNY'}
+def hook_case(txt):
+    """Lower-case the first letter after 'X people:' unless the first word is a proper noun (weekday, MRT...)."""
+    w = txt.split(' ', 1)[0].rstrip('.,;:!?')
+    return txt if w in PROPER else txt[0].lower() + txt[1:]
+
 def slug_of(nm): return nm.lower().replace(' ', '-')
 
 
@@ -251,7 +257,7 @@ def sky(date):
     if hk is None: hk = picks[0]; print(f'WARNING: no SCENE image in {A}; designed hook (fallback)')
     hl = lines[hk]
     hook = dict(img=cards[hk].get('img'), designed=cards[hk].get('designed'), date=dt.strftime('%a %-d %b').upper(), lead=f"{hl['element']} people:",
-                line=first_sentence(hl['line'])[0][0].lower() + first_sentence(hl['line'])[0][1:], note='Your element in 3 sec…')
+                line=hook_case(first_sentence(hl['line'])[0]), note='Your element in 3 sec…')
     close = dict(line='Your element is the day you were born.', sub='Find it free in 60 seconds.', head='skyandseason.com', body='Then comment your element below.',
                  designed=Designed(s, f'{date}-close'))
     out = f'{ROOT}/media/{date}'

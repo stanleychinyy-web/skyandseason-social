@@ -105,7 +105,9 @@
     "Yang Earth",
     "Yang Water"
    ],
-   "why": "The five yang stems lead from the front; Yang Metal gives orders, Yang Fire takes the stage."
+   "why": "The five yang stems lead from the front; Yang Metal gives orders, Yang Fire takes the stage.",
+   "used": "2026-11-11",
+   "spec": "tools/rankings/bossiest.json"
   },
   {
    "slug": "office-sunshine",
@@ -121,7 +123,9 @@
     "Yin Wood",
     "Yang Water"
    ],
-   "why": "Fire warms the room; Wood brings fresh energy."
+   "why": "Fire warms the room; Wood brings fresh energy.",
+   "used": "2026-11-14",
+   "spec": "tools/rankings/office-sunshine.json"
   },
   {
    "slug": "most-creative",

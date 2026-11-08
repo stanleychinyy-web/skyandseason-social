@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Friend",
+  "line": "Your crowd has Monday energy today. Split the big task and race to lunch."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Rival",
+  "line": "Someone talks louder in the meeting today. Speak once, clearly; it's enough."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Insight",
+  "line": "Ideas come fast this morning. Write three down before the emails start."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Support",
+  "line": "A colleague covers for you today. Return the favour by Friday."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Pressure",
+  "line": "Monday pushes hard today. Guard your lunch hour; you'll need it."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Recognition",
+  "line": "Your steady work gets a nod today. Accept the praise; don't downplay it."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Opportunity",
+  "line": "A new task has your name on it today. Take it if it teaches you something."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Steady-money",
+  "line": "Check the subscriptions today. Cancel the one you forgot you had."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Joy",
+  "line": "Monday flows easy for you today. Share the good mood in the group chat."
+ },
+ {
+  "element": "Yin Water",
+  "type": "Speak-up",
+  "line": "Your voice matters in today's meeting. Bring one clear suggestion."
+ }
+]

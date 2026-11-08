@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Rival",
+  "line": "A colleague wants the same slot today. Share the stage; you both win."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Friend",
+  "line": "Your allies are close today. Ask for the intro you've been shy about."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Support",
+  "line": "Someone fuels your plan today. Say thank you with something sweet."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Insight",
+  "line": "A small clue solves a big puzzle today. Trust what you noticed."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Recognition",
+  "line": "Your boss sees your patience today. Keep the steady pace; it's working."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Pressure",
+  "line": "Requests keep growing today. Say no to one, nicely and early."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Steady-money",
+  "line": "Admin day pays off. Clear the claims and file the receipts."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Opportunity",
+  "line": "A small opening appears today. Send the message before you overthink."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Speak-up",
+  "line": "You've got the words today. Pitch it at the huddle, short and bright."
+ },
+ {
+  "element": "Yin Water",
+  "type": "Joy",
+  "line": "Tuesday treats you kindly. Take a proper lunch break outside."
+ }
+]

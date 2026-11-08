@@ -1,0 +1,32 @@
+{
+ "date": "2026-11-11",
+ "status": "pending",
+ "stories": [
+  "media/2026-11-11/story1.jpg",
+  "media/2026-11-11/story2.jpg",
+  "media/2026-11-11/story3.jpg",
+  "media/2026-11-11/story4.jpg"
+ ],
+ "stories_noon": [
+  "media/2026-11-11/story5.jpg"
+ ],
+ "stories_night": [
+  "media/2026-11-11/story6.jpg",
+  "media/2026-11-11/story-clip.mp4"
+ ],
+ "morning": {
+  "type": "reel",
+  "video": "media/2026-11-11/reel.mp4",
+  "cover": "media/2026-11-11/cover.jpg",
+  "caption": "Wednesday's Sky is Yin Earth, The Fertile Field 🌾 Find your element below.\n\nYour element is the element of the day you were born. Today's fertile field meets it and creates one of 10 forces: Yin Earth gets a friend day, Yin Fire gets a joy day, Yin Water feels the pressure.\n\nDon't know yours? Find it free at the link in bio.\n\nWhich line is too accurate? Comment below.\n\n#skyandseason #innerconstellation #fiveelements #chineseastrology #humpday #selfdiscovery #dailyhoroscope #worklife #fourpillars #singapore",
+  "series": "sky-today"
+ },
+ "evening": {
+  "type": "reel",
+  "video": "media/2026-11-11/series-reel.mp4",
+  "cover": "media/2026-11-11/series-cover.jpg",
+  "caption": "Which element is the bossiest? 📋\n\nIn Chinese astrology your element comes from the day you were born. The five yang elements lead from the front: Yang Metal sets the deadlines, Yang Fire runs the show, Yang Wood hands out the jobs. Bossy, yes, but the plan does happen.\n\nFind your element free at the link in bio.\n\nTag your #1 below.\n\n#skyandseason #innerconstellation #relatable #zodiacmemes #fiveelements #chineseastrology #friendship #personality #knowyourself #singapore",
+  "series": "ranking-bossiest",
+  "status": "review"
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "date": "2026-11-16",
+ "status": "pending",
+ "stories": [
+  "media/2026-11-16/story1.jpg",
+  "media/2026-11-16/story2.jpg",
+  "media/2026-11-16/story3.jpg",
+  "media/2026-11-16/story4.jpg"
+ ],
+ "stories_noon": [
+  "media/2026-11-16/story5.jpg"
+ ],
+ "stories_night": [
+  "media/2026-11-16/story6.jpg",
+  "media/2026-11-16/story-clip.mp4"
+ ],
+ "morning": {
+  "type": "reel",
+  "video": "media/2026-11-16/reel.mp4",
+  "cover": "media/2026-11-16/cover.jpg",
+  "caption": "Monday's Sky is Yang Wood, The Great Tree 🌳 Find your element below.\n\nYour element is the element of the day you were born. Today's tall tree meets it and creates one of 10 forces: Yang Wood gets a friend day, Yang Water gets a joy day, Yang Earth feels the pressure.\n\nDon't know yours? Find it free at the link in bio.\n\nHow's your Monday going? Comment your element below.\n\n#skyandseason #innerconstellation #mondaymotivation #fiveelements #chineseastrology #horoscope #bazi #personalgrowth #worklife #singapore",
+  "series": "sky-today"
+ },
+ "evening": {
+  "type": "reel",
+  "video": "media/2026-11-16/series-reel.mp4",
+  "cover": "media/2026-11-16/series-cover.jpg",
+  "caption": "Tag the one who made the spreadsheet ✈️\n\nThe school holidays are here and the year-end trip is being planned in a group chat somewhere. Every element plans it differently. Which one is you?\n\nYour element comes from the day you were born, not your zodiac animal. Find yours free at the link in bio.\n\nWhich one are you? Comment below.\n\n#skyandseason #innerconstellation #travel #holiday #singapore #relatable #astrologymemes #fiveelements #chineseastrology #mondaymood",
+  "series": "year-end-trip"
+ }
+}
