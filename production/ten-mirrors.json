@@ -4,6 +4,91 @@
  "plan": "production/TEN_MIRRORS_PLAN.md",
  "reels": [
   {
+   "id": "TM064",
+   "character": "season",
+   "form": "Jia",
+   "form_name": "Yang Wood",
+   "world": "Geng",
+   "world_name": "the iron cave",
+   "feeling": "Pressure",
+   "ten_god": "七殺",
+   "status": "todo",
+   "block": 1,
+   "order": 1,
+   "title": "The Closing Gate",
+   "situation": "Barely making it in time",
+   "dev_date": "2026-11-12",
+   "post_date": "2026-11-22"
+  },
+  {
+   "id": "TM007",
+   "character": "sky",
+   "form": "Ji",
+   "form_name": "Yin Earth",
+   "world": "Ji",
+   "world_name": "the farm field",
+   "feeling": "Friend",
+   "ten_god": "比肩",
+   "status": "todo",
+   "block": 1,
+   "order": 2,
+   "title": "Not the Only One",
+   "situation": "Finding out you're not the only one",
+   "dev_date": "2026-11-13",
+   "post_date": "2026-11-24"
+  },
+  {
+   "id": "TM050",
+   "character": "season",
+   "form": "Geng",
+   "form_name": "Yang Metal",
+   "world": "Ding",
+   "world_name": "the candlelit night garden",
+   "feeling": "Recognition",
+   "ten_god": "正官",
+   "status": "todo",
+   "block": 1,
+   "order": 3,
+   "title": "Wait, Me?",
+   "situation": "Being picked",
+   "dev_date": "2026-11-14",
+   "post_date": "2026-11-26"
+  },
+  {
+   "id": "TM093",
+   "character": "sky",
+   "form": "Yi",
+   "form_name": "Yin Wood",
+   "world": "Jia",
+   "world_name": "the giant-tree forest",
+   "feeling": "Rival",
+   "ten_god": "劫財",
+   "status": "todo",
+   "block": 1,
+   "order": 4,
+   "title": "One Small Leaf",
+   "situation": "Comparing yourself",
+   "dev_date": "2026-11-15",
+   "post_date": "2026-11-29"
+  },
+  {
+   "id": "TM056",
+   "character": "season",
+   "form": "Bing",
+   "form_name": "Yang Fire",
+   "world": "Wu",
+   "world_name": "the mountain pass",
+   "feeling": "Joy",
+   "ten_god": "食神",
+   "status": "todo",
+   "block": 1,
+   "order": 5,
+   "title": "For No Reason",
+   "situation": "Doing it just for fun",
+   "dev_date": "2026-11-16",
+   "post_date": "2026-12-01"
+  },
+  {
    "id": "TM001",
    "character": "sky",
    "form": "Gui",
@@ -12,10 +97,50 @@
    "world_name": "the sunlit plains",
    "feeling": "Steady money",
    "ten_god": "正財",
-   "status": "sample-made",
+   "status": "made-not-queued",
    "made_date": "2026-11-07",
    "credits_used": 63,
-   "notes": "V01 sample made 7 Nov (63 credits). V1_T1 only 0.2-3.4 usable (ears lift + crest spike after 3.6 s); V2_T1 and V3_T1 pass. 22.6 s, 5.9 MB. Library: EPISODES/TEN_MIRRORS/TM001. Waiting for Stanley; nothing scheduled."
+   "notes": "V01 sample made 7 Nov (63 credits). V1_T1 only 0.2-3.4 usable (ears lift + crest spike after 3.6 s); V2_T1 and V3_T1 pass. 22.6 s, 5.9 MB. Library: EPISODES/TEN_MIRRORS/TM001. Waiting for Stanley; nothing scheduled. | 11 Nov: Stanley approved block one; use as made with the block-one caption; queue for review on 17 Nov (post 3 Dec).",
+   "block": 1,
+   "order": 6,
+   "title": "It Adds Up",
+   "situation": "Small effort, every day",
+   "dev_date": "2026-11-17",
+   "post_date": "2026-12-03"
+  },
+  {
+   "id": "TM068",
+   "character": "season",
+   "form": "Wu",
+   "form_name": "Yang Earth",
+   "world": "Ren",
+   "world_name": "the open ocean",
+   "feeling": "Opportunity",
+   "ten_god": "偏財",
+   "status": "todo",
+   "block": 1,
+   "order": 7,
+   "title": "Now or Never",
+   "situation": "Taking the chance",
+   "dev_date": "2026-11-18",
+   "post_date": "2026-12-06"
+  },
+  {
+   "id": "TM095",
+   "character": "sky",
+   "form": "Ding",
+   "form_name": "Yin Fire",
+   "world": "Yi",
+   "world_name": "the sprout garden",
+   "feeling": "Insight",
+   "ten_god": "偏印",
+   "status": "todo",
+   "block": 1,
+   "order": 8,
+   "title": "Just Watching",
+   "situation": "The quiet one who notices",
+   "dev_date": "2026-11-19",
+   "post_date": "2026-12-08"
   },
   {
    "id": "TM002",
@@ -26,7 +151,30 @@
    "world_name": "the crystal field",
    "feeling": "Support",
    "ten_god": "正印",
-   "status": "todo"
+   "status": "todo",
+   "block": 1,
+   "order": 9,
+   "title": "Someone Left the Light On",
+   "situation": "Being looked after",
+   "dev_date": "2026-11-20",
+   "post_date": "2026-12-10"
+  },
+  {
+   "id": "TM049",
+   "character": "sky",
+   "form": "Xin",
+   "form_name": "Yin Metal",
+   "world": "Ren",
+   "world_name": "the open ocean",
+   "feeling": "Speak-up",
+   "ten_god": "傷官",
+   "status": "todo",
+   "block": 1,
+   "order": 10,
+   "title": "Said It",
+   "situation": "Finally saying it",
+   "dev_date": "2026-11-21",
+   "post_date": "2026-12-13"
   },
   {
    "id": "TM003",
@@ -70,17 +218,6 @@
    "world_name": "the rain valley",
    "feeling": "Recognition",
    "ten_god": "正官",
-   "status": "todo"
-  },
-  {
-   "id": "TM007",
-   "character": "sky",
-   "form": "Ji",
-   "form_name": "Yin Earth",
-   "world": "Ji",
-   "world_name": "the farm field",
-   "feeling": "Friend",
-   "ten_god": "比肩",
    "status": "todo"
   },
   {
@@ -535,28 +672,6 @@
    "status": "todo"
   },
   {
-   "id": "TM049",
-   "character": "sky",
-   "form": "Xin",
-   "form_name": "Yin Metal",
-   "world": "Ren",
-   "world_name": "the open ocean",
-   "feeling": "Speak-up",
-   "ten_god": "傷官",
-   "status": "todo"
-  },
-  {
-   "id": "TM050",
-   "character": "season",
-   "form": "Geng",
-   "form_name": "Yang Metal",
-   "world": "Ding",
-   "world_name": "the candlelit night garden",
-   "feeling": "Recognition",
-   "ten_god": "正官",
-   "status": "todo"
-  },
-  {
    "id": "TM051",
    "character": "sky",
    "form": "Gui",
@@ -609,17 +724,6 @@
    "world_name": "the rain valley",
    "feeling": "Pressure",
    "ten_god": "七殺",
-   "status": "todo"
-  },
-  {
-   "id": "TM056",
-   "character": "season",
-   "form": "Bing",
-   "form_name": "Yang Fire",
-   "world": "Wu",
-   "world_name": "the mountain pass",
-   "feeling": "Joy",
-   "ten_god": "食神",
    "status": "todo"
   },
   {
@@ -700,17 +804,6 @@
    "status": "todo"
   },
   {
-   "id": "TM064",
-   "character": "season",
-   "form": "Jia",
-   "form_name": "Yang Wood",
-   "world": "Geng",
-   "world_name": "the iron cave",
-   "feeling": "Pressure",
-   "ten_god": "七殺",
-   "status": "todo"
-  },
-  {
    "id": "TM065",
    "character": "sky",
    "form": "Ding",
@@ -741,17 +834,6 @@
    "world_name": "the candlelit night garden",
    "feeling": "Insight",
    "ten_god": "偏印",
-   "status": "todo"
-  },
-  {
-   "id": "TM068",
-   "character": "season",
-   "form": "Wu",
-   "form_name": "Yang Earth",
-   "world": "Ren",
-   "world_name": "the open ocean",
-   "feeling": "Opportunity",
-   "ten_god": "偏財",
    "status": "todo"
   },
   {
@@ -1019,17 +1101,6 @@
    "status": "todo"
   },
   {
-   "id": "TM093",
-   "character": "sky",
-   "form": "Yi",
-   "form_name": "Yin Wood",
-   "world": "Jia",
-   "world_name": "the giant-tree forest",
-   "feeling": "Rival",
-   "ten_god": "劫財",
-   "status": "todo"
-  },
-  {
    "id": "TM094",
    "character": "season",
    "form": "Jia",
@@ -1038,17 +1109,6 @@
    "world_name": "the farm field",
    "feeling": "Steady money",
    "ten_god": "正財",
-   "status": "todo"
-  },
-  {
-   "id": "TM095",
-   "character": "sky",
-   "form": "Ding",
-   "form_name": "Yin Fire",
-   "world": "Yi",
-   "world_name": "the sprout garden",
-   "feeling": "Insight",
-   "ten_god": "偏印",
    "status": "todo"
   },
   {
@@ -1112,5 +1172,11 @@
   "Arrival shots: never say mist/heat \"rises\" (pulls ears and crest up); say \"drifts sideways and fades\"; add \"ears hang straight down the whole clip, crest stays a low smooth arch, never grows into a spike\".",
   "Flow: after clicking Approve, wait until the agent finishes (send arrow returns) before sending the next message, or the approval is cancelled.",
   "Flow single-item download (720p original) saves a named mp4 straight to Downloads, no zip."
- ]
+ ],
+ "block1_plan": "production/TEN_MIRRORS_BLOCK1.md",
+ "block1_approved": "2026-11-11 (Stanley: \"ok schedule it for production\")",
+ "daily_credit_cap": 80,
+ "post_time_sgt": "19:00 (evening slot), Tue/Thu/Sun",
+ "statuses": "todo -> made (in repo, evening status review) -> approved -> posted; or changes. made-not-queued = finished video in the library, not yet in the repo/review page.",
+ "last_run_date": ""
 }
