@@ -1,0 +1,195 @@
+{
+ "_rules": "Format v6 (from 18 Nov 2026): 'Which of the ten are you?' reels, Wednesdays 19:00, one form per week in this order (alternating Season and Sky). On screen: Inner Constellation names only (the essence name and the site's label 'Wood, bold'); the classical name (Yang Wood, Jia) goes in the caption. hook[1] is a behaviour people recognise in themselves (<= 52 characters); reveal <= 46; strength and catch are [headline <= 36, line <= 48]; always balanced: a strength, then the catch, kindly put. Spec: tools/forms/<slug>.json {stem, essence, hook:[lead, line], reveal, strength, catch, comment_line, caption}. Scenes (ChatGPT, from the form's reference sheet): media/<date>/art5e/hook.png shows the form doing the hook behaviour; optional 01-, 02-, 03- for the three cards. The first reel of this set needs Stanley's 'Approve reel' (evening status 'review'); later ones follow the day's status. Mark 'used': '<date>' when scheduled. After all ten, start a second round with new hooks.",
+ "forms": [
+  {
+   "slug": "the-steadfast-pillar",
+   "stem": "Yang Wood",
+   "essence": "The Steadfast Pillar",
+   "who": "Season",
+   "hook": [
+    "Is this you?",
+    "You plan everyone's holiday and never ask for help."
+   ],
+   "reveal": "Tall, steady, the one others lean on.",
+   "strength": [
+    "People build on you.",
+    "You hold the plan when everyone else wobbles."
+   ],
+   "catch": [
+    "You bend last.",
+    "Asking for help feels like losing. It isn't."
+   ]
+  },
+  {
+   "slug": "the-nurturing-garden",
+   "stem": "Yin Earth",
+   "essence": "The Nurturing Garden",
+   "who": "Sky",
+   "hook": [
+    "Is this you?",
+    "You remember how everyone takes their kopi."
+   ],
+   "reveal": "Patient, practical, quietly feeding everyone.",
+   "strength": [
+    "You make people feel looked after.",
+    "Small care, every day, adds up."
+   ],
+   "catch": [
+    "You worry for everyone.",
+    "Leave some of that care for yourself."
+   ]
+  },
+  {
+   "slug": "the-luminary",
+   "stem": "Yang Fire",
+   "essence": "The Luminary",
+   "who": "Season",
+   "hook": [
+    "Is this you?",
+    "You walk in and the room gets louder."
+   ],
+   "reveal": "Warm, generous, seen by everyone.",
+   "strength": [
+    "You light people up.",
+    "Your energy is what gets things started."
+   ],
+   "catch": [
+    "You promise more than a day holds.",
+    "Even the sun sets. Rest before you burn out."
+   ]
+  },
+  {
+   "slug": "the-refined-artisan",
+   "stem": "Yin Metal",
+   "essence": "The Refined Artisan",
+   "who": "Sky",
+   "hook": [
+    "Is this you?",
+    "You spot the typo on a menu across the room."
+   ],
+   "reveal": "Precise, elegant, tuned to detail.",
+   "strength": [
+    "You make things beautiful.",
+    "The last five percent is where you shine."
+   ],
+   "catch": [
+    "Perfect takes too long.",
+    "Done and good beats flawless and late."
+   ]
+  },
+  {
+   "slug": "the-arbiters-blade",
+   "stem": "Yang Metal",
+   "essence": "The Arbiter's Blade",
+   "who": "Season",
+   "hook": [
+    "Is this you?",
+    "You already decided. The meeting is still going."
+   ],
+   "reveal": "Direct, brave, quick to cut through.",
+   "strength": [
+    "You make the hard call.",
+    "Others wait. You choose and move."
+   ],
+   "catch": [
+    "Your words can cut.",
+    "Sharp is useful. Aim it carefully."
+   ]
+  },
+  {
+   "slug": "the-pervasive-mist",
+   "stem": "Yin Water",
+   "essence": "The Pervasive Mist",
+   "who": "Sky",
+   "hook": [
+    "Is this you?",
+    "You knew how it would end before anyone spoke."
+   ],
+   "reveal": "Quiet, intuitive, reading the room.",
+   "strength": [
+    "You sense what is unsaid.",
+    "People feel understood around you."
+   ],
+   "catch": [
+    "Moods roll in like weather.",
+    "Name the feeling. It passes sooner."
+   ]
+  },
+  {
+   "slug": "the-silent-sentinel",
+   "stem": "Yang Earth",
+   "essence": "The Silent Sentinel",
+   "who": "Season",
+   "hook": [
+    "Is this you?",
+    "Everyone brings you their problems. You keep yours."
+   ],
+   "reveal": "Calm, solid, the ground others stand on.",
+   "strength": [
+    "You don't panic.",
+    "In a crisis, people look for you first."
+   ],
+   "catch": [
+    "You won't budge.",
+    "Steady is good. Stuck is different."
+   ]
+  },
+  {
+   "slug": "the-resilient-weaver",
+   "stem": "Yin Wood",
+   "essence": "The Resilient Weaver",
+   "who": "Sky",
+   "hook": [
+    "Is this you?",
+    "You always find a way round, and nobody sees how."
+   ],
+   "reveal": "Soft on the outside, impossible to stop.",
+   "strength": [
+    "You adapt and still get there.",
+    "Blocked path? You grow around it."
+   ],
+   "catch": [
+    "You bend too far for others.",
+    "Not every yes is yours to give."
+   ]
+  },
+  {
+   "slug": "the-boundless-tide",
+   "stem": "Yang Water",
+   "essence": "The Boundless Tide",
+   "who": "Season",
+   "hook": [
+    "Is this you?",
+    "Twelve tabs open. Three trips half planned."
+   ],
+   "reveal": "Big, free-flowing, always moving.",
+   "strength": [
+    "You think wide.",
+    "New ideas and new people find you."
+   ],
+   "catch": [
+    "You scatter.",
+    "Pick one river and follow it."
+   ]
+  },
+  {
+   "slug": "the-alchemists-flame",
+   "stem": "Yin Fire",
+   "essence": "The Alchemist's Flame",
+   "who": "Sky",
+   "hook": [
+    "Is this you?",
+    "You notice what everyone else missed. At 2 am."
+   ],
+   "reveal": "A small light that goes deep.",
+   "strength": [
+    "You see into people.",
+    "One honest talk with you changes things."
+   ],
+   "catch": [
+    "You overthink in the dark.",
+    "Not every thought needs finishing tonight."
+   ]
+  }
+ ]
+}

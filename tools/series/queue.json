@@ -1,0 +1,139 @@
+{
+ "_rules": "Format v6 (from 18 Nov 2026). Situation reels run Mon (work life), Fri (friends and family) and Sat (at home) at 19:00. Use topics in order within each slot, skipping used ones; add new ones in the same shape. Each topic opens on the VIEWER: hook[0] is the moment (<= 30 characters), hook[1] the question (<= 26). The spec has 'pairs' {Wood|Fire|Earth|Metal|Water: {yang, yin}}, each line <= 45 characters, plain words, everyday Singapore life, balanced and kind. Evidence 11 Nov: 'BTO setup' 199 views and 'Group chat' 85 were the only breakouts, so home and family moments come first. Caption line 1 is a prompt to send the reel to someone ('Send this to the one with the spreadsheet'). Mark 'used': '<date>' when scheduled.",
+ "topics": [
+  {
+   "slug": "reno-quote",
+   "slot": "home",
+   "hook": [
+    "The reno quote just came in.",
+    "What do you do first?"
+   ],
+   "spec": "tools/series/reno-quote.json"
+  },
+  {
+   "slug": "aircon-remote",
+   "slot": "home",
+   "hook": [
+    "The aircon remote is missing.",
+    "Who set it to 18?"
+   ]
+  },
+  {
+   "slug": "moving-day",
+   "slot": "home",
+   "hook": [
+    "Moving day. Forty boxes.",
+    "Which one are you?"
+   ]
+  },
+  {
+   "slug": "spring-cleaning",
+   "slot": "home",
+   "hook": [
+    "Spring cleaning starts today.",
+    "Where do you begin?"
+   ],
+   "note": "January, before CNY"
+  },
+  {
+   "slug": "choosing-a-sofa",
+   "slot": "home",
+   "hook": [
+    "Choosing a sofa together.",
+    "Who decides at home?"
+   ]
+  },
+  {
+   "slug": "monday-meeting",
+   "slot": "work",
+   "hook": [
+    "The meeting runs 40 min over.",
+    "What are you doing?"
+   ]
+  },
+  {
+   "slug": "bonus-day",
+   "slot": "work",
+   "hook": [
+    "The bonus just landed.",
+    "What happens next?"
+   ],
+   "note": "December"
+  },
+  {
+   "slug": "reply-all",
+   "slot": "work",
+   "hook": [
+    "Someone hit reply-all.",
+    "How do you react?"
+   ]
+  },
+  {
+   "slug": "leave-balance",
+   "slot": "work",
+   "hook": [
+    "Ten days of leave left.",
+    "How do you use them?"
+   ],
+   "note": "November to December"
+  },
+  {
+   "slug": "appraisal",
+   "slot": "work",
+   "hook": [
+    "Appraisal form due Friday.",
+    "How do you write yours?"
+   ]
+  },
+  {
+   "slug": "family-chat-7am",
+   "slot": "social",
+   "hook": [
+    "7 am. The family chat pings.",
+    "Which one are you?"
+   ]
+  },
+  {
+   "slug": "dinner-queue",
+   "slot": "social",
+   "hook": [
+    "A 40-minute queue for dinner.",
+    "Do you stay?"
+   ]
+  },
+  {
+   "slug": "splitting-the-bill",
+   "slot": "social",
+   "hook": [
+    "The bill comes. Eight people.",
+    "Who does the maths?"
+   ]
+  },
+  {
+   "slug": "secret-santa",
+   "slot": "social",
+   "hook": [
+    "Secret Santa. $20 budget.",
+    "What do you buy?"
+   ],
+   "note": "December"
+  },
+  {
+   "slug": "packing-night",
+   "slot": "social",
+   "hook": [
+    "Flight at 6 am. Not packed.",
+    "Which one are you?"
+   ]
+  },
+  {
+   "slug": "cny-visiting",
+   "slot": "social",
+   "hook": [
+    "CNY visiting. House four.",
+    "Which one are you?"
+   ],
+   "note": "February 2027"
+  }
+ ]
+}

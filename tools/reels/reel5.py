@@ -14,6 +14,16 @@ The hook uses the first SCENE card of the reel. Music only, no voice.
   python3 tools/reels/reel5.py series tools/series/<slug>.json <date>    -> media/<date>/series-reel.mp4 + series-cover.jpg
   python3 tools/reels/reel5.py clip <date> [reel|series|ranking]          -> media/<date>/story-clip.mp4
   python3 tools/reels/reel5.py picks <date>   # which cards should be SCENE cards (prints the ChatGPT prompts list)
+
+Format v6 (from 18 Nov 2026; Stanley agreed the growth plan on 11 Nov): shorter reels that open on the viewer.
+  python3 tools/reels/reel5.py situation tools/series/<slug>.json <date> -> media/<date>/series-reel.mp4 + series-cover.jpg
+      five cards, one per element family (the Yang and the Yin line share a card), about 28 s
+  python3 tools/reels/reel5.py form tools/forms/<slug>.json <date>       -> media/<date>/series-reel.mp4 + series-cover.jpg
+      "Which of the ten are you?": hook, reveal, strength, catch, about 19 s
+  python3 tools/reels/reel5.py animals <date>                             -> media/<date>/reel.mp4 + cover.jpg
+      Sunday: the 12 animals in four cards grouped by how today treats them, about 24 s
+  python3 tools/reels/reel5.py lines <date>                               -> media/<date>/story-lines1.jpg, story-lines2.jpg
+      the ten per-element lines of the day as two story pages (the daily reading now lives in the 06:00 stories)
 """
 import json, sys, os, subprocess, tempfile, shutil, datetime, math, random, glob
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
@@ -179,6 +189,46 @@ class Designed:
         return im
 
 
+def rows_panel(im, y, rows, t, start, accent=None):
+    """White reading card with labelled rows [(label, text)], sliding up from the bottom (v6 pair cards)."""
+    p = ease((t - start) / 0.35)
+    if p <= 0: return
+    d = ImageDraw.Draw(im); fl = F(34, 700); size = 50
+    while True:
+        ft = F(size, 600); wrapped = [wrap(d, txt, ft, W - 220) for _, txt in rows]
+        if all(len(w) <= 2 for w in wrapped) or size <= 40: break
+        size -= 2
+    hgt = 44 + sum(48 + len(w) * int(size * 1.22) + 22 for w in wrapped) + 14
+    y0 = min(y, H - 120 - hgt) + int(260 * (1 - p))
+    sh = Image.new('RGBA', (W, H), (0, 0, 0, 0)); ImageDraw.Draw(sh).rounded_rectangle([60, y0 + 12, W - 60, y0 + hgt + 12], 48, fill=(20, 10, 40, 80))
+    im.alpha_composite(sh.filter(ImageFilter.GaussianBlur(14)))
+    d.rounded_rectangle([60, y0, W - 60, y0 + hgt], 48, fill=(255, 255, 255, 246))
+    if accent: d.rounded_rectangle([60, y0, 76, y0 + hgt], 8, fill=accent)
+    yy = y0 + 44
+    for (lab, _), w in zip(rows, wrapped):
+        d.text((110, yy), lab, font=fl, fill=accent or MUTED); yy += 48
+        for l in w: d.text((110, yy), l, font=ft, fill=INK); yy += int(size * 1.22)
+        yy += 22
+
+DEEP = {'Wood': (45, 120, 75), 'Fire': (196, 71, 47), 'Earth': (150, 105, 30), 'Metal': (95, 98, 125), 'Water': (46, 90, 135)}
+ELS = ['Wood', 'Fire', 'Earth', 'Metal', 'Water']
+
+class Duo(Designed):
+    """Designed card for one element family: Season's Yang form (left) and Sky's Yin form (right), bobbing out of step."""
+    def __init__(self, el, seed):
+        k = ELS.index(el); Designed.__init__(self, 2 * k, seed)
+        rnd = random.Random(str(seed) + 'duo'); sc = rnd.uniform(1.0, 1.08)
+        def rs(slug):
+            f = form(slug); return f.resize((int(f.width * sc), int(f.height * sc)), Image.LANCZOS)
+        self.a, self.b = rs(STEM_SLUG[2 * k]), rs(STEM_SLUG[2 * k + 1])
+        self.cy = rnd.choice([930, 960, 900])
+    def frame(self, t):
+        fig, self.fig = self.fig, Image.new('RGBA', (2, 2), (0, 0, 0, 0)); im = Designed.frame(self, t); self.fig = fig
+        im.alpha_composite(self.a, (int(285 - self.a.width / 2), int(self.cy - self.a.height / 2 + 20 * math.sin(t * 2.2))))
+        im.alpha_composite(self.b, (int(795 - self.b.width / 2), int(self.cy + 30 - self.b.height / 2 + 20 * math.sin(t * 2.2 + 2.1))))
+        return im
+
+
 # ---------- engine ----------
 def encode(frames, total, out):
     music = f'{frames}/tune.m4a'
@@ -204,11 +254,15 @@ def render(hook, cards, close, out_video, out_cover, card_len=CARD):
             i = int((t - HOOK) // card_len); lt = t - HOOK - i * card_len; c = cards[i]
             im = scene_bg(c['img'], lt / card_len) if c.get('img') else c['designed'].frame(lt + i)
             d = ImageDraw.Draw(im)
-            shadow_text(im, (70, 110), c['kicker'], F(42, 700), c.get('accent', GOLD))
-            pop(im, 70, 165, c['title'], fit(d, c['title'], 132, W - 140, 1, floor=90), WHITE, lt, per=0.12)
-            if lt > 0.25 and c.get('who'): shadow_text(im, (74, 320), c['who'], F(46, 500), WARM)
-            if lt > 0.4 and c.get('pill'): pill(ImageDraw.Draw(im), 70, 395, c['pill'], F(42, 700), c.get('accent', GOLD), INK)
-            card_panel(im, 1330, c['head'], c.get('body', ''), lt, 0.5, accent=c.get('accent'))
+            if c.get('overlay'): c['overlay'](im, lt)
+            shadow_text(im, (70, 110), c['kicker'], F(42, 700), c.get('kicker_fill', c.get('accent', GOLD)))
+            tl = c.get('title_lines', 1)
+            ty = pop(im, 70, 165, c['title'], fit(d, c['title'], 132, W - 140, tl, floor=90 if tl == 1 else 84), WHITE, lt, per=0.12)
+            wy = 320 if tl == 1 else max(320, ty + 26)
+            if lt > 0.25 and c.get('who'): shadow_text(im, (74, wy), c['who'], fit(d, c['who'], 46, W - 150, 1, w=500, floor=30), WARM)
+            if lt > 0.4 and c.get('pill'): pill(ImageDraw.Draw(im), 70, wy + 75, c['pill'], F(42, 700), c.get('accent', GOLD), INK)
+            if c.get('rows'): rows_panel(im, 1300, c['rows'], lt, 0.5, accent=c.get('accent_deep'))
+            else: card_panel(im, 1330, c['head'], c.get('body', ''), lt, 0.5, accent=c.get('accent'))
         else:
             lt = t - HOOK - n * card_len; c = close
             im = scene_bg(c['img'], lt / CLOSE) if c.get('img') else c['designed'].frame(lt); d = ImageDraw.Draw(im)
@@ -338,6 +392,139 @@ def season(date):
     out = f'{ROOT}/media/{date}'
     render(hook, cards, close, f'{out}/reel.mp4', f'{out}/cover.jpg', card_len=1.5 * BAR)
 
+# ---------- format v6 (from 18 Nov 2026) ----------
+def pairs_of(sp):
+    """{element: (yang line, yin line)} from a v6 spec ("pairs") or an older ten-line spec ("items")."""
+    if sp.get('pairs'): return {el: (sp['pairs'][el]['yang'], sp['pairs'][el]['yin']) for el in ELS}
+    return {el: (sp['items'][f'Yang {el}'], sp['items'][f'Yin {el}']) for el in ELS}
+
+def situation(spec_path, date):
+    """Situation reel, five cards: one per element family, Season's Yang line and Sky's Yin line together."""
+    dt = datetime.date.fromisoformat(date); sp = json.load(open(spec_path, encoding='utf-8')); A = f'{ROOT}/media/{date}/art5e'
+    pairs = pairs_of(sp); cards = []
+    for i, el in enumerate(ELS):
+        img = art(A, f'{i + 1:02d}-')
+        c = dict(kicker=f'{i + 1} / 5', title=el.upper(), who='Season is Yang · Sky is Yin', pill='',
+                 rows=[(f'YANG {el.upper()}', pairs[el][0]), (f'YIN {el.upper()}', pairs[el][1])], accent_deep=DEEP[el])
+        if img: c['img'] = img
+        else: c['designed'] = Duo(el, f'{date}-p{i}')
+        cards.append(c)
+    title = ' '.join(sp['title']); hk = sp.get('hook') or [title[0].upper() + title[1:], sp['tag_line']]
+    first = {'img': art(A, 'hook')} if art(A, 'hook') else None
+    if not first: print(f'WARNING: no SCENE image in {A}/hook.png; designed hook (fallback)'); first = {'designed': Duo(sp.get('cover_element', 'Fire'), f'{date}-phook')}
+    hook = dict(img=first.get('img'), designed=first.get('designed'), date=dt.strftime('%a %-d %b').upper(), lead=hk[0], line=hk[1], note='Find yours in 3 sec…')
+    close = dict(line='Which one are you?', sub='Your element is the day you were born.', head='skyandseason.com', body=sp.get('comment_line', 'Then comment your element below.'),
+                 designed=Duo(sp.get('cover_element', 'Fire'), f'{date}-pclose'))
+    out = f'{ROOT}/media/{date}'; os.makedirs(out, exist_ok=True)
+    render(hook, cards, close, f'{out}/series-reel.mp4', f'{out}/series-cover.jpg')
+
+def form_reel(spec_path, date):
+    """'Which of the ten are you?': hook (a behaviour people recognise), reveal (the essence name), the strength, the catch.
+    Inner Constellation names on screen; the classical name (Yang Wood, Jia) belongs in the caption."""
+    dt = datetime.date.fromisoformat(date); sp = json.load(open(spec_path, encoding='utf-8')); A = f'{ROOT}/media/{date}/art5e'
+    si = {name(i): i for i in range(10)}[sp['stem']]; el = STEMS[si][1]; ess = sp['essence'].upper()
+    side = f"{el}, {'bold' if si % 2 == 0 else 'gentle'}"
+    spec = [('YOU MAY BE', sp['reveal'], '', '01-'), ('THE STRENGTH', sp['strength'][0], sp['strength'][1], '02-'), ('THE CATCH', sp['catch'][0], sp['catch'][1], '03-')]
+    cards = []
+    for k, (kick, head, body, key) in enumerate(spec):
+        c = dict(kicker=kick, title=ess, title_lines=2, who=WHO[si], pill=side if k == 0 else '', head=head, body=body)
+        img = art(A, key)
+        if img: c['img'] = img
+        else: c['designed'] = Designed(si, f'{date}-f{k}')
+        cards.append(c)
+    first = {'img': art(A, 'hook')} if art(A, 'hook') else None
+    if not first: print(f'WARNING: no SCENE image in {A}/hook.png; designed hook (fallback)'); first = {'designed': Designed(si, f'{date}-fhook')}
+    hook = dict(img=first.get('img'), designed=first.get('designed'), date='WHICH OF THE TEN ARE YOU?', lead=sp['hook'][0], line=sp['hook'][1], note='Which of the ten…')
+    close = dict(line='There are ten.', sub='Find yours free in 60 seconds.', head='skyandseason.com', body=sp.get('comment_line', 'Comment the one that sounds like you.'),
+                 designed=Designed(si, f'{date}-fclose'))
+    out = f'{ROOT}/media/{date}'; os.makedirs(out, exist_ok=True)
+    render(hook, cards, close, f'{out}/series-reel.mp4', f'{out}/series-cover.jpg')
+
+GROUPS = [('GO EASY', 'CLASH DAY', 'clash', (226, 84, 60)), ('SMALL FRICTION', 'SMALL-FRICTION DAY', 'friction', (255, 170, 60)),
+          ('STEADY DAY', 'STEADY DAY', 'steady', GOLD), ('BEST DAY', None, 'best', (120, 220, 140))]
+
+def animal_groups(b):
+    """The 12 animals sorted by how today's animal b treats them (reel.relation): clash, friction, steady, best."""
+    from reel import relation
+    g = {'clash': [], 'friction': [], 'steady': [], 'best': []}
+    for a in range(12):
+        lab = relation(a, b)[0]
+        g['clash' if lab.startswith('CLASH') else 'friction' if lab.startswith('SMALL') else 'steady' if lab.startswith('STEADY') else 'best'].append(a)
+    g['best'].sort(key=lambda a: (a != b, a))   # today's own animal first
+    return g
+
+def animals(date):
+    """Sunday, v6: four cards instead of twelve. Needs the two ChatGPT grids (art5/animals-a.png, animals-b.png) and,
+    in tools/days/<date>.json, group_tips {clash, friction, steady, best} (falls back to animal_tips)."""
+    from daytype import BRANCH_ANIMAL, BRANCH_EL
+    dt = datetime.date.fromisoformat(date); s, b = day(dt); A = f'{ROOT}/media/{date}/art5'
+    spec = json.load(open(f'{ROOT}/tools/days/{date}.json', encoding='utf-8')); tips = spec.get('animal_tips', {}); gt = spec.get('group_tips', {})
+    if not (art(A, 'animals-a') and art(A, 'animals-b')): raise SystemExit(f'Sunday needs {A}/animals-a.png and animals-b.png (ChatGPT grids)')
+    ts = tiles(art(A, 'animals-a')) + tiles(art(A, 'animals-b')); g = animal_groups(b); cards = []
+    def overlay_for(members):
+        n = len(members); cols = 1 if n == 1 else 2 if n <= 4 else 3; rows = math.ceil(n / cols)
+        size = 620 if n == 1 else 470 if n == 2 else 380 if cols == 2 else 330 if rows <= 2 else 300
+        small = [ts[a].resize((size, size), Image.LANCZOS) for a in members]
+        gap = int(size * 0.02); gw = cols * size + (cols - 1) * gap; gh = rows * size + (rows - 1) * gap
+        x0 = (W - gw) // 2; y0 = 500 + (760 - gh) // 2
+        def draw(im, lt):
+            for k, t in enumerate(small):
+                p = eb((lt - 0.12 * k) / 0.3)
+                if p <= 0: continue
+                r, c = divmod(k, cols); n_row = min(cols, n - r * cols); off = (cols - n_row) * (size + gap) // 2
+                tt = t if abs(p - 1) < 0.01 else t.resize((max(1, int(size * p)), max(1, int(size * p))))
+                im.alpha_composite(tt, (x0 + off + c * (size + gap) + (size - tt.width) // 2, y0 + r * (size + gap) + (size - tt.height) // 2 + int(10 * math.sin(lt * 2 + k))))
+        return draw
+    order = [x for x in GROUPS if g[x[2]]]
+    for k, (title, _, key, accent) in enumerate(order):
+        members = g[key]; names = [BRANCH_ANIMAL[a] for a in members]
+        tip = gt.get(key) or tips.get(names[0], '')
+        cards.append(dict(kicker=f'{k + 1} / {len(order)}', kicker_fill=WHITE, title=title, who=' · '.join(names), pill='', accent=accent, head=tip,
+                          body='Born in Jan or early Feb? Use the animal before yours.' if k == 0 else '',
+                          designed=Designed(None, f'{date}-g{k}', el=BRANCH_EL[members[0]], fig=Image.new('RGBA', (2, 2), (0, 0, 0, 0))), overlay=overlay_for(members)))
+    clash = (b + 6) % 12; an = BRANCH_ANIMAL[clash]
+    hook = dict(img=art(A, 'hook'), designed=Designed(s, f'{date}-hook'), date=f"{dt.strftime('%a %-d %b').upper()} · {BRANCH_ANIMAL[b].upper()} DAY",
+                lead=f"Born in {'an' if an[0] in 'AEIOU' else 'a'} {an} year?", line=gt.get('clash') or tips[an], note='All 12 animals in 20 sec…')
+    close = dict(line='Your animal is your Season.', sub='Your element is your Sky. Both free.', head='skyandseason.com', body='Then comment your animal below.',
+                 designed=Designed(s, f'{date}-close'))
+    out = f'{ROOT}/media/{date}'
+    render(hook, cards, close, f'{out}/reel.mp4', f'{out}/cover.jpg')
+
+def lines_story(date):
+    """The day's ten per-element lines as two story pages (five each), with the Sky & Season forms.
+    Needs media/<date>/lines.json (render.py daily). -> media/<date>/story-lines1.jpg, story-lines2.jpg"""
+    dt = datetime.date.fromisoformat(date); s, b = day(dt); idx = {name(i): i for i in range(10)}
+    lines = json.load(open(f'{ROOT}/media/{date}/lines.json', encoding='utf-8')); out = f'{ROOT}/media/{date}'
+    top, bot = GRAD[STEMS[s][1]][0]
+    for page in range(2):
+        g = Image.new('RGB', (1, 256))
+        for y in range(256):
+            k = y / 255; g.putpixel((0, y), tuple(int(top[i] * (1 - k) + bot[i] * k) for i in range(3)))
+        im = g.resize((W, H)).convert('RGBA'); d = ImageDraw.Draw(im)
+        d.text((W // 2, 230), dt.strftime('TODAY · %a %-d %b').upper(), font=F(38, 600), fill=INK, anchor='mm')
+        d.text((W // 2, 318), 'Your element today', font=F(74, 700), fill=INK, anchor='mm')
+        d.text((W // 2, 392), f'{page + 1} of 2 · find the element of the day you were born', font=F(32, 500), fill=MUTED, anchor='mm')
+        y = 452
+        for l in lines[page * 5: page * 5 + 5]:
+            si = idx[l['element']]; el = STEMS[si][1]
+            d.rounded_rectangle([50, y, W - 50, y + 226], 44, fill=(255, 255, 255, 244))
+            f = form(STEM_SLUG[si]); r = min(176 / f.width, 176 / f.height); f = f.resize((int(f.width * r), int(f.height * r)), Image.LANCZOS)
+            im.alpha_composite(f, (70 + (176 - f.width) // 2, y + 25 + (176 - f.height) // 2))
+            d.text((266, y + 24), l['element'].upper(), font=F(34, 700), fill=DEEP[el])
+            tw = d.textlength(l['element'].upper() + '  ', font=F(34, 700))
+            d.text((266 + tw, y + 27), f"· {SHORT[l['type']]}", font=F(30, 500), fill=MUTED)
+            size = 38
+            while size > 30 and len(wrap(d, l['line'], F(size, 500), W - 50 - 266 - 36)) > 3: size -= 2
+            for j, t in enumerate(wrap(d, l['line'], F(size, 500), W - 50 - 266 - 36)[:3]): d.text((266, y + 74 + j * int(size * 1.24)), t, font=F(size, 500), fill=INK)
+            y += 242
+        if page == 1:
+            d.text((W // 2, y + 26), 'Not sure which is yours? skyandseason.com · free', font=F(36, 600), fill=INK, anchor='mm')
+        else:
+            d.text((W // 2, y + 26), 'Tap for the other five', font=F(36, 600), fill=INK, anchor='mm')
+        im.convert('RGB').save(f'{out}/story-lines{page + 1}.jpg', quality=90)
+    print('lines stories', out)
+
+
 def clip(date, source='reel'):
     """9pm video story: the hook + first card(s), then an end card sending people to the full reel."""
     out = f'{ROOT}/media/{date}'; dt = datetime.date.fromisoformat(date); s, b = day(dt)
@@ -373,4 +560,8 @@ if __name__ == '__main__':
     elif k == 'clip': clip(sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else 'reel')
     elif k == 'season': season(sys.argv[2])
     elif k == 'picks': picks(sys.argv[2])
-    else: raise SystemExit('sky|ranking|series|clip|picks')
+    elif k == 'situation': situation(sys.argv[2], sys.argv[3])
+    elif k == 'form': form_reel(sys.argv[2], sys.argv[3])
+    elif k == 'animals': animals(sys.argv[2])
+    elif k == 'lines': lines_story(sys.argv[2])
+    else: raise SystemExit('sky|season|ranking|series|clip|picks|situation|form|animals|lines')

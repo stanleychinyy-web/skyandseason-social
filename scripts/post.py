@@ -346,6 +346,10 @@ def main():
             if SLOT == "evening":
                 done["eveningAt"] = datetime.datetime.now(SGT).isoformat(timespec="seconds")
         os.makedirs(os.path.dirname(marker_path), exist_ok=True); json.dump(done, open(marker_path, "w"), indent=1)
+    if SLOT == "morning" and not item and stories and not failed:
+        # v6 (from 18 Nov 2026): Mon-Sat mornings are stories only; record when the drop went out
+        done.setdefault("postedAt", datetime.datetime.now(SGT).isoformat(timespec="seconds"))
+        os.makedirs(os.path.dirname(marker_path), exist_ok=True); json.dump(done, open(marker_path, "w"), indent=1)
     if failed:
         raise SystemExit(f"not published: {failed} (the next run retries only these)")
     print("all done for", DATE, SLOT)
