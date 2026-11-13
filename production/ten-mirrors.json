@@ -40,14 +40,24 @@
    "world_name": "the farm field",
    "feeling": "Friend",
    "ten_god": "比肩",
-   "status": "todo",
+   "status": "made",
    "block": 1,
    "order": 2,
    "title": "Not the Only One",
    "situation": "Finding out you're not the only one",
    "dev_date": "2026-11-13",
    "post_date": "2026-11-24",
-   "notes": "in progress 14 Nov: stills K1, K2, K2B done (3 cr; K2 had a green field unlike K1, so K2B redrawn with K1 as world look; K2B used). Clips V1 (from K1) and V2 (from K2B) generating (40 cr). Library: EPISODES/TEN_MIRRORS/TM007/KEYFRAMES. Flow balance 510 before."
+   "notes": "V01 made 14 Nov: SS_TM_NOT-THE-ONLY-ONE_V01.mp4 (story 14.2 s + 4 s end card, 3.0 MB). Stills K1, K2, K2B (3 cr): K2 had a green sprout field that did not match K1's brown ploughed field, so K2B was redrawn with K1 attached as the world look (used). Clips V1_T1 from K1 (0.2-7.0, pass: the nearest sprout copies her wiggle at 3-5 s and grows slightly bigger, reads as perking up) and V2_T1 from K2B (0.2-7.6, pass) (40 cr). No retries. Cover frame 4.0 s. Flow balance 510 before, ~467 after.",
+   "made_date": "2026-11-14",
+   "credits_used": 43,
+   "evening_entry": {
+    "type": "reel",
+    "video": "media/2026-11-24/evening-reel.mp4",
+    "cover": "media/2026-11-24/evening-cover.jpg",
+    "caption": "Finding your people 🌱\n\nThis is the Friend feeling: Yin Earth in a Yin Earth world. The thing you thought was only you turns out to be the thing you share.\n\nWho is your \"same same\" person? Tag them 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #tenmirrors #friendship #mypeople #animatedshort #chineseastrology #bazi #fiveelements #yinyang",
+    "series": "ten-mirrors",
+    "status": "review"
+   }
   },
   {
    "id": "TM050",
