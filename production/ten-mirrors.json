@@ -1189,5 +1189,5 @@
   "daily_credit_cap": 80,
   "post_time_sgt": "19:00 (evening slot), Tue/Thu/Sun",
   "statuses": "todo -> made (in repo, evening status review) -> approved -> posted; or changes. made-not-queued = finished video in the library, not yet in the repo/review page.",
-  "last_run_date": ""
+  "last_run_date": "2026-11-13"
 }
