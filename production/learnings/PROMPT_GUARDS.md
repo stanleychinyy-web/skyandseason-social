@@ -31,6 +31,8 @@ METAL/CRYSTAL FORMS (1 Nov, L41): never ask for the form change in one clip when
 
 SEASON METAL FORM (3 Nov, L42-L45): colour-only change clips: 'his face, head, body, arms and legs stay pure soft white the whole clip, never grey or patchy; the tan inside his ears stays tan until it fades straight to pale silver'. Never write blade or sword (Veo makes a weapon and armour): 'small hand-sized polished silver piece, never grows, never raised or swung; no armour, nothing grows on his arms, chest or body'. Keep Season facing the camera (three-quarter front); no head turns to profile.
 
+DIRECTION OF TRAVEL (13 Nov, L47): a character walks the way he faces. Put the goal (door, light, friend) between the character and the camera's far side, i.e. place the camera AT the goal so he moves towards the camera; never ask him to move towards something behind him.
+
 ## PROPS
 - Water drops stay ONE clear water droplet, never ice, crystal or gems (unless the plan says crystal).
 

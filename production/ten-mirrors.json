@@ -12,14 +12,24 @@
       "world_name": "the iron cave",
       "feeling": "Pressure",
       "ten_god": "七殺",
-      "status": "todo",
+      "status": "made",
       "block": 1,
       "order": 1,
       "title": "The Closing Gate",
       "situation": "Barely making it in time",
       "dev_date": "2026-11-12",
       "post_date": "2026-11-22",
-      "notes": "in progress 13 Nov: K1, K2 stills made in Flow (Nano Banana 2.1, Season - Jia Wood character ref), passed QC + relatability test (hurry/late -> relief), saved to library TM064/KEYFRAMES. Flow balance 520 before clips. Next: V1, V2 i2v."
+      "notes": "V01 made 13 Nov: SS_TM_THE-CLOSING-GATE_V01.mp4 (story 12.5 s + 4 s end card, 4.3 MB). Stills K1, K2 (2 cr), K1B (1 cr); clips V1_T1, V1B_T1, V2_T1 (60 cr). RESTAGED V1: V1_T1 from K1 (Season facing camera with the doors behind him) had him walk AWAY from the light towards the camera, the tunnel went dark at 3.5-5.5 s and one ear spread like a wing -> failed. New still K1B with the camera OUTSIDE looking in through the closing gap, so he hurries towards the camera and the doors shut behind him (same situation and feeling). Used V1B_T1 0.2-5.0 (doors change from square to round-arched shape during the camera move; character on-model) and V2_T1 0.2-7.9 (pass). Cover frame 2.6 s. Flow balance 520 before clips.",
+      "made_date": "2026-11-13",
+      "credits_used": 63,
+      "evening_entry": {
+        "type": "reel",
+        "video": "media/2026-11-22/evening-reel.mp4",
+        "cover": "media/2026-11-22/evening-cover.jpg",
+        "caption": "That deadline feeling ⏳\n\nThis is the Pressure feeling: Yang Wood in a Yang Metal world. Some days the gate is closing and all you can do is move. Pressure is not the enemy. It is what gets you through the door.\n\nWho always makes it with one second to spare? Tag them 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #tenmirrors #deadline #relatable #animatedshort #chineseastrology #bazi #fiveelements #yinyang",
+        "series": "ten-mirrors",
+        "status": "review"
+      }
     },
     {
       "id": "TM007",
