@@ -12,7 +12,7 @@
    "world_name": "the iron cave",
    "feeling": "Pressure",
    "ten_god": "七殺",
-   "status": "made",
+   "status": "approved",
    "block": 1,
    "order": 1,
    "title": "The Closing Gate",
@@ -1200,5 +1200,5 @@
  "daily_credit_cap": 80,
  "post_time_sgt": "19:00 (evening slot), Tue/Thu/Sun",
  "statuses": "todo -> made (in repo, evening status review) -> approved -> posted; or changes. made-not-queued = finished video in the library, not yet in the repo/review page.",
- "last_run_date": "2026-11-13"
+ "last_run_date": "2026-11-14"
 }

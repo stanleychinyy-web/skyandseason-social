@@ -38,3 +38,5 @@ DIRECTION OF TRAVEL (13 Nov, L47): a character walks the way he faces. Put the g
 
 ## CHECK THE AGENT'S REWRITE
 The Flow agent rewrites prompts. After each generation, read the item's prompt text in the media list; if it changed a guard (e.g. wrote "white mitten-like hand"), treat the output as suspect, QC extra carefully, and say "use my wording exactly" in the next request.
+
+SAME WORLD IN K1 AND K2 (14 Nov, L48): make K2 AFTER K1 with the K1 still attached as the world look: 'use the attached K1 still as the look of the world: the SAME <place> with the same <ground, props, sky>'.
