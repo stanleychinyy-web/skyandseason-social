@@ -1,31 +1,31 @@
 {
- "date": "2026-11-14",
- "status": "approved",
- "stories": [
-  "media/2026-11-14/story1.jpg",
-  "media/2026-11-14/story2.jpg",
-  "media/2026-11-14/story3.jpg",
-  "media/2026-11-14/story4.jpg"
- ],
- "stories_noon": [
-  "media/2026-11-14/story5.jpg"
- ],
- "stories_night": [
-  "media/2026-11-14/story6.jpg",
-  "media/2026-11-14/story-clip.mp4"
- ],
- "morning": {
-  "type": "reel",
-  "video": "media/2026-11-14/reel.mp4",
-  "cover": "media/2026-11-14/cover.jpg",
-  "caption": "Saturday's Sky is Yang Water, The Ocean 🌊 Find your element below.\n\nYour element is the element of the day you were born. Today's big ocean meets it and creates one of 10 forces: Yang Water gets a friend day, Yang Metal gets a joy day, Yang Fire feels the pressure.\n\nDon't know yours? Find it free at the link in bio.\n\nWhat are your Saturday plans? Comment your element below.\n\n#skyandseason #innerconstellation #weekendvibes #astrology #fiveelements #chineseastrology #knowyourself #fourpillars #dailyhoroscope #sgig",
-  "series": "sky-today"
- },
- "evening": {
-  "type": "reel",
-  "video": "media/2026-11-14/series-reel.mp4",
-  "cover": "media/2026-11-14/series-cover.jpg",
-  "caption": "Which element is the office sunshine? ☀️\n\nIn Chinese astrology your element comes from the day you were born. Fire warms the room: Yang Fire greets everyone, Yin Fire remembers the birthdays. Wood brings the fresh energy, and Yang Water keeps things lively.\n\nFind your element free at the link in bio.\n\nTag your #1 below.\n\n#skyandseason #innerconstellation #officelife #goodvibes #worklife #fiveelements #chineseastrology #relatable #zodiacsigns #singapore",
-  "series": "ranking-office-sunshine"
- }
+  "date": "2026-11-14",
+  "status": "posted",
+  "stories": [
+    "media/2026-11-14/story1.jpg",
+    "media/2026-11-14/story2.jpg",
+    "media/2026-11-14/story3.jpg",
+    "media/2026-11-14/story4.jpg"
+  ],
+  "stories_noon": [
+    "media/2026-11-14/story5.jpg"
+  ],
+  "stories_night": [
+    "media/2026-11-14/story6.jpg",
+    "media/2026-11-14/story-clip.mp4"
+  ],
+  "morning": {
+    "type": "reel",
+    "video": "media/2026-11-14/reel.mp4",
+    "cover": "media/2026-11-14/cover.jpg",
+    "caption": "Saturday's Sky is Yang Water, The Ocean 🌊 Find your element below.\n\nYour element is the element of the day you were born. Today's big ocean meets it and creates one of 10 forces: Yang Water gets a friend day, Yang Metal gets a joy day, Yang Fire feels the pressure.\n\nDon't know yours? Find it free at the link in bio.\n\nWhat are your Saturday plans? Comment your element below.\n\n#skyandseason #innerconstellation #weekendvibes #astrology #fiveelements #chineseastrology #knowyourself #fourpillars #dailyhoroscope #sgig",
+    "series": "sky-today"
+  },
+  "evening": {
+    "type": "reel",
+    "video": "media/2026-11-14/series-reel.mp4",
+    "cover": "media/2026-11-14/series-cover.jpg",
+    "caption": "Which element is the office sunshine? ☀️\n\nIn Chinese astrology your element comes from the day you were born. Fire warms the room: Yang Fire greets everyone, Yin Fire remembers the birthdays. Wood brings the fresh energy, and Yang Water keeps things lively.\n\nFind your element free at the link in bio.\n\nTag your #1 below.\n\n#skyandseason #innerconstellation #officelife #goodvibes #worklife #fiveelements #chineseastrology #relatable #zodiacsigns #singapore",
+    "series": "ranking-office-sunshine"
+  }
 }
