@@ -8,7 +8,8 @@
     "The reno quote just came in.",
     "What do you do first?"
    ],
-   "spec": "tools/series/reno-quote.json"
+   "spec": "tools/series/reno-quote.json",
+   "used": "2026-11-21"
   },
   {
    "slug": "aircon-remote",
@@ -49,7 +50,8 @@
    "hook": [
     "The meeting runs 40 min over.",
     "What are you doing?"
-   ]
+   ],
+   "used": "2026-11-23"
   },
   {
    "slug": "bonus-day",
@@ -91,7 +93,8 @@
    "hook": [
     "7 am. The family chat pings.",
     "Which one are you?"
-   ]
+   ],
+   "used": "2026-11-20"
   },
   {
    "slug": "dinner-queue",
