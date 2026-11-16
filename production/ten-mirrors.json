@@ -102,7 +102,9 @@
    "title": "One Small Leaf",
    "situation": "Comparing yourself",
    "dev_date": "2026-11-15",
-   "post_date": "2026-11-29"
+   "post_date": "2026-11-29",
+   "credits_used": 84,
+   "notes": "in progress (16 Nov, day 1; 84 credits spent, daily cap reached: do NOT spend more on 16 Nov). Library EPISODES/TEN_MIRRORS/TM093. Stills: K1 PASS (Sky Yi Wood floating in sunlit giant forest, holding up a small leaf, beaming; Flow title 'Character holding green leaf'). K2 (too much a copy of K1) and K2B (story right but too dark) rejected; K2C PASS (bright, huge glowing leaves overhead, sunbeam on her, small glowing leaf at chest; Flow title 'Character holding glowing leaf'). 4 cr. Clips: V2B_T1 from K2C PASS (floats, holds leaf at chest, a second tiny leaf unfolds at ~2.9 s, then opens arms holding the leaf, proud smile; use ~0.3-7.8). V2_T1 FAIL (glow ball over face 1.6-4 s, leaf raised overhead, leaf gone at end). V1_T1 and V1B_T1 from K1 FAIL: Veo zooms in at ~0.8 s and lowers her until her feet are at the fern tops (looks like standing), leaf vanished at the end (V1), tuft grew into a spiky crown (V1B 4-7.5 s). Story beat itself read well (huge leaves unfurl, she looks up, smile fades, lowers leaf). NEXT (17 Nov): restage V1 more simply (L50): new still K1R closer, Sky high in the air (her own height above the ferns) with the huge leaves ALREADY at the top of frame (like K2C world, bright), and a clip where only the big leaves spread a little wider and their shade passes over her while she looks up, then down at her leaf and lowers it (no zoom, feet dangling). Then assemble V1R -> V2B_T1. Music script music_tm093.py ready in source/ (args story tB tH)."
   },
   {
    "id": "TM056",
@@ -1211,5 +1213,5 @@
  "daily_credit_cap": 80,
  "post_time_sgt": "19:00 (evening slot), Tue/Thu/Sun",
  "statuses": "todo -> made (in repo, evening status review) -> approved -> posted; or changes. made-not-queued = finished video in the library, not yet in the repo/review page.",
- "last_run_date": "2026-11-15"
+ "last_run_date": "2026-11-16"
 }

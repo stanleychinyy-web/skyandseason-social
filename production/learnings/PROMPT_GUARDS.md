@@ -40,3 +40,9 @@ DIRECTION OF TRAVEL (13 Nov, L47): a character walks the way he faces. Put the g
 The Flow agent rewrites prompts. After each generation, read the item's prompt text in the media list; if it changed a guard (e.g. wrote "white mitten-like hand"), treat the output as suspect, QC extra carefully, and say "use my wording exactly" in the next request.
 
 SAME WORLD IN K1 AND K2 (14 Nov, L48): make K2 AFTER K1 with the K1 still attached as the world look: 'use the attached K1 still as the look of the world: the SAME <place> with the same <ground, props, sky>'.
+
+SKY HEIGHT + BIG PROPS (16 Nov, L50): Sky start stills: 'floating high, a gap of air about her own height below her feet'. Every big prop (giant leaves, branch, wave) is ALREADY in the start still; the clip may only let it grow or spread a little. Never have a big object enter from the frame edge (Veo re-frames and drops her to the ground). Elemental tufts: 'two small smooth leaves, never grows or becomes spiky'.
+
+NO GLOW BALLS (16 Nov, L51): never ask a prop to 'glow brighter'. Say 'NO glow: no light ball, no bloom, no flash'; keep held props at chest height, 'never above her shoulders or in front of her face', and 'still holding it in the very last frame'.
+
+K2 FROM K1 (16 Nov, L53): when K1 is attached as the world look, add 'a DIFFERENT, CLOSER shot and a different light; must not look like a copy of K1' plus the new framing, and keep 'bright, high-key, never dark'.
