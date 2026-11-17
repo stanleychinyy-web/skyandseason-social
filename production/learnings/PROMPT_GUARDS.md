@@ -46,3 +46,5 @@ SKY HEIGHT + BIG PROPS (16 Nov, L50): Sky start stills: 'floating high, a gap of
 NO GLOW BALLS (16 Nov, L51): never ask a prop to 'glow brighter'. Say 'NO glow: no light ball, no bloom, no flash'; keep held props at chest height, 'never above her shoulders or in front of her face', and 'still holding it in the very last frame'.
 
 K2 FROM K1 (16 Nov, L53): when K1 is attached as the world look, add 'a DIFFERENT, CLOSER shot and a different light; must not look like a copy of K1' plus the new framing, and keep 'bright, high-key, never dark'.
+
+MEDIUM SIZE + SMALL ACTION (17 Nov, L54): Sky start stills at medium size (about one third of the frame height), never small in a wide shot. For quiet emotional beats keep the world still and give her only a head/face action; add 'her arms stay close to her body, she never spreads her arms or opens her hands; the held prop never sticks to her body or disappears'. Check the last 2 s for a dropped prop and cut before it.
