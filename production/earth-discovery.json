@@ -222,7 +222,7 @@
       "element": "Xin Metal",
       "dev_date": "2026-10-29",
       "post_date": "2026-11-17",
-      "status": "approved",
+      "status": "posted",
       "credits_used": 207,
       "notes": "V01 made 2 Nov (two days, ~207 credits: 6 stills + 10 Veo clips incl. 4 V2 retries; Flow balance ~610 after). All story shots are Veo clips and passed QC: V1_T1 (i2v K1) 0.2-5.6; V2_T6 V2F (K2A->K2S silver-ring colour sweep) 0.5-6.5 cut on the gem flash, dissolve into V2_T5 V2E (K2S->K2J facets) 5.5-7.9; V3_T1 0.3-5.5; V4_T1 0.2-5.0; end card V2. 27.8 s, 6.6 MB. Rejected: V2_T1-T4 (shards, cracking, smoke rings, ink smoke). Xin-form hands are silver per the approved Xin sheet. Build notes in SKY06/source/BUILD.txt.",
       "made_date": "2026-11-02",
@@ -233,7 +233,8 @@
         "caption": "Sky brushed away the soil and found a hidden jewel, and when the sunlight passed through it, she became one too ✨\n\nSky is the gentle Yin spirit, and when she held the crystal she became Yin Metal: the jewel. Xin Metal isn't the heavy sword or the iron gate. It is refined, precise and quietly brilliant, beauty polished by pressure that shines most when light is let in. In people, it is the side that notices the finest details, keeps high standards, chooses words with care and has a sparkle others only see up close. Small, but precious.\n\nWho is the hidden jewel in your life, the one whose shine you noticed up close? Tag them below 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #yinmetal #fiveelements #yinyang #animatedshort #bazi #chinesemetaphysics #crystals #3danimation",
         "series": "earth-discovery",
         "status": "review"
-      }
+      },
+      "permalink": "https://www.instagram.com/reel/Df1tnvSjzkZ/"
     },
     {
       "id": "SEA06",
@@ -255,7 +256,7 @@
       }
     }
   ],
-  "last_run_date": "2026-11-17",
+  "last_run_date": "2026-11-18",
   "schedule": "hourly 12:59-22:59 SGT until the day's reel is done",
   "daily_spend": {
     "2026-10-24": 140,

@@ -141,16 +141,24 @@
    "world_name": "the sunlit plains",
    "feeling": "Steady money",
    "ten_god": "正財",
-   "status": "made-not-queued",
-   "made_date": "2026-11-07",
+   "status": "made",
+   "made_date": "2026-11-18",
    "credits_used": 63,
-   "notes": "V01 sample made 7 Nov (63 credits). V1_T1 only 0.2-3.4 usable (ears lift + crest spike after 3.6 s); V2_T1 and V3_T1 pass. 22.6 s, 5.9 MB. Library: EPISODES/TEN_MIRRORS/TM001. Waiting for Stanley; nothing scheduled. | 11 Nov: Stanley approved block one; use as made with the block-one caption; queue for review on 17 Nov (post 3 Dec).",
+   "notes": "V01 sample made 7 Nov (63 credits). V1_T1 only 0.2-3.4 usable (ears lift + crest spike after 3.6 s); V2_T1 and V3_T1 pass. 22.6 s, 5.9 MB. Library: EPISODES/TEN_MIRRORS/TM001. Waiting for Stanley; nothing scheduled. | 11 Nov: Stanley approved block one; use as made with the block-one caption; queue for review on 17 Nov (post 3 Dec). | 18 Nov: queued for review as made (V01 from 7 Nov, 22.6 s, no new credits); credits_used stays 63. Repo media/2026-12-03, cover at 9.0 s (rain cloud greening the grass). Library file kept as SS_YIN-WATER-IN-THE-SUNLIT-PLAINS_V01.mp4.",
    "block": 1,
    "order": 6,
    "title": "It Adds Up",
    "situation": "Small effort, every day",
    "dev_date": "2026-11-17",
-   "post_date": "2026-12-03"
+   "post_date": "2026-12-03",
+   "evening_entry": {
+    "type": "reel",
+    "video": "media/2026-12-03/evening-reel.mp4",
+    "cover": "media/2026-12-03/evening-cover.jpg",
+    "caption": "It adds up 🌧️\n\nThis is the Steady Money feeling: Yin Water in a Yang Fire world. A little, done patiently, in the right place, pays you back slowly and every time.\n\nWhat small thing are you doing every day right now? Tell us below.\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #tenmirrors #consistency #smallsteps #animatedshort #chineseastrology #bazi #fiveelements #yinyang",
+    "series": "ten-mirrors",
+    "status": "review"
+   }
   },
   {
    "id": "TM068",
@@ -1222,5 +1230,5 @@
  "daily_credit_cap": 80,
  "post_time_sgt": "19:00 (evening slot), Tue/Thu/Sun",
  "statuses": "todo -> made (in repo, evening status review) -> approved -> posted; or changes. made-not-queued = finished video in the library, not yet in the repo/review page.",
- "last_run_date": "2026-11-17"
+ "last_run_date": "2026-11-18"
 }
