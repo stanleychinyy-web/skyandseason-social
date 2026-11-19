@@ -96,7 +96,7 @@
    "world_name": "the giant-tree forest",
    "feeling": "Rival",
    "ten_god": "劫財",
-   "status": "made",
+   "status": "changes",
    "block": 1,
    "order": 4,
    "title": "One Small Leaf",
@@ -104,7 +104,7 @@
    "dev_date": "2026-11-15",
    "post_date": "2026-11-29",
    "credits_used": 126,
-   "notes": "V01 made 17 Nov: SS_TM_ONE-SMALL-LEAF_V01.mp4 (story 13.3 s + 4 s end card, 2.9 MB). Day 1 (16 Nov, 84 cr): K1, K2, K2B rejected; K2C PASS; V1_T1, V1B_T1, V2_T1 FAIL (L50, L51); V2B_T1 PASS. Day 2 (17 Nov, 42 cr): K1R (wide) -> V1R_T1 FAIL (L54). RESTAGED V1: K1R2 = K2C framing in bright green shade, plain leaf, proud smile -> V1R2_T1 PASS (she looks up at the huge leaves, back down at her leaf, smile fades; used 0.2-6.0, cut before she drops the leaf at ~6.3 s). The giant branch no longer visibly unfurls: the huge leaves are already there (change from the plan, kept the situation and feeling). Edit: V1R2 0.2-6.0 -> V2B_T1 0.3-7.8 (dissolve). Cover at 1.6 s. Library EPISODES/TEN_MIRRORS/TM093.",
+   "notes": "it does not look like sky, it is too fat.\naction make no sense also",
    "made_date": "2026-11-17",
    "evening_entry": {
     "type": "reel",
@@ -113,7 +113,9 @@
     "caption": "When someone makes it look easy 🍃\n\nThis is the Rival feeling: Yin Wood in a Yang Wood world. Comparison shrinks you. Your leaf was never theirs to measure.\n\nSend this to someone who needs to hear it today.\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #tenmirrors #comparison #selfworth #animatedshort #chineseastrology #bazi #fiveelements #yinyang",
     "series": "ten-mirrors",
     "status": "review"
-   }
+   },
+   "made_notes": "V01 made 17 Nov: SS_TM_ONE-SMALL-LEAF_V01.mp4 (story 13.3 s + 4 s end card, 2.9 MB). Day 1 (16 Nov, 84 cr): K1, K2, K2B rejected; K2C PASS; V1_T1, V1B_T1, V2_T1 FAIL (L50, L51); V2B_T1 PASS. Day 2 (17 Nov, 42 cr): K1R (wide) -> V1R_T1 FAIL (L54). RESTAGED V1: K1R2 = K2C framing in bright green shade, plain leaf, proud smile -> V1R2_T1 PASS (she looks up at the huge leaves, back down at her leaf, smile fades; used 0.2-6.0, cut before she drops the leaf at ~6.3 s). The giant branch no longer visibly unfurls: the huge leaves are already there (change from the plan, kept the situation and feeling). Edit: V1R2 0.2-6.0 -> V2B_T1 0.3-7.8 (dissolve). Cover at 1.6 s. Library EPISODES/TEN_MIRRORS/TM093.",
+   "changes_requested": "2026-11-19T21:22+08:00 (review page, synced by claude)"
   },
   {
    "id": "TM056",
