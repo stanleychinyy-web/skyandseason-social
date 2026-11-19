@@ -130,7 +130,9 @@
    "title": "For No Reason",
    "situation": "Doing it just for fun",
    "dev_date": "2026-11-16",
-   "post_date": "2026-12-01"
+   "post_date": "2026-12-01",
+   "credits_used": 63,
+   "notes": "in progress (day 1 = 19 Nov, 63 cr; daily cap reached, do NOT spend more credits on 19 Nov; resume 20 Nov). Stills: K1 (blue chest crystal, off-sheet) -> K1B edit with the orange-red Bing crystal PASS; K2 (K1B attached as world look; flowers in the snow, arms wide, laughing) PASS. Relatability: building a snowman -> laughing in flowers = 'playing / joy' PASS. Clips: V1_T1 FAIL (yellow flame burning in the snow where the snow figure melted 3.0-4.0 s, sparkle stars 5-7 s; L55). V1B_T1 (no 'melt', no-fire lines) FAIL after 5.2 s (small flame wisps beside his head behind the flowers 5.3-7.3 s); 0.2-5.2 is clean: pats, snow figure sinks, flowers sprout and grow, hands start rising to his cheeks. V2_T1 PASS only 3.0-7.9 (fireballs in the sky and flames at his feet 0.5-2.9 s; from 3.0 he sways laughing, arms wide, flower field spreads; on-model). Story would be only ~10 s with these, so RESTAGE PLAN for 20 Nov (one clip, 20 cr): grab the V1B_T1 frame at ~5.0 s, upload as 'TM056 K1G', make V1C i2v from it: 'he giggles with both hands on his cheeks, looking at the flowers; the flowers sway gently; camera locked-off' + full no-fire block (L55). Edit: V1B_T1 0.2-5.0 -> hard continue V1C (best ~4 s) -> dissolve V2_T1 3.0-7.9. Library EPISODES/TEN_MIRRORS/TM056 (KEYFRAMES K1, K1B, K2; TAKES V1_T1, V1B_T1, V2_T1; QC strips in cloud only). Music plan: playful nylon guitar + whistle."
   },
   {
    "id": "TM001",
@@ -1230,5 +1232,5 @@
  "daily_credit_cap": 80,
  "post_time_sgt": "19:00 (evening slot), Tue/Thu/Sun",
  "statuses": "todo -> made (in repo, evening status review) -> approved -> posted; or changes. made-not-queued = finished video in the library, not yet in the repo/review page.",
- "last_run_date": "2026-11-18"
+ "last_run_date": "2026-11-19"
 }
