@@ -68,7 +68,7 @@
       "world_name": "the candlelit night garden",
       "feeling": "Recognition",
       "ten_god": "正官",
-      "status": "made",
+      "status": "approved",
       "block": 1,
       "order": 3,
       "title": "Wait, Me?",
@@ -126,15 +126,24 @@
       "world_name": "the mountain pass",
       "feeling": "Joy",
       "ten_god": "食神",
-      "status": "todo",
+      "status": "made",
       "block": 1,
       "order": 5,
       "title": "For No Reason",
       "situation": "Doing it just for fun",
       "dev_date": "2026-11-16",
       "post_date": "2026-12-01",
-      "credits_used": 83,
-      "notes": "in progress (day 1 = 19 Nov, 63 cr; day 2 = 20 Nov). 20 Nov 16:00 run: K1G uploaded (V1B_T1 frame ~5.0 s), V1C_T1 made (20 cr, saved in TAKES) but tracker not updated by that run. 20 Nov 17:00 QC: V1C_T1 FAIL after 1.4 s (flame wisps burning on both ear tips 1.5-7.9 s, L55 again; 0.0-1.4 clean: hands on cheeks, giggling). Stills: K1 (blue chest crystal, off-sheet) -> K1B edit with the orange-red Bing crystal PASS; K2 (K1B attached as world look; flowers in the snow, arms wide, laughing) PASS. Relatability: building a snowman -> laughing in flowers = 'playing / joy' PASS. Clips: V1_T1 FAIL (yellow flame burning in the snow where the snow figure melted 3.0-4.0 s, sparkle stars 5-7 s; L55). V1B_T1 (no 'melt', no-fire lines) FAIL after 5.2 s (small flame wisps beside his head behind the flowers 5.3-7.3 s); 0.2-5.2 is clean: pats, snow figure sinks, flowers sprout and grow, hands start rising to his cheeks. V2_T1 PASS only 3.0-7.9 (fireballs in the sky and flames at his feet 0.5-2.9 s; from 3.0 he sways laughing, arms wide, flower field spreads; on-model). Story would be only ~10 s with these, so RESTAGE PLAN for 20 Nov (one clip, 20 cr): grab the V1B_T1 frame at ~5.0 s, upload as 'TM056 K1G', make V1C i2v from it: 'he giggles with both hands on his cheeks, looking at the flowers; the flowers sway gently; camera locked-off' + full no-fire block (L55). Edit: V1B_T1 0.2-5.0 -> hard continue V1C (best ~4 s) -> dissolve V2_T1 3.0-7.9. Library EPISODES/TEN_MIRRORS/TM056 (KEYFRAMES K1, K1B, K2; TAKES V1_T1, V1B_T1, V2_T1; QC strips in cloud only). Music plan: playful nylon guitar + whistle."
+      "credits_used": 103,
+      "notes": "V01 made 20 Nov: SS_TM_FOR-NO-REASON_V01.mp4 (story 15.5 s + 4 s end card, 6.3 MB). Day 1 (19 Nov, 63 cr): K1 -> K1B (Bing crystal) PASS, K2 PASS; V1_T1 FAIL, V1B_T1 PASS 0.2-5.0, V2_T1 PASS 3.4-7.9 (L55). Day 2 (20 Nov, 40 cr): K1G = V1B frame ~5.0 s; V1C_T1 FAIL after 1.4 s (flames on both ear tips); V1D_T1 PASS 0.04-6.2 (ears described as 'soft matte parrot-like feathers', no 'phoenix'/'fire' naming, L56). RESTAGED V1 end: the giggle with hands on cheeks is its own continuous shot (hard cut from V1B at 5.0 s) instead of happening inside V1. Edit: V1B 0.2-5.0 -> hard cut V1D 0.04-6.2 -> dissolve V2_T1 3.4-7.9. Cover at 7.0 s. Music: plucked nylon guitar + whistle + glockenspiel. Library EPISODES/TEN_MIRRORS/TM056 (TAKES, KEYFRAMES, qc, source).",
+      "made_date": "2026-11-20",
+      "evening_entry": {
+        "type": "reel",
+        "video": "media/2026-12-01/evening-reel.mp4",
+        "cover": "media/2026-12-01/evening-cover.jpg",
+        "caption": "The thing you do for no reason ☀️\n\nThis is the Joy feeling: Yang Fire in a Yang Earth world. No audience, no purpose, no deadline. Just making something because it is fun.\n\nWhat is yours? Tell us below.\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #tenmirrors #joy #play #animatedshort #chineseastrology #bazi #fiveelements #yinyang",
+        "series": "ten-mirrors",
+        "status": "review"
+      }
     },
     {
       "id": "TM001",
@@ -145,7 +154,7 @@
       "world_name": "the sunlit plains",
       "feeling": "Steady money",
       "ten_god": "正財",
-      "status": "made",
+      "status": "approved",
       "made_date": "2026-11-18",
       "credits_used": 63,
       "notes": "V01 sample made 7 Nov (63 credits). V1_T1 only 0.2-3.4 usable (ears lift + crest spike after 3.6 s); V2_T1 and V3_T1 pass. 22.6 s, 5.9 MB. Library: EPISODES/TEN_MIRRORS/TM001. Waiting for Stanley; nothing scheduled. | 11 Nov: Stanley approved block one; use as made with the block-one caption; queue for review on 17 Nov (post 3 Dec). | 18 Nov: queued for review as made (V01 from 7 Nov, 22.6 s, no new credits); credits_used stays 63. Repo media/2026-12-03, cover at 9.0 s (rain cloud greening the grass). Library file kept as SS_YIN-WATER-IN-THE-SUNLIT-PLAINS_V01.mp4.",
@@ -1234,5 +1243,5 @@
   "daily_credit_cap": 80,
   "post_time_sgt": "19:00 (evening slot), Tue/Thu/Sun",
   "statuses": "todo -> made (in repo, evening status review) -> approved -> posted; or changes. made-not-queued = finished video in the library, not yet in the repo/review page.",
-  "last_run_date": "2026-11-19"
+  "last_run_date": "2026-11-20"
 }
