@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-30",
+  "status": "pending",
+  "stories": [
+    "media/2026-11-30/story1.jpg",
+    "media/2026-11-30/story2.jpg",
+    "media/2026-11-30/story3.jpg",
+    "media/2026-11-30/story4.jpg",
+    "media/2026-11-30/story-lines1.jpg",
+    "media/2026-11-30/story-lines2.jpg"
+  ],
+  "evening": {
+    "type": "reel",
+    "video": "media/2026-11-30/series-reel.mp4",
+    "cover": "media/2026-11-30/series-cover.jpg",
+    "caption": "Send this to the colleague who saw that reply-all too 📧\n\nOne email, 300 replies, and every element copes its own way: one writes the polite 'please remove me', one cracks a joke, one quietly makes a filter. Which one are you, and which one sits next to you?\n\nYour element comes from the day you were born, not your zodiac animal. Find yours free at the link in bio.\n\nWhich one is your office? Comment below.\n\n#skyandseason #innerconstellation #officelife #worklife #corporatelife #singapore #relatable #fiveelements #chineseastrology #personalitytypes",
+    "series": "reply-all"
+  }
+}

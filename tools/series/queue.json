@@ -17,7 +17,9 @@
    "hook": [
     "The aircon remote is missing.",
     "Who set it to 18?"
-   ]
+   ],
+   "spec": "tools/series/aircon-remote.json",
+   "used": "2026-11-28"
   },
   {
    "slug": "moving-day",
@@ -68,7 +70,9 @@
    "hook": [
     "Someone hit reply-all.",
     "How do you react?"
-   ]
+   ],
+   "spec": "tools/series/reply-all.json",
+   "used": "2026-11-30"
   },
   {
    "slug": "leave-balance",
@@ -102,7 +106,9 @@
    "hook": [
     "A 40-minute queue for dinner.",
     "Do you stay?"
-   ]
+   ],
+   "spec": "tools/series/dinner-queue.json",
+   "used": "2026-11-27"
   },
   {
    "slug": "splitting-the-bill",

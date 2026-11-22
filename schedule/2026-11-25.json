@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-25",
+  "status": "pending",
+  "stories": [
+    "media/2026-11-25/story1.jpg",
+    "media/2026-11-25/story2.jpg",
+    "media/2026-11-25/story3.jpg",
+    "media/2026-11-25/story4.jpg",
+    "media/2026-11-25/story-lines1.jpg",
+    "media/2026-11-25/story-lines2.jpg"
+  ],
+  "evening": {
+    "type": "reel",
+    "video": "media/2026-11-25/series-reel.mp4",
+    "cover": "media/2026-11-25/series-cover.jpg",
+    "caption": "Is this you? The one who remembers how everyone takes their kopi ☕\n\nYou may be The Nurturing Garden. In classical Chinese astrology this is Yin Earth (Ji): the soft, fertile field. Patient, practical, quietly feeding everyone around you, so people feel looked after. The catch is that you worry for everyone, so leave some of that care for yourself.\n\nThere are ten of these, and yours comes from the day you were born. Find it free in 60 seconds at the link in bio.\n\nWho remembers your kopi order? Tag them below.\n\n#skyandseason #innerconstellation #personalitytypes #selfdiscovery #selfawareness #fiveelements #yinyang #chineseastrology #bazi #astrology",
+    "series": "form-the-nurturing-garden"
+  }
+}

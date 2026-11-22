@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-27",
+  "status": "pending",
+  "stories": [
+    "media/2026-11-27/story1.jpg",
+    "media/2026-11-27/story2.jpg",
+    "media/2026-11-27/story3.jpg",
+    "media/2026-11-27/story4.jpg",
+    "media/2026-11-27/story-lines1.jpg",
+    "media/2026-11-27/story-lines2.jpg"
+  ],
+  "evening": {
+    "type": "reel",
+    "video": "media/2026-11-27/series-reel.mp4",
+    "cover": "media/2026-11-27/series-cover.jpg",
+    "caption": "Send this to the friend who always says 'it's worth the queue' 🍜\n\nForty minutes for dinner and every element handles it differently: one finds a better place, one holds the spot for everyone, one knows the owner. Which one are you, and who do you queue with?\n\nYour element comes from the day you were born, not your zodiac animal. Find yours free at the link in bio.\n\nWould you stay? Comment below.\n\n#skyandseason #innerconstellation #singaporefood #foodie #friends #relatable #fiveelements #chineseastrology #personalitytypes #bazi",
+    "series": "dinner-queue"
+  }
+}
