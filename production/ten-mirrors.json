@@ -128,7 +128,7 @@
       "world_name": "the mountain pass",
       "feeling": "Joy",
       "ten_god": "食神",
-      "status": "made",
+      "status": "approved",
       "block": 1,
       "order": 5,
       "title": "For No Reason",
@@ -1245,5 +1245,5 @@
   "daily_credit_cap": 80,
   "post_time_sgt": "19:00 (evening slot), Tue/Thu/Sun",
   "statuses": "todo -> made (in repo, evening status review) -> approved -> posted; or changes. made-not-queued = finished video in the library, not yet in the repo/review page.",
-  "last_run_date": "2026-11-23"
+  "last_run_date": "2026-11-24"
 }
