@@ -41,7 +41,7 @@
       "world_name": "the farm field",
       "feeling": "Friend",
       "ten_god": "比肩",
-      "status": "approved",
+      "status": "posted",
       "block": 1,
       "order": 2,
       "title": "Not the Only One",
@@ -58,7 +58,8 @@
         "caption": "Finding your people 🌱\n\nThis is the Friend feeling: Yin Earth in a Yin Earth world. The thing you thought was only you turns out to be the thing you share.\n\nWho is your \"same same\" person? Tag them 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #tenmirrors #friendship #mypeople #animatedshort #chineseastrology #bazi #fiveelements #yinyang",
         "series": "ten-mirrors",
         "status": "review"
-      }
+      },
+      "permalink": "https://www.instagram.com/reel/DgHvPNzithI/"
     },
     {
       "id": "TM050",
@@ -184,14 +185,24 @@
       "world_name": "the open ocean",
       "feeling": "Opportunity",
       "ten_god": "偏財",
-      "status": "todo",
+      "status": "made",
       "block": 1,
       "order": 7,
       "title": "Now or Never",
       "situation": "Taking the chance",
       "dev_date": "2026-11-18",
       "post_date": "2026-12-06",
-      "notes": "in progress 25 Nov: K1 PASS (made 25 Nov 17:21, library KEYFRAMES/TM068_K1.jpg; Flow 'Character reaching for golden shell'). K2 requested 18:05 (chained from K1). Flow balance 260 before K2."
+      "notes": "V01 made 25 Nov: SS_TM_NOW-OR-NEVER_V01.mp4 (story 13.9 s + 4 s end card, 7.7 MB). One day, 62 credits: K1 PASS, K2 PASS (chained from K1, closer: he rides a wave holding the shell up); V1_T1 PASS 0.2-6.6 (reaches, shell slips past, disappointed then determined; cut before the shell turns pale); V2_T1 FAIL (small brown pebble flies past his hand 3.2-3.6 s, L60); V2B_T1 PASS whole clip. Hard cut V1 -> V2B (he leaves the rock in the cut; the jump itself is not shown, as the plan's Veo-safe staging says). Cover at 8.5 s. Review page files e1.mp4/e1-cover.jpg. Library EPISODES/TEN_MIRRORS/TM068.",
+      "made_date": "2026-11-25",
+      "credits_used": 62,
+      "evening_entry": {
+        "type": "reel",
+        "video": "media/2026-12-06/evening-reel.mp4",
+        "cover": "media/2026-12-06/evening-cover.jpg",
+        "caption": "Now or never 🌊\n\nThis is the Opportunity feeling: Yang Earth in a Yang Water world. Some chances only pass once. The safe rock will still be there.\n\nWhat is the best chance you ever took? Tell us below.\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #tenmirrors #takethechance #opportunity #animatedshort #chineseastrology #bazi #fiveelements #yinyang",
+        "series": "ten-mirrors",
+        "status": "review"
+      }
     },
     {
       "id": "TM095",
@@ -1246,5 +1257,5 @@
   "daily_credit_cap": 80,
   "post_time_sgt": "19:00 (evening slot), Tue/Thu/Sun",
   "statuses": "todo -> made (in repo, evening status review) -> approved -> posted; or changes. made-not-queued = finished video in the library, not yet in the repo/review page.",
-  "last_run_date": "2026-11-24"
+  "last_run_date": "2026-11-25"
 }
