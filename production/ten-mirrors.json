@@ -220,7 +220,8 @@
       "situation": "The quiet one who notices",
       "dev_date": "2026-11-19",
       "post_date": "2026-12-08",
-      "notes": "in progress 26 Nov: K1 PASS, K2 (eyes to camera, low float) -> K2B PASS (floats higher, looks down at droplet; rainbow already in the still). Planned restage: V2 is face-only (no 'droplet lights up / rainbow spreads', L51/L59); rainbow is in K2B. V1_T1 from K1 generating. Credits so far 23. Library EPISODES/TEN_MIRRORS/TM095."
+      "notes": "in progress. DAILY CAP REACHED 26 Nov (64 credits spent on 26 Nov): spend nothing more on 26 Nov; resume 27 Nov. 26 Nov: K1 PASS; K2 FAIL-ish (eyes to camera, floating low) -> K2B PASS (version of the K2 item, floats higher, looks down at droplet; rainbow already in the still, L50). Planned restage of V2 (before spending): face-only, no 'droplet lights up / rainbow spreads' (L51, L59). V2_T1 from K2B PASS whole clip 0.2-7.9 (slow blink, quiet smile, droplet held at chest throughout). V1_T1 from K1 FAIL (white smoke plume rising from her crest 1.5-5.5 s). V1B_T1 from K1 FAIL (no smoke, but head turn ~2.8 s and crest stands up spiky 3.3-4.3 s; only 0.2-3.1 clean) -> L61. Restage after one retry: K1R (edit = new version of the K1 item 'Character floating in dawn garden': petals only, no white swirl trails or seeds, crest lying low and swept back, eyes towards the droplet) PASS. NEXT (27 Nov): V1C i2v from K1R with the L61 lines: head perfectly still facing the camera, only eyes and mouth move (eyes from the petal flurry down to the droplet, small smile), no head tilt; sky above her head stays clear. Then assemble: V1C -> dissolve -> V2_T1 (0.2-7.9); music_tm095.py ready in the library source folder (busy, thinning to one celesta note at the cut). Library EPISODES/TEN_MIRRORS/TM095 (KEYFRAMES K1, K2, K2B, K1R; TAKES V1_T1, V1B_T1, V2_T1).",
+      "credits_used": 64
     },
     {
       "id": "TM002",
@@ -1258,5 +1259,5 @@
   "daily_credit_cap": 80,
   "post_time_sgt": "19:00 (evening slot), Tue/Thu/Sun",
   "statuses": "todo -> made (in repo, evening status review) -> approved -> posted; or changes. made-not-queued = finished video in the library, not yet in the repo/review page.",
-  "last_run_date": "2026-11-25"
+  "last_run_date": "2026-11-26"
 }
