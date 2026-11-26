@@ -258,8 +258,10 @@ def stories(D, C, folder):
         d.text((240, y + 2), E['cards'][el]['people'], font=sans(32, 700), fill=EL_TINT[el])
         f = fit(d, E['cards'][el]['line'], 38, W - 340, lambda s: sans(s, 400), 32); yy = block(d, y + 46, E['cards'][el]['line'], f, WHITE, maxw=W - 340, align='l', x=240, lead=1.12)
         yy = int(max(yy, y + 112)); d.line([(240, yy + 12), (W - 100, yy + 12)], fill=GOLD_D + (120,), width=1); y = yy + 30
-    y += 40; d.rounded_rectangle([110, y, W - 110, y + 120], 60, fill=GOLD); d.text((W // 2, y + 60), c['invitation'], font=serif(52, 500), fill=INK0, anchor='mm')
+    y += (24 if c.get('year_line') else 40); d.rounded_rectangle([110, y, W - 110, y + 120], 60, fill=GOLD); d.text((W // 2, y + 60), c['invitation'], font=serif(52, 500), fill=INK0, anchor='mm')
     d.text((W // 2, y + 190), c['link_line'], font=sans(38, 600), fill=GOLD_L, anchor='mm')
+    if c.get('year_line'):  # optional pointer to the site's year mark (26 Nov 2026); the Latin font has no → glyph
+        block(d, y + 232, c['year_line'].replace('→', '›'), sans(34, 400), SOFT, maxw=W - 200, lead=1.25)
     im.convert('RGB').save(f'{folder}/story3.jpg', quality=92)
 
 if __name__ == '__main__':
