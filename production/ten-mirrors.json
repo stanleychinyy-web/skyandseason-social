@@ -219,7 +219,8 @@
       "title": "Just Watching",
       "situation": "The quiet one who notices",
       "dev_date": "2026-11-19",
-      "post_date": "2026-12-08"
+      "post_date": "2026-12-08",
+      "notes": "in progress 26 Nov: K1 PASS, K2 (eyes to camera, low float) -> K2B PASS (floats higher, looks down at droplet; rainbow already in the still). Planned restage: V2 is face-only (no 'droplet lights up / rainbow spreads', L51/L59); rainbow is in K2B. V1_T1 from K1 generating. Credits so far 23. Library EPISODES/TEN_MIRRORS/TM095."
     },
     {
       "id": "TM002",
