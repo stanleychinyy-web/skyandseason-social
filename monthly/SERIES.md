@@ -31,7 +31,7 @@ A separate, premium monthly series, built to reach new people (it may be boosted
   | Month | Made | Reviewed | Posts |
   | --- | --- | --- | --- |
   | November 2026 | 18 Oct | 18 Oct (first one, a day late) | Sat 31 Oct |
-  | December 2026 | Sat 14 Nov | Sun 15 Nov | Mon 30 Nov |
+  | December 2026 | Thu 26 Nov (catch-up: the 14 Nov run made nothing) | from 26 Nov | Mon 30 Nov |
   | January 2027 | Sat 12 Dec | Sun 13 Dec | Thu 31 Dec |
 
 ## Calendar rules
@@ -85,7 +85,7 @@ A separate, premium monthly series, built to reach new people (it may be boosted
 Instagram API stories cannot carry stickers.
 1. **Teaser:** kicker, 2-line headline, a line, and a pointer to the reel on the feed.
 2. **Question:** 4 options; people reply with the number. A `native_poll` version is also given so Stanley can add a real poll by hand if he wants.
-3. **Conversion:** the five element groups with their plain month line, "Discover Your Monthly Energy", and "Free at the link in bio · skyandseason.com".
+3. **Conversion:** the five element groups with their plain month line, "Discover Your Monthly Energy", and "Free at the link in bio · skyandseason.com". Optional `year_line` (from Dec 2026): a pointer to the site's 2027 year mark, drawn under the link line (the renderer swaps → for › because the Latin font has no arrow).
 
 ### content.json keys (schema v2)
 `hook[2]`, `intro{line1, line2}`, `energy{sky_name, sky_plain, sky_label, season_name, season_plain, season_label, image, meaning}`, `themes[3]`, `opportunity`, `challenge`, `elements{intro1, intro2, cards{Wood, Fire, Earth, Metal, Water: {people, line}}}`, `close[2]`, `stories{teaser{kicker ≤ 34, headline[2 ≤ 24], line ≤ 80, pointer ≤ 40}, question{question ≤ 44, options[4 ≤ 18], reply_line ≤ 40, native_poll}, conversion{headline ≤ 34, line ≤ 96, invitation, link_line}}`, `reel_caption`, `alt_text`, `story_alt[3]`, `report_md`, `promotion`, `qa`.
