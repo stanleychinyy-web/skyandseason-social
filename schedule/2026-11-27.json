@@ -1,19 +1,20 @@
 {
-  "date": "2026-11-27",
-  "status": "approved",
-  "stories": [
-    "media/2026-11-27/story1.jpg",
-    "media/2026-11-27/story2.jpg",
-    "media/2026-11-27/story3.jpg",
-    "media/2026-11-27/story4.jpg",
-    "media/2026-11-27/story-lines1.jpg",
-    "media/2026-11-27/story-lines2.jpg"
-  ],
-  "evening": {
-    "type": "reel",
-    "video": "media/2026-11-27/series-reel.mp4",
-    "cover": "media/2026-11-27/series-cover.jpg",
-    "caption": "Send this to the friend who always says 'it's worth the queue' 🍜\n\nForty minutes for dinner and every element handles it differently: one finds a better place, one holds the spot for everyone, one knows the owner. Which one are you, and who do you queue with?\n\nYour element comes from the day you were born, not your zodiac animal. Find yours free at the link in bio.\n\nWould you stay? Comment below.\n\n#skyandseason #innerconstellation #singaporefood #foodie #friends #relatable #fiveelements #chineseastrology #personalitytypes #bazi",
-    "series": "dinner-queue"
-  }
+ "date": "2026-11-27",
+ "status": "approved",
+ "stories": [
+  "media/2026-11-27/story1.jpg",
+  "media/2026-11-27/story2.jpg",
+  "media/2026-11-27/story3.jpg",
+  "media/2026-11-27/story4.jpg",
+  "media/2026-11-27/story-lines1.jpg",
+  "media/2026-11-27/story-lines2.jpg"
+ ],
+ "evening": {
+  "type": "reel",
+  "video": "media/2026-11-27/series-reel.mp4",
+  "cover": "media/2026-11-27/series-cover.jpg",
+  "caption": "Send this to the friend already planning 2027 🏮\n\n2027 is Ding Wei, the Yin Fire Goat. Its element is Yin Fire: a candle or a lamp, warm and focused rather than blazing. Its animal is the Goat, warm summer earth: gentle, creative and home-loving. Together they make a year for craft, care and finishing well, not for rushing.\n\nBut the year treats every chart differently. Get your free chart at skyandseason.com (link in bio), open Calendar, go to February 2027 and see your own 2027 mark: Good, Steady or Care, for work, money and love.\n\nWhat's your 2027 word? Comment below.\n\n#skyandseason #innerconstellation #2027 #yearofthegoat #chinesenewyear2027 #chinesezodiac #bazi #fengshui #chineseastrology #singapore",
+  "series": "y2027-what-is-2027",
+  "status": "review"
+ }
 }

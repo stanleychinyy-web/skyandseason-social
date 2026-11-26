@@ -19,7 +19,7 @@
     "Who set it to 18?"
    ],
    "spec": "tools/series/aircon-remote.json",
-   "used": "2026-11-28"
+   "note": "Built for 27-30 Nov 2026 but replaced by the 2027 series before posting; spec and reel kept in tools/series/ and git history. Reuse from April 2027."
   },
   {
    "slug": "moving-day",
@@ -72,7 +72,7 @@
     "How do you react?"
    ],
    "spec": "tools/series/reply-all.json",
-   "used": "2026-11-30"
+   "note": "Built for 27-30 Nov 2026 but replaced by the 2027 series before posting; spec and reel kept in tools/series/ and git history. Reuse from April 2027."
   },
   {
    "slug": "leave-balance",
@@ -108,7 +108,7 @@
     "Do you stay?"
    ],
    "spec": "tools/series/dinner-queue.json",
-   "used": "2026-11-27"
+   "note": "Built for 27-30 Nov 2026 but replaced by the 2027 series before posting; spec and reel kept in tools/series/ and git history. Reuse from April 2027."
   },
   {
    "slug": "splitting-the-bill",

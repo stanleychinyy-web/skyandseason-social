@@ -24,6 +24,10 @@ Format v6 (from 18 Nov 2026; Stanley agreed the growth plan on 11 Nov): shorter 
       Sunday: the 12 animals in four cards grouped by how today treats them, about 24 s
   python3 tools/reels/reel5.py lines <date>                               -> media/<date>/story-lines1.jpg, story-lines2.jpg
       the ten per-element lines of the day as two story pages (the daily reading now lives in the 06:00 stories)
+
+2027 series (from 27 Nov 2026 to Mar 2027, 7pm Mon/Wed/Fri/Sat; plan: tools/y2027/PLAN.md):
+  python3 tools/reels/reel5.py y27 tools/y2027/<slug>.json <date>        -> media/<date>/series-reel.mp4 + series-cover.jpg
+      hook, 2-5 cards, then the three-step "your 2027 mark" close that sends people to the site
 """
 import json, sys, os, subprocess, tempfile, shutil, datetime, math, random, glob
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
@@ -238,7 +242,7 @@ def encode(frames, total, out):
 
 def render(hook, cards, close, out_video, out_cover, card_len=CARD):
     """hook: {img, date, lead, line, note}; cards: [{img|designed, kicker, title, who, pill, head, body, accent?}]; close: {line, sub, head, body, img|designed}."""
-    HOOK = 1.5 * BAR; CLOSE = 1.5 * BAR; n = len(cards); total = HOOK + n * card_len + CLOSE
+    HOOK = 1.5 * BAR; CLOSE = close.get('len', 1.5 * BAR); n = len(cards); total = HOOK + n * card_len + CLOSE
     frames = tempfile.mkdtemp()
     for fr in range(int(total * FPS) + 1):
         t = fr / FPS
@@ -268,7 +272,8 @@ def render(hook, cards, close, out_video, out_cover, card_len=CARD):
             im = scene_bg(c['img'], lt / CLOSE) if c.get('img') else c['designed'].frame(lt); d = ImageDraw.Draw(im)
             y = pop(im, 70, 200, c['line'], fit(d, c['line'], 96, W - 140, 3), WHITE, lt, per=0.07)
             if lt > 0.9: pop(im, 70, y + 20, c['sub'], F(62, 500), WARM, lt, per=0.07, start=0.9)
-            card_panel(im, 1420, c['head'], c['body'], lt, 1.4)
+            if c.get('rows'): rows_panel(im, 1180, c['rows'], lt, 1.2, accent=c.get('accent_deep'))
+            else: card_panel(im, 1420, c['head'], c['body'], lt, 1.4)
         ImageDraw.Draw(im).rectangle([0, H - 14, int(W * t / total), H], fill=GOLD)
         if abs(t - 1.4) < 0.5 / FPS: im.convert('RGB').save(out_cover, quality=92)
         im.convert('RGB').save(f'{frames}/{fr:05d}.jpg', quality=90)
@@ -525,6 +530,46 @@ def lines_story(date):
     print('lines stories', out)
 
 
+# ---------- 2027 series (Dec 2026 - Mar 2027; Stanley, 26 Nov: the 7pm reels focus on the 2027 Fire Goat year
+# and sell the site's own year mark: free account -> Calendar -> Feb 2027 -> Good / Steady / Care for work, money, love) ----------
+ANIMALS = ['Rat', 'Ox', 'Tiger', 'Rabbit', 'Dragon', 'Snake', 'Horse', 'Goat', 'Monkey', 'Rooster', 'Dog', 'Pig']
+Y27_CTA = [('STEP 1 · FREE', 'Get your chart at skyandseason.com'), ('STEP 2', 'Open Calendar and go to February 2027'),
+           ('STEP 3', 'See your 2027 mark: Good, Steady or Care')]
+
+def animal_tile(nm, size=720):
+    """A zodiac animal portrait from the library tools/assets/animals/<name>.png (cut from a ChatGPT grid), white-framed."""
+    t = Image.open(f'{ASSETS}/animals/{nm.lower()}.png').convert('RGBA'); return t.resize((size, int(t.height * size / t.width)), Image.LANCZOS)
+
+def y27_designed(c, seed):
+    if c.get('animal'): return Designed(None, seed, el=c.get('el', 'Earth'), fig=animal_tile(c['animal']))
+    if c.get('form'):
+        si = {name(i): i for i in range(10)}[c['form']]; return Designed(si, seed)
+    return Duo(c.get('el', 'Fire'), seed)
+
+def y27(spec_path, date):
+    """2027 reel: hook (a ChatGPT scene at media/<date>/art5e/hook.png, else designed), 2-5 cards, then the site's
+    three-step 'your 2027 mark' close. Spec: tools/y2027/<slug>.json {tag, hook[2], note, cards[{kicker, title, who, pill,
+    head, body, form|animal|el}], cover_form, cta{line, sub}, caption}. Cards may have their own scene art5e/0N-*.png."""
+    sp = json.load(open(spec_path, encoding='utf-8')); A = f'{ROOT}/media/{date}/art5e'; cards = []
+    cover = sp.get('cover_form', 'Yin Fire')
+    for i, c in enumerate(sp['cards']):
+        d = dict(kicker=c['kicker'], title=c['title'], title_lines=c.get('title_lines', 1), who=c.get('who', ''), pill=c.get('pill', ''),
+                 head=c['head'], body=c.get('body', ''), accent=c.get('accent') and tuple(c['accent']))
+        if d['accent'] is None: d.pop('accent')
+        img = art(A, f'{i + 1:02d}-')
+        if img: d['img'] = img
+        else: d['designed'] = y27_designed(c, f'{date}-y{i}')
+        cards.append(d)
+    first = art(A, 'hook')
+    if not first: print(f'WARNING: no SCENE image in {A}/hook.png; designed hook (fallback)')
+    hook = dict(img=first, designed=None if first else y27_designed({'form': cover}, f'{date}-yhook'), date=sp.get('tag', '2027 · THE FIRE GOAT YEAR'),
+                lead=sp['hook'][0], line=sp['hook'][1], note=sp.get('note', 'What it means for you…'))
+    cta = sp.get('cta', {})
+    close = dict(line=cta.get('line', "What's YOUR 2027 mark?"), sub=cta.get('sub', 'Every chart meets 2027 differently.'), rows=Y27_CTA,
+                 accent_deep=DEEP['Fire'], designed=y27_designed({'form': cover}, f'{date}-yclose'), len=2 * BAR)
+    out = f'{ROOT}/media/{date}'; os.makedirs(out, exist_ok=True)
+    render(hook, cards, close, f'{out}/series-reel.mp4', f'{out}/series-cover.jpg', card_len=sp.get('card_len', CARD))
+
 def clip(date, source='reel'):
     """9pm video story: the hook + first card(s), then an end card sending people to the full reel."""
     out = f'{ROOT}/media/{date}'; dt = datetime.date.fromisoformat(date); s, b = day(dt)
@@ -564,4 +609,5 @@ if __name__ == '__main__':
     elif k == 'form': form_reel(sys.argv[2], sys.argv[3])
     elif k == 'animals': animals(sys.argv[2])
     elif k == 'lines': lines_story(sys.argv[2])
+    elif k == 'y27': y27(sys.argv[2], sys.argv[3])
     else: raise SystemExit('sky|season|ranking|series|clip|picks|situation|form|animals|lines')

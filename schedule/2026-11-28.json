@@ -1,19 +1,20 @@
 {
-  "date": "2026-11-28",
-  "status": "approved",
-  "stories": [
-    "media/2026-11-28/story1.jpg",
-    "media/2026-11-28/story2.jpg",
-    "media/2026-11-28/story3.jpg",
-    "media/2026-11-28/story4.jpg",
-    "media/2026-11-28/story-lines1.jpg",
-    "media/2026-11-28/story-lines2.jpg"
-  ],
-  "evening": {
-    "type": "reel",
-    "video": "media/2026-11-28/series-reel.mp4",
-    "cover": "media/2026-11-28/series-cover.jpg",
-    "caption": "Send this to the one who always hides the aircon remote ❄️\n\nThe remote is gone, the room is at 18 and every element reacts in its own way: one searches every cushion, one bought a spare, one just opens the windows. Which one are you, and who do you live with?\n\nYour element comes from the day you were born, not your zodiac animal. Find yours free at the link in bio.\n\nWho controls the aircon at your place? Comment below.\n\n#skyandseason #innerconstellation #hdb #singapore #homelife #family #relatable #fiveelements #chineseastrology #fengshui",
-    "series": "aircon-remote"
-  }
+ "date": "2026-11-28",
+ "status": "approved",
+ "stories": [
+  "media/2026-11-28/story1.jpg",
+  "media/2026-11-28/story2.jpg",
+  "media/2026-11-28/story3.jpg",
+  "media/2026-11-28/story4.jpg",
+  "media/2026-11-28/story-lines1.jpg",
+  "media/2026-11-28/story-lines2.jpg"
+ ],
+ "evening": {
+  "type": "reel",
+  "video": "media/2026-11-28/series-reel.mp4",
+  "cover": "media/2026-11-28/series-cover.jpg",
+  "caption": "Send this to the friend born in January who thinks they know their animal 📅\n\nIn Chinese astrology the year doesn't turn on 1 January, and not on Chinese New Year either. It turns at the start of spring, when the sun reaches its spring point: Thursday 4 February 2027, 9:46 am Singapore time. Chinese New Year follows the moon and falls on Saturday 6 February.\n\nBorn between 1 January and early February? Your animal may be the year before. Your free chart at skyandseason.com (link in bio) works it out to the minute, and its Calendar shows your own 2027 mark: Good, Steady or Care.\n\nBorn in January or February? Comment your birthday month below.\n\n#skyandseason #innerconstellation #2027 #chinesenewyear2027 #lichun #chinesezodiac #bazi #chineseastrology #zodiacfacts #singapore",
+  "series": "y2027-2027-starts-4-feb",
+  "status": "review"
+ }
 }

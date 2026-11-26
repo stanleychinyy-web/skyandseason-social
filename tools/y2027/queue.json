@@ -1,0 +1,795 @@
+[
+ {
+  "date": "2026-11-27",
+  "dow": "Fri",
+  "series": "explainer",
+  "slug": "what-is-2027",
+  "hook": "2027 is a Fire Goat year. Here's what that means.",
+  "angle": "Yin Fire (candle) over the Goat (warm summer earth).",
+  "spec": "what-is-2027.json",
+  "used": true
+ },
+ {
+  "date": "2026-11-28",
+  "dow": "Sat",
+  "series": "explainer",
+  "slug": "2027-starts-4-feb",
+  "hook": "Your 2027 doesn't start on 1 Jan.",
+  "angle": "Start of spring Thu 4 Feb 2027 09:46 SGT; CNY Sat 6 Feb; Jan/early-Feb births take the year before.",
+  "spec": "2027-starts-4-feb.json",
+  "used": true
+ },
+ {
+  "date": "2026-11-30",
+  "dow": "Mon",
+  "series": "explainer",
+  "slug": "sun-to-candle",
+  "hook": "2026 burned like the sun. 2027 glows like a lamp.",
+  "angle": "Bing Wu -> Ding Wei; Horse-Goat pair: 2027 finishes 2026.",
+  "spec": "sun-to-candle.json",
+  "used": true
+ },
+ {
+  "date": "2026-12-02",
+  "dow": "Wed",
+  "series": "explainer",
+  "slug": "heavenly-river",
+  "hook": "A fire year with hidden water.",
+  "angle": "The year's sound element (nayin) of Bing Wu/Ding Wei is Heavenly River Water: rain from the sky on a fire year. Cooling, timing, emotions.",
+  "fig": "Yin Water",
+  "used": false
+ },
+ {
+  "date": "2026-12-04",
+  "dow": "Fri",
+  "series": "explainer",
+  "slug": "four-meet-tai-sui",
+  "hook": "Goat, Ox, Rat, Dog: 2027 is your \"meet the boss\" year.",
+  "angle": "Tai Sui = the year's ruler. Goat sits with it, Ox clashes, Rat harm, Dog punishment/break. Not bad luck: a year to move with care. Balanced: what each is good for.",
+  "animals": [
+   "Goat",
+   "Ox",
+   "Rat",
+   "Dog"
+  ],
+  "used": false
+ },
+ {
+  "date": "2026-12-05",
+  "dow": "Sat",
+  "series": "explainer",
+  "slug": "three-words",
+  "hook": "2027 in three words.",
+  "angle": "Warm. Focused. Finish. (Candle, Goat, Horse-Goat pair.) Ask viewers for their word.",
+  "fig": "Yin Fire",
+  "used": false
+ },
+ {
+  "date": "2026-12-07",
+  "dow": "Mon",
+  "series": "animal",
+  "slug": "animal-ox",
+  "hook": "Born in a Ox year? Here's your 2027.",
+  "angle": "Goat vs Ox: clash (Chou-Wei). Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "animals": [
+   "Ox"
+  ],
+  "el": "Earth",
+  "used": false
+ },
+ {
+  "date": "2026-12-09",
+  "dow": "Wed",
+  "series": "animal",
+  "slug": "animal-goat",
+  "hook": "Born in a Goat year? Here's your 2027.",
+  "angle": "Goat vs Goat: own year (sits with the Tai Sui). Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "animals": [
+   "Goat"
+  ],
+  "el": "Earth",
+  "used": false
+ },
+ {
+  "date": "2026-12-11",
+  "dow": "Fri",
+  "series": "animal",
+  "slug": "animal-rat",
+  "hook": "Born in a Rat year? Here's your 2027.",
+  "angle": "Goat vs Rat: harm (Zi-Wei). Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "animals": [
+   "Rat"
+  ],
+  "el": "Water",
+  "used": false
+ },
+ {
+  "date": "2026-12-12",
+  "dow": "Sat",
+  "series": "animal",
+  "slug": "animal-dog",
+  "hook": "Born in a Dog year? Here's your 2027.",
+  "angle": "Goat vs Dog: punishment + break (Xu-Wei). Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "animals": [
+   "Dog"
+  ],
+  "el": "Earth",
+  "used": false
+ },
+ {
+  "date": "2026-12-14",
+  "dow": "Mon",
+  "series": "economy",
+  "slug": "last-ding-wei-1967",
+  "hook": "The last Ding Wei year was 1967.",
+  "angle": "Singapore issued its first own currency notes (12 Jun 1967); ASEAN founded (8 Aug 1967). Building foundations. No predictions.",
+  "fig": "Yang Earth",
+  "used": false
+ },
+ {
+  "date": "2026-12-16",
+  "dow": "Wed",
+  "series": "animal",
+  "slug": "animal-horse",
+  "hook": "Born in a Horse year? Here's your 2027.",
+  "angle": "Goat vs Horse: best partner (Wu-Wei pair). Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "animals": [
+   "Horse"
+  ],
+  "el": "Fire",
+  "used": false
+ },
+ {
+  "date": "2026-12-18",
+  "dow": "Fri",
+  "series": "animal",
+  "slug": "animal-rabbit",
+  "hook": "Born in a Rabbit year? Here's your 2027.",
+  "angle": "Goat vs Rabbit: team (Hai-Mao-Wei). Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "animals": [
+   "Rabbit"
+  ],
+  "el": "Wood",
+  "used": false
+ },
+ {
+  "date": "2026-12-19",
+  "dow": "Sat",
+  "series": "animal",
+  "slug": "animal-pig",
+  "hook": "Born in a Pig year? Here's your 2027.",
+  "angle": "Goat vs Pig: team (Hai-Mao-Wei). Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "animals": [
+   "Pig"
+  ],
+  "el": "Water",
+  "used": false
+ },
+ {
+  "date": "2026-12-21",
+  "dow": "Mon",
+  "series": "myth",
+  "slug": "clash-year-myth",
+  "hook": "Is a clash year a bad year?",
+  "angle": "No: a clash is movement. Good for moves, change, travel; hard on forcing things. Balanced.",
+  "animals": [
+   "Ox"
+  ],
+  "used": false
+ },
+ {
+  "date": "2026-12-23",
+  "dow": "Wed",
+  "series": "animal",
+  "slug": "animal-tiger",
+  "hook": "Born in a Tiger year? Here's your 2027.",
+  "angle": "Goat vs Tiger: steady. Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "animals": [
+   "Tiger"
+  ],
+  "el": "Wood",
+  "used": false
+ },
+ {
+  "date": "2026-12-25",
+  "dow": "Fri",
+  "series": "animal",
+  "slug": "animal-dragon",
+  "hook": "Born in a Dragon year? Here's your 2027.",
+  "angle": "Goat vs Dragon: steady. Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "animals": [
+   "Dragon"
+  ],
+  "el": "Earth",
+  "used": false
+ },
+ {
+  "date": "2026-12-26",
+  "dow": "Sat",
+  "series": "animal",
+  "slug": "animal-snake",
+  "hook": "Born in a Snake year? Here's your 2027.",
+  "angle": "Goat vs Snake: steady. Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "animals": [
+   "Snake"
+  ],
+  "el": "Fire",
+  "used": false
+ },
+ {
+  "date": "2026-12-28",
+  "dow": "Mon",
+  "series": "animal",
+  "slug": "animal-monkey",
+  "hook": "Born in a Monkey year? Here's your 2027.",
+  "angle": "Goat vs Monkey: steady. Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "animals": [
+   "Monkey"
+  ],
+  "el": "Metal",
+  "used": false
+ },
+ {
+  "date": "2026-12-30",
+  "dow": "Wed",
+  "series": "animal",
+  "slug": "animal-rooster",
+  "hook": "Born in a Rooster year? Here's your 2027.",
+  "angle": "Goat vs Rooster: steady. Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "animals": [
+   "Rooster"
+  ],
+  "el": "Metal",
+  "used": false
+ },
+ {
+  "date": "2027-01-01",
+  "dow": "Fri",
+  "series": "animal",
+  "slug": "animals-go-slow",
+  "hook": "The 4 animals who should take 2027 slowly.",
+  "angle": "Goat, Ox, Rat, Dog — kind framing, each with its upside.",
+  "animals": [
+   "Goat",
+   "Ox",
+   "Rat",
+   "Dog"
+  ],
+  "used": false
+ },
+ {
+  "date": "2027-01-02",
+  "dow": "Sat",
+  "series": "animal",
+  "slug": "animals-easy",
+  "hook": "The 3 animals with the easiest start to 2027.",
+  "angle": "Horse (pair), Rabbit and Pig (team).",
+  "animals": [
+   "Horse",
+   "Rabbit",
+   "Pig"
+  ],
+  "used": false
+ },
+ {
+  "date": "2027-01-04",
+  "dow": "Mon",
+  "series": "economy",
+  "slug": "fire-industries",
+  "hook": "A Fire year: which work does tradition favour?",
+  "angle": "Fire = light, screens, energy, media, beauty, tech. Traditional association only; not financial advice.",
+  "fig": "Yang Fire",
+  "used": false
+ },
+ {
+  "date": "2027-01-06",
+  "dow": "Wed",
+  "series": "element",
+  "slug": "element-yin-metal",
+  "hook": "Born on a Yin Metal day? 2027 is your pressure year.",
+  "angle": "Ding brings Yin Metal the Pressure force. Strength + catch + one tip. Explain \"the element of the day you were born\".",
+  "fig": "Yin Metal",
+  "used": false
+ },
+ {
+  "date": "2027-01-08",
+  "dow": "Fri",
+  "series": "element",
+  "slug": "element-yang-metal",
+  "hook": "Born on a Yang Metal day? 2027 is your recognition year.",
+  "angle": "Ding brings Yang Metal the Recognition force. Strength + catch + one tip. Explain \"the element of the day you were born\".",
+  "fig": "Yang Metal",
+  "used": false
+ },
+ {
+  "date": "2027-01-09",
+  "dow": "Sat",
+  "series": "element",
+  "slug": "element-yin-water",
+  "hook": "Born on a Yin Water day? 2027 is your opportunity year.",
+  "angle": "Ding brings Yin Water the Opportunity force. Strength + catch + one tip. Explain \"the element of the day you were born\".",
+  "fig": "Yin Water",
+  "used": false
+ },
+ {
+  "date": "2027-01-11",
+  "dow": "Mon",
+  "series": "element",
+  "slug": "element-yang-water",
+  "hook": "Born on a Yang Water day? 2027 is your steady money year.",
+  "angle": "Ding brings Yang Water the Steady money (+ the Ding-Ren pairing) force. Strength + catch + one tip. Explain \"the element of the day you were born\".",
+  "fig": "Yang Water",
+  "used": false
+ },
+ {
+  "date": "2027-01-13",
+  "dow": "Wed",
+  "series": "element",
+  "slug": "element-yang-wood",
+  "hook": "Born on a Yang Wood day? 2027 is your speak-up year.",
+  "angle": "Ding brings Yang Wood the Speak-up force. Strength + catch + one tip. Explain \"the element of the day you were born\".",
+  "fig": "Yang Wood",
+  "used": false
+ },
+ {
+  "date": "2027-01-15",
+  "dow": "Fri",
+  "series": "ask",
+  "slug": "ask-love",
+  "hook": "Is 2027 a good year to get married?",
+  "angle": "The general traditional view, then: it depends on your chart. Calendar -> Feb 2027 -> love pill shows your mark.",
+  "fig": "Yin Fire",
+  "question": "love",
+  "used": false
+ },
+ {
+  "date": "2027-01-16",
+  "dow": "Sat",
+  "series": "element",
+  "slug": "element-yang-fire",
+  "hook": "Born on a Yang Fire day? 2027 is your rival year.",
+  "angle": "Ding brings Yang Fire the Rival force. Strength + catch + one tip. Explain \"the element of the day you were born\".",
+  "fig": "Yang Fire",
+  "used": false
+ },
+ {
+  "date": "2027-01-18",
+  "dow": "Mon",
+  "series": "element",
+  "slug": "element-yin-wood",
+  "hook": "Born on a Yin Wood day? 2027 is your joy year.",
+  "angle": "Ding brings Yin Wood the Joy force. Strength + catch + one tip. Explain \"the element of the day you were born\".",
+  "fig": "Yin Wood",
+  "used": false
+ },
+ {
+  "date": "2027-01-20",
+  "dow": "Wed",
+  "series": "element",
+  "slug": "element-yin-fire",
+  "hook": "Born on a Yin Fire day? 2027 is your friend year.",
+  "angle": "Ding brings Yin Fire the Friend force. Strength + catch + one tip. Explain \"the element of the day you were born\".",
+  "fig": "Yin Fire",
+  "used": false
+ },
+ {
+  "date": "2027-01-22",
+  "dow": "Fri",
+  "series": "element",
+  "slug": "element-yang-earth",
+  "hook": "Born on a Yang Earth day? 2027 is your support year.",
+  "angle": "Ding brings Yang Earth the Support force. Strength + catch + one tip. Explain \"the element of the day you were born\".",
+  "fig": "Yang Earth",
+  "used": false
+ },
+ {
+  "date": "2027-01-23",
+  "dow": "Sat",
+  "series": "element",
+  "slug": "element-yin-earth",
+  "hook": "Born on a Yin Earth day? 2027 is your insight year.",
+  "angle": "Ding brings Yin Earth the Insight force. Strength + catch + one tip. Explain \"the element of the day you were born\".",
+  "fig": "Yin Earth",
+  "used": false
+ },
+ {
+  "date": "2027-01-25",
+  "dow": "Mon",
+  "series": "element",
+  "slug": "elements-one-word",
+  "hook": "The 10 elements in 2027, one word each.",
+  "angle": "All ten forces in plain words; ends: find yours.",
+  "fig": "Yin Fire",
+  "used": false
+ },
+ {
+  "date": "2027-01-27",
+  "dow": "Wed",
+  "series": "ask",
+  "slug": "ask-work",
+  "hook": "Is 2027 a good year to change jobs?",
+  "angle": "The general traditional view, then: it depends on your chart. Calendar -> Feb 2027 -> work pill shows your mark.",
+  "fig": "Yin Fire",
+  "question": "work",
+  "used": false
+ },
+ {
+  "date": "2027-01-29",
+  "dow": "Fri",
+  "series": "months",
+  "slug": "months-feb-apr",
+  "hook": "2027, Feb to Apr: the growing months.",
+  "angle": "Ren Yin, Gui Mao, Jia Chen: Wood months feed the year's fire. Start things.",
+  "fig": "Yang Wood",
+  "used": false
+ },
+ {
+  "date": "2027-01-30",
+  "dow": "Sat",
+  "series": "dayanimal",
+  "slug": "day-animal-intro",
+  "hook": "Your love life in 2027 isn't about your year animal.",
+  "angle": "The day animal (the branch of the day you were born) is the partner palace. Find it free on the chart.",
+  "fig": "Yin Wood",
+  "used": false
+ },
+ {
+  "date": "2027-02-01",
+  "dow": "Mon",
+  "series": "dayanimal",
+  "slug": "day-ox",
+  "hook": "Day animal Ox? 2027 shakes up home and partner.",
+  "angle": "Goat clashes Ox in the partner palace: moves, changes; talk early.",
+  "animals": [
+   "Ox"
+  ],
+  "used": false
+ },
+ {
+  "date": "2027-02-03",
+  "dow": "Wed",
+  "series": "special",
+  "slug": "before-4-feb",
+  "hook": "Do these 3 things before 4 Feb.",
+  "angle": "Clear one corner, close one loop, write one goal (general, not superstition).",
+  "fig": "Yang Wood",
+  "near": "2027-02-03",
+  "used": false
+ },
+ {
+  "date": "2027-02-05",
+  "dow": "Fri",
+  "series": "dayanimal",
+  "slug": "day-horse",
+  "hook": "Day animal Horse? 2027 pairs with your partner palace.",
+  "angle": "Wu-Wei pair: good for commitment, meeting people.",
+  "animals": [
+   "Horse"
+  ],
+  "used": false
+ },
+ {
+  "date": "2027-02-06",
+  "dow": "Sat",
+  "series": "special",
+  "slug": "goat-new-year",
+  "hook": "Happy Fire Goat year!",
+  "angle": "CNY greeting reel; the 12 animals; find your 2027 mark.",
+  "animals": [
+   "Goat"
+  ],
+  "near": "2027-02-06",
+  "used": false
+ },
+ {
+  "date": "2027-02-08",
+  "dow": "Mon",
+  "series": "economy",
+  "slug": "earth-industries",
+  "hook": "The Goat is Earth: land, food, home.",
+  "angle": "Earth = property, construction, food, logistics. Traditional view; not advice.",
+  "fig": "Yang Earth",
+  "used": false
+ },
+ {
+  "date": "2027-02-10",
+  "dow": "Wed",
+  "series": "dayanimal",
+  "slug": "day-team",
+  "hook": "Day animal Rabbit or Pig? Easy company in 2027.",
+  "angle": "Hai-Mao-Wei team.",
+  "animals": [
+   "Rabbit",
+   "Pig"
+  ],
+  "used": false
+ },
+ {
+  "date": "2027-02-12",
+  "dow": "Fri",
+  "series": "dayanimal",
+  "slug": "day-friction",
+  "hook": "Day animal Rat or Dog? Small rubs at home in 2027.",
+  "angle": "Zi-Wei harm, Xu-Wei punishment/break: patience, not drama.",
+  "animals": [
+   "Rat",
+   "Dog"
+  ],
+  "used": false
+ },
+ {
+  "date": "2027-02-13",
+  "dow": "Sat",
+  "series": "dayanimal",
+  "slug": "day-goat",
+  "hook": "Day animal Goat? 2027 holds up a mirror.",
+  "angle": "Own-branch year: self-reflection in relationships.",
+  "animals": [
+   "Goat"
+  ],
+  "used": false
+ },
+ {
+  "date": "2027-02-15",
+  "dow": "Mon",
+  "series": "ask",
+  "slug": "ask-money",
+  "hook": "Is 2027 a good year to start a business?",
+  "angle": "The general traditional view, then: it depends on your chart. Calendar -> Feb 2027 -> money pill shows your mark.",
+  "fig": "Yin Fire",
+  "question": "money",
+  "used": false
+ },
+ {
+  "date": "2027-02-17",
+  "dow": "Wed",
+  "series": "home",
+  "slug": "home-heavy-north",
+  "hook": "2027: let the north of your home rest.",
+  "angle": "Annual heavy ground (5) in the North: no drilling or reno there; keep calm, tidy.",
+  "fig": "Yang Earth",
+  "used": false
+ },
+ {
+  "date": "2027-02-19",
+  "dow": "Fri",
+  "series": "home",
+  "slug": "home-west-rest",
+  "hook": "The west side of your home needs quiet in 2027.",
+  "angle": "Tired ground (2) and the three cold winds in the West.",
+  "fig": "Yin Earth",
+  "used": false
+ },
+ {
+  "date": "2027-02-20",
+  "dow": "Sat",
+  "series": "home",
+  "slug": "home-tai-sui",
+  "hook": "Don't face the boss: the Tai Sui sits southwest in 2027.",
+  "angle": "Tai Sui SW, its shadow NE: don't start renovation there; sitting with your back to it is fine.",
+  "fig": "Yang Earth",
+  "used": false
+ },
+ {
+  "date": "2027-02-22",
+  "dow": "Mon",
+  "series": "economy",
+  "slug": "goat-economy",
+  "hook": "The Goat economy: care, craft and comfort.",
+  "angle": "Goat = arts, wellness, caregiving, home. Traditional view.",
+  "animals": [
+   "Goat"
+  ],
+  "used": false
+ },
+ {
+  "date": "2027-02-24",
+  "dow": "Wed",
+  "series": "ask",
+  "slug": "ask-study",
+  "hook": "Is 2027 a good year to study?",
+  "angle": "The general traditional view, then: it depends on your chart. Calendar -> Feb 2027 -> study pill shows your mark.",
+  "fig": "Yin Fire",
+  "question": "study",
+  "used": false
+ },
+ {
+  "date": "2027-02-26",
+  "dow": "Fri",
+  "series": "months",
+  "slug": "months-may-jul",
+  "hook": "2027, May to Jul: the hottest stretch.",
+  "angle": "Yi Si, Bing Wu, Ding Wei: fire peaks; pace yourself.",
+  "fig": "Yang Fire",
+  "used": false
+ },
+ {
+  "date": "2027-02-27",
+  "dow": "Sat",
+  "series": "ask",
+  "slug": "ask-home",
+  "hook": "Is 2027 a good year to move house?",
+  "angle": "The general traditional view, then: it depends on your chart. Calendar -> Feb 2027 -> home pill shows your mark.",
+  "fig": "Yin Fire",
+  "question": "home",
+  "used": false
+ },
+ {
+  "date": "2027-03-01",
+  "dow": "Mon",
+  "series": "economy",
+  "slug": "candle-money",
+  "hook": "Money in a candle year: steady beats splashy.",
+  "angle": "Yin Fire = focus; habits over gambles. General habits only, not advice.",
+  "fig": "Yin Fire",
+  "used": false
+ },
+ {
+  "date": "2027-03-03",
+  "dow": "Wed",
+  "series": "ask",
+  "slug": "ask-health",
+  "hook": "How do I look after myself in a Fire year?",
+  "angle": "The general traditional view, then: it depends on your chart. Calendar -> Feb 2027 -> health pill shows your mark.",
+  "fig": "Yin Fire",
+  "question": "health",
+  "used": false
+ },
+ {
+  "date": "2027-03-05",
+  "dow": "Fri",
+  "series": "months",
+  "slug": "months-aug-oct",
+  "hook": "2027, Aug to Oct: harvest time.",
+  "angle": "Wu Shen, Ji You, Geng Xu: Metal; results and cleanup.",
+  "fig": "Yang Metal",
+  "used": false
+ },
+ {
+  "date": "2027-03-06",
+  "dow": "Sat",
+  "series": "months",
+  "slug": "months-nov-jan",
+  "hook": "2027, Nov to Jan: the cool down.",
+  "angle": "Xin Hai, Ren Zi, Gui Chou: Water; rest; the Ox month clashes the year.",
+  "fig": "Yang Water",
+  "used": false
+ },
+ {
+  "date": "2027-03-08",
+  "dow": "Mon",
+  "series": "family",
+  "slug": "family-wood",
+  "hook": "Wood people in 2027: work, money, love.",
+  "angle": "Yang Wood and Yin Wood side by side, using their two forces; then the Calendar pills for their own mark.",
+  "fig": "Yang Wood",
+  "el": "Wood",
+  "used": false
+ },
+ {
+  "date": "2027-03-10",
+  "dow": "Wed",
+  "series": "family",
+  "slug": "family-fire",
+  "hook": "Fire people in 2027: work, money, love.",
+  "angle": "Yang Fire and Yin Fire side by side, using their two forces; then the Calendar pills for their own mark.",
+  "fig": "Yin Fire",
+  "el": "Fire",
+  "used": false
+ },
+ {
+  "date": "2027-03-12",
+  "dow": "Fri",
+  "series": "family",
+  "slug": "family-earth",
+  "hook": "Earth people in 2027: work, money, love.",
+  "angle": "Yang Earth and Yin Earth side by side, using their two forces; then the Calendar pills for their own mark.",
+  "fig": "Yang Earth",
+  "el": "Earth",
+  "used": false
+ },
+ {
+  "date": "2027-03-13",
+  "dow": "Sat",
+  "series": "family",
+  "slug": "family-metal",
+  "hook": "Metal people in 2027: work, money, love.",
+  "angle": "Yang Metal and Yin Metal side by side, using their two forces; then the Calendar pills for their own mark.",
+  "fig": "Yang Metal",
+  "el": "Metal",
+  "used": false
+ },
+ {
+  "date": "2027-03-15",
+  "dow": "Mon",
+  "series": "family",
+  "slug": "family-water",
+  "hook": "Water people in 2027: work, money, love.",
+  "angle": "Yang Water and Yin Water side by side, using their two forces; then the Calendar pills for their own mark.",
+  "fig": "Yin Water",
+  "el": "Water",
+  "used": false
+ },
+ {
+  "date": "2027-03-17",
+  "dow": "Wed",
+  "series": "special",
+  "slug": "q1-check-in",
+  "hook": "2027 so far: how is your Fire Goat year going?",
+  "angle": "End-of-March check-in; invite comments; the Calendar shows the months ahead.",
+  "fig": "Yin Fire",
+  "used": false
+ },
+ {
+  "date": "2027-03-19",
+  "dow": "Fri",
+  "series": "flex",
+  "slug": "",
+  "hook": "Open: repeat the best performer or answer comments",
+  "angle": "",
+  "used": false
+ },
+ {
+  "date": "2027-03-20",
+  "dow": "Sat",
+  "series": "flex",
+  "slug": "",
+  "hook": "Open: repeat the best performer or answer comments",
+  "angle": "",
+  "used": false
+ },
+ {
+  "date": "2027-03-22",
+  "dow": "Mon",
+  "series": "flex",
+  "slug": "",
+  "hook": "Open: repeat the best performer or answer comments",
+  "angle": "",
+  "used": false
+ },
+ {
+  "date": "2027-03-24",
+  "dow": "Wed",
+  "series": "flex",
+  "slug": "",
+  "hook": "Open: repeat the best performer or answer comments",
+  "angle": "",
+  "used": false
+ },
+ {
+  "date": "2027-03-26",
+  "dow": "Fri",
+  "series": "flex",
+  "slug": "",
+  "hook": "Open: repeat the best performer or answer comments",
+  "angle": "",
+  "used": false
+ },
+ {
+  "date": "2027-03-27",
+  "dow": "Sat",
+  "series": "flex",
+  "slug": "",
+  "hook": "Open: repeat the best performer or answer comments",
+  "angle": "",
+  "used": false
+ },
+ {
+  "date": "2027-03-29",
+  "dow": "Mon",
+  "series": "flex",
+  "slug": "",
+  "hook": "Open: repeat the best performer or answer comments",
+  "angle": "",
+  "used": false
+ },
+ {
+  "date": "2027-03-31",
+  "dow": "Wed",
+  "series": "flex",
+  "slug": "",
+  "hook": "Open: repeat the best performer or answer comments",
+  "angle": "",
+  "used": false
+ }
+]
