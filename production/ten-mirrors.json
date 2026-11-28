@@ -214,15 +214,24 @@
       "world_name": "the sprout garden",
       "feeling": "Insight",
       "ten_god": "偏印",
-      "status": "todo",
+      "status": "made",
       "block": 1,
       "order": 8,
       "title": "Just Watching",
       "situation": "The quiet one who notices",
       "dev_date": "2026-11-19",
       "post_date": "2026-12-08",
-      "notes": "in progress. 27 Nov (run not recorded at the time; reconstructed 28 Nov from the Flow project, about 41 cr): V1C_T1 i2v from K1R ('Character floating in garden breeze') FAIL: crest stands up into a tall single spike from 1.5 s to the end and she shrinks in frame (L61 again). Restaged: new closer still K1S ('Character floating with pink petals': hands together at chest, petals only, droplet under the leaf bottom right) -> V1D_T1 ('Woman floating amidst pink petals'). 28 Nov QC of V1D_T1 (Flow player, ~1 fps): PASS 0.2-6.8: on-model (two ears, flame crest like the Ding Fire ref sheet seen from the front, hands together at chest the whole clip, moon visible, floats); petals drift; she turns calmly from three-quarter to face us by 3.5 s, glances down with a slow blink at 3.0 s, then a small quiet smile. No smoke, no sparks. NEXT (needs library + Downloads folder access, still waiting for Stanley's Allow on the computer since 28 Nov 16:05): download V1D_T1 and K1S (single-item 720p) into TM095/TAKES and KEYFRAMES; ffmpeg tile-strip QC to confirm; assemble V1D 0.2-6.8 -> 6-frame dissolve -> V2_T1 0.2-7.9 (+ end card V2 4 s); music_tm095.py in the library source folder; then queue for 8 Dec. Library EPISODES/TEN_MIRRORS/TM095 (KEYFRAMES K1, K2, K2B, K1R; TAKES V1_T1, V1B_T1, V2_T1). Housekeeping: Downloads/Character_holding_water_droplet_fa8ef652.mp4 (copy of V2_T1) -> Downloads/_to_delete; check Downloads for any 27 Nov TM095 downloads.",
-      "credits_used": 105
+      "notes": "V01 made 28 Nov: SS_TM_JUST-WATCHING_V01.mp4 (story 14.3 s + 4 s end card, 4.1 MB): library TAKES/TM095_V1E_T1 0.2-6.8 -> 6-frame dissolve -> TM095_V2_T1 0.2-7.9, end card V2, music_tm095.py (loudnorm -16 LUFS added: pyfluidsynth output was ~17 dB quieter than earlier reels). Takes naming: the library file TM095_V1E_T1.mp4 is the Flow clip 'Woman floating amidst pink petals' (hands together at chest) that the 28 Nov 16:06 run called V1D_T1 and passed; library TM095_V1D_T1 = 'Character floating in garden breeze' (FAIL, crest spike) and TM095_V1C_T1 = 'Character watching drifting pink petals' (FAIL). 28 Nov 20:00 tile-strip QC (1 fps + 2 fps head crops) of V1E_T1: on-model every frame: two hanging ears, compact curled flame crest (same as V2_T1/K2B), hands at chest, floats; she turns calmly from three-quarter to face us ~3 s (no spike). V2_T1 re-checked PASS. Restaged: V1 no longer shows her eyes travelling down to the droplet (Veo kept turning her head and spiking the crest, L61/L62); V1 is now her calm and still in the busy petal swirl with the droplet visible under the leaf; V2 droplet + rainbow as planned. Credits: 26 Nov 64, 27 Nov ~41 (library BUILD.txt said ~62), 28 Nov 0. Downloads still holds copies of the three V1C/V1D/V1E clips (no delete tool on the device bridge).",
+      "credits_used": 105,
+      "made_date": "2026-11-28",
+      "evening_entry": {
+        "type": "reel",
+        "video": "media/2026-12-08/evening-reel.mp4",
+        "cover": "media/2026-12-08/evening-cover.jpg",
+        "caption": "Not shy. Just watching 🕯️\n\nThis is the Insight feeling: Yin Fire in a Yin Wood world. While everyone else is busy, someone at the edge is noticing the thing that matters.\n\nTag the quiet one who always notices 👇\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #tenmirrors #introvert #quietones #animatedshort #chineseastrology #bazi #fiveelements #yinyang",
+        "series": "ten-mirrors",
+        "status": "review"
+      }
     },
     {
       "id": "TM002",
