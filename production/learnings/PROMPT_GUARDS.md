@@ -62,3 +62,5 @@ NO MAGIC LIGHT ON SMALL PROPS (24 Nov, L59): for clips where Sky is next to a sm
 EARTH FORM + WATER SPRAY (25 Nov, L60): with an earth form in splashing water add 'the spray stays low around his feet, soft white foam only: nothing is thrown into the air, no pebbles, stones, dots or droplets flying past him; he never kicks his feet'.
 
 FIRE-FORM SKY STILLS + HEAD (26 Nov, L61): with Ding Fire Sky (or any flame-crest form) the start still has NO white swirl lines, trails, mist, steam-like wisps or dandelion seeds anywhere (busy air = pink petals only), and the crest is drawn 'lying low, swept back close to the back of her head'. In the clip: 'her head stays perfectly still facing the camera; only her eyes and mouth move'; never ask for a head tilt or turn. Add 'the sky above and around her head stays clear: nothing rises from her head or crest, no white puff, no cloud, no steam, no smoke'.
+
+FIRE-FORM SKY FRAMING (28 Nov, L62): fire-form Sky start stills medium-close (she fills about half the frame height) and already facing the camera when the clip is a face beat; small or three-quarter fire crests get redrawn as a tall spike.

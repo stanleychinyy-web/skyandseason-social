@@ -70,7 +70,7 @@
       "world_name": "the candlelit night garden",
       "feeling": "Recognition",
       "ten_god": "正官",
-      "status": "approved",
+      "status": "posted",
       "block": 1,
       "order": 3,
       "title": "Wait, Me?",
@@ -87,7 +87,8 @@
         "caption": "\"Wait, me?\" 🏮\n\nThis is the Recognition feeling: Yang Metal in a Yin Fire world. Being trusted with something is a weight and a compliment at the same time. You stand a little taller to carry it.\n\nWho was the first person to trust you with something big? Tell us below.\n\nA Sky & Season short. Explore your free chart at skyandseason.com (link in bio).\n\n#skyandseason #innerconstellation #tenmirrors #responsibility #worklife #animatedshort #chineseastrology #bazi #fiveelements #yinyang",
         "series": "ten-mirrors",
         "status": "review"
-      }
+      },
+      "permalink": "https://www.instagram.com/reel/DgM41ETNtzS/"
     },
     {
       "id": "TM093",
@@ -98,7 +99,7 @@
       "world_name": "the giant-tree forest",
       "feeling": "Rival",
       "ten_god": "劫財",
-      "status": "made",
+      "status": "approved",
       "block": 1,
       "order": 4,
       "title": "One Small Leaf",
@@ -185,7 +186,7 @@
       "world_name": "the open ocean",
       "feeling": "Opportunity",
       "ten_god": "偏財",
-      "status": "made",
+      "status": "approved",
       "block": 1,
       "order": 7,
       "title": "Now or Never",
@@ -220,8 +221,8 @@
       "situation": "The quiet one who notices",
       "dev_date": "2026-11-19",
       "post_date": "2026-12-08",
-      "notes": "in progress. DAILY CAP REACHED 26 Nov (64 credits spent on 26 Nov): spend nothing more on 26 Nov; resume 27 Nov. 26 Nov: K1 PASS; K2 FAIL-ish (eyes to camera, floating low) -> K2B PASS (version of the K2 item, floats higher, looks down at droplet; rainbow already in the still, L50). Planned restage of V2 (before spending): face-only, no 'droplet lights up / rainbow spreads' (L51, L59). V2_T1 from K2B PASS whole clip 0.2-7.9 (slow blink, quiet smile, droplet held at chest throughout). V1_T1 from K1 FAIL (white smoke plume rising from her crest 1.5-5.5 s). V1B_T1 from K1 FAIL (no smoke, but head turn ~2.8 s and crest stands up spiky 3.3-4.3 s; only 0.2-3.1 clean) -> L61. Restage after one retry: K1R (edit = new version of the K1 item 'Character floating in dawn garden': petals only, no white swirl trails or seeds, crest lying low and swept back, eyes towards the droplet) PASS. NEXT (27 Nov): V1C i2v from K1R with the L61 lines: head perfectly still facing the camera, only eyes and mouth move (eyes from the petal flurry down to the droplet, small smile), no head tilt; sky above her head stays clear. Then assemble: V1C -> dissolve -> V2_T1 (0.2-7.9); music_tm095.py ready in the library source folder (busy, thinning to one celesta note at the cut). Library EPISODES/TEN_MIRRORS/TM095 (KEYFRAMES K1, K2, K2B, K1R; TAKES V1_T1, V1B_T1, V2_T1). Housekeeping: Downloads/Character_holding_water_droplet_fa8ef652.mp4 (copy of V2_T1, already in TAKES) was locked on 26 Nov; move it to Downloads/_to_delete next run.",
-      "credits_used": 64
+      "notes": "in progress. 27 Nov (run not recorded at the time; reconstructed 28 Nov from the Flow project, about 41 cr): V1C_T1 i2v from K1R ('Character floating in garden breeze') FAIL: crest stands up into a tall single spike from 1.5 s to the end and she shrinks in frame (L61 again). Restaged: new closer still K1S ('Character floating with pink petals': hands together at chest, petals only, droplet under the leaf bottom right) -> V1D_T1 ('Woman floating amidst pink petals'). 28 Nov QC of V1D_T1 (Flow player, ~1 fps): PASS 0.2-6.8: on-model (two ears, flame crest like the Ding Fire ref sheet seen from the front, hands together at chest the whole clip, moon visible, floats); petals drift; she turns calmly from three-quarter to face us by 3.5 s, glances down with a slow blink at 3.0 s, then a small quiet smile. No smoke, no sparks. NEXT (needs library + Downloads folder access, still waiting for Stanley's Allow on the computer since 28 Nov 16:05): download V1D_T1 and K1S (single-item 720p) into TM095/TAKES and KEYFRAMES; ffmpeg tile-strip QC to confirm; assemble V1D 0.2-6.8 -> 6-frame dissolve -> V2_T1 0.2-7.9 (+ end card V2 4 s); music_tm095.py in the library source folder; then queue for 8 Dec. Library EPISODES/TEN_MIRRORS/TM095 (KEYFRAMES K1, K2, K2B, K1R; TAKES V1_T1, V1B_T1, V2_T1). Housekeeping: Downloads/Character_holding_water_droplet_fa8ef652.mp4 (copy of V2_T1) -> Downloads/_to_delete; check Downloads for any 27 Nov TM095 downloads.",
+      "credits_used": 105
     },
     {
       "id": "TM002",
@@ -1259,5 +1260,5 @@
   "daily_credit_cap": 80,
   "post_time_sgt": "19:00 (evening slot), Tue/Thu/Sun",
   "statuses": "todo -> made (in repo, evening status review) -> approved -> posted; or changes. made-not-queued = finished video in the library, not yet in the repo/review page.",
-  "last_run_date": "2026-11-26"
+  "last_run_date": "2026-11-28"
 }
