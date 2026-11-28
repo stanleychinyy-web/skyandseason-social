@@ -37,7 +37,8 @@
   "hook": "A fire year with hidden water.",
   "angle": "The year's sound element (nayin) of Bing Wu/Ding Wei is Heavenly River Water: rain from the sky on a fire year. Cooling, timing, emotions.",
   "fig": "Yin Water",
-  "used": false
+  "used": true,
+  "spec": "heavenly-river.json"
  },
  {
   "date": "2026-12-04",
@@ -52,7 +53,8 @@
    "Rat",
    "Dog"
   ],
-  "used": false
+  "used": true,
+  "spec": "four-meet-tai-sui.json"
  },
  {
   "date": "2026-12-05",
@@ -62,20 +64,22 @@
   "hook": "2027 in three words.",
   "angle": "Warm. Focused. Finish. (Candle, Goat, Horse-Goat pair.) Ask viewers for their word.",
   "fig": "Yin Fire",
-  "used": false
+  "used": true,
+  "spec": "three-words.json"
  },
  {
   "date": "2026-12-07",
   "dow": "Mon",
   "series": "animal",
   "slug": "animal-ox",
-  "hook": "Born in a Ox year? Here's your 2027.",
-  "angle": "Goat vs Ox: clash (Chou-Wei). Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "hook": "Born in an Ox year? Here's your 2027.",
+  "angle": "Goat vs Ox: clash (Chou-Wei). Hook, the upside, the catch, one thing to do. Years: born 1949+12k (see PLAN.md fact sheet) (Jan/early Feb = year before).",
   "animals": [
    "Ox"
   ],
   "el": "Earth",
-  "used": false
+  "used": true,
+  "spec": "animal-ox.json"
  },
  {
   "date": "2026-12-09",
@@ -83,7 +87,7 @@
   "series": "animal",
   "slug": "animal-goat",
   "hook": "Born in a Goat year? Here's your 2027.",
-  "angle": "Goat vs Goat: own year (sits with the Tai Sui). Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "angle": "Goat vs Goat: own year (sits with the Tai Sui). Hook, the upside, the catch, one thing to do. Years: born 1955+12k (see PLAN.md fact sheet) (Jan/early Feb = year before).",
   "animals": [
    "Goat"
   ],
@@ -96,7 +100,7 @@
   "series": "animal",
   "slug": "animal-rat",
   "hook": "Born in a Rat year? Here's your 2027.",
-  "angle": "Goat vs Rat: harm (Zi-Wei). Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "angle": "Goat vs Rat: harm (Zi-Wei). Hook, the upside, the catch, one thing to do. Years: born 1948+12k (see PLAN.md fact sheet) (Jan/early Feb = year before).",
   "animals": [
    "Rat"
   ],
@@ -109,7 +113,7 @@
   "series": "animal",
   "slug": "animal-dog",
   "hook": "Born in a Dog year? Here's your 2027.",
-  "angle": "Goat vs Dog: punishment + break (Xu-Wei). Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "angle": "Goat vs Dog: punishment + break (Xu-Wei). Hook, the upside, the catch, one thing to do. Years: born 1958+12k (see PLAN.md fact sheet) (Jan/early Feb = year before).",
   "animals": [
    "Dog"
   ],
@@ -132,7 +136,7 @@
   "series": "animal",
   "slug": "animal-horse",
   "hook": "Born in a Horse year? Here's your 2027.",
-  "angle": "Goat vs Horse: best partner (Wu-Wei pair). Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "angle": "Goat vs Horse: best partner (Wu-Wei pair). Hook, the upside, the catch, one thing to do. Years: born 1954+12k (see PLAN.md fact sheet) (Jan/early Feb = year before).",
   "animals": [
    "Horse"
   ],
@@ -145,7 +149,7 @@
   "series": "animal",
   "slug": "animal-rabbit",
   "hook": "Born in a Rabbit year? Here's your 2027.",
-  "angle": "Goat vs Rabbit: team (Hai-Mao-Wei). Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "angle": "Goat vs Rabbit: team (Hai-Mao-Wei). Hook, the upside, the catch, one thing to do. Years: born 1951+12k (see PLAN.md fact sheet) (Jan/early Feb = year before).",
   "animals": [
    "Rabbit"
   ],
@@ -158,7 +162,7 @@
   "series": "animal",
   "slug": "animal-pig",
   "hook": "Born in a Pig year? Here's your 2027.",
-  "angle": "Goat vs Pig: team (Hai-Mao-Wei). Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "angle": "Goat vs Pig: team (Hai-Mao-Wei). Hook, the upside, the catch, one thing to do. Years: born 1959+12k (see PLAN.md fact sheet) (Jan/early Feb = year before).",
   "animals": [
    "Pig"
   ],
@@ -183,7 +187,7 @@
   "series": "animal",
   "slug": "animal-tiger",
   "hook": "Born in a Tiger year? Here's your 2027.",
-  "angle": "Goat vs Tiger: steady. Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "angle": "Goat vs Tiger: steady. Hook, the upside, the catch, one thing to do. Years: born 1950+12k (see PLAN.md fact sheet) (Jan/early Feb = year before).",
   "animals": [
    "Tiger"
   ],
@@ -196,7 +200,7 @@
   "series": "animal",
   "slug": "animal-dragon",
   "hook": "Born in a Dragon year? Here's your 2027.",
-  "angle": "Goat vs Dragon: steady. Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "angle": "Goat vs Dragon: steady. Hook, the upside, the catch, one thing to do. Years: born 1952+12k (see PLAN.md fact sheet) (Jan/early Feb = year before).",
   "animals": [
    "Dragon"
   ],
@@ -209,7 +213,7 @@
   "series": "animal",
   "slug": "animal-snake",
   "hook": "Born in a Snake year? Here's your 2027.",
-  "angle": "Goat vs Snake: steady. Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "angle": "Goat vs Snake: steady. Hook, the upside, the catch, one thing to do. Years: born 1953+12k (see PLAN.md fact sheet) (Jan/early Feb = year before).",
   "animals": [
    "Snake"
   ],
@@ -222,7 +226,7 @@
   "series": "animal",
   "slug": "animal-monkey",
   "hook": "Born in a Monkey year? Here's your 2027.",
-  "angle": "Goat vs Monkey: steady. Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "angle": "Goat vs Monkey: steady. Hook, the upside, the catch, one thing to do. Years: born 1956+12k (see PLAN.md fact sheet) (Jan/early Feb = year before).",
   "animals": [
    "Monkey"
   ],
@@ -235,7 +239,7 @@
   "series": "animal",
   "slug": "animal-rooster",
   "hook": "Born in a Rooster year? Here's your 2027.",
-  "angle": "Goat vs Rooster: steady. Hook, the upside, the catch, one thing to do. Years: born 1948+12k (Jan/early Feb = year before).",
+  "angle": "Goat vs Rooster: steady. Hook, the upside, the catch, one thing to do. Years: born 1957+12k (see PLAN.md fact sheet) (Jan/early Feb = year before).",
   "animals": [
    "Rooster"
   ],

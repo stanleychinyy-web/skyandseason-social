@@ -1,6 +1,14 @@
 {
   "date": "2026-12-03",
   "status": "approved",
+  "stories": [
+    "media/2026-12-03/story1.jpg",
+    "media/2026-12-03/story2.jpg",
+    "media/2026-12-03/story3.jpg",
+    "media/2026-12-03/story4.jpg",
+    "media/2026-12-03/story-lines1.jpg",
+    "media/2026-12-03/story-lines2.jpg"
+  ],
   "evening": {
     "type": "reel",
     "video": "media/2026-12-03/evening-reel.mp4",

@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Support",
+  "line": "Someone helps without asking today. Accept the lift and skip the rain."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Insight",
+  "line": "A rainy Saturday clears your head. Make a cup of tea and plan December."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Recognition",
+  "line": "Your helpfulness gets noticed today. Fix the family Wi-Fi and take a bow."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Pressure",
+  "line": "Saturday asks a lot of you. Do the errands in one loop, then rest."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Steady-money",
+  "line": "Slow spending suits you today. Fix it, don't replace it."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Opportunity",
+  "line": "A small win waits at the shops today. Check the clearance shelf first."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Speak-up",
+  "line": "Your stories are good today. Tell the one that makes Grandma laugh."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Joy",
+  "line": "Cosy fun suits you today. Film marathon, blanket, no guilt."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Rival",
+  "line": "Someone wants the sofa too. Share it, and share the snacks."
+ },
+ {
+  "element": "Yin Water",
+  "type": "Friend",
+  "line": "Your favourite people are near today. Invite them over for steamboat."
+ }
+]

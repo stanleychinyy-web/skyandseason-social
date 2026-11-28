@@ -43,4 +43,4 @@ Cards: 3–4. Title ≤ 14 characters (or `"title_lines": 2`). head ≤ 46, body
 
 ## Calendar
 `tools/y2027/queue.json` (built by `build_queue.py`): one entry per Mon/Wed/Fri/Sat slot with series, slug, hook, angle and facts; specials pinned (3 Feb "before 4 Feb", 6 Feb Goat New Year). 8 "flex" slots in late March for repeats of the best performers.
-Written and rendered on 26 Nov: what-is-2027 (27 Nov), 2027-starts-4-feb (28 Nov), sun-to-candle (30 Nov). Written, to render in the 28 Nov batch: heavenly-river (2 Dec), four-meet-tai-sui (4 Dec), three-words (5 Dec), animal-ox (7 Dec).
+Written and rendered on 26 Nov: what-is-2027 (27 Nov), 2027-starts-4-feb (28 Nov), sun-to-candle (30 Nov). Written 26 Nov, rendered in the 28 Nov batch with ChatGPT hook scenes: heavenly-river (2 Dec), four-meet-tai-sui (4 Dec), three-words (5 Dec), animal-ox (7 Dec). Queue birth-year angles corrected 28 Nov (base year per animal, not 1948 for all; flagged by Lantern).

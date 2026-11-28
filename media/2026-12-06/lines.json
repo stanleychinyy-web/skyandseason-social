@@ -1,0 +1,52 @@
+[
+ {
+  "element": "Yang Wood",
+  "type": "Friend",
+  "line": "Your crew is up for it today. Walk the park connector together, brunch at the end."
+ },
+ {
+  "element": "Yin Wood",
+  "type": "Rival",
+  "line": "A sibling wants the same plan today. Flip a coin and laugh about it."
+ },
+ {
+  "element": "Yang Fire",
+  "type": "Insight",
+  "line": "A quiet Sunday idea grows today. Write it on paper, not in your phone."
+ },
+ {
+  "element": "Yin Fire",
+  "type": "Support",
+  "line": "You're looked after today. Let someone else plan the day for once."
+ },
+ {
+  "element": "Yang Earth",
+  "type": "Pressure",
+  "line": "Sunday fills up fast. Protect one hour that's only for you."
+ },
+ {
+  "element": "Yin Earth",
+  "type": "Recognition",
+  "line": "Your care gets noticed today. Someone says thank you; believe them."
+ },
+ {
+  "element": "Yang Metal",
+  "type": "Opportunity",
+  "line": "A fresh chance appears today. Sign up for the class you keep saving."
+ },
+ {
+  "element": "Yin Metal",
+  "type": "Steady-money",
+  "line": "Gift season starts today. Plan the Christmas presents and set one budget."
+ },
+ {
+  "element": "Yang Water",
+  "type": "Joy",
+  "line": "Play comes easily today. Try the new trail or the new dessert, or both."
+ },
+ {
+  "element": "Yin Water",
+  "type": "Speak-up",
+  "line": "Your words carry warmth today. Send a voice note to a friend overseas."
+ }
+]
